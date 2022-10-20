@@ -46,8 +46,8 @@ data-structure-recap
 introduction-to-loops
 for-loops
 for-loop-example
-use-a-for-to-complement-a-dna-sequence
-use-a-for-to-reverse-complement-a-dna-sequence
+use-a-for-loop-to-complement-a-dna-sequence
+use-a-for-loop-to-reverse-complement-a-dna-sequence
 while-loops
 further-control-statements
 recap-3

@@ -206,8 +206,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2" data-path="08_loops.html"><a href="08_loops.html#introduction-to-loops"><i class="fa fa-check"></i><b>9.2</b> Introduction To Loops</a></li>
 <li class="chapter" data-level="9.3" data-path="08_loops.html"><a href="08_loops.html#for-loops"><i class="fa fa-check"></i><b>9.3</b> For Loops</a></li>
 <li class="chapter" data-level="9.4" data-path="08_loops.html"><a href="08_loops.html#for-loop-example"><i class="fa fa-check"></i><b>9.4</b> For Loop Example</a></li>
-<li class="chapter" data-level="9.5" data-path="08_loops.html"><a href="08_loops.html#use-a-for-to-complement-a-dna-sequence"><i class="fa fa-check"></i><b>9.5</b> Use a for to complement a DNA sequence</a></li>
-<li class="chapter" data-level="9.6" data-path="08_loops.html"><a href="08_loops.html#use-a-for-to-reverse-complement-a-dna-sequence"><i class="fa fa-check"></i><b>9.6</b> Use a for to reverse-complement a DNA sequence</a></li>
+<li class="chapter" data-level="9.5" data-path="08_loops.html"><a href="08_loops.html#use-a-for-loop-to-complement-a-dna-sequence"><i class="fa fa-check"></i><b>9.5</b> Use a for loop to complement a DNA sequence</a></li>
+<li class="chapter" data-level="9.6" data-path="08_loops.html"><a href="08_loops.html#use-a-for-loop-to-reverse-complement-a-dna-sequence"><i class="fa fa-check"></i><b>9.6</b> Use a for loop to reverse-complement a DNA sequence</a></li>
 <li class="chapter" data-level="9.7" data-path="08_loops.html"><a href="08_loops.html#while-loops"><i class="fa fa-check"></i><b>9.7</b> While loops</a></li>
 <li class="chapter" data-level="9.8" data-path="08_loops.html"><a href="08_loops.html#further-control-statements"><i class="fa fa-check"></i><b>9.8</b> Further control statements</a></li>
 <li class="chapter" data-level="9.9" data-path="08_loops.html"><a href="08_loops.html#recap-3"><i class="fa fa-check"></i><b>9.9</b> Recap</a></li>
@@ -305,8 +305,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This loop would run until the bag of potatoes is empty, achieving the job in just three lines of code.</p>
 <p>This pseudocode is actually very similar to the required Python syntax.
 The generic format of a <b>for</b> loop is:</p>
-<pre><code>for &lt;value&gt; in &lt;data_structure&gt;:
-  do something</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="08_loops.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">&lt;</span>value<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>data_structure<span class="op">&gt;</span>:</span>
+<span id="cb39-2"><a href="08_loops.html#cb39-2" aria-hidden="true" tabindex="-1"></a>  do something</span></code></pre></div>
 <p><b>Note the colon starting the loop and the tab indent of any commands inside the loop.</b></p>
 </div>
 <div id="for-loop-example" class="section level2 hasAnchor" number="9.4">
@@ -316,79 +316,72 @@ The generic format of a <b>for</b> loop is:</p>
 <p>Add a string of nucleotides to the script in Gedit (you can use any random nucleotide sequence - no need to copy this one exactly),
 and code a <b>for</b> loop to move through the DNA string, printing each base to the screen. Save and run the script.</p>
 <p><b>Remember to tab indent the lines inside the for loop.</b></p>
-<pre><code>DNA_string = &quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;
-
-# loop through each base in the string
-for base in DNA_string:
-
-  # print the current base
-  print(base)</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="08_loops.html#cb40-1" aria-hidden="true" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
+<span id="cb40-2"><a href="08_loops.html#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="08_loops.html#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co"># loop through each base in the string</span></span>
+<span id="cb40-4"><a href="08_loops.html#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb40-5"><a href="08_loops.html#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="08_loops.html#cb40-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print the current base</span></span>
+<span id="cb40-7"><a href="08_loops.html#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(base)</span></code></pre></div>
 <p>We can see from the output that the <b>loop</b> allows us to process each base in the string separately; in this case by printing them individually.</p>
 </div>
-<div id="use-a-for-to-complement-a-dna-sequence" class="section level2 hasAnchor" number="9.5">
-<h2><span class="header-section-number">9.5</span> Use a for to complement a DNA sequence<a href="08_loops.html#use-a-for-to-complement-a-dna-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="use-a-for-loop-to-complement-a-dna-sequence" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Use a for loop to complement a DNA sequence<a href="08_loops.html#use-a-for-loop-to-complement-a-dna-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Next, let's use this loop functionality to do something useful to each base such as translate each nucleotide to the appropriate complement base.</p>
 <p>For this, we will use a <b>dictionary</b> to swap each base for the complement. Recall that a dictionary has a <b>key</b> and <b>value</b> for each entry. We can define the 'standard' base as the key, and the 'complement' as the value.</p>
 <p>First create the dictionary holding the complementary pairs of bases. In the script this needs to come <b>before</b> the <b>for</b> loop. Modify the above to the following:</p>
 <p><b>Note</b> That each of the four rows of the dictionary need to have a leading TAB character.</p>
-<pre><code>DNA_string = &quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;
-
-# define our dictionary of complements
-complements = {
-  &quot;A&quot; : &quot;T&quot;,
-  &quot;T&quot; : &quot;A&quot;,
-  &quot;G&quot; : &quot;C&quot;,
-  &quot;C&quot; : &quot;G&quot;
-}
-
-# loop through each base in the string
-for base in DNA_string:
-
-  # print the current base
-  print(base)
-</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="08_loops.html#cb41-1" aria-hidden="true" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
+<span id="cb41-2"><a href="08_loops.html#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="08_loops.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co"># define our dictionary of complements</span></span>
+<span id="cb41-4"><a href="08_loops.html#cb41-4" aria-hidden="true" tabindex="-1"></a>complements <span class="op">=</span> {</span>
+<span id="cb41-5"><a href="08_loops.html#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;T&quot;</span>,</span>
+<span id="cb41-6"><a href="08_loops.html#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
+<span id="cb41-7"><a href="08_loops.html#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
+<span id="cb41-8"><a href="08_loops.html#cb41-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
+<span id="cb41-9"><a href="08_loops.html#cb41-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb41-10"><a href="08_loops.html#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="08_loops.html#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co"># loop through each base in the string</span></span>
+<span id="cb41-12"><a href="08_loops.html#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb41-13"><a href="08_loops.html#cb41-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print the current base</span></span>
+<span id="cb41-14"><a href="08_loops.html#cb41-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(base)</span></code></pre></div>
 <p>At present, the print statement is still just going to print the base as it appears in the original string. We need to change the print statement so that in each iteration of the loop, the original nucleotide (base) is passed to the dictionary and the appropriate complementary base is returned.</p>
 <p>Modify the loop as follows:</p>
-<pre><code># loop through each base in the string
-for base in DNA_string:
-
-  # print the current base
-  #print(base)
-  
-  # print the complemented base
-  print(complements[base])</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="08_loops.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loop through each base in the string</span></span>
+<span id="cb42-2"><a href="08_loops.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb42-3"><a href="08_loops.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print the current base</span></span>
+<span id="cb42-4"><a href="08_loops.html#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(base)</span></span>
+<span id="cb42-5"><a href="08_loops.html#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print the complemented base</span></span>
+<span id="cb42-6"><a href="08_loops.html#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(complements[base])</span></code></pre></div>
 <p>Run the script and verify that the complementary base is printed each time.</p>
 <p>Finally, we can build up an 'output string' to format the complemented sequence.
 The complemented base is added to the variable output_sting each time and the
 whole string is printed at the end.</p>
-<pre><code># loop through each base in the string
-output_string = &quot;&quot;
-for base in DNA_string:
-
-  # print the current base
-  #print(base)
-  
-  # print the complemented base
-  #print(complements[base])
-  
-  # add the complemented base to the output string
-  output_string = output_string + complements[base]
-
-# print the input and output strings for comparison
-print(DNA_string)
-print(output_string)</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="08_loops.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loop through each base in the string</span></span>
+<span id="cb43-2"><a href="08_loops.html#cb43-2" aria-hidden="true" tabindex="-1"></a>output_string <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb43-3"><a href="08_loops.html#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb43-4"><a href="08_loops.html#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print the current base</span></span>
+<span id="cb43-5"><a href="08_loops.html#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(base)</span></span>
+<span id="cb43-6"><a href="08_loops.html#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print the complemented base</span></span>
+<span id="cb43-7"><a href="08_loops.html#cb43-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(complements[base])</span></span>
+<span id="cb43-8"><a href="08_loops.html#cb43-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add the complemented base to the output string</span></span>
+<span id="cb43-9"><a href="08_loops.html#cb43-9" aria-hidden="true" tabindex="-1"></a>  output_string <span class="op">=</span> output_string <span class="op">+</span> complements[base]</span>
+<span id="cb43-10"><a href="08_loops.html#cb43-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-11"><a href="08_loops.html#cb43-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print the input and output strings for comparison</span></span>
+<span id="cb43-12"><a href="08_loops.html#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(DNA_string)</span>
+<span id="cb43-13"><a href="08_loops.html#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(output_string)</span></code></pre></div>
 <p>Save, and run the script to check the output sequence is as expected.</p>
 </div>
-<div id="use-a-for-to-reverse-complement-a-dna-sequence" class="section level2 hasAnchor" number="9.6">
-<h2><span class="header-section-number">9.6</span> Use a for to reverse-complement a DNA sequence<a href="08_loops.html#use-a-for-to-reverse-complement-a-dna-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="use-a-for-loop-to-reverse-complement-a-dna-sequence" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Use a for loop to reverse-complement a DNA sequence<a href="08_loops.html#use-a-for-loop-to-reverse-complement-a-dna-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To generate the reverse complement we can use Python's built in reversed() method
 to loop through the original DNA sequence in the reverse order.
 Comment out the original <b>for</b> loop line, and replace with the following:</p>
-<pre><code># comment out the original for loop
-#for base in DNA_string:
-
-# replace with
-for base in reversed(DNA_string):</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="08_loops.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># comment out the original for loop</span></span>
+<span id="cb44-2"><a href="08_loops.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co">#for base in DNA_string:</span></span>
+<span id="cb44-3"><a href="08_loops.html#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="08_loops.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="co"># replace with</span></span>
+<span id="cb44-5"><a href="08_loops.html#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> <span class="bu">reversed</span>(DNA_string):</span></code></pre></div>
 <p>Running the script now will produce the reverse complement of our original DNA sequence.</p>
 </div>
 <div id="while-loops" class="section level2 hasAnchor" number="9.7">
@@ -396,8 +389,9 @@ for base in reversed(DNA_string):</code></pre>
 <center>
 <img src="../images/loop_icon3.png" height="300" />
 </center>
-<p>The other type of loop you might encounter is the <b>while</b> loop. A <b>while</b> loop continues to
-run while a statement remains true. For example, returning to our bag of potatoes, a <b>while</b> loop for the same job might look like this:</p>
+<p>The other type of loop you might encounter is the <b>while</b> loop.
+A <b>while</b> loop continues to run while a statement remains true.
+For example, returning to our bag of potatoes, a <b>while</b> loop for the same job might look like this:</p>
 <ol style="list-style-type: decimal">
 <li>while <b>bag_of_potatoes</b> is not empty :
 <ol start="2" style="list-style-type: decimal">
@@ -405,11 +399,10 @@ run while a statement remains true. For example, returning to our bag of potatoe
 <li>put <b>potato</b> into pot</li>
 </ol></li>
 </ol>
-<p>This loop would run until the last potato has been prepared, at which point the
-<b>while</b> statement would return FALSE and the loop would be stopped.</p>
+<p>This loop would run until the last potato has been prepared, at which point the <b>while</b> statement would return FALSE and the loop would be stopped.</p>
 <p>The generic format of a <b>while</b> loop is as follows:</p>
-<pre><code>while &lt;condition&gt; :
-  do something</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="08_loops.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">&lt;</span>condition<span class="op">&gt;</span> :</span>
+<span id="cb45-2"><a href="08_loops.html#cb45-2" aria-hidden="true" tabindex="-1"></a>  do something</span></code></pre></div>
 <p><b>While</b> loops are much less commonly used and we will not spend any more time on them in this session.
 Hopefully you can see the difference between a for loop and a while loop and have an idea of how they run.</p>
 </div>

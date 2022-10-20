@@ -1,8 +1,3 @@
----
-title: "Python for Bioinformatics"
-author: Graeme Fox
-date: "`r format(Sys.time(), '%B, %Y')`"
----
 # Reading sequence data
 
 <center>![](../images/DNA_icon.png){height=300px}![](../images/biopython_logo.png){height=300px}</center>
@@ -22,7 +17,7 @@ The SeqIO tools are the main Sequence Input/Output interface for Biopython. It p
 
 
 ## Reading a FASTQ DNA data file into Python
-One of the most common types of DNA sequence data file you will be working with is the [FASTQ] (https://en.wikipedia.org/wiki/FASTQ_format) file. 
+One of the most common types of DNA sequence data files you will be working with is the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file. 
 The FASTQ file contains multiple DNA sequences, each one might be a single short read from an Illumina sequencer and the total file can contain thousands or millions of sequences depending on which sequencer was used to produce it.
 
 The FASTQ has a very specific format and holds three important pieces of information.
@@ -31,8 +26,8 @@ The FASTQ has a very specific format and holds three important pieces of informa
 
 <center>![](../images/fastq_icon.png){height=300px}</center>
 
-
 The file has a repetitive structure of four distinct components:
+
 * A unique sequence identifier (ID)
 * The DNA nucleotide sequence
 * A small spacer
@@ -55,7 +50,7 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD
 ```
 ## Read a FASTQ file into Python
 
-<br> Scenario: </b>You have just some FASTQ formatted data back from your sequencing facility. The data was generated using a shotgun, whole-genome sequencing approach to sequence the genome of the undulate ray (*Raja undulata*).
+__Scenario:__ You have just recieved some FASTQ formatted data back from your sequencing facility. The data was generated using a shotgun, whole-genome sequencing approach to sequence the genome of the undulate ray (*Raja undulata*).
 
 <center>![](../images/undulate_ray.jpeg){height=300px}</center>
 
@@ -67,15 +62,15 @@ Open a new file in Gedit (File > New).
 
 We need to load a couple of Python libraries: 
 
-'Biopython' (a suite of bioinformatics focused Python tools)
+`Biopython` (a suite of bioinformatics focused Python tools)
 
 ...and...
 
-'re' (allows us to perform searches using wildcards and special characters). 
+`re` (allows us to perform searches using wildcards and special characters). 
 
 Add the following to the top of the script.
 
-```
+```{python, eval=FALSE}
 from Bio import SeqIO
 import re
 ```
@@ -83,7 +78,7 @@ import re
 You should hopefully still have the current working directory on your clipboard.
 Set a variable called 'wd', (working directory) to the filepath on your clipboard by adding a version of the following:
 
-```
+```{python, eval=FALSE}
 wd = "/pub39/tea/nsc014"
 ```
 
@@ -91,19 +86,24 @@ wd = "/pub39/tea/nsc014"
 
 <center>![](../images/bioinformatics_icon2.png){height=300px}</center>
 
-We are going to use 'SeqIO' (which stands for sequence in/out) and the 'parse' function which splits the FASTQ file into its separate components.
+We are going to use `SeqIO` (which stands for sequence in/out) and the `parse` function which splits the FASTQ file into its separate components.
 
-We store the information on which file to parse in the variable called 'R_undulata_R1_data. SeqIO.parse requires two arguments: the filepath to the file which is to be read, and the format of that file.
+We store the information on which file to parse in the variable called `R_undulata_R1_data`.
+`SeqIO.parse` requires two arguments: 
 
-```
+- The filepath to the file which is to be read.
+- The format of that file.
+
+```{python, eval=FALSE}
 R_undulata_R1_data = SeqIO.parse(wd + "data/Raja_undulata_WGS_trim_R1.fastq", "fastq")
 ```
 
 We can then look through the file using a <b>for</b> loop. Each of the four-unit repeats of the FASTQ file is read as a separate 'record' and we can access them in the script. 
 
-To access the ID line of each record, we use '.id' and to access the sequence we use '.seq'. Each of these elements can be printed in the terminal using an appropriate print statement.
+To access the ID line of each record, we use '.id' and to access the sequence we use '.seq'. 
+Each of these elements can be printed in the terminal using an appropriate print statement.
 
-```
+```{python, eval=FALSE}
 for record in R_undulata_R1_data:
   print(record.id)
   print(record.seq)
@@ -113,19 +113,20 @@ Save the new script as 'script02.py' and run it from the terminal window to prin
 
 ## Modifying reads
 
-We can perform operations on each of these elements. For example, Biopython has a built in translate() method to convert nucleotide sequence into protein sequence (although bear in mind that we are not considering reading frames and we likely have lots of non-coding data).
+We can perform operations on each of these elements. For example, Biopython has a built in `translate()` method to convert nucleotide sequence into protein sequence (although bear in mind that we are not considering reading frames and we likely have lots of non-coding data).
 
-Modify the for loop above to the following:
-```
+Modify the __for__ loop above to the following:
+
+```{python, eval=FALSE}
 for record in R_undulata_R1_data:
   #print(record.id)
   #print(record.seq)
   print(record.seq.translate())
 ```
 
-We can implement a counter to tally the total number of reads in the file. Modify the <b>for</b> loop above to the following (you do not need to add the comments however):
+We can implement a counter to tally the total number of reads in the file. Modify the __for__ loop above to the following (you do not need to add the comments however):
 
-```
+```{python, eval=FALSE}
 ## start a counter to track how many reads
 counter = 0
 
@@ -143,4 +144,4 @@ print("Raw sequence file has " + str(number_raw_reads) + \
 " sequence records.")
 ```
 
-Note that we need to convert the number_raw_reads to a string type in order for the print statement to work using str(). Python will not print variables of different types in the same statement.
+Note that we need to convert the `number_raw_reads` to a string type in order for the print statement to work using str(). Python will not print variables of different types in the same statement.
