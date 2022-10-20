@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Python for Bioinformatics</title>
+  <title>11 Using Conditions to Modify DNA Data | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Python for Bioinformatics" />
+  <meta property="og:title" content="11 Using Conditions to Modify DNA Data | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Python for Bioinformatics" />
+  <meta name="twitter:title" content="11 Using Conditions to Modify DNA Data | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/images/NEOF.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/NEOF_favicon.png" type="image/x-icon" />
-
-
+<link rel="prev" href="09_DNA_sequence_data.html"/>
+<link rel="next" href="11_reading_and_writing.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,11 +193,86 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="using-conditions-to-modify-dna-data" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Using Conditions to Modify DNA Data<a href="10_DNA_conditions.html#using-conditions-to-modify-dna-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<center>
+<img src="images/checks.jpeg" /><img src="images/DNA_icon2.png" />
+</center>
+<p>Suppose we want to filter the raw sequence reads by some parameter, for example removing reads of a certain length
+or removing sections of sequence such as PCR primer sequences. We can use our knowledge of loops and conditions
+to perform these tasks.</p>
+<div id="remove-short-reads" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Remove short reads<a href="10_DNA_conditions.html#remove-short-reads" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="images/comp_filter.png" height="250" />
+</center>
+<p>Using what we know, we can write a script to remove reads below a certain read-length threshold from a FastQ file.</p>
+<p>Starting a new section at the bottom of the script, re-specify where SeqIO.parse should read the file. We need to do this because the SeqIO.parse object gets 'consumed' in the loop we built during the last section. To loop again, and do something else, we need to re-establish the SeqIO.parse connection.</p>
+<pre><code>R_undulata_R1_data = SeqIO.parse(wd + &quot;data/Raja_undulata_WGS_trim_R1.fastq&quot;, &quot;fastq&quot;)</code></pre>
+<p>Suppose we want to find and ultimately remove short reads from the data. As our loop moves through the file, we can count the number of nucleotides in each read using the Python function len().</p>
+<pre><code>for record in R_undulata_R1_data:
+  print(len(record.seq))</code></pre>
+<p>We can see there is some size variation in the file and can use an <b>if</b> statement to select only those reads with a read length of &gt; 100 nucleotides.</p>
+<p>Modify the loop above to the following:</p>
+<pre><code># initialise an empty list to hold the records that we want to keep
+wanted_sequences = []
+
+for record in R_undulata_R1_data:
+  #print(len(record.seq))
+  if len(record.seq) &gt; 100:
+    # add the record to the list of records we want to keep
+    wanted_sequences.append(record)
+
+print(&quot;Found &quot; + str(len(wanted_sequences)) + &quot; reads &gt;100bp in length.&quot;)</code></pre>
+<p>We use the len() function again to see how many records are contained in the wanted_long_sequences list and print the results to the terminal.</p>
+</div>
+<div id="remove-pcr-primers" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Remove PCR primers<a href="10_DNA_conditions.html#remove-pcr-primers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="images/cut.png" height="220" /><img src="images/DNA_icon.png" />
+</center>
+<p>Often you may want to check your sequence file for PCR primers, and remove them when they are found.
+Using a for loop to move through the sequence file, we can check each DNA sequence read for the presence of a
+pre-defined primer sequence and if it is present, remove it.</p>
+<p>We are going to check for the presence of the 13 nucleotide PCR primer "ACACTGCTGATCG" at the start of the reads using the startswith() method.
+This function checks whether a string starts with a particular sub-string and returns True or False. It is very useful for checking for primer sequences in our data.</p>
+<p>The input for this primer removal step will be the 'wanted_sequences' from above (those of &gt;100bp in length).</p>
+<pre><code># loop through the sequence records
+for record in wanted_sequences:
+  
+  # check whether the sequence starts with the primer sequence
+  if record.seq.startswith(&quot;ACACTGCTGATCG&quot;):
+    print(record.seq)
+  </code></pre>
+<p>The code above is printing lots of sequence, indicating that there are lots of sequences with the primer sequence present.
+Now that we have identified their presence, let's go ahead and trim them off the start of the reads.</p>
+<p>Modify the block of code above to the following:</p>
+<pre><code># define a list to hold the trimmed sequences
+trimmed_sequences = []
+
+# loop through the sequence records
+for record in wanted_sequences:
+  
+  # check whether the sequence starts with the primer sequence
+  if record.seq.startswith(&quot;ACACTGCTGATCG&quot;):
+    #print(record.seq)
+    
+    # if it does, subset the read from position 14 onwards and store in trimmed_sequences
+    trimmed_sequences.append(record[13:])
+  
+  else:
+    # if it doesn&#39;t have the primer, retain the whole read and store in trimmed_sequences
+    trimmed_sequences.append(record)</code></pre>
+</div>
+<div id="recap-4" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Recap<a href="10_DNA_conditions.html#recap-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/recap.webp" height="300" />
+</center>
+<p>Using our knowledge of reading FASTQ files, looping through the data, and using conditions to check certain characteristics of the data we have been able to filter out short-reads and also remove primer contamination. We are starting to build a pipeline!</p>
+<p>We will learn to write data out and store it in a new file in the next chapter.</p>
+
+</div>
 </div>
 <script>
 
@@ -375,8 +450,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-
-
+<a href="09_DNA_sequence_data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="11_reading_and_writing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Python for Bioinformatics</title>
+  <title>4 Scripting in Python | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Python for Bioinformatics" />
+  <meta property="og:title" content="4 Scripting in Python | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Python for Bioinformatics" />
+  <meta name="twitter:title" content="4 Scripting in Python | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/images/NEOF.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/NEOF_favicon.png" type="image/x-icon" />
-
-
+<link rel="prev" href="02_cluster_introduction.html"/>
+<link rel="next" href="04_python_fundamentals.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,11 +193,72 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="scripting-in-python" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Scripting in Python<a href="03_basic_scripting.html#scripting-in-python" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<center>
+<img src="../images/python_logo.png" height="200" /><img src="../images/scripting_icon.png" height="200" />
+</center>
+<div id="introduction-to-commands-and-scripts" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Introduction to commands and scripts<a href="03_basic_scripting.html#introduction-to-commands-and-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are two important components to programming in Python; the commands that are committed by the user, and the interpreter which receives and implements the commands.</p>
+<p>Each command can be thought of as a single instruction and these can be added together into a series of steps, called a script.
+Think about how a cooking recipe is often presented:</p>
+<ol style="list-style-type: decimal">
+<li>Break a few eggs</li>
+<li>Make an omelette</li>
+</ol>
+<p>These are two distinct <em>commands</em>, but together they form a <em>script</em> for how to transform raw eggs into an omelette.</p>
+<p>In Python we can either issue commands one at a time to the Python interpreter or we can put them into a file and submit the whole script at once.</p>
+</div>
+<div id="issuing-commands-directly-to-the-interpretator" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Issuing commands directly to the interpretator<a href="03_basic_scripting.html#issuing-commands-directly-to-the-interpretator" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Open up the Python interpreter in the terminal window of the VNC with the following command. We are using Python version 3, the current version.</p>
+<pre><code>python3</code></pre>
+<p>Python has opened correctly if you see the following message (or very similar):</p>
+<pre><code>Python 3.9.6 | packaged by conda-forge (default, Jul  11 2021, 12:28:51) 
+[GCC 9.3.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;  </code></pre>
+<p>The "&gt;&gt;&gt;" and blinking cursor shows that the Python command line interface is ready to receive commands. Try using the <strong>print</strong> command as shown below.</p>
+<p>Python is very particular about braces/brackets and quote marks.</p>
+<pre><code>print(&quot;Hello, world!&quot;)
+
+print(&quot;I&#39;m excited to be learning some Python!&quot;)</code></pre>
+<p>Get the <em>current working directory</em> using Python as we will need this for our scripts later.</p>
+<pre><code>import os
+
+os.getcwd()</code></pre>
+<p>This will return something like: '/pub39/tea/nsc014'</p>
+<p>Highlight this filepath text, including the quote marks, right click and 'copy'.</p>
+<p>So far we have issued simple instructions to Python but if we had lots of complex commands it would very quickly become cumbersome to type them in or to run it repeatedly.</p>
+<p>Throughout the workshop, we will build up more complex scripts and submit them to the interpreter to be run all at once.</p>
+</div>
+<div id="a-note-on-indentation" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> A note on indentation<a href="03_basic_scripting.html#a-note-on-indentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/tab.jpg" height="200" />
+</center>
+<p>Indentation refers to any spaces or tab characters at the beginning of a line
+of code. Indentation helps readability of code by helping to define code blocks
+dedicated to a single purpose. However, indentation in Python in <em>mandatory</em>
+and the interpreter will give an error if the indentation is wrong.</p>
+<p>The code editor we are going to be using today attempts to <em>auto</em> indent code but we still
+need to take care that the level of indentation in the script matches
+that in the workbook <em>exactly</em>.</p>
+</div>
+<div id="tabs-vs-spaces" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Tabs vs spaces<a href="03_basic_scripting.html#tabs-vs-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There is an active
+debate about whether tabs or spaces are more appropriate for indentation.</p>
+<p>For reference, one tab = 4 spaces.</p>
+<p>You can use either tabs or space, but you cannot use them interchangeably!</p>
+<p>Do not enter the below, this is just an illustration of how three levels of TAB indentation looks in a script.</p>
+<pre><code># Zero level of indentation
+  # One level of indentation
+    # Two levels of identation
+# Zero level of indentation</code></pre>
+
+</div>
 </div>
 <script>
 
@@ -375,8 +436,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-
-
+<a href="02_cluster_introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="04_python_fundamentals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

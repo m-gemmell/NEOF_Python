@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Python for Bioinformatics</title>
+  <title>5 Python Fundamentals | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Python for Bioinformatics" />
+  <meta property="og:title" content="5 Python Fundamentals | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Python for Bioinformatics" />
+  <meta name="twitter:title" content="5 Python Fundamentals | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/images/NEOF.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/NEOF_favicon.png" type="image/x-icon" />
-
-
+<link rel="prev" href="03_basic_scripting.html"/>
+<link rel="next" href="05_data_structures.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,11 +193,228 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="python-fundamentals" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Python Fundamentals<a href="04_python_fundamentals.html#python-fundamentals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter covers some of the fundamental concepts of scripting in Python.
+An understanding of how to use <em>operators</em>, <em>variables</em>, and <em>functions</em> will
+give a good grounding in how the language works and allow you to develop
+your own methods and code.</p>
+<p>You definitely do not need to memorise all the information here as all of these
+concepts will be explored more in the rest of the tutorial. The best way to
+learn how various aspects of the Python language work is by <em>doing</em> rather
+then by <em>reading</em>.</p>
+<p>Consider
+coming back to this page later if you want to remind yourself of how a
+particular operator works or how to define a function, for example.</p>
+<p><b> For each of the following sections of example code, enter them directly into the Python interpreter and press enter after each line.</b></p>
+<div id="operators" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Operators<a href="04_python_fundamentals.html#operators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/operators.svg" height="200" />
+</center>
+<p>Python allows the use of the usual arithmetic operators and
+follows the traditional rules of mathematical precedence (BODMAS). The
+maths operators are:</p>
+<ul>
+<li><p>+ (addition)</p></li>
+<li><p>- (subtraction)</p></li>
+<li><p>* (multiplication)</p></li>
+<li><p>/ (division)</p></li>
+<li><p>** (power)</p></li>
+<li><p>// (integer division)</p></li>
+</ul>
+</div>
+<div id="comments" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Comments<a href="04_python_fundamentals.html#comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/comment.jpg" height="200" />
+</center>
+<p>It is often useful to include human-readable comments in your scripts and code.
+Comments in Python are indicated by the hash symbol (#). Anything to the right
+of the hash is considered a comment and is ignored by the interpreter.
+When working through the workbook there is no need to add the comments into the
+commands or scripts.</p>
+<pre><code># This line is a comment
+
+print(&quot;This section will print&quot;) # This section is ignored
+</code></pre>
+</div>
+<div id="variables" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Variables<a href="04_python_fundamentals.html#variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Variables are used to store information which can then referenced
+or manipulated later. They are also useful to label data with a descriptive name
+which is more easily read by a human. You can think of a variable as a 'container'
+to hold a piece of information.</p>
+<p>Variables are assigned a value using the equals (=) character.
+Variable names must start with either a letter or an underscore, must only contain
+alphanumeric characters (and underscores), and are case sensitive. Python supports
+several classes (or types) of variable including strings, integers, floats, and booleans.</p>
+<div id="strings" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Strings<a href="04_python_fundamentals.html#strings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<img src="../images/string.png" height="200" />
+</center>
+<p><strong>Strings</strong> are used to store alphanumeric text. A string is defined by enclosing the text with either single or double quotes.</p>
+<p>Enter the following into the Python terminal, pressing enter after each line. Here we define two string variables, and then retrieve them again by using their name, or identifier.</p>
+<pre><code>DNA_string = &quot;GCACAAACC&quot;
+amino_acids = &quot;ARG VAL TRP&quot;
+
+DNA_string
+amino_acids</code></pre>
+</div>
+<div id="integers" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Integers<a href="04_python_fundamentals.html#integers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Integers</strong> are used to store whole numbers. These should not be declared with quote marks
+otherwise they will be stored as a string.</p>
+<p>Enter the following:</p>
+<pre><code>my_int = 7
+
+my_int</code></pre>
+</div>
+<div id="floats-floating-point-numbers" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Floats (floating point numbers)<a href="04_python_fundamentals.html#floats-floating-point-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<img src="../images/float.png" height="200" />
+</center>
+<p><strong>Floating point numbers</strong> are used to store real numbers (I.e. a number written
+with a decimal point dividing the integer and the fractional parts).</p>
+<p>Enter the following:</p>
+<pre><code>my_float = 7.0001
+another_float = 345.765
+yet_another_float = -5.423e+19
+
+my_float
+another_float
+yet_another_float</code></pre>
+</div>
+<div id="booleans" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Booleans<a href="04_python_fundamentals.html#booleans" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<img src="../images/bool.png" height="200" />
+</center>
+<p><strong>Booleans</strong> are a special type of variable than can represent one of
+two values: <em>True</em> or <em>False</em>. You can compare any two values in Python
+and get a result of either True or False.</p>
+<p>To check if two values are equal we use double equals: ==
+To check if two values are not equal we use: !=
+Greater than or less than also work.</p>
+<p>Enter the following:</p>
+<pre><code>a_bool = 10&gt;9
+a_bool
+
+another_bool = &quot;ATGCA&quot; != &quot;ATGCA&quot;
+another_bool
+
+yet_another_bool = 9&gt;42
+yet_another_bool</code></pre>
+</div>
+</div>
+<div id="classes-of-variable" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Classes of variable<a href="04_python_fundamentals.html#classes-of-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Every variable in Python has a class. These are the string, integer, float, or boolean characteristics we described earlier.</p>
+<p>Unlike some other languages, you do not need to tell Python which class a variable should have. Python will try to figure it out based on the value
+assigned.</p>
+<p>You can check the class of a variable by passing it to the 'type' function:</p>
+<pre><code>variable1 = &quot;a piece of text&quot;
+type(variable1)
+
+variable2 = 5
+type(variable2)
+
+variable3 = 7.0001
+type(variable3)
+
+variable4 = True
+type(variable4)</code></pre>
+</div>
+<div id="transforming-variables" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Transforming variables<a href="04_python_fundamentals.html#transforming-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/transform.png" height="200" />
+</center>
+<p>Variables can be transformed from one type to another provided the
+value can be coerced into the new data type (I.e. you could not transform a
+string of text to a floating point number).</p>
+<p>To transform a float to an integer using the int() function (note the loss
+of precision):</p>
+<pre><code>a_float = 17.45
+
+int(a_float)</code></pre>
+<p>To transform an integer to a string using the str() function:</p>
+<pre><code>an_integer = 783473
+str(an_integer)</code></pre>
+<p>You can also transform to a floating point using float().</p>
+</div>
+<div id="functions-and-methods" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Functions and methods<a href="04_python_fundamentals.html#functions-and-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/function.jpg" height="200" />
+</center>
+<p>Functions and methods are groups of instructions that together perform a specific task.
+This may be a task that you need to run repeatedly on your data and by storing
+these instructions in a single function, you only need to enter the code
+once and simply re-use it each time. A function returns a value after it has
+performed the specific task.</p>
+<div id="running-a-function" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Running a function<a href="04_python_fundamentals.html#running-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A function is a distinct piece of code which requires data to be sent to it in order to run.
+To run a function you need to give the name of the function followed by a pair of
+braces with the desired input within the braces.</p>
+<p>We have already been using some functions: the int() and str() functions.</p>
+<p>For example, we might want to find the length of a string of nucleotides.
+In this instance, we can use
+the built-in len() function on the string:</p>
+<p>(use any string of 'ACGT' you like, no need to copy this one exactly!)</p>
+<pre><code>DNA = &quot;ACGTGTTATATGCGCGTTAGTGTAGTCGATC&quot;
+
+# print the length of the string
+len(DNA)</code></pre>
+</div>
+<div id="running-a-method" class="section level3 hasAnchor" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Running a method<a href="04_python_fundamentals.html#running-a-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Methods are very similar to functions in that they process an input in some manner.
+They differ in that methods are associated with a particular data class
+(string, for example) and are called via the data itself.</p>
+<p>Methods are called using a
+different syntax; the variable is followed by "." and the name of the method with
+a pair of braces.</p>
+<p>First let's Try a couple of methods associated with manipulation of string data:</p>
+<pre><code># define a string called sequencers
+sequencers = &quot;illumina,oxford_nanopore,pac-bio&quot;
+
+# the upper() method converts string variables to uppercase
+sequencers.upper()
+
+# split() chops a string up wherever the specified sub-string occurs (comma in this case)
+sequencers.split(&quot;,&quot;)
+</code></pre>
+<p>We can also use built-in methods for some simple analysis using the "DNA" string generated earlier. For example, the built in 'count' method can be used to count the number of each nucleotide in the string.</p>
+<pre><code>DNA.count(&quot;A&quot;)
+DNA.count(&quot;C&quot;)
+DNA.count(&quot;G&quot;)
+DNA.count(&quot;T&quot;)</code></pre>
+<p>By using the len() function and the count() method, we can calculate the GC content of the DNA sequence:</p>
+<pre><code>## count the number of G and C in the sequence
+G_total = DNA.count(&quot;G&quot;)
+C_total = DNA.count(&quot;C&quot;)
+
+# calculate the percentage of the sequence that is GC
+(G_total + C_total)/len(DNA)*100</code></pre>
+</div>
+</div>
+<div id="recap" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Recap<a href="04_python_fundamentals.html#recap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/recap.webp" height="300" />
+</center>
+<p>We have described and tried some of the major types of variable which are used in Python.</p>
+<p>All variables have a 'class' and this can determine which functions
+and methods we can apply to them.</p>
+<p>We have also explored functions and methods,
+and can now apply them to variables.</p>
+<p>There was lots of information in this chapter and you do not need to have memorised it. Please refer back to this chapter at any point.</p>
+
+</div>
 </div>
 <script>
 
@@ -375,8 +592,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-
-
+<a href="03_basic_scripting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="05_data_structures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

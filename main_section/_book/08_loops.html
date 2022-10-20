@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Python for Bioinformatics</title>
+  <title>9 Loops | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Python for Bioinformatics" />
+  <meta property="og:title" content="9 Loops | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Python for Bioinformatics" />
+  <meta name="twitter:title" content="9 Loops | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/images/NEOF.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/NEOF_favicon.png" type="image/x-icon" />
-
-
+<link rel="prev" href="07_scripting_in_python.html"/>
+<link rel="next" href="09_DNA_sequence_data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,11 +193,176 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="loops" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Loops<a href="08_loops.html#loops" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<center>
+<img src="../images/loop_icon.png" height="300" />
+</center>
+<div id="data-structure-recap" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Data Structure Recap<a href="08_loops.html#data-structure-recap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We now have some knowledge of Python data structures (lists, sets, and dictionaries), what type of data they hold, and how we can access the elements within them.</p>
+<p>How might we apply something to each element of a list? Perhaps we need to count the number of characters in each entry in the list?</p>
+</div>
+<div id="introduction-to-loops" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Introduction To Loops<a href="08_loops.html#introduction-to-loops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Where we need to apply the same function to every item in a data structure, we can use a loop. This means that we do not need to manually apply the function to every item in the list, one at a time.</p>
+<p>There are several possible types of loop; we will cover some of the most important in this section.</p>
+</div>
+<div id="for-loops" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> For Loops<a href="08_loops.html#for-loops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/loop_icon2.jpg" height="300" />
+</center>
+<p>One of the most important and most commong types of loop is the <b>for</b> loop.</p>
+<p>The <b>for</b> loop runs through a set of variables (such as those in our list) and applies a function to each element once. This is the loop that you will most often encounter.</p>
+<p>Imagine you have a bag of 10 potatoes that you need to peel and put into a pot.</p>
+<center>
+<img src="../images/potatoes.jpg" height="300" /><img src="../images/boiling_pot.webp" height="300" />
+</center>
+<p>Using some pseudocode we can imagine how this script might look:</p>
+<ol style="list-style-type: decimal">
+<li>from <b>bag_of_potatoes</b> pick up <b>potato_01</b><br></li>
+<li>peel <b>potato_01</b><br></li>
+<li>put <b>potato_01</b> into <b>pot</b><br></li>
+<li>from <b>bag_of_potatoes</b> pick up <b>potato_02</b><br></li>
+<li>peel <b>potato_02</b><br></li>
+<li>put <b>potato_02</b> into <b>pot</b><br>
+....(and so on)</li>
+</ol>
+<p>You can see how inefficient this code is, especially if it was a particularly large bag of potatoes!</p>
+<p>Instead, we can use a <b>for</b> loop to recycle the code.</p>
+<ol style="list-style-type: decimal">
+<li>for each <b>potato</b> in <b>bag_of_potatoes</b>:
+<ol start="2" style="list-style-type: decimal">
+<li>peel <b>potato</b></li>
+<li>put <b>potato</b> into pot</li>
+</ol></li>
+</ol>
+<p>This loop would run until the bag of potatoes is empty, achieving the job in just three lines of code.</p>
+<p>This pseudocode is actually very similar to the required Python syntax.
+The generic format of a <b>for</b> loop is:</p>
+<pre><code>for &lt;value&gt; in &lt;data_structure&gt;:
+  do something</code></pre>
+<p><b>Note the colon starting the loop and the tab indent of any commands inside the loop.</b></p>
+</div>
+<div id="for-loop-example" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> For Loop Example<a href="08_loops.html#for-loop-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As we have seen, <b>for</b> loops are extremely useful when we have a lot of values (for example, in a list) and we need to apply some method to all of them.</p>
+<p>As an example, we will take a string of DNA nucleotides and use a <b>loop</b> to generate the complement and reverse complement sequences.</p>
+<p>Add a string of nucleotides to the script in Gedit (you can use any random nucleotide sequence - no need to copy this one exactly),
+and code a <b>for</b> loop to move through the DNA string, printing each base to the screen. Save and run the script.</p>
+<p><b>Remember to tab indent the lines inside the for loop.</b></p>
+<pre><code>DNA_string = &quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;
+
+# loop through each base in the string
+for base in DNA_string:
+
+  # print the current base
+  print(base)</code></pre>
+<p>We can see from the output that the <b>loop</b> allows us to process each base in the string separately; in this case by printing them individually.</p>
+</div>
+<div id="use-a-for-to-complement-a-dna-sequence" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Use a for to complement a DNA sequence<a href="08_loops.html#use-a-for-to-complement-a-dna-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Next, let's use this loop functionality to do something useful to each base such as translate each nucleotide to the appropriate complement base.</p>
+<p>For this, we will use a <b>dictionary</b> to swap each base for the complement. Recall that a dictionary has a <b>key</b> and <b>value</b> for each entry. We can define the 'standard' base as the key, and the 'complement' as the value.</p>
+<p>First create the dictionary holding the complementary pairs of bases. In the script this needs to come <b>before</b> the <b>for</b> loop. Modify the above to the following:</p>
+<p><b>Note</b> That each of the four rows of the dictionary need to have a leading TAB character.</p>
+<pre><code>DNA_string = &quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;
+
+# define our dictionary of complements
+complements = {
+  &quot;A&quot; : &quot;T&quot;,
+  &quot;T&quot; : &quot;A&quot;,
+  &quot;G&quot; : &quot;C&quot;,
+  &quot;C&quot; : &quot;G&quot;
+}
+
+# loop through each base in the string
+for base in DNA_string:
+
+  # print the current base
+  print(base)
+</code></pre>
+<p>At present, the print statement is still just going to print the base as it appears in the original string. We need to change the print statement so that in each iteration of the loop, the original nucleotide (base) is passed to the dictionary and the appropriate complementary base is returned.</p>
+<p>Modify the loop as follows:</p>
+<pre><code># loop through each base in the string
+for base in DNA_string:
+
+  # print the current base
+  #print(base)
+  
+  # print the complemented base
+  print(complements[base])</code></pre>
+<p>Run the script and verify that the complementary base is printed each time.</p>
+<p>Finally, we can build up an 'output string' to format the complemented sequence.
+The complemented base is added to the variable output_sting each time and the
+whole string is printed at the end.</p>
+<pre><code># loop through each base in the string
+output_string = &quot;&quot;
+for base in DNA_string:
+
+  # print the current base
+  #print(base)
+  
+  # print the complemented base
+  #print(complements[base])
+  
+  # add the complemented base to the output string
+  output_string = output_string + complements[base]
+
+# print the input and output strings for comparison
+print(DNA_string)
+print(output_string)</code></pre>
+<p>Save, and run the script to check the output sequence is as expected.</p>
+</div>
+<div id="use-a-for-to-reverse-complement-a-dna-sequence" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Use a for to reverse-complement a DNA sequence<a href="08_loops.html#use-a-for-to-reverse-complement-a-dna-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To generate the reverse complement we can use Python's built in reversed() method
+to loop through the original DNA sequence in the reverse order.
+Comment out the original <b>for</b> loop line, and replace with the following:</p>
+<pre><code># comment out the original for loop
+#for base in DNA_string:
+
+# replace with
+for base in reversed(DNA_string):</code></pre>
+<p>Running the script now will produce the reverse complement of our original DNA sequence.</p>
+</div>
+<div id="while-loops" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> While loops<a href="08_loops.html#while-loops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/loop_icon3.png" height="300" />
+</center>
+<p>The other type of loop you might encounter is the <b>while</b> loop. A <b>while</b> loop continues to
+run while a statement remains true. For example, returning to our bag of potatoes, a <b>while</b> loop for the same job might look like this:</p>
+<ol style="list-style-type: decimal">
+<li>while <b>bag_of_potatoes</b> is not empty :
+<ol start="2" style="list-style-type: decimal">
+<li>peel <b>potato</b></li>
+<li>put <b>potato</b> into pot</li>
+</ol></li>
+</ol>
+<p>This loop would run until the last potato has been prepared, at which point the
+<b>while</b> statement would return FALSE and the loop would be stopped.</p>
+<p>The generic format of a <b>while</b> loop is as follows:</p>
+<pre><code>while &lt;condition&gt; :
+  do something</code></pre>
+<p><b>While</b> loops are much less commonly used and we will not spend any more time on them in this session.
+Hopefully you can see the difference between a for loop and a while loop and have an idea of how they run.</p>
+</div>
+<div id="further-control-statements" class="section level2 hasAnchor" number="9.8">
+<h2><span class="header-section-number">9.8</span> Further control statements<a href="08_loops.html#further-control-statements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can control loops further using break, continue and pass statements although we are not covering these in this tutorial as they are much less common. You can find good resources covering Python control statements <a href="https://www.tutorialspoint.com/python/python_loop_control.htm">online</a>.</p>
+</div>
+<div id="recap-3" class="section level2 hasAnchor" number="9.9">
+<h2><span class="header-section-number">9.9</span> Recap<a href="08_loops.html#recap-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/recap.webp" height="300" />
+</center>
+<p>Loops are really useful when we need to perform the same task, or function, over-and-over again. Where we have data stored in a data structure such
+as a list, we can apply something to everything in the list using a for loop.
+This is an efficient way to code as it means we do not need to duplicate the instructions.</p>
+
+</div>
 </div>
 <script>
 
@@ -375,8 +540,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-
-
+<a href="07_scripting_in_python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="09_DNA_sequence_data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
