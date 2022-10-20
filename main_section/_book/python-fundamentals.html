@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Python Fundamentals | Python for Bioinformatics</title>
+  <meta name="description" content="5 Python Fundamentals | Python for Bioinformatics" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Python Fundamentals | Python for Bioinformatics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Python Fundamentals | Python for Bioinformatics" />
+  
+  
+  
+
+<meta name="author" content="Graeme Fox" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="scripting-in-python.html"/>
+<link rel="next" href="data-structures.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="python-for-bioinformatics.html"><a href="python-for-bioinformatics.html"><i class="fa fa-check"></i><b>2</b> Python for bioinformatics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="python-for-bioinformatics.html"><a href="python-for-bioinformatics.html#materials-covered-in-the-course"><i class="fa fa-check"></i><b>2.1</b> Materials Covered in the Course</a></li>
+<li class="chapter" data-level="2.2" data-path="python-for-bioinformatics.html"><a href="python-for-bioinformatics.html#inputting-commands"><i class="fa fa-check"></i><b>2.2</b> Inputting Commands</a></li>
+<li class="chapter" data-level="2.3" data-path="python-for-bioinformatics.html"><a href="python-for-bioinformatics.html#pseudocode"><i class="fa fa-check"></i><b>2.3</b> Pseudocode</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cluster-introduction.html"><a href="cluster-introduction.html"><i class="fa fa-check"></i><b>3</b> Cluster Introduction</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cluster-introduction.html"><a href="cluster-introduction.html#logon-instructions"><i class="fa fa-check"></i><b>3.1</b> Logon Instructions</a></li>
+<li class="chapter" data-level="3.2" data-path="cluster-introduction.html"><a href="cluster-introduction.html#the-terminal-window"><i class="fa fa-check"></i><b>3.2</b> The Terminal Window</a></li>
+<li class="chapter" data-level="3.3" data-path="cluster-introduction.html"><a href="cluster-introduction.html#load-workshop-data"><i class="fa fa-check"></i><b>3.3</b> Load workshop data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="scripting-in-python.html"><a href="scripting-in-python.html"><i class="fa fa-check"></i><b>4</b> Scripting in Python</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="scripting-in-python.html"><a href="scripting-in-python.html#introduction-to-commands-and-scripts"><i class="fa fa-check"></i><b>4.1</b> Introduction to commands and scripts</a></li>
+<li class="chapter" data-level="4.2" data-path="scripting-in-python.html"><a href="scripting-in-python.html#issuing-commands-directly-to-the-interpretator"><i class="fa fa-check"></i><b>4.2</b> Issuing commands directly to the interpretator</a></li>
+<li class="chapter" data-level="4.3" data-path="scripting-in-python.html"><a href="scripting-in-python.html#a-note-on-indentation"><i class="fa fa-check"></i><b>4.3</b> A note on indentation</a></li>
+<li class="chapter" data-level="4.4" data-path="scripting-in-python.html"><a href="scripting-in-python.html#tabs-vs-spaces"><i class="fa fa-check"></i><b>4.4</b> Tabs vs spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="python-fundamentals.html"><a href="python-fundamentals.html"><i class="fa fa-check"></i><b>5</b> Python Fundamentals</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="python-fundamentals.html"><a href="python-fundamentals.html#operators"><i class="fa fa-check"></i><b>5.1</b> Operators</a></li>
+<li class="chapter" data-level="5.2" data-path="python-fundamentals.html"><a href="python-fundamentals.html#comments"><i class="fa fa-check"></i><b>5.2</b> Comments</a></li>
+<li class="chapter" data-level="5.3" data-path="python-fundamentals.html"><a href="python-fundamentals.html#variables"><i class="fa fa-check"></i><b>5.3</b> Variables</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="python-fundamentals.html"><a href="python-fundamentals.html#strings"><i class="fa fa-check"></i><b>5.3.1</b> Strings</a></li>
+<li class="chapter" data-level="5.3.2" data-path="python-fundamentals.html"><a href="python-fundamentals.html#integers"><i class="fa fa-check"></i><b>5.3.2</b> Integers</a></li>
+<li class="chapter" data-level="5.3.3" data-path="python-fundamentals.html"><a href="python-fundamentals.html#floats-floating-point-numbers"><i class="fa fa-check"></i><b>5.3.3</b> Floats (floating point numbers)</a></li>
+<li class="chapter" data-level="5.3.4" data-path="python-fundamentals.html"><a href="python-fundamentals.html#booleans"><i class="fa fa-check"></i><b>5.3.4</b> Booleans</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="python-fundamentals.html"><a href="python-fundamentals.html#classes-of-variable"><i class="fa fa-check"></i><b>5.4</b> Classes of variable</a></li>
+<li class="chapter" data-level="5.5" data-path="python-fundamentals.html"><a href="python-fundamentals.html#transforming-variables"><i class="fa fa-check"></i><b>5.5</b> Transforming variables</a></li>
+<li class="chapter" data-level="5.6" data-path="python-fundamentals.html"><a href="python-fundamentals.html#functions-and-methods"><i class="fa fa-check"></i><b>5.6</b> Functions and methods</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="python-fundamentals.html"><a href="python-fundamentals.html#running-a-function"><i class="fa fa-check"></i><b>5.6.1</b> Running a function</a></li>
+<li class="chapter" data-level="5.6.2" data-path="python-fundamentals.html"><a href="python-fundamentals.html#running-a-method"><i class="fa fa-check"></i><b>5.6.2</b> Running a method</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="python-fundamentals.html"><a href="python-fundamentals.html#recap"><i class="fa fa-check"></i><b>5.7</b> Recap</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>6</b> Data Structures</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>6.1</b> Lists</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="data-structures.html"><a href="data-structures.html#add-numeric-data-to-a-list"><i class="fa fa-check"></i><b>6.1.1</b> Add numeric data to a list</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="data-structures.html"><a href="data-structures.html#subsetting-data"><i class="fa fa-check"></i><b>6.2</b> Subsetting data</a></li>
+<li class="chapter" data-level="6.3" data-path="data-structures.html"><a href="data-structures.html#set"><i class="fa fa-check"></i><b>6.3</b> Set</a></li>
+<li class="chapter" data-level="6.4" data-path="data-structures.html"><a href="data-structures.html#transform-a-list-to-a-set"><i class="fa fa-check"></i><b>6.4</b> Transform a list to a set</a></li>
+<li class="chapter" data-level="6.5" data-path="data-structures.html"><a href="data-structures.html#dictionary"><i class="fa fa-check"></i><b>6.5</b> Dictionary</a></li>
+<li class="chapter" data-level="6.6" data-path="data-structures.html"><a href="data-structures.html#recap-1"><i class="fa fa-check"></i><b>6.6</b> Recap</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="python-conditions-if-and-else-statements.html"><a href="python-conditions-if-and-else-statements.html"><i class="fa fa-check"></i><b>7</b> Python Conditions: ‘if’ and ‘else’ statements</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="python-conditions-if-and-else-statements.html"><a href="python-conditions-if-and-else-statements.html#if-statements"><i class="fa fa-check"></i><b>7.1</b> If statements</a></li>
+<li class="chapter" data-level="7.2" data-path="python-conditions-if-and-else-statements.html"><a href="python-conditions-if-and-else-statements.html#if-else-statements"><i class="fa fa-check"></i><b>7.2</b> If else statements</a></li>
+<li class="chapter" data-level="7.3" data-path="python-conditions-if-and-else-statements.html"><a href="python-conditions-if-and-else-statements.html#recap-2"><i class="fa fa-check"></i><b>7.3</b> Recap</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="starting-scripting-in-python.html"><a href="starting-scripting-in-python.html"><i class="fa fa-check"></i><b>8</b> Starting scripting in Python</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="starting-scripting-in-python.html"><a href="starting-scripting-in-python.html#open-a-plain-text-editor"><i class="fa fa-check"></i><b>8.1</b> Open a plain text editor</a></li>
+<li class="chapter" data-level="8.2" data-path="starting-scripting-in-python.html"><a href="starting-scripting-in-python.html#running-a-script-from-the-terminal"><i class="fa fa-check"></i><b>8.2</b> Running a script from the terminal</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="loops.html"><a href="loops.html"><i class="fa fa-check"></i><b>9</b> Loops</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="loops.html"><a href="loops.html#data-structure-recap"><i class="fa fa-check"></i><b>9.1</b> Data Structure Recap</a></li>
+<li class="chapter" data-level="9.2" data-path="loops.html"><a href="loops.html#introduction-to-loops"><i class="fa fa-check"></i><b>9.2</b> Introduction To Loops</a></li>
+<li class="chapter" data-level="9.3" data-path="loops.html"><a href="loops.html#for-loops"><i class="fa fa-check"></i><b>9.3</b> For Loops</a></li>
+<li class="chapter" data-level="9.4" data-path="loops.html"><a href="loops.html#for-loop-example"><i class="fa fa-check"></i><b>9.4</b> For Loop Example</a></li>
+<li class="chapter" data-level="9.5" data-path="loops.html"><a href="loops.html#use-a-for-to-complement-a-dna-sequence"><i class="fa fa-check"></i><b>9.5</b> Use a for to complement a DNA sequence</a></li>
+<li class="chapter" data-level="9.6" data-path="loops.html"><a href="loops.html#use-a-for-to-reverse-complement-a-dna-sequence"><i class="fa fa-check"></i><b>9.6</b> Use a for to reverse-complement a DNA sequence</a></li>
+<li class="chapter" data-level="9.7" data-path="loops.html"><a href="loops.html#while-loops"><i class="fa fa-check"></i><b>9.7</b> While loops</a></li>
+<li class="chapter" data-level="9.8" data-path="loops.html"><a href="loops.html#further-control-statements"><i class="fa fa-check"></i><b>9.8</b> Further control statements</a></li>
+<li class="chapter" data-level="9.9" data-path="loops.html"><a href="loops.html#recap-3"><i class="fa fa-check"></i><b>9.9</b> Recap</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html"><i class="fa fa-check"></i><b>10</b> Reading sequence data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html#seqio"><i class="fa fa-check"></i><b>10.1</b> SeqIO</a></li>
+<li class="chapter" data-level="10.2" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html#reading-a-fastq-dna-data-file-into-python"><i class="fa fa-check"></i><b>10.2</b> Reading a FASTQ DNA data file into Python</a></li>
+<li class="chapter" data-level="10.3" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html#the-fastq-format"><i class="fa fa-check"></i><b>10.3</b> The FASTQ format</a></li>
+<li class="chapter" data-level="10.4" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html#read-a-fastq-file-into-python"><i class="fa fa-check"></i><b>10.4</b> Read a FASTQ file into Python</a></li>
+<li class="chapter" data-level="10.5" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html#setting-up-a-script-to-use-biopython"><i class="fa fa-check"></i><b>10.5</b> Setting up a script to use BioPython</a></li>
+<li class="chapter" data-level="10.6" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html#read-a-fie-of-sequence-data"><i class="fa fa-check"></i><b>10.6</b> Read a fie of sequence data</a></li>
+<li class="chapter" data-level="10.7" data-path="reading-sequence-data.html"><a href="reading-sequence-data.html#modifying-reads"><i class="fa fa-check"></i><b>10.7</b> Modifying reads</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="using-conditions-to-modify-dna-data.html"><a href="using-conditions-to-modify-dna-data.html"><i class="fa fa-check"></i><b>11</b> Using Conditions to Modify DNA Data</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="using-conditions-to-modify-dna-data.html"><a href="using-conditions-to-modify-dna-data.html#remove-short-reads"><i class="fa fa-check"></i><b>11.1</b> Remove short reads</a></li>
+<li class="chapter" data-level="11.2" data-path="using-conditions-to-modify-dna-data.html"><a href="using-conditions-to-modify-dna-data.html#remove-pcr-primers"><i class="fa fa-check"></i><b>11.2</b> Remove PCR primers</a></li>
+<li class="chapter" data-level="11.3" data-path="using-conditions-to-modify-dna-data.html"><a href="using-conditions-to-modify-dna-data.html#recap-4"><i class="fa fa-check"></i><b>11.3</b> Recap</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="reading-and-writing-files.html"><a href="reading-and-writing-files.html"><i class="fa fa-check"></i><b>12</b> Reading and writing files</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="reading-and-writing-files.html"><a href="reading-and-writing-files.html#open"><i class="fa fa-check"></i><b>12.1</b> ‘open’</a></li>
+<li class="chapter" data-level="12.2" data-path="reading-and-writing-files.html"><a href="reading-and-writing-files.html#with"><i class="fa fa-check"></i><b>12.2</b> ‘with’</a></li>
+<li class="chapter" data-level="12.3" data-path="reading-and-writing-files.html"><a href="reading-and-writing-files.html#read-a-data-file"><i class="fa fa-check"></i><b>12.3</b> Read a data file</a></li>
+<li class="chapter" data-level="12.4" data-path="reading-and-writing-files.html"><a href="reading-and-writing-files.html#write-data-to-a-file"><i class="fa fa-check"></i><b>12.4</b> Write data to a file</a></li>
+<li class="chapter" data-level="12.5" data-path="reading-and-writing-files.html"><a href="reading-and-writing-files.html#write-out-the-filtered-undulate-ray-sequence-data"><i class="fa fa-check"></i><b>12.5</b> Write out the filtered Undulate ray sequence data</a></li>
+<li class="chapter" data-level="12.6" data-path="reading-and-writing-files.html"><a href="reading-and-writing-files.html#recap-5"><i class="fa fa-check"></i><b>12.6</b> Recap</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python for Bioinformatics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="python-fundamentals" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Python Fundamentals<a href="python-fundamentals.html#python-fundamentals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter covers some of the fundamental concepts of scripting in Python.
+An understanding of how to use <em>operators</em>, <em>variables</em>, and <em>functions</em> will
+give a good grounding in how the language works and allow you to develop
+your own methods and code.</p>
+<p>You definitely do not need to memorise all the information here as all of these
+concepts will be explored more in the rest of the tutorial. The best way to
+learn how various aspects of the Python language work is by <em>doing</em> rather
+then by <em>reading</em>.</p>
+<p>Consider
+coming back to this page later if you want to remind yourself of how a
+particular operator works or how to define a function, for example.</p>
+<p><b> For each of the following sections of example code, enter them directly into the Python interpreter and press enter after each line.</b></p>
+<div id="operators" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Operators<a href="python-fundamentals.html#operators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/operators.svg" height="200" />
+</center>
+<p>Python allows the use of the usual arithmetic operators and
+follows the traditional rules of mathematical precedence (BODMAS). The
+maths operators are:</p>
+<ul>
+<li><p>+ (addition)</p></li>
+<li><p>- (subtraction)</p></li>
+<li><p>* (multiplication)</p></li>
+<li><p>/ (division)</p></li>
+<li><p>** (power)</p></li>
+<li><p>// (integer division)</p></li>
+</ul>
+</div>
+<div id="comments" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Comments<a href="python-fundamentals.html#comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/comment.jpg" height="200" />
+</center>
+<p>It is often useful to include human-readable comments in your scripts and code.
+Comments in Python are indicated by the hash symbol (#). Anything to the right
+of the hash is considered a comment and is ignored by the interpreter.
+When working through the workbook there is no need to add the comments into the
+commands or scripts.</p>
+<pre><code># This line is a comment
+
+print(&quot;This section will print&quot;) # This section is ignored
+</code></pre>
+</div>
+<div id="variables" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Variables<a href="python-fundamentals.html#variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Variables are used to store information which can then referenced
+or manipulated later. They are also useful to label data with a descriptive name
+which is more easily read by a human. You can think of a variable as a ‘container’
+to hold a piece of information.</p>
+<p>Variables are assigned a value using the equals (=) character.
+Variable names must start with either a letter or an underscore, must only contain
+alphanumeric characters (and underscores), and are case sensitive. Python supports
+several classes (or types) of variable including strings, integers, floats, and booleans.</p>
+<div id="strings" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Strings<a href="python-fundamentals.html#strings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<img src="../images/string.png" height="200" />
+</center>
+<p><strong>Strings</strong> are used to store alphanumeric text. A string is defined by enclosing the text with either single or double quotes.</p>
+<p>Enter the following into the Python terminal, pressing enter after each line. Here we define two string variables, and then retrieve them again by using their name, or identifier.</p>
+<pre><code>DNA_string = &quot;GCACAAACC&quot;
+amino_acids = &quot;ARG VAL TRP&quot;
+
+DNA_string
+amino_acids</code></pre>
+</div>
+<div id="integers" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Integers<a href="python-fundamentals.html#integers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Integers</strong> are used to store whole numbers. These should not be declared with quote marks
+otherwise they will be stored as a string.</p>
+<p>Enter the following:</p>
+<pre><code>my_int = 7
+
+my_int</code></pre>
+</div>
+<div id="floats-floating-point-numbers" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Floats (floating point numbers)<a href="python-fundamentals.html#floats-floating-point-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<img src="../images/float.png" height="200" />
+</center>
+<p><strong>Floating point numbers</strong> are used to store real numbers (I.e. a number written
+with a decimal point dividing the integer and the fractional parts).</p>
+<p>Enter the following:</p>
+<pre><code>my_float = 7.0001
+another_float = 345.765
+yet_another_float = -5.423e+19
+
+my_float
+another_float
+yet_another_float</code></pre>
+</div>
+<div id="booleans" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Booleans<a href="python-fundamentals.html#booleans" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<img src="../images/bool.png" height="200" />
+</center>
+<p><strong>Booleans</strong> are a special type of variable than can represent one of
+two values: <em>True</em> or <em>False</em>. You can compare any two values in Python
+and get a result of either True or False.</p>
+<p>To check if two values are equal we use double equals: ==
+To check if two values are not equal we use: !=
+Greater than or less than also work.</p>
+<p>Enter the following:</p>
+<pre><code>a_bool = 10&gt;9
+a_bool
+
+another_bool = &quot;ATGCA&quot; != &quot;ATGCA&quot;
+another_bool
+
+yet_another_bool = 9&gt;42
+yet_another_bool</code></pre>
+</div>
+</div>
+<div id="classes-of-variable" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Classes of variable<a href="python-fundamentals.html#classes-of-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Every variable in Python has a class. These are the string, integer, float, or boolean characteristics we described earlier.</p>
+<p>Unlike some other languages, you do not need to tell Python which class a variable should have. Python will try to figure it out based on the value
+assigned.</p>
+<p>You can check the class of a variable by passing it to the ‘type’ function:</p>
+<pre><code>variable1 = &quot;a piece of text&quot;
+type(variable1)
+
+variable2 = 5
+type(variable2)
+
+variable3 = 7.0001
+type(variable3)
+
+variable4 = True
+type(variable4)</code></pre>
+</div>
+<div id="transforming-variables" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Transforming variables<a href="python-fundamentals.html#transforming-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/transform.png" height="200" />
+</center>
+<p>Variables can be transformed from one type to another provided the
+value can be coerced into the new data type (I.e. you could not transform a
+string of text to a floating point number).</p>
+<p>To transform a float to an integer using the int() function (note the loss
+of precision):</p>
+<pre><code>a_float = 17.45
+
+int(a_float)</code></pre>
+<p>To transform an integer to a string using the str() function:</p>
+<pre><code>an_integer = 783473
+str(an_integer)</code></pre>
+<p>You can also transform to a floating point using float().</p>
+</div>
+<div id="functions-and-methods" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Functions and methods<a href="python-fundamentals.html#functions-and-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/function.jpg" height="200" />
+</center>
+<p>Functions and methods are groups of instructions that together perform a specific task.
+This may be a task that you need to run repeatedly on your data and by storing
+these instructions in a single function, you only need to enter the code
+once and simply re-use it each time. A function returns a value after it has
+performed the specific task.</p>
+<div id="running-a-function" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Running a function<a href="python-fundamentals.html#running-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A function is a distinct piece of code which requires data to be sent to it in order to run.
+To run a function you need to give the name of the function followed by a pair of
+braces with the desired input within the braces.</p>
+<p>We have already been using some functions: the int() and str() functions.</p>
+<p>For example, we might want to find the length of a string of nucleotides.
+In this instance, we can use
+the built-in len() function on the string:</p>
+<p>(use any string of ‘ACGT’ you like, no need to copy this one exactly!)</p>
+<pre><code>DNA = &quot;ACGTGTTATATGCGCGTTAGTGTAGTCGATC&quot;
+
+# print the length of the string
+len(DNA)</code></pre>
+</div>
+<div id="running-a-method" class="section level3 hasAnchor" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Running a method<a href="python-fundamentals.html#running-a-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Methods are very similar to functions in that they process an input in some manner.
+They differ in that methods are associated with a particular data class
+(string, for example) and are called via the data itself.</p>
+<p>Methods are called using a
+different syntax; the variable is followed by “.” and the name of the method with
+a pair of braces.</p>
+<p>First let’s Try a couple of methods associated with manipulation of string data:</p>
+<pre><code># define a string called sequencers
+sequencers = &quot;illumina,oxford_nanopore,pac-bio&quot;
+
+# the upper() method converts string variables to uppercase
+sequencers.upper()
+
+# split() chops a string up wherever the specified sub-string occurs (comma in this case)
+sequencers.split(&quot;,&quot;)
+</code></pre>
+<p>We can also use built-in methods for some simple analysis using the “DNA” string generated earlier. For example, the built in ‘count’ method can be used to count the number of each nucleotide in the string.</p>
+<pre><code>DNA.count(&quot;A&quot;)
+DNA.count(&quot;C&quot;)
+DNA.count(&quot;G&quot;)
+DNA.count(&quot;T&quot;)</code></pre>
+<p>By using the len() function and the count() method, we can calculate the GC content of the DNA sequence:</p>
+<pre><code>## count the number of G and C in the sequence
+G_total = DNA.count(&quot;G&quot;)
+C_total = DNA.count(&quot;C&quot;)
+
+# calculate the percentage of the sequence that is GC
+(G_total + C_total)/len(DNA)*100</code></pre>
+</div>
+</div>
+<div id="recap" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Recap<a href="python-fundamentals.html#recap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="../images/recap.webp" height="300" />
+</center>
+<p>We have described and tried some of the major types of variable which are used in Python.</p>
+<p>All variables have a ‘class’ and this can determine which functions
+and methods we can apply to them.</p>
+<p>We have also explored functions and methods,
+and can now apply them to variables.</p>
+<p>There was lots of information in this chapter and you do not need to have memorised it. Please refer back to this chapter at any point.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="scripting-in-python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-structures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

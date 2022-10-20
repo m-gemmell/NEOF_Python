@@ -1,0 +1,190 @@
+---
+title: "Python for Bioinformatics - Supplementary Materials"
+author: Graeme Fox
+date: "`r format(Sys.time(), '%B, %Y')`"
+---
+
+# Working with other types of data
+
+<center>![](../images/pandas_icon.jpg){height=300px}!</center>
+
+Often scientists store data in delimited text files which are typically separated by commas or tabs.
+We can read these into Python, loop through them and manipulate their values using similar, or identical,
+approaches to those we used with our sequence data previously.
+
+We are going to load a further example dataset; a typical table of comma delimited data, and use the 
+Python module 'pandas' to filter and manipulate the data.
+
+## Background info on the example data 
+
+<center>![](../images/microbiome_icon.webp){height=300px}</center>
+
+The example data we are working with is a subset of the [Atlas1006](https://rdrr.io/github/microbiome/microbiome/man/atlas1006.html)
+dataset, which itself is example data provided with the R package [microbiome](https://microbiome.github.io/tutorials/).
+
+It contains information on 1006 western women with no reported health complications. The women had their gut microbiome profiled and 
+several other characteristics records. 
+
+The data we will be looking at contains the following variables: SampleID, age, gender, nationality, diverity of gut microbiome, and a BMI category.
+
+## Reading .csv files (or similar) with pandas
+
+<center>![](../images/pandas_icon.jpg){height=300px}</center>
+
+
+The Python module [pandas](https://pandas.pydata.org/) specifically for reading delimited text files. 
+It pre-processes text data files and makes them easier to process and use in analysis.
+
+Just as we did earlier, first we establish a link to the file we are to import with using "open" and "with".
+
+Modify the commands from the previous chapter to the following.
+
+```
+with open(wd + "data/patients_modified.csv", 'w') as output_file:
+    with open(wd + "data/patients_clean.csv", 'r') as input_file:
+        for row in input_file:
+            print(row)
+            #output_file.write("Study_2022," + row)
+```
+
+We can see the comma separated data typical of a .csv file printed in the terminal, 
+however we can use specific Python data processing tools to make the data more usable.
+
+Pandas allows us to access
+certain elements within each row? For example, the gender of each patient.
+
+Start a new code block, load pandas and use the pandas method read_csv to input the file:
+```
+import pandas
+
+patients = pandas.read_csv(wd + "data/patient_data.csv")
+```
+
+Now we have read our data into the object 'patients', we can take a look at how pandas has stored the data.
+
+```
+print(print(patients.dtypes))
+```
+
+
+Pandas has automatically used the column headers as the variable names, and assigned 
+each variable a type based on the data; either 'float64' (a floating point number) 
+or 'object' (a catch all term for string types).
+
+We can access a single column of data by it's variable name assigned by pandas.
+For example, to access the 'diversity' column:
+
+```
+print(patients.diversity)
+```
+
+To access individual records, we need to first tell pandas which column contains the index, or sample names in this case.
+In the case of the patients.csv data file, the identifiers are in the first column, which Python counts as column zero.
+
+Modify the command above to the following to add the index information, and print the data associated with sample #21.
+
+```
+patients = pandas.read_csv(wd + "data/patient_data.csv", index_col=0)
+
+print(patients.loc["Sample-21"])
+
+```
+
+## Make more complex selections
+
+<center>![](../images/filter_icon.png){height=300px}</center>
+
+
+Pandas is very powerful for selecting columns and records from the data by any conditions we want.
+
+## Select columns by name
+Let's select the data relating to the age, gut microbiome diversity, and bmi_group and save it as a separate variable.
+
+<i>*NOTE* the double square brackets containing the variable names: [[ ]]
+(this ie because we are choosing columns by index - which is done by passing an argument in square brackets,
+*AND* we're passing a *list* of the columns to select which is *also* defined by being within square brackets).</i>
+
+Modify the commands above to the following: 
+
+```
+patients = pandas.read_csv(wd + "data/patient_data.csv", index_col=0)
+
+#print(patients.loc["Sample-21"])
+
+age_div_bmi = patients[["age", "diversity", "bmi_group"]]
+
+print(age_div_bmi)
+print(type(age_div_bmi))
+```
+
+We can see our new dataframe contains just the columns we selected, and also by checking it with the type() function,
+this new dataframe is also in the pandas format.
+
+
+## Select records by their properties
+
+<center>![](../images/venn_icon.jpg){height=300px}</center>
+
+Let's choose records which fit certain criteria.
+
+First we'll choose records from the patients data in which the patient is 25 or more years old *AND* are overweight.
+The two statements are linked together by the *AND* operator; the ampersand character:  &
+
+YOu can always fefer back to chapter *???* for a refresher on how selection statements and operators work
+
+Modify the above commands to:
+
+```
+#print(age_div_bmi)
+#print(type(age_div_bmi))
+
+overweight_over25 = patients[(patients["age"] >= 25) & (patients["bmi_group"] == "overweight")]
+
+print(overweight_over25)
+
+```
+
+We can also do something similar but using the *OR* operator instead; the pipe character: |
+
+Modify the end of the above commands to:
+
+```
+#print(overweight_over25)
+
+obese_or_severeobese = patients[(patients["bmi_group"] == "obese") | (patients["bmi_group"] == "severeobese")]
+
+print(obese_or_severeobese)
+```
+
+## Applying functions and methods to pandas objects
+
+<center>![](../images/function.jpg){height=300px}![](../images/pandas_logo2.svg.png){height=300px}</center></center>
+
+Pandas provides useful methods for working with data tables, as we have seen. All of the previous approaches
+that we used in previous chapters still apply to data which has been processed using pandas.
+
+For example, we can use pandas to select the age column, and convert the number of years to months:
+
+```
+print(print(patients.age*12))
+```
+
+We can also pass pandas data to functions, as before.
+
+Or, we could define a new function and use that with pandas data.
+
+Comment out the print statement above, add the following definition for an average function,
+and pass the diversity column to the new function to find the average microbiome diversity in the dataset.
+
+```
+#print(print(patients.age*12))
+
+# define new function to find the average of a list
+def average(input_list):
+  total = 0
+  for row in input_list:
+    total = total + row
+  return(total / len(input_list))
+
+print(average(patients.diversity))
+```

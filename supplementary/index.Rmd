@@ -1,0 +1,18 @@
+--- 
+title: "Python for Bioinformatics - Supplementary Materials"
+author: Graeme Fox
+date: "`r format(Sys.time(), '%B, %Y')`"
+---
+
+# Introduction
+<center>
+![](images/NEOF_logo.png){height=100px}</center>
+
+<br><br>
+This supplementary material is focused on working with other types of data that you might typically encounter; specifically comma delimited data tables, and also using Python to generate plots.
+
+This material serves as an introduction to two very powerful Python libraries:
+
+[Pandas](https://pandas.pydata.org/) and [Matplotlib](https://matplotlib.org/).
+
+This additional bookdown is an extension to the 'main' material, and expands on the use of loops, reading and writing files, subsetting data, and applying functions that you have already practiced.

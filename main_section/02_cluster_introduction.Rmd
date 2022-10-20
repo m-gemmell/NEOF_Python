@@ -1,0 +1,41 @@
+---
+title: "Python for Bioinformatics"
+author: Graeme Fox
+date: "`r format(Sys.time(), '%B, %Y')`"
+---
+  
+# Cluster Introduction
+
+<center>![](../images/cluster.png){width=35%}</center>
+
+## Logon Instructions
+For this workshop we will be using Virtual Network Computing (VNC). 
+Connect to the VNC with a browser by using the webVNC link you were sent.
+
+You will now be in a logged-in Linux VNC desktop with a terminal window visible. 
+You will see something as below. 
+<center>![](../images/logon_pic.png){width=75%}</center>
+
+If you do not see something similar please ask for assistance.
+
+If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
+
+During the first chapters of this session you will be working directly in the terminal window in the VNC. During the latter chapters we will open a plain text editor called [Gedit](https://wiki.gnome.org/Apps/Gedit).
+
+## The Terminal Window
+In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
+
+<center>![](../images/terminal_window.png){width=75%}</center>
+
+You're now ready to stat the workshop!
+
+## Load workshop data
+Before we get started, we need to copy across some data files to analyse later in the workshop.
+
+In the terminal window, issue the following commands to copy the data into your account:
+
+```
+cd ~
+cp -r /pub14/tea/nsc201/Python_course_data .
+
+```

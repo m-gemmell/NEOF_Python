@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 even though Pygm and Pgm2 were each added twice, | Python for Bioinformatics</title>
+  <meta name="description" content="8 even though Pygm and Pgm2 were each added twice, | Python for Bioinformatics" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8 even though Pygm and Pgm2 were each added twice, | Python for Bioinformatics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8 even though Pygm and Pgm2 were each added twice, | Python for Bioinformatics" />
+  
+  
+  
+
+<meta name="author" content="Graeme Fox" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="get-the-last-value-wihtout-knowing-the-length-of-the-list.html"/>
+<link rel="next" href="they-only-appear-once-in-the-set.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="python-for-bioinformatics.html"><a href="python-for-bioinformatics.html"><i class="fa fa-check"></i><b>2</b> Python for bioinformatics</a></li>
+<li class="chapter" data-level="3" data-path="cluster-introduction.html"><a href="cluster-introduction.html"><i class="fa fa-check"></i><b>3</b> Cluster Introduction</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cluster-introduction.html"><a href="cluster-introduction.html#logon-instructions"><i class="fa fa-check"></i><b>3.1</b> Logon Instructions</a></li>
+<li class="chapter" data-level="3.2" data-path="cluster-introduction.html"><a href="cluster-introduction.html#the-terminal-window"><i class="fa fa-check"></i><b>3.2</b> The Terminal Window</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="scripting-in-python.html"><a href="scripting-in-python.html"><i class="fa fa-check"></i><b>4</b> Scripting in Python</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="scripting-in-python.html"><a href="scripting-in-python.html#introduction-to-commands-and-scripts"><i class="fa fa-check"></i><b>4.1</b> Introduction to commands and scripts</a></li>
+<li class="chapter" data-level="4.2" data-path="scripting-in-python.html"><a href="scripting-in-python.html#issuing-commands-directly-to-the-interpretator"><i class="fa fa-check"></i><b>4.2</b> Issuing commands directly to the interpretator</a></li>
+<li class="chapter" data-level="4.3" data-path="scripting-in-python.html"><a href="scripting-in-python.html#a-note-on-indentation"><i class="fa fa-check"></i><b>4.3</b> A note on indentation</a></li>
+<li class="chapter" data-level="4.4" data-path="scripting-in-python.html"><a href="scripting-in-python.html#tabs-vs-spaces"><i class="fa fa-check"></i><b>4.4</b> Tabs vs spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="python-fundamentals.html"><a href="python-fundamentals.html"><i class="fa fa-check"></i><b>5</b> Python Fundamentals</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="python-fundamentals.html"><a href="python-fundamentals.html#operators"><i class="fa fa-check"></i><b>5.1</b> Operators</a></li>
+<li class="chapter" data-level="5.2" data-path="python-fundamentals.html"><a href="python-fundamentals.html#comments"><i class="fa fa-check"></i><b>5.2</b> Comments</a></li>
+<li class="chapter" data-level="5.3" data-path="python-fundamentals.html"><a href="python-fundamentals.html#variables"><i class="fa fa-check"></i><b>5.3</b> Variables</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="python-fundamentals.html"><a href="python-fundamentals.html#strings"><i class="fa fa-check"></i><b>5.3.1</b> Strings</a></li>
+<li class="chapter" data-level="5.3.2" data-path="python-fundamentals.html"><a href="python-fundamentals.html#integers"><i class="fa fa-check"></i><b>5.3.2</b> Integers</a></li>
+<li class="chapter" data-level="5.3.3" data-path="python-fundamentals.html"><a href="python-fundamentals.html#floats-floating-point-numbers"><i class="fa fa-check"></i><b>5.3.3</b> Floats (floating point numbers)</a></li>
+<li class="chapter" data-level="5.3.4" data-path="python-fundamentals.html"><a href="python-fundamentals.html#booleans"><i class="fa fa-check"></i><b>5.3.4</b> Booleans</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="python-fundamentals.html"><a href="python-fundamentals.html#classes-of-variable"><i class="fa fa-check"></i><b>5.4</b> Classes of variable</a></li>
+<li class="chapter" data-level="5.5" data-path="python-fundamentals.html"><a href="python-fundamentals.html#transforming-variables"><i class="fa fa-check"></i><b>5.5</b> Transforming variables</a></li>
+<li class="chapter" data-level="5.6" data-path="python-fundamentals.html"><a href="python-fundamentals.html#functions-and-methods"><i class="fa fa-check"></i><b>5.6</b> Functions and methods</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="python-fundamentals.html"><a href="python-fundamentals.html#running-a-function"><i class="fa fa-check"></i><b>5.6.1</b> Running a function</a></li>
+<li class="chapter" data-level="5.6.2" data-path="python-fundamentals.html"><a href="python-fundamentals.html#running-a-method"><i class="fa fa-check"></i><b>5.6.2</b> Running a method</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="get-the-fifth-value.html"><a href="get-the-fifth-value.html"><i class="fa fa-check"></i><b>6</b> Get the fifth value:</a></li>
+<li class="chapter" data-level="7" data-path="get-the-last-value-wihtout-knowing-the-length-of-the-list.html"><a href="get-the-last-value-wihtout-knowing-the-length-of-the-list.html"><i class="fa fa-check"></i><b>7</b> Get the last value (wihtout knowing the length of the list)</a></li>
+<li class="chapter" data-level="8" data-path="even-though-pygm-and-pgm2-were-each-added-twice.html"><a href="even-though-pygm-and-pgm2-were-each-added-twice.html"><i class="fa fa-check"></i><b>8</b> even though Pygm and Pgm2 were each added twice,</a></li>
+<li class="chapter" data-level="9" data-path="they-only-appear-once-in-the-set.html"><a href="they-only-appear-once-in-the-set.html"><i class="fa fa-check"></i><b>9</b> they only appear once in the set</a></li>
+<li class="chapter" data-level="10" data-path="add-another-gene-identifier.html"><a href="add-another-gene-identifier.html"><i class="fa fa-check"></i><b>10</b> Add another gene identifier</a></li>
+<li class="chapter" data-level="11" data-path="redefine-the-list-since-we-have-moved-into-vscode..html"><a href="redefine-the-list-since-we-have-moved-into-vscode..html"><i class="fa fa-check"></i><b>11</b> redefine the list since we have moved into VSCode.</a></li>
+<li class="chapter" data-level="12" data-path="loop-through-each-value-in-the-list.html"><a href="loop-through-each-value-in-the-list.html"><i class="fa fa-check"></i><b>12</b> loop through each value in the list</a></li>
+<li class="chapter" data-level="13" data-path="initialise-the-counter-value.html"><a href="initialise-the-counter-value.html"><i class="fa fa-check"></i><b>13</b> initialise the counter value</a></li>
+<li class="chapter" data-level="14" data-path="initialise-a-variable-to-add-the-daily-temps-together.html"><a href="initialise-a-variable-to-add-the-daily-temps-together.html"><i class="fa fa-check"></i><b>14</b> initialise a variable to add the daily temps together</a></li>
+<li class="chapter" data-level="15" data-path="begin-the-while-loop.html"><a href="begin-the-while-loop.html"><i class="fa fa-check"></i><b>15</b> begin the while loop</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="begin-the-while-loop.html"><a href="begin-the-while-loop.html#start-a-counter-to-track-how-many-reads"><i class="fa fa-check"></i><b>15.1</b> start a counter to track how many reads</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="save-the-number-of-raw-sequences-for-use-later.html"><a href="save-the-number-of-raw-sequences-for-use-later.html"><i class="fa fa-check"></i><b>16</b> save the number of raw sequences for use later</a></li>
+<li class="chapter" data-level="17" data-path="initialise-an-empty-list-to-hold-the-records-that-we-want-to-keep.html"><a href="initialise-an-empty-list-to-hold-the-records-that-we-want-to-keep.html"><i class="fa fa-check"></i><b>17</b> initialise an empty list to hold the records that we want to keep</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Python for Bioinformatics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="even-though-pygm-and-pgm2-were-each-added-twice" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> even though Pygm and Pgm2 were each added twice,<a href="even-though-pygm-and-pgm2-were-each-added-twice.html#even-though-pygm-and-pgm2-were-each-added-twice" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="get-the-last-value-wihtout-knowing-the-length-of-the-list.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="they-only-appear-once-in-the-set.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

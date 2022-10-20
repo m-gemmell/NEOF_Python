@@ -1,0 +1,201 @@
+---
+title: "Python for Bioinformatics"
+author: Graeme Fox
+date: "`r format(Sys.time(), '%B, %Y')`"
+---
+
+# Loops
+
+<center>![](../images/loop_icon.png){height=300px}</center>
+
+## Data Structure Recap
+We now have some knowledge of Python data structures (lists, sets, and dictionaries), what type of data they hold, and how we can access the elements within them. 
+
+How might we apply something to each element of a list? Perhaps we need to count the number of characters in each entry in the list?
+
+## Introduction To Loops
+Where we need to apply the same function to every item in a data structure, we can use a loop. This means that we do not need to manually apply the function to every item in the list, one at a time.
+
+There are several possible types of loop; we will cover some of the most important in this section.
+
+## For Loops
+
+<center>![](../images/loop_icon2.jpg){height=300px}</center>
+
+One of the most important and most commong types of loop is the <b>for</b> loop. 
+
+The <b>for</b> loop runs through a set of variables (such as those in our list) and applies a function to each element once. This is the loop that you will most often encounter.
+
+Imagine you have a bag of 10 potatoes that you need to peel and put into a pot.
+
+<center>![](../images/potatoes.jpg){height=300px}![](../images/boiling_pot.webp){height=300px}</center>
+
+Using some pseudocode we can imagine how this script might look:
+
+1) from <b>bag_of_potatoes</b> pick up <b>potato_01</b><br>
+2) peel <b>potato_01</b><br>
+3) put <b>potato_01</b> into <b>pot</b><br>
+4) from <b>bag_of_potatoes</b> pick up <b>potato_02</b><br>
+5) peel <b>potato_02</b><br>
+6) put <b>potato_02</b> into <b>pot</b><br>
+  ....(and so on)
+
+You can see how inefficient this code is, especially if it was a particularly large bag of potatoes!
+
+Instead, we can use a <b>for</b> loop to recycle the code.
+
+1) for each <b>potato</b> in <b>bag_of_potatoes</b>:
+    2) peel <b>potato</b>
+    3) put <b>potato</b> into pot
+
+This loop would run until the bag of potatoes is empty, achieving the job in just three lines of code.
+
+This pseudocode is actually very similar to the required Python syntax. 
+The generic format of a <b>for</b> loop is:
+```
+for <value> in <data_structure>:
+  do something
+```
+<b>Note the colon starting the loop and the tab indent of any commands inside the loop.</b>
+
+## For Loop Example
+As we have seen, <b>for</b> loops are extremely useful when we have a lot of values (for example, in a list) and we need to apply some method to all of them.
+
+
+As an example, we will take a string of DNA nucleotides and use a <b>loop</b> to generate the complement and reverse complement sequences.
+
+Add a string of nucleotides to the script in Gedit (you can use any random nucleotide sequence - no need to copy this one exactly),
+and code a <b>for</b> loop to move through the DNA string, printing each base to the screen. Save and run the script.
+
+<b>Remember to tab indent the lines inside the for loop.</b>
+
+
+```
+DNA_string = "ATTCGAAGTCGTGTAGTACCGCGTATA"
+
+# loop through each base in the string
+for base in DNA_string:
+
+  # print the current base
+  print(base)
+```
+  
+We can see from the output that the <b>loop</b> allows us to process each base in the string separately; in this case by printing them individually.
+
+## Use a for to complement a DNA sequence
+Next, let's use this loop functionality to do something useful to each base such as translate each nucleotide to the appropriate complement base.
+
+For this, we will use a <b>dictionary</b> to swap each base for the complement. Recall that a dictionary has a <b>key</b> and <b>value</b> for each entry. We can define the 'standard' base as the key, and the 'complement' as the value.
+
+First create the dictionary holding the complementary pairs of bases. In the script this needs to come <b>before</b> the <b>for</b> loop. Modify the above to the following:
+
+<b>Note</b> That each of the four rows of the dictionary need to have a leading TAB character.
+```
+DNA_string = "ATTCGAAGTCGTGTAGTACCGCGTATA"
+
+# define our dictionary of complements
+complements = {
+  "A" : "T",
+  "T" : "A",
+  "G" : "C",
+  "C" : "G"
+}
+
+# loop through each base in the string
+for base in DNA_string:
+
+  # print the current base
+  print(base)
+
+```
+
+At present, the print statement is still just going to print the base as it appears in the original string. We need to change the print statement so that in each iteration of the loop, the original nucleotide (base) is passed to the dictionary and the appropriate complementary base is returned.
+
+Modify the loop as follows:
+
+```
+# loop through each base in the string
+for base in DNA_string:
+
+  # print the current base
+  #print(base)
+  
+  # print the complemented base
+  print(complements[base])
+```
+
+Run the script and verify that the complementary base is printed each time.
+
+Finally, we can build up an 'output string' to format the complemented sequence.
+The complemented base is added to the variable output_sting each time and the
+whole string is printed at the end.
+
+```
+# loop through each base in the string
+output_string = ""
+for base in DNA_string:
+
+  # print the current base
+  #print(base)
+  
+  # print the complemented base
+  #print(complements[base])
+  
+  # add the complemented base to the output string
+  output_string = output_string + complements[base]
+
+# print the input and output strings for comparison
+print(DNA_string)
+print(output_string)
+```
+
+Save, and run the script to check the output sequence is as expected.
+
+## Use a for to reverse-complement a DNA sequence
+
+To generate the reverse complement we can use Python's built in reversed() method
+to loop through the original DNA sequence in the reverse order.
+Comment out the original <b>for</b> loop line, and replace with the following:
+
+```
+# comment out the original for loop
+#for base in DNA_string:
+
+# replace with
+for base in reversed(DNA_string):
+```
+
+Running the script now will produce the reverse complement of our original DNA sequence.
+
+## While loops
+
+<center>![](../images/loop_icon3.png){height=300px}</center>
+
+The other type of loop you might encounter is the <b>while</b> loop. A <b>while</b> loop continues to
+run while a statement remains true. For example, returning to our bag of potatoes, a <b>while</b> loop for the same job might look like this:
+
+1) while <b>bag_of_potatoes</b> is not empty :
+    2) peel <b>potato</b>
+    3) put <b>potato</b> into pot
+    
+This loop would run until the last potato has been prepared, at which point the 
+<b>while</b> statement would return FALSE and the loop would be stopped.
+
+The generic format of a <b>while</b> loop is as follows:
+
+```
+while <condition> :
+  do something
+```
+
+<b>While</b> loops are much less commonly used and we will not spend any more time on them in this session.
+Hopefully you can see the difference between a for loop and a while loop and have an idea of how they run.
+
+## Further control statements
+You can control loops further using break, continue and pass statements although we are not covering these in this tutorial as they are much less common. You can find good resources covering Python control statements [online](https://www.tutorialspoint.com/python/python_loop_control.htm).
+
+## Recap
+<center>![](../images/recap.webp){height=300px}</center>
+Loops are really useful when we need to perform the same task, or function, over-and-over again. Where we have data stored in a data structure such
+as a list, we can apply something to everything in the list using a for loop.
+This is an efficient way to code as it means we do not need to duplicate the instructions.

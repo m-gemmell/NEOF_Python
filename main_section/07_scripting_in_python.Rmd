@@ -1,0 +1,57 @@
+---
+title: "Python for Bioinformatics"
+author: Graeme Fox
+date: "`r format(Sys.time(), '%B, %Y')`"
+---
+# Starting scripting in Python
+At this point we are going to stop issuing commands directly to the Python interpreter and instead build up a Python script. 
+
+In the terminal window, exit from the interactive Python session:
+
+```
+quit()
+```
+
+## Open a plain text editor
+In the VNC window, right click on the Desktop, outside of the open terminal window.
+
+In the dialogue that is displayed, select "Applications", then "Editors", then "Gedit". A familiar looking text editor should open.
+
+<center>![](../images/load_gedit.png){height=300px}</center>
+  
+Gedit is a 'plain text editor' which means it will not add any hidden characters or formatting to the document. It is important to not try to edit code in a word processor such as Microsoft Word.
+
+You should still have your current working directory on the clipboard.
+(If you don't, run os.getcwd() in the terminal window and copy it again)
+
+Paste this into the Gedit window and define a variable 'wd' (working directory) using a version of the following (your filepath will be slightly different).
+
+```
+wd = '/pub39/tea/nsc014'
+print("Hello, world!")
+print(wd)
+```
+
+Save the script into the directory of your username (something like nsc014) and name it 'script01.py'. 
+
+See the image below to make sure it is being saved in the correct place. This is important because we need to tell Python where the script is.
+
+<center>![](../images/save_script.png){}</center>
+
+## Running a script from the terminal
+
+Return to the <b>terminal</b> window and run the Python script we have just saved with the following:
+
+```
+python3 script01.py
+```
+
+<b>This process of editing the script file in Gedit, saving, and running the script in the terminal will form the basis of the rest of the tutorial.</b>
+
+Returning to the Python script and comment out the two print statements. We will continue working in this same script file in the next section.
+
+```
+wd = "/pub39/tea/nsc014"
+#print("Hello, world!")
+#print(wd)
+```
