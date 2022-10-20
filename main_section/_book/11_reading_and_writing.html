@@ -264,13 +264,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </center>
 <p>Often we want to read from a data file, perform some task with the data, and write out
 another file.</p>
-<p>To read/write a file in Python we open a data stream using a statement like:</p>
+<p>To read/write a file in Python we open a data stream using a statement such as:</p>
 <p>(don't add this line to the script)</p>
-<pre><code>with open(path_to_file, &quot;open_mode&quot;) as input_file:</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="11_reading_and_writing.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(path_to_file, <span class="st">&quot;open_mode&quot;</span>) <span class="im">as</span> input_file:</span></code></pre></div>
 <p>There are two parts to consider:</p>
 <ul>
 <li><p>open(path_to_file, mode)</p></li>
-<li><p>with(...<input-file>...) as input_file:</p></li>
+<li><p>with(...<code>&lt;input-file&gt;</code>...) as input_file:</p></li>
 </ul>
 <div id="open" class="section level2 hasAnchor" number="12.1">
 <h2><span class="header-section-number">12.1</span> 'open'<a href="11_reading_and_writing.html#open" class="anchor-section" aria-label="Anchor link to header"></a></h2>
