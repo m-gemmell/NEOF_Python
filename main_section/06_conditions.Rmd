@@ -1,37 +1,30 @@
----
-title: "Python for Bioinformatics"
-author: Graeme Fox
-date: "`r format(Sys.time(), '%B, %Y')`"
----
-
 # Python Conditions: 'if' and 'else' statements
 
 <center>![](../images/if_else.jpeg){height=300px}</center>
 
-A powerful feature of most programming languages is the ability to compare values/variables
-and to make decisions based upon the outcome. This type of behaviour is achieved using
-*logical conditions*. 
+A powerful feature of most programming languages is the ability to compare values/variables and to make decisions based upon the outcome. 
+This type of behaviour is achieved using *logical conditions*. 
 
-The conditions allowed depend on the type of data you are comparing. For example,
-you cannot use greater than or less than or string variables directly (although
-you could compare their length, for example).
+The conditions allowed depend on the type of data you are comparing. 
+For example, you cannot use greater than or less than on string variables directly (although you could compare their lengths).
 
-<b>Python supports the following logical conditions:</b>
+__Python supports the following logical conditions:__
 
-* Equals:  a == b  
+* Equals:  `a == b` 
  
-* Does not equal:   a != b
+* Does not equal:   `a != b`
  
-* Less than:    a < b
+* Less than:    `a < b`
  
-* Less than or equal to:  a <= b
+* Less than or equal to:  `a <= b`
  
-* Greater than:  a > b
+* Greater than:  `a > b`
  
-* Greater then or equal to:  a >= b
+* Greater then or equal to:  `a >= b`
 
 Try the following:
-```
+
+```{python, eval=FALSE}
 a = "ATTGCG"
 b = "AGCGAT"
 
@@ -63,34 +56,23 @@ A generic <b>if</b> statement using pseudocode would have the following structur
 
 We can also include an action for when the condition has <b>not</b> been met using <b>else</b>.
 The <b>else</b> statement works in conjunction with the <b>if</b> and offers a different action if the condition evaluated to <b>False</b>.
-<br>
+
 
 1. If <b>a condition</b> is met:
-
-    2. Perform <b>a task</b>
-
-3. <b>Else:</b>
-
-    4. Do <b>something else</b>
-
-<br>
+    - Perform <b>a task</b>
+2. <b>Else:</b>
+    - Do <b>something else</b>
 
 For example, we might have a string of nucleotide data which we want to move through, translating any thymine (T) bases into uracil (U).
 The other three bases (A, C, and G) do not require any processing.
 
 The <b>if</b> and <b>else</b> statements to do this would look something like (again, using pseudocode):
 
-<br>
-
 1. If the current nucleotide is "T":
+    - Print "U"
+2. Else:
+    - Print the current nucleotide
 
-    2. Print "U"
-
-3. Else:
-
-    4. Print the current nucleotide
-    
-<br>
 We will explore using loops to move through data more in the next chapter.
 
 ## Recap

@@ -262,27 +262,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <center>
 <img src="../images/if_else.jpeg" height="300" />
 </center>
-<p>A powerful feature of most programming languages is the ability to compare values/variables
-and to make decisions based upon the outcome. This type of behaviour is achieved using
-<em>logical conditions</em>.</p>
-<p>The conditions allowed depend on the type of data you are comparing. For example,
-you cannot use greater than or less than or string variables directly (although
-you could compare their length, for example).</p>
-<p><b>Python supports the following logical conditions:</b></p>
+<p>A powerful feature of most programming languages is the ability to compare values/variables and to make decisions based upon the outcome.
+This type of behaviour is achieved using <em>logical conditions</em>.</p>
+<p>The conditions allowed depend on the type of data you are comparing.
+For example, you cannot use greater than or less than on string variables directly (although you could compare their lengths).</p>
+<p><strong>Python supports the following logical conditions:</strong></p>
 <ul>
-<li><p>Equals: a == b</p></li>
-<li><p>Does not equal: a != b</p></li>
-<li><p>Less than: a &lt; b</p></li>
-<li><p>Less than or equal to: a &lt;= b</p></li>
-<li><p>Greater than: a &gt; b</p></li>
-<li><p>Greater then or equal to: a &gt;= b</p></li>
+<li><p>Equals: <code>a == b</code></p></li>
+<li><p>Does not equal: <code>a != b</code></p></li>
+<li><p>Less than: <code>a &lt; b</code></p></li>
+<li><p>Less than or equal to: <code>a &lt;= b</code></p></li>
+<li><p>Greater than: <code>a &gt; b</code></p></li>
+<li><p>Greater then or equal to: <code>a &gt;= b</code></p></li>
 </ul>
 <p>Try the following:</p>
-<pre><code>a = &quot;ATTGCG&quot;
-b = &quot;AGCGAT&quot;
-
-a==b
-len(a) == len(b)</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="06_conditions.html#cb34-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;ATTGCG&quot;</span></span>
+<span id="cb34-2"><a href="06_conditions.html#cb34-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot;AGCGAT&quot;</span></span>
+<span id="cb34-3"><a href="06_conditions.html#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="06_conditions.html#cb34-4" aria-hidden="true" tabindex="-1"></a>a<span class="op">==</span>b</span>
+<span id="cb34-5"><a href="06_conditions.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(a) <span class="op">==</span> <span class="bu">len</span>(b)</span></code></pre></div>
 <p>These logical conditions are most typically used in <b>if</b> statements.</p>
 <div id="if-statements" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> If statements<a href="06_conditions.html#if-statements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -308,35 +306,31 @@ the switch remains inactivated.</p>
 <div id="if-else-statements" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> If else statements<a href="06_conditions.html#if-else-statements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can also include an action for when the condition has <b>not</b> been met using <b>else</b>.
-The <b>else</b> statement works in conjunction with the <b>if</b> and offers a different action if the condition evaluated to <b>False</b>.
-<br></p>
+The <b>else</b> statement works in conjunction with the <b>if</b> and offers a different action if the condition evaluated to <b>False</b>.</p>
 <ol style="list-style-type: decimal">
-<li><p>If <b>a condition</b> is met:</p>
-<ol start="2" style="list-style-type: decimal">
+<li>If <b>a condition</b> is met:
+<ul>
 <li>Perform <b>a task</b></li>
-</ol></li>
-<li><p><b>Else:</b></p>
-<ol start="4" style="list-style-type: decimal">
+</ul></li>
+<li><b>Else:</b>
+<ul>
 <li>Do <b>something else</b></li>
-</ol></li>
+</ul></li>
 </ol>
-<p><br></p>
 <p>For example, we might have a string of nucleotide data which we want to move through, translating any thymine (T) bases into uracil (U).
 The other three bases (A, C, and G) do not require any processing.</p>
 <p>The <b>if</b> and <b>else</b> statements to do this would look something like (again, using pseudocode):</p>
-<p><br></p>
 <ol style="list-style-type: decimal">
-<li><p>If the current nucleotide is "T":</p>
-<ol start="2" style="list-style-type: decimal">
+<li>If the current nucleotide is "T":
+<ul>
 <li>Print "U"</li>
-</ol></li>
-<li><p>Else:</p>
-<ol start="4" style="list-style-type: decimal">
+</ul></li>
+<li>Else:
+<ul>
 <li>Print the current nucleotide</li>
-</ol></li>
+</ul></li>
 </ol>
-<p><br>
-We will explore using loops to move through data more in the next chapter.</p>
+<p>We will explore using loops to move through data more in the next chapter.</p>
 </div>
 <div id="recap-2" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Recap<a href="06_conditions.html#recap-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
