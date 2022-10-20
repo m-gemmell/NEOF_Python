@@ -1,9 +1,3 @@
----
-title: "Python for Bioinformatics"
-author: Graeme Fox
-date: "`r format(Sys.time(), '%B, %Y')`"
----
-
 # Loops
 
 <center>![](../images/loop_icon.png){height=300px}</center>
@@ -52,7 +46,7 @@ This loop would run until the bag of potatoes is empty, achieving the job in jus
 
 This pseudocode is actually very similar to the required Python syntax. 
 The generic format of a <b>for</b> loop is:
-```
+```{python, eval=FALSE}
 for <value> in <data_structure>:
   do something
 ```
@@ -61,7 +55,6 @@ for <value> in <data_structure>:
 ## For Loop Example
 As we have seen, <b>for</b> loops are extremely useful when we have a lot of values (for example, in a list) and we need to apply some method to all of them.
 
-
 As an example, we will take a string of DNA nucleotides and use a <b>loop</b> to generate the complement and reverse complement sequences.
 
 Add a string of nucleotides to the script in Gedit (you can use any random nucleotide sequence - no need to copy this one exactly),
@@ -69,8 +62,7 @@ and code a <b>for</b> loop to move through the DNA string, printing each base to
 
 <b>Remember to tab indent the lines inside the for loop.</b>
 
-
-```
+```{python, eval=FALSE}
 DNA_string = "ATTCGAAGTCGTGTAGTACCGCGTATA"
 
 # loop through each base in the string
@@ -82,7 +74,7 @@ for base in DNA_string:
   
 We can see from the output that the <b>loop</b> allows us to process each base in the string separately; in this case by printing them individually.
 
-## Use a for to complement a DNA sequence
+## Use a for loop to complement a DNA sequence
 Next, let's use this loop functionality to do something useful to each base such as translate each nucleotide to the appropriate complement base.
 
 For this, we will use a <b>dictionary</b> to swap each base for the complement. Recall that a dictionary has a <b>key</b> and <b>value</b> for each entry. We can define the 'standard' base as the key, and the 'complement' as the value.
@@ -90,7 +82,8 @@ For this, we will use a <b>dictionary</b> to swap each base for the complement. 
 First create the dictionary holding the complementary pairs of bases. In the script this needs to come <b>before</b> the <b>for</b> loop. Modify the above to the following:
 
 <b>Note</b> That each of the four rows of the dictionary need to have a leading TAB character.
-```
+
+```{python, eval=FALSE}
 DNA_string = "ATTCGAAGTCGTGTAGTACCGCGTATA"
 
 # define our dictionary of complements
@@ -103,7 +96,6 @@ complements = {
 
 # loop through each base in the string
 for base in DNA_string:
-
   # print the current base
   print(base)
 
@@ -113,13 +105,11 @@ At present, the print statement is still just going to print the base as it appe
 
 Modify the loop as follows:
 
-```
+```{python, eval=FALSE}
 # loop through each base in the string
 for base in DNA_string:
-
   # print the current base
   #print(base)
-  
   # print the complemented base
   print(complements[base])
 ```
@@ -130,17 +120,14 @@ Finally, we can build up an 'output string' to format the complemented sequence.
 The complemented base is added to the variable output_sting each time and the
 whole string is printed at the end.
 
-```
+```{python, eval=FALSE}
 # loop through each base in the string
 output_string = ""
 for base in DNA_string:
-
   # print the current base
   #print(base)
-  
   # print the complemented base
   #print(complements[base])
-  
   # add the complemented base to the output string
   output_string = output_string + complements[base]
 
@@ -151,13 +138,13 @@ print(output_string)
 
 Save, and run the script to check the output sequence is as expected.
 
-## Use a for to reverse-complement a DNA sequence
+## Use a for loop to reverse-complement a DNA sequence
 
 To generate the reverse complement we can use Python's built in reversed() method
 to loop through the original DNA sequence in the reverse order.
 Comment out the original <b>for</b> loop line, and replace with the following:
 
-```
+```{python, eval=FALSE}
 # comment out the original for loop
 #for base in DNA_string:
 
@@ -171,19 +158,19 @@ Running the script now will produce the reverse complement of our original DNA s
 
 <center>![](../images/loop_icon3.png){height=300px}</center>
 
-The other type of loop you might encounter is the <b>while</b> loop. A <b>while</b> loop continues to
-run while a statement remains true. For example, returning to our bag of potatoes, a <b>while</b> loop for the same job might look like this:
+The other type of loop you might encounter is the <b>while</b> loop.
+A <b>while</b> loop continues to run while a statement remains true.
+For example, returning to our bag of potatoes, a <b>while</b> loop for the same job might look like this:
 
 1) while <b>bag_of_potatoes</b> is not empty :
     2) peel <b>potato</b>
     3) put <b>potato</b> into pot
     
-This loop would run until the last potato has been prepared, at which point the 
-<b>while</b> statement would return FALSE and the loop would be stopped.
+This loop would run until the last potato has been prepared, at which point the <b>while</b> statement would return FALSE and the loop would be stopped.
 
 The generic format of a <b>while</b> loop is as follows:
 
-```
+```{python, eval=FALSE}
 while <condition> :
   do something
 ```
