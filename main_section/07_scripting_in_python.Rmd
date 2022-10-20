@@ -21,7 +21,7 @@ You should still have your current working directory on the clipboard.
 
 Paste this into the Gedit window and define a variable 'wd' (working directory) using a version of the following (your filepath will be slightly different).
 
-```
+```{python, eval=FALSE}
 wd = '/pub39/tea/nsc014'
 print("Hello, world!")
 print(wd)
@@ -37,15 +37,15 @@ See the image below to make sure it is being saved in the correct place. This is
 
 Return to the <b>terminal</b> window and run the Python script we have just saved with the following:
 
-```
+```{python, eval=FALSE}
 python3 script01.py
 ```
 
 <b>This process of editing the script file in Gedit, saving, and running the script in the terminal will form the basis of the rest of the tutorial.</b>
 
-Returning to the Python script and comment out the two print statements. We will continue working in this same script file in the next section.
+Return to the Python script and comment out the two print statements. We will continue working in this same script file in the next section.
 
-```
+```{python, eval=FALSE}
 wd = "/pub39/tea/nsc014"
 #print("Hello, world!")
 #print(wd)

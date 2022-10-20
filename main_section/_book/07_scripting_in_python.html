@@ -273,9 +273,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You should still have your current working directory on the clipboard.
 (If you don't, run os.getcwd() in the terminal window and copy it again)</p>
 <p>Paste this into the Gedit window and define a variable 'wd' (working directory) using a version of the following (your filepath will be slightly different).</p>
-<pre><code>wd = &#39;/pub39/tea/nsc014&#39;
-print(&quot;Hello, world!&quot;)
-print(wd)</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="07_scripting_in_python.html#cb36-1" aria-hidden="true" tabindex="-1"></a>wd <span class="op">=</span> <span class="st">&#39;/pub39/tea/nsc014&#39;</span></span>
+<span id="cb36-2"><a href="07_scripting_in_python.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span>
+<span id="cb36-3"><a href="07_scripting_in_python.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(wd)</span></code></pre></div>
 <p>Save the script into the directory of your username (something like nsc014) and name it 'script01.py'.</p>
 <p>See the image below to make sure it is being saved in the correct place. This is important because we need to tell Python where the script is.</p>
 <center>
@@ -285,12 +285,12 @@ print(wd)</code></pre>
 <div id="running-a-script-from-the-terminal" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Running a script from the terminal<a href="07_scripting_in_python.html#running-a-script-from-the-terminal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Return to the <b>terminal</b> window and run the Python script we have just saved with the following:</p>
-<pre><code>python3 script01.py</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="07_scripting_in_python.html#cb37-1" aria-hidden="true" tabindex="-1"></a>python3 script01.py</span></code></pre></div>
 <p><b>This process of editing the script file in Gedit, saving, and running the script in the terminal will form the basis of the rest of the tutorial.</b></p>
-<p>Returning to the Python script and comment out the two print statements. We will continue working in this same script file in the next section.</p>
-<pre><code>wd = &quot;/pub39/tea/nsc014&quot;
-#print(&quot;Hello, world!&quot;)
-#print(wd)</code></pre>
+<p>Return to the Python script and comment out the two print statements. We will continue working in this same script file in the next section.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="07_scripting_in_python.html#cb38-1" aria-hidden="true" tabindex="-1"></a>wd <span class="op">=</span> <span class="st">&quot;/pub39/tea/nsc014&quot;</span></span>
+<span id="cb38-2"><a href="07_scripting_in_python.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co">#print(&quot;Hello, world!&quot;)</span></span>
+<span id="cb38-3"><a href="07_scripting_in_python.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co">#print(wd)</span></span></code></pre></div>
 
 </div>
 </div>
