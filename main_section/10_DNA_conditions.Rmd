@@ -1,24 +1,27 @@
 # Using Conditions to Modify DNA Data
 <center>![](images/checks.jpeg){}![](images/DNA_icon2.png){}</center>
 
-Suppose we want to filter the raw sequence reads by some parameter, for example removing reads of a certain length
-or removing sections of sequence such as PCR primer sequences. We can use our knowledge of loops and conditions
-to perform these tasks.
+Suppose we want to filter the raw sequence reads by some parameter.
+For example we could remove reads of a certain length or remove sections of a sequence such as PCR primer sequences.
+We can use our knowledge of loops and conditions to perform these tasks.
 
 ## Remove short reads
 <center>![](images/comp_filter.png){height=250px}</center>
 
 Using what we know, we can write a script to remove reads below a certain read-length threshold from a FastQ file.
 
-Starting a new section at the bottom of the script, re-specify where SeqIO.parse should read the file. We need to do this because the SeqIO.parse object gets 'consumed' in the loop we built during the last section. To loop again, and do something else, we need to re-establish the SeqIO.parse connection.
+Starting a new section at the bottom of the script, re-specify where `SeqIO.parse` should read the file.
+We need to do this because the `SeqIO.parse` object gets 'consumed' in the loop we built during the last section.
+To loop again, and do something else, we need to re-establish the `SeqIO.parse` connection.
 
-```
+```{python, eval=FALSE}
 R_undulata_R1_data = SeqIO.parse(wd + "data/Raja_undulata_WGS_trim_R1.fastq", "fastq")
 ```
 
-Suppose we want to find and ultimately remove short reads from the data. As our loop moves through the file, we can count the number of nucleotides in each read using the Python function len().
+Suppose we want to find and ultimately remove short reads from the data.
+As our loop moves through the file, we can count the number of nucleotides in each read using the Python function `len()`.
 
-```
+```{python, eval=FALSE}
 for record in R_undulata_R1_data:
   print(len(record.seq))
 ```
@@ -27,8 +30,7 @@ We can see there is some size variation in the file and can use an <b>if</b> sta
 
 
 Modify the loop above to the following:
-
-```
+```{python, eval=FALSE}
 # initialise an empty list to hold the records that we want to keep
 wanted_sequences = []
 
@@ -41,36 +43,37 @@ for record in R_undulata_R1_data:
 print("Found " + str(len(wanted_sequences)) + " reads >100bp in length.")
 ```
 
-We use the len() function again to see how many records are contained in the wanted_long_sequences list and print the results to the terminal.
+We use the `len()` function again to see how many records are contained in the wanted_long_sequences list and print the results to the terminal.
 
 ## Remove PCR primers
 <center>![](images/cut.png){height=220px}![](images/../images/DNA_icon.png){}</center>
 
 Often you may want to check your sequence file for PCR primers, and remove them when they are found.
-Using a for loop to move through the sequence file, we can check each DNA sequence read for the presence of a 
-pre-defined primer sequence and if it is present, remove it.
+Using a __for__ loop to move through the sequence file, we can check each DNA sequence read for the presence of a pre-defined primer sequence.
+If it is present, we'll remove it.
 
-We are going to check for the presence of the 13 nucleotide PCR primer "ACACTGCTGATCG" at the start of the reads using the startswith() method.
-This function checks whether a string starts with a particular sub-string and returns True or False. It is very useful for checking for primer sequences in our data.
+We are going to check for the presence of the 13 nucleotide PCR primer "ACACTGCTGATCG" at the start of the reads using the `startswith()` method.
+This function checks whether a string starts with a particular sub-string and returns True or False. 
+It is very useful for checking for primer sequences in our data.
 
 The input for this primer removal step will be the 'wanted_sequences' from above (those of >100bp in length). 
 
-```
+```{python, eval=FALSE}
 # loop through the sequence records
 for record in wanted_sequences:
   
   # check whether the sequence starts with the primer sequence
   if record.seq.startswith("ACACTGCTGATCG"):
     print(record.seq)
-  
 ```
 
-The code above is printing lots of sequence, indicating that there are lots of sequences with the primer sequence present.
-Now that we have identified their presence, let's go ahead and trim them off the start of the reads.
+The code above is printing lots of sequence.
+This indicates that there are lots of sequences with the primer sequence present.
+Now that we have identified their presence, let's trim them off the start of the reads.
 
 Modify the block of code above to the following:
 
-```
+```{python, eval=FALSE}
 # define a list to hold the trimmed sequences
 trimmed_sequences = []
 
