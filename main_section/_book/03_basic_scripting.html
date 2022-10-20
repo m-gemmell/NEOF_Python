@@ -53,6 +53,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -213,21 +277,21 @@ Think about how a cooking recipe is often presented:</p>
 <div id="issuing-commands-directly-to-the-interpretator" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Issuing commands directly to the interpretator<a href="03_basic_scripting.html#issuing-commands-directly-to-the-interpretator" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Open up the Python interpreter in the terminal window of the VNC with the following command. We are using Python version 3, the current version.</p>
-<pre><code>python3</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="03_basic_scripting.html#cb3-1" aria-hidden="true" tabindex="-1"></a>python3</span></code></pre></div>
 <p>Python has opened correctly if you see the following message (or very similar):</p>
-<pre><code>Python 3.9.6 | packaged by conda-forge (default, Jul  11 2021, 12:28:51) 
-[GCC 9.3.0] on linux
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;  </code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="03_basic_scripting.html#cb4-1" aria-hidden="true" tabindex="-1"></a>Python <span class="fl">3.9.6</span> <span class="op">|</span> packaged by conda<span class="op">-</span>forge (default, Jul  <span class="dv">11</span> <span class="dv">2021</span>, <span class="dv">12</span>:<span class="dv">28</span>:<span class="dv">51</span>) </span>
+<span id="cb4-2"><a href="03_basic_scripting.html#cb4-2" aria-hidden="true" tabindex="-1"></a>[GCC <span class="fl">9.3.0</span>] on linux</span>
+<span id="cb4-3"><a href="03_basic_scripting.html#cb4-3" aria-hidden="true" tabindex="-1"></a>Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> <span class="kw">or</span> <span class="st">&quot;license&quot;</span> <span class="cf">for</span> more information.</span>
+<span id="cb4-4"><a href="03_basic_scripting.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>  </span></code></pre></div>
 <p>The "&gt;&gt;&gt;" and blinking cursor shows that the Python command line interface is ready to receive commands. Try using the <strong>print</strong> command as shown below.</p>
 <p>Python is very particular about braces/brackets and quote marks.</p>
-<pre><code>print(&quot;Hello, world!&quot;)
-
-print(&quot;I&#39;m excited to be learning some Python!&quot;)</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="03_basic_scripting.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span>
+<span id="cb5-2"><a href="03_basic_scripting.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="03_basic_scripting.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;I&#39;m excited to be learning some Python!&quot;</span>)</span></code></pre></div>
 <p>Get the <em>current working directory</em> using Python as we will need this for our scripts later.</p>
-<pre><code>import os
-
-os.getcwd()</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="03_basic_scripting.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-2"><a href="03_basic_scripting.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="03_basic_scripting.html#cb6-3" aria-hidden="true" tabindex="-1"></a>os.getcwd()</span></code></pre></div>
 <p>This will return something like: '/pub39/tea/nsc014'</p>
 <p>Highlight this filepath text, including the quote marks, right click and 'copy'.</p>
 <p>So far we have issued simple instructions to Python but if we had lots of complex commands it would very quickly become cumbersome to type them in or to run it repeatedly.</p>
@@ -240,7 +304,7 @@ os.getcwd()</code></pre>
 </center>
 <p>Indentation refers to any spaces or tab characters at the beginning of a line
 of code. Indentation helps readability of code by helping to define code blocks
-dedicated to a single purpose. However, indentation in Python in <em>mandatory</em>
+dedicated to a single purpose. However, indentation in Python is <em>mandatory</em>
 and the interpreter will give an error if the indentation is wrong.</p>
 <p>The code editor we are going to be using today attempts to <em>auto</em> indent code but we still
 need to take care that the level of indentation in the script matches
@@ -253,10 +317,10 @@ debate about whether tabs or spaces are more appropriate for indentation.</p>
 <p>For reference, one tab = 4 spaces.</p>
 <p>You can use either tabs or space, but you cannot use them interchangeably!</p>
 <p>Do not enter the below, this is just an illustration of how three levels of TAB indentation looks in a script.</p>
-<pre><code># Zero level of indentation
-  # One level of indentation
-    # Two levels of identation
-# Zero level of indentation</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="03_basic_scripting.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Zero level of indentation</span></span>
+<span id="cb7-2"><a href="03_basic_scripting.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># One level of indentation</span></span>
+<span id="cb7-3"><a href="03_basic_scripting.html#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Two levels of identation</span></span>
+<span id="cb7-4"><a href="03_basic_scripting.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Zero level of indentation</span></span></code></pre></div>
 
 </div>
 </div>

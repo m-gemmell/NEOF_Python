@@ -1,6 +1,4 @@
 ---
-title: "Illumina Quality Control"
-author: "Matthew R. Gemmell"
 date: "`r format(Sys.time(), '%B, %Y')`"
 favicon: images/NEOF_favicon.png
 description: NEOF book for the Python for Bioinformatics workshop

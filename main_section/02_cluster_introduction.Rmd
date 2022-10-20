@@ -1,12 +1,6 @@
----
-title: "Python for Bioinformatics"
-author: Graeme Fox
-date: "`r format(Sys.time(), '%B, %Y')`"
----
-  
 # Cluster Introduction
 
-<center>![](../images/cluster.png){width=35%}</center>
+<center>![](../images/cluster.png){width=25%}</center>
 
 ## Logon Instructions
 For this workshop we will be using Virtual Network Computing (VNC). 
@@ -34,7 +28,7 @@ Before we get started, we need to copy across some data files to analyse later i
 
 In the terminal window, issue the following commands to copy the data into your account:
 
-```
+```{bash, eval=FALSE}
 cd ~
 cp -r /pub14/tea/nsc201/Python_course_data .
 
