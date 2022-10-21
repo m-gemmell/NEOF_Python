@@ -1,7 +1,7 @@
 introduction
 working-with-other-types-of-data
 background-info-on-the-example-data
-reading-.csv-files-or-similar-with-pandas
+read-a-.csv-file-with-pandas
 make-more-complex-selections
 select-columns-by-name
 select-records-by-their-properties

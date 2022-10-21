@@ -15,18 +15,18 @@ We need to do this because the `SeqIO.parse` object gets 'consumed' in the loop 
 To loop again, and do something else, we need to re-establish the `SeqIO.parse` connection.
 
 ```{python, eval=FALSE}
-R_undulata_R1_data = SeqIO.parse(wd + "data/Raja_undulata_WGS_trim_R1.fastq", "fastq")
+R_undulata_data = SeqIO.parse(wd + "/Python_course_data/R_undulata_WGS.fastq", "fastq")
 ```
 
 Suppose we want to find and ultimately remove short reads from the data.
 As our loop moves through the file, we can count the number of nucleotides in each read using the Python function `len()`.
 
 ```{python, eval=FALSE}
-for record in R_undulata_R1_data:
+for record in R_undulata_data:
   print(len(record.seq))
 ```
 
-We can see there is some size variation in the file and can use an <b>if</b> statement to select only those reads with a read length of > 100 nucleotides.
+We can see there is some variation in the length of reads in the file and can use an <b>if</b> statement to select only those reads with a read length of > 100 nucleotides.
 
 
 Modify the loop above to the following:
@@ -34,7 +34,7 @@ Modify the loop above to the following:
 # initialise an empty list to hold the records that we want to keep
 wanted_sequences = []
 
-for record in R_undulata_R1_data:
+for record in R_undulata_data:
   #print(len(record.seq))
   if len(record.seq) > 100:
     # add the record to the list of records we want to keep
@@ -64,10 +64,10 @@ for record in wanted_sequences:
   
   # check whether the sequence starts with the primer sequence
   if record.seq.startswith("ACACTGCTGATCG"):
-    print(record.seq)
+    print(record)
 ```
 
-The code above is printing lots of sequence.
+The code above print a lot to the terminal. In each record, look at the lines starting "Seq" and note that every sequence does indeed start with the primer we specified above. 
 This indicates that there are lots of sequences with the primer sequence present.
 Now that we have identified their presence, let's trim them off the start of the reads.
 

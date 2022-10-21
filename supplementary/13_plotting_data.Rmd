@@ -11,7 +11,7 @@ We can also use Python to produce plots of our data.
 plotting tools.
 
 ## Import Matplotlib
-Add a new line to the <b>top</b> of the Python script containing the work in pandas. We need to import a new library: matplotlib, and specifically the pyplot suite of functions.
+Add a new line to the <b>top</b> of the Python script containing the work in pandas (script04.py). We need to import a new library: matplotlib, and specifically the pyplot suite of functions.
 
 To save us having to type out "matplotlib.pyplot" repeatedly in our script, we can set it as an abbreviated form "plt".
 
@@ -25,29 +25,37 @@ Again, considering the patients.csv dataset, let's see which is the most common 
 To the bottom of the script, add the following. We are using the value_counts() method to count how many individuals are in each group.
 
 ```
+#print(average(patients.diversity))
+
 bmi_counts = (patients['bmi_group'].value_counts())
 print(bmi_counts)
 ```
 
 We can then use Matplotlib to plot this data in order to visualise these groups. To our bmi_counts data we apply the plot() method, and specify that we would like a bar chart. Once the plot has been generated in the computer, we need to save it to the disk so that we can view it.
 
-Add the following:
+Add/modify the following:
 
 ```
+#print(bmi_counts)
+
 # generate the plot
-bmi_counts.plot(kind='hist')
+bmi_counts.plot(kind='bar')
 
 # automatically adjust borders to fit axis ticks
 plt.tight_layout()
 
 # save the plot to the disk
-plt.savefig(wd + 'bmi_groups.png')
+plt.savefig(wd + '/bmi_groups.png')
+
+# close the plotting device
+plt.close()
 ```
 
 In <b>terminal</b> window, run the following the view the plot:
 
 ```
-firefox "$PWD"/bmi_groups.png
+cd ~
+firefox bmi_groups.png
 ```
 
 <center>![](images/bar_chart.png){}</center>
@@ -61,13 +69,16 @@ We can also look for relationships between a pair of variables. Consider the age
 plt.scatter(patients.age[0:99], patients.diversity[0:99])
 
 # write the plot to the disk
-plt.savefig(wd + 'age_diversity_plot.png')
+plt.savefig(wd + '/age_diversity_plot.png')
+
+# close the plotting device
+plt.close()
 ```
 
 View the plot by running the following in the <b>terminal</b> window:
 
 ```
-firefox "$PWD"/age_diversity_plot.png
+firefox age_diversity_plot.png
 ```
 
 <center>![](images/scatter.png){}</center>

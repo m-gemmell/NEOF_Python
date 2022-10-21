@@ -58,7 +58,7 @@ We are going to read the data into Python ready to do some data processing and a
 
 ## Setting up a script to use BioPython
 
-Open a new file in Gedit (File > New).
+Open a new file in Gedit by clicking the "Create a new document" button at the top-left.
 
 We need to load a couple of Python libraries: 
 
@@ -79,7 +79,7 @@ You should hopefully still have the current working directory on your clipboard.
 Set a variable called 'wd', (working directory) to the filepath on your clipboard by adding a version of the following:
 
 ```{python, eval=FALSE}
-wd = "/pub39/tea/nsc014"
+wd = "/pub14/tea/nsc201"
 ```
 
 ## Read a fie of sequence data
@@ -95,7 +95,7 @@ We store the information on which file to parse in the variable called `R_undula
 - The format of that file.
 
 ```{python, eval=FALSE}
-R_undulata_R1_data = SeqIO.parse(wd + "data/Raja_undulata_WGS_trim_R1.fastq", "fastq")
+R_undulata_data = SeqIO.parse(wd + "/Python_course_data/R_undulata_WGS.fastq", "fastq")
 ```
 
 We can then look through the file using a <b>for</b> loop. Each of the four-unit repeats of the FASTQ file is read as a separate 'record' and we can access them in the script. 
@@ -104,7 +104,7 @@ To access the ID line of each record, we use '.id' and to access the sequence we
 Each of these elements can be printed in the terminal using an appropriate print statement.
 
 ```{python, eval=FALSE}
-for record in R_undulata_R1_data:
+for record in R_undulata_data:
   print(record.id)
   print(record.seq)
 ```
@@ -118,8 +118,8 @@ We can perform operations on each of these elements. For example, Biopython has 
 Modify the __for__ loop above to the following:
 
 ```{python, eval=FALSE}
-for record in R_undulata_R1_data:
-  #print(record.id)
+for record in R_undulata_data:
+  print(record.id)
   #print(record.seq)
   print(record.seq.translate())
 ```
@@ -130,7 +130,7 @@ We can implement a counter to tally the total number of reads in the file. Modif
 ## start a counter to track how many reads
 counter = 0
 
-for record in R_undulata_R1_data:
+for record in R_undulata_data:
   #print(record.id) 
   #print(record.seq)
   #print(record.seq.translate())

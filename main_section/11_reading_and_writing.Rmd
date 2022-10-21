@@ -38,12 +38,17 @@ It also performs important 'under-the-hood' cleaning up that stops files from be
 ## Read a data file
 <center>![](images/read.webp){height=220px}</center>
 
-Open a new script in Gedit. 
+Open a new script in Gedit. Again add the location of our working directory and load the SeqIO library. 
 Add the following to open a data stream to <b>read</b> the provided file 'patients_data.csv'.
 Then add a `for` loop to print each line of the file.
 
+Save the script as "script03.py" and run it from the terminal.
+
 ```{python, eval=FALSE}
-with open(wd + "data/patients_clean.csv", 'r') as input_file:
+wd = "/pub14/tea/nsc201"
+from Bio import SeqIO
+
+with open(wd + "/Python_course_data/patients_gut_data.csv", 'r') as input_file:
   for row in input_file:
     print(row)
 ```
@@ -59,8 +64,8 @@ prepend the line of data with the string "Study_2022,", and write this new data 
 using the `.write()` method.
 
 ```{python, eval=FALSE}
-with open(wd + "data/patients_modified.csv", 'w') as output_file:
-    with open(wd + "data/patients_clean.csv", 'r') as input_file:
+with open(wd + "/Python_course_data/patients_modified.csv", 'w') as output_file:
+    with open(wd + "/Python_course_data/patients_gut_data.csv", 'r') as input_file:
         for row in input_file:
             #print(row)
             output_file.write("Study_2022," + row)
@@ -71,18 +76,19 @@ see that each row in the data now starts with the "Study_2022" string.
 
 ```{python, eval=FALSE}
 # In the terminal (not the Python script)
-head data/patients_modified.csv
+cd ~
+head Python_course_data/patients_modified.csv
 ```
 
 ## Write out the filtered Undulate ray sequence data
 Returning to our example data relating to the undulate ray, we have a list of sequence records (trimmed_sequences) which have passed our filters and we now want to write out the FASTQ file so that it might be further analysed using another piece of software.
 
-Return to the script in Gedit that was concerned with the FastQ data (named script02.py).
+<b>Return to the script in Gedit that was concerned with the FastQ data (named script02.py).</b>
 
 At the bottom of the script, we will open up a data stream to a new output file, and then used SeqIO's built in write method to write out data, specifying that we want a FASTQ format file:
 
 ```{python, eval=FALSE}
-with open(wd + "data/R_undulata_filtered_seqs.fastq", 'w') as output_file:
+with open(wd + "/Python_course_data/R_undulata_filtered_seqs.fastq", 'w') as output_file:
   SeqIO.write(trimmed_sequences, output_file, "fastq")
 ```  
 

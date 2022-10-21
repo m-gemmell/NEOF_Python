@@ -8,11 +8,13 @@ quit()
 ```
 
 ## Open a plain text editor
-In the VNC window, right click on the Desktop, outside of the open terminal window.
+In the terminal window, run the following to open up an instance of the 'Gedit' text editor.
 
-In the dialogue that is displayed, select "Applications", then "Editors", then "Gedit". A familiar looking text editor should open.
+```{bash, eval=FALSE}
+gedit &
+```
 
-<center>![](../images/load_gedit.png){height=300px}</center>
+<center>![](images/load_gedit.png){height=300px}</center>
   
 Gedit is a 'plain text editor' which means it will not add any hidden characters or formatting to the document. It is important to not try to edit code in a word processor such as Microsoft Word.
 
@@ -35,7 +37,10 @@ See the image below to make sure it is being saved in the correct place. This is
 
 ## Running a script from the terminal
 
-Return to the <b>terminal</b> window and run the Python script we have just saved with the following:
+Return to the <b>terminal</b> window.
+You may need to clear some text from the terminal leftover from when we launched Gedit; do this with <b>ctrl + c</b>.
+
+Run the Python script we have just saved with the following:
 
 ```{python, eval=FALSE}
 python3 script01.py

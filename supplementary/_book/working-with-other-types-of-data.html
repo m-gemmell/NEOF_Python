@@ -71,7 +71,7 @@
 <li class="chapter" data-level="2" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html"><i class="fa fa-check"></i><b>2</b> Working with other types of data</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#background-info-on-the-example-data"><i class="fa fa-check"></i><b>2.1</b> Background info on the example data</a></li>
-<li class="chapter" data-level="2.2" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#reading-.csv-files-or-similar-with-pandas"><i class="fa fa-check"></i><b>2.2</b> Reading .csv files (or similar) with pandas</a></li>
+<li class="chapter" data-level="2.2" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#read-a-.csv-file-with-pandas"><i class="fa fa-check"></i><b>2.2</b> Read a .csv file with pandas</a></li>
 <li class="chapter" data-level="2.3" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#make-more-complex-selections"><i class="fa fa-check"></i><b>2.3</b> Make more complex selections</a></li>
 <li class="chapter" data-level="2.4" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#select-columns-by-name"><i class="fa fa-check"></i><b>2.4</b> Select columns by name</a></li>
 <li class="chapter" data-level="2.5" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#select-records-by-their-properties"><i class="fa fa-check"></i><b>2.5</b> Select records by their properties</a></li>
@@ -127,41 +127,36 @@ dataset, which itself is example data provided with the R package <a href="https
 several other characteristics records.</p>
 <p>The data we will be looking at contains the following variables: SampleID, age, gender, nationality, diverity of gut microbiome, and a BMI category.</p>
 </div>
-<div id="reading-.csv-files-or-similar-with-pandas" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Reading .csv files (or similar) with pandas<a href="working-with-other-types-of-data.html#reading-.csv-files-or-similar-with-pandas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="read-a-.csv-file-with-pandas" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Read a .csv file with pandas<a href="working-with-other-types-of-data.html#read-a-.csv-file-with-pandas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <center>
 <img src="../images/pandas_icon.jpg" height="300" />
 </center>
 <p>The Python module <a href="https://pandas.pydata.org/">pandas</a> specifically for reading delimited text files.
 It pre-processes text data files and makes them easier to process and use in analysis.</p>
-<p>Just as we did earlier, first we establish a link to the file we are to import with using “open” and “with”.</p>
-<p>Modify the commands from the previous chapter to the following.</p>
-<pre><code>with open(wd + &quot;data/patients_modified.csv&quot;, &#39;w&#39;) as output_file:
-    with open(wd + &quot;data/patients_clean.csv&quot;, &#39;r&#39;) as input_file:
-        for row in input_file:
-            print(row)
-            #output_file.write(&quot;Study_2022,&quot; + row)</code></pre>
-<p>We can see the comma separated data typical of a .csv file printed in the terminal,
-however we can use specific Python data processing tools to make the data more usable.</p>
 <p>Pandas allows us to access
 certain elements within each row? For example, the gender of each patient.</p>
-<p>Start a new code block, load pandas and use the pandas method read_csv to input the file:</p>
+<p>Start a new script called “Script04.py”, add the wd, load pandas and use the pandas method read_csv to input the same input file:</p>
 <pre><code>import pandas
+wd = &quot;/pub14/tea/nsc201&quot;
 
-patients = pandas.read_csv(wd + &quot;data/patient_data.csv&quot;)</code></pre>
-<p>Now we have read our data into the object ‘patients’, we can take a look at how pandas has stored the data.</p>
-<pre><code>print(print(patients.dtypes))</code></pre>
+patients = pandas.read_csv(wd + &quot;/Python_course_data/patients_gut_data.csv&quot;)</code></pre>
+<p>Now we have read our data into the object ‘patients’, we can take a look at how pandas has stored the data by looking at the “.dtypes” (data types).</p>
+<pre><code>print(patients.dtypes)</code></pre>
 <p>Pandas has automatically used the column headers as the variable names, and assigned
 each variable a type based on the data; either ‘float64’ (a floating point number)
 or ‘object’ (a catch all term for string types).</p>
 <p>We can access a single column of data by it’s variable name assigned by pandas.
 For example, to access the ‘diversity’ column:</p>
-<pre><code>print(patients.diversity)</code></pre>
-<p>To access individual records, we need to first tell pandas which column contains the index, or sample names in this case.
-In the case of the patients.csv data file, the identifiers are in the first column, which Python counts as column zero.</p>
+<pre><code>#print(patients.dtypes)
+print(patients.diversity)</code></pre>
+<p>To access individual records, we need to first tell pandas which column contains the index, or sample names.</p>
+<p>In the case of the patients_gut_data.csv data file, the identifiers are in the first column, which Python counts as column zero.</p>
 <p>Modify the command above to the following to add the index information, and print the data associated with sample #21.</p>
-<pre><code>patients = pandas.read_csv(wd + &quot;data/patient_data.csv&quot;, index_col=0)
+<pre><code>patients = pandas.read_csv(wd + &quot;/Python_course_data/patients_gut_data.csv&quot;, index_col=0)
 
+#print(patients.dtypes)
+#print(patients.diversity)
 print(patients.loc[&quot;Sample-21&quot;])
 </code></pre>
 </div>
@@ -175,11 +170,11 @@ print(patients.loc[&quot;Sample-21&quot;])
 <div id="select-columns-by-name" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Select columns by name<a href="working-with-other-types-of-data.html#select-columns-by-name" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s select the data relating to the age, gut microbiome diversity, and bmi_group and save it as a separate variable.</p>
-<p><i><em>NOTE</em> the double square brackets containing the variable names: [[ ]]
-(this ie because we are choosing columns by index - which is done by passing an argument in square brackets,
-<em>AND</em> we’re passing a <em>list</em> of the columns to select which is <em>also</em> defined by being within square brackets).</i></p>
+<p><b><em>NOTE</em> the double square brackets containing the variable names: [[ ]]</b>
+(this is because we are choosing columns by index - which is done by passing an argument in square brackets,
+<em>AND</em> we’re passing a <em>list</em> of the columns to select which is <em>also</em> defined by being within square brackets).</p>
 <p>Modify the commands above to the following:</p>
-<pre><code>patients = pandas.read_csv(wd + &quot;data/patient_data.csv&quot;, index_col=0)
+<pre><code>patients = pandas.read_csv(wd + &quot;/Python_course_data/patients_gut_data.csv&quot;, index_col=0)
 
 #print(patients.loc[&quot;Sample-21&quot;])
 
@@ -198,7 +193,7 @@ this new dataframe is also in the pandas format.</p>
 <p>Let’s choose records which fit certain criteria.</p>
 <p>First we’ll choose records from the patients data in which the patient is 25 or more years old <em>AND</em> are overweight.
 The two statements are linked together by the <em>AND</em> operator; the ampersand character: &amp;</p>
-<p>YOu can always fefer back to chapter <em>???</em> for a refresher on how selection statements and operators work</p>
+<p>You can always refer back to chapters 4 and 5 for a refresher on how selection statements and operators work.</p>
 <p>Modify the above commands to:</p>
 <pre><code>#print(age_div_bmi)
 #print(type(age_div_bmi))
@@ -224,12 +219,13 @@ print(obese_or_severeobese)</code></pre>
 <p>Pandas provides useful methods for working with data tables, as we have seen. All of the previous approaches
 that we used in previous chapters still apply to data which has been processed using pandas.</p>
 <p>For example, we can use pandas to select the age column, and convert the number of years to months:</p>
-<pre><code>print(print(patients.age*12))</code></pre>
+<pre><code>#print(obese_or_severeobese)
+print(patients.age*12)</code></pre>
 <p>We can also pass pandas data to functions, as before.</p>
 <p>Or, we could define a new function and use that with pandas data.</p>
 <p>Comment out the print statement above, add the following definition for an average function,
 and pass the diversity column to the new function to find the average microbiome diversity in the dataset.</p>
-<pre><code>#print(print(patients.age*12))
+<pre><code>#print(patients.age*12)
 
 # define new function to find the average of a list
 def average(input_list):

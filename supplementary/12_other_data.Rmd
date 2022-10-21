@@ -27,7 +27,7 @@ several other characteristics records.
 
 The data we will be looking at contains the following variables: SampleID, age, gender, nationality, diverity of gut microbiome, and a BMI category.
 
-## Reading .csv files (or similar) with pandas
+## Read a .csv file with pandas
 
 <center>![](../images/pandas_icon.jpg){height=300px}</center>
 
@@ -35,38 +35,22 @@ The data we will be looking at contains the following variables: SampleID, age, 
 The Python module [pandas](https://pandas.pydata.org/) specifically for reading delimited text files. 
 It pre-processes text data files and makes them easier to process and use in analysis.
 
-Just as we did earlier, first we establish a link to the file we are to import with using "open" and "with".
-
-Modify the commands from the previous chapter to the following.
-
-```
-with open(wd + "data/patients_modified.csv", 'w') as output_file:
-    with open(wd + "data/patients_clean.csv", 'r') as input_file:
-        for row in input_file:
-            print(row)
-            #output_file.write("Study_2022," + row)
-```
-
-We can see the comma separated data typical of a .csv file printed in the terminal, 
-however we can use specific Python data processing tools to make the data more usable.
-
 Pandas allows us to access
 certain elements within each row? For example, the gender of each patient.
 
-Start a new code block, load pandas and use the pandas method read_csv to input the file:
+Start a new script called "Script04.py", add the wd, load pandas and use the pandas method read_csv to input the same input file:
 ```
 import pandas
+wd = "/pub14/tea/nsc201"
 
-patients = pandas.read_csv(wd + "data/patient_data.csv")
+patients = pandas.read_csv(wd + "/Python_course_data/patients_gut_data.csv")
 ```
 
-Now we have read our data into the object 'patients', we can take a look at how pandas has stored the data.
+Now we have read our data into the object 'patients', we can take a look at how pandas has stored the data by looking at the ".dtypes" (data types).
 
 ```
-print(print(patients.dtypes))
+print(patients.dtypes)
 ```
-
-
 Pandas has automatically used the column headers as the variable names, and assigned 
 each variable a type based on the data; either 'float64' (a floating point number) 
 or 'object' (a catch all term for string types).
@@ -75,17 +59,21 @@ We can access a single column of data by it's variable name assigned by pandas.
 For example, to access the 'diversity' column:
 
 ```
+#print(patients.dtypes)
 print(patients.diversity)
 ```
 
-To access individual records, we need to first tell pandas which column contains the index, or sample names in this case.
-In the case of the patients.csv data file, the identifiers are in the first column, which Python counts as column zero.
+To access individual records, we need to first tell pandas which column contains the index, or sample names.
+
+In the case of the patients_gut_data.csv data file, the identifiers are in the first column, which Python counts as column zero.
 
 Modify the command above to the following to add the index information, and print the data associated with sample #21.
 
 ```
-patients = pandas.read_csv(wd + "data/patient_data.csv", index_col=0)
+patients = pandas.read_csv(wd + "/Python_course_data/patients_gut_data.csv", index_col=0)
 
+#print(patients.dtypes)
+#print(patients.diversity)
 print(patients.loc["Sample-21"])
 
 ```
@@ -100,14 +88,14 @@ Pandas is very powerful for selecting columns and records from the data by any c
 ## Select columns by name
 Let's select the data relating to the age, gut microbiome diversity, and bmi_group and save it as a separate variable.
 
-<i>*NOTE* the double square brackets containing the variable names: [[ ]]
-(this ie because we are choosing columns by index - which is done by passing an argument in square brackets,
-*AND* we're passing a *list* of the columns to select which is *also* defined by being within square brackets).</i>
+<b>*NOTE* the double square brackets containing the variable names: [[ ]]</b>
+(this is because we are choosing columns by index - which is done by passing an argument in square brackets,
+*AND* we're passing a *list* of the columns to select which is *also* defined by being within square brackets).
 
 Modify the commands above to the following: 
 
 ```
-patients = pandas.read_csv(wd + "data/patient_data.csv", index_col=0)
+patients = pandas.read_csv(wd + "/Python_course_data/patients_gut_data.csv", index_col=0)
 
 #print(patients.loc["Sample-21"])
 
@@ -130,7 +118,7 @@ Let's choose records which fit certain criteria.
 First we'll choose records from the patients data in which the patient is 25 or more years old *AND* are overweight.
 The two statements are linked together by the *AND* operator; the ampersand character:  &
 
-YOu can always fefer back to chapter *???* for a refresher on how selection statements and operators work
+You can always refer back to chapters 4 and 5 for a refresher on how selection statements and operators work.
 
 Modify the above commands to:
 
@@ -166,7 +154,8 @@ that we used in previous chapters still apply to data which has been processed u
 For example, we can use pandas to select the age column, and convert the number of years to months:
 
 ```
-print(print(patients.age*12))
+#print(obese_or_severeobese)
+print(patients.age*12)
 ```
 
 We can also pass pandas data to functions, as before.
@@ -177,7 +166,7 @@ Comment out the print statement above, add the following definition for an avera
 and pass the diversity column to the new function to find the average microbiome diversity in the dataset.
 
 ```
-#print(print(patients.age*12))
+#print(patients.age*12)
 
 # define new function to find the average of a list
 def average(input_list):

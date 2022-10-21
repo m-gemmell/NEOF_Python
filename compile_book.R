@@ -1,10 +1,9 @@
 #!/usr/bin/env Rscript
-#install.packages("bookdown")
-  
+
 ## main book section
-setwd("~/Dropbox/NEOF_21-22/Training_courses/Python_for_Bioinformatics/main_section/")
+setwd("~/Dropbox/NEOF_21-22/Training_courses/NEOF_Python/main_section/")
 bookdown::render_book("index.Rmd", "bookdown::gitbook")
 
 ## supplementary book section
-setwd("~/Dropbox/NEOF_21-22/Training_courses/Python_for_Bioinformatics/supplementary/")
+setwd("~/Dropbox/NEOF_21-22/Training_courses/NEOF_Python/supplementary/")
 bookdown::render_book("index.Rmd", "bookdown::gitbook")

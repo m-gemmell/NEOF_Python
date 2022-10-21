@@ -71,7 +71,7 @@
 <li class="chapter" data-level="2" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html"><i class="fa fa-check"></i><b>2</b> Working with other types of data</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#background-info-on-the-example-data"><i class="fa fa-check"></i><b>2.1</b> Background info on the example data</a></li>
-<li class="chapter" data-level="2.2" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#reading-.csv-files-or-similar-with-pandas"><i class="fa fa-check"></i><b>2.2</b> Reading .csv files (or similar) with pandas</a></li>
+<li class="chapter" data-level="2.2" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#read-a-.csv-file-with-pandas"><i class="fa fa-check"></i><b>2.2</b> Read a .csv file with pandas</a></li>
 <li class="chapter" data-level="2.3" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#make-more-complex-selections"><i class="fa fa-check"></i><b>2.3</b> Make more complex selections</a></li>
 <li class="chapter" data-level="2.4" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#select-columns-by-name"><i class="fa fa-check"></i><b>2.4</b> Select columns by name</a></li>
 <li class="chapter" data-level="2.5" data-path="working-with-other-types-of-data.html"><a href="working-with-other-types-of-data.html#select-records-by-their-properties"><i class="fa fa-check"></i><b>2.5</b> Select records by their properties</a></li>
@@ -116,7 +116,7 @@
 plotting tools.</p>
 <div id="import-matplotlib" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Import Matplotlib<a href="plotting-using-python-and-matplotlib.html#import-matplotlib" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Add a new line to the <b>top</b> of the Python script containing the work in pandas. We need to import a new library: matplotlib, and specifically the pyplot suite of functions.</p>
+<p>Add a new line to the <b>top</b> of the Python script containing the work in pandas (script04.py). We need to import a new library: matplotlib, and specifically the pyplot suite of functions.</p>
 <p>To save us having to type out “matplotlib.pyplot” repeatedly in our script, we can set it as an abbreviated form “plt”.</p>
 <pre><code>import matplotlib.pyplot as plt</code></pre>
 </div>
@@ -124,20 +124,28 @@ plotting tools.</p>
 <h2><span class="header-section-number">3.2</span> Produce a Simple Bar Chart<a href="plotting-using-python-and-matplotlib.html#produce-a-simple-bar-chart" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Again, considering the patients.csv dataset, let’s see which is the most common bmi group and generate a bar chart.</p>
 <p>To the bottom of the script, add the following. We are using the value_counts() method to count how many individuals are in each group.</p>
-<pre><code>bmi_counts = (patients[&#39;bmi_group&#39;].value_counts())
+<pre><code>#print(average(patients.diversity))
+
+bmi_counts = (patients[&#39;bmi_group&#39;].value_counts())
 print(bmi_counts)</code></pre>
 <p>We can then use Matplotlib to plot this data in order to visualise these groups. To our bmi_counts data we apply the plot() method, and specify that we would like a bar chart. Once the plot has been generated in the computer, we need to save it to the disk so that we can view it.</p>
-<p>Add the following:</p>
-<pre><code># generate the plot
-bmi_counts.plot(kind=&#39;hist&#39;)
+<p>Add/modify the following:</p>
+<pre><code>#print(bmi_counts)
+
+# generate the plot
+bmi_counts.plot(kind=&#39;bar&#39;)
 
 # automatically adjust borders to fit axis ticks
 plt.tight_layout()
 
 # save the plot to the disk
-plt.savefig(wd + &#39;bmi_groups.png&#39;)</code></pre>
+plt.savefig(wd + &#39;/bmi_groups.png&#39;)
+
+# close the plotting device
+plt.close()</code></pre>
 <p>In <b>terminal</b> window, run the following the view the plot:</p>
-<pre><code>firefox &quot;$PWD&quot;/bmi_groups.png</code></pre>
+<pre><code>cd ~
+firefox bmi_groups.png</code></pre>
 <center>
 <img src="images/bar_chart.png" />
 </center>
@@ -149,9 +157,12 @@ plt.savefig(wd + &#39;bmi_groups.png&#39;)</code></pre>
 plt.scatter(patients.age[0:99], patients.diversity[0:99])
 
 # write the plot to the disk
-plt.savefig(wd + &#39;age_diversity_plot.png&#39;)</code></pre>
+plt.savefig(wd + &#39;/age_diversity_plot.png&#39;)
+
+# close the plotting device
+plt.close()</code></pre>
 <p>View the plot by running the following in the <b>terminal</b> window:</p>
-<pre><code>firefox &quot;$PWD&quot;/age_diversity_plot.png</code></pre>
+<pre><code>firefox age_diversity_plot.png</code></pre>
 <center>
 <img src="images/scatter.png" />
 </center>
