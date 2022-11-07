@@ -13,7 +13,7 @@ date: "`r format(Sys.time(), '%B, %Y')`"
   You definitely do not need to memorise all the information here as all of these
   concepts will be explored more in the rest of the tutorial. The best way to
   learn how various aspects of the Python language work is by *doing* rather
-  then by *reading*. 
+  than by *reading*. 
   
   Consider
   coming back to this page later if you want to remind yourself of how a
@@ -222,7 +222,7 @@ They differ in that methods are associated with a particular data class
 
 Methods are called using a different syntax; the variable is followed by "." and the name of the method with a pair of braces.
 
-First let's Try a couple of methods associated with manipulation of string data:
+First let's try a couple of methods associated with manipulation of string data:
 
 ```{python, eval=FALSE}
 # define a string called sequencers

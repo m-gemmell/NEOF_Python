@@ -70,7 +70,7 @@ The same technique also works to select a range of values from the list. The upp
 
 ```{python, eval=FALSE}
 # subset the third and fourth values
-gene_fold_change[2:3]
+gene_fold_change[2:4]
 ```
 
 To subset everything from a certain position onwards, leave the upper value blank. This also works to select everything before a certain position.
@@ -98,7 +98,7 @@ plants_set = {"Dandelion", "Buttercup", "Clover", "Poppy"}
 plants_set
 ```
 
-A second round of analysis founds an extra plant species and so we can add this in as well.
+A second round of analysis found an extra plant species and so we can add this in as well.
 
 ```{python, eval=FALSE}
 plants_set.add("Honeysuckle")
@@ -110,7 +110,7 @@ Combining data from more samples might mean that duplicate plants were detected 
 Adding plants that are already in the set has no effect as it cannot hold duplicate values.
 
 ```{python, eval=FALSE}
-plants_set.add("Buttercup", "Clover")
+plants_set.add("Buttercup")
 
 plants_set
 ```
