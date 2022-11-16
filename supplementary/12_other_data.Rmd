@@ -1,19 +1,14 @@
----
-title: "Python for Bioinformatics - Supplementary Materials"
-author: Graeme Fox
-date: "`r format(Sys.time(), '%B, %Y')`"
----
+# Other types of data
 
-# Working with other types of data
+<center>![](../images/pandas_icon.jpg){width=25%}!</center>
 
-<center>![](../images/pandas_icon.jpg){height=300px}!</center>
+Often scientists store data in delimited text files. 
+These are typically separated by commas or tabs.
+We can read these into Python, loop through them and manipulate their values. 
+We will do this using similar/identical approaches that we used with our sequence data previously.
 
-Often scientists store data in delimited text files which are typically separated by commas or tabs.
-We can read these into Python, loop through them and manipulate their values using similar, or identical,
-approaches to those we used with our sequence data previously.
-
-We are going to load a further example dataset; a typical table of comma delimited data, and use the 
-Python module 'pandas' to filter and manipulate the data.
+We are going to load a new example dataset; a table of comma delimited data. 
+We will then use the Python module [pandas](https://pandas.pydata.org/) to filter and manipulate the data.
 
 ## Background info on the example data 
 
@@ -25,51 +20,66 @@ dataset, which itself is example data provided with the R package [microbiome](h
 It contains information on 1006 western women with no reported health complications. The women had their gut microbiome profiled and 
 several other characteristics records. 
 
-The data we will be looking at contains the following variables: SampleID, age, gender, nationality, diverity of gut microbiome, and a BMI category.
+The data we will be looking at contains the following variables: 
+
+- SampleID
+- Age
+- Gender
+- Nationality
+- Diverity of gut microbiome
+- A BMI category
 
 ## Read a .csv file with pandas
 
 <center>![](../images/pandas_icon.jpg){height=300px}</center>
 
-
-The Python module [pandas](https://pandas.pydata.org/) specifically for reading delimited text files. 
+The Python module [pandas](https://pandas.pydata.org/) is specifically designed for reading delimited text files. 
 It pre-processes text data files and makes them easier to process and use in analysis.
 
-Pandas allows us to access
-certain elements within each row? For example, the gender of each patient.
+[Pandas](https://pandas.pydata.org/) allows us to access certain elements within each row.
+For example, the gender of each patient.
 
-Start a new script called "Script04.py", add the wd, load pandas and use the pandas method read_csv to input the same input file:
-```
+With [pandas](https://pandas.pydata.org/) let us read in the file "patients_gut_data.csv".
+
+- Start a new script called "Script04.py"
+- Add the `wd`
+- load [pandas](https://pandas.pydata.org/) 
+- Use the [pandas](https://pandas.pydata.org/) method `read_csv` to read in the input file
+
+Contents of "Script04.py":
+```{python, eval=FALSE}
+#load pandas
 import pandas
+#Set working dirtectory
 wd = "/pub14/tea/nsc201"
-
+#Read in csv file
 patients = pandas.read_csv(wd + "/Python_course_data/patients_gut_data.csv")
 ```
 
-Now we have read our data into the object 'patients', we can take a look at how pandas has stored the data by looking at the ".dtypes" (data types).
+Now we have read our data into the object 'patients', we can take a look at how [pandas](https://pandas.pydata.org/) has stored the data by looking at the ".dtypes" (data types).
 
-```
+```{python, eval=FALSE}
 print(patients.dtypes)
 ```
 Pandas has automatically used the column headers as the variable names, and assigned 
 each variable a type based on the data; either 'float64' (a floating point number) 
 or 'object' (a catch all term for string types).
 
-We can access a single column of data by it's variable name assigned by pandas.
+We can access a single column of data by it's variable name assigned by [pandas](https://pandas.pydata.org/)
 For example, to access the 'diversity' column:
 
-```
+```{python, eval=FALSE}
 #print(patients.dtypes)
 print(patients.diversity)
 ```
 
-To access individual records, we need to first tell pandas which column contains the index, or sample names.
+To access individual records, we need to first tell [pandas](https://pandas.pydata.org/) which column contains the index, or sample names.
 
 In the case of the patients_gut_data.csv data file, the identifiers are in the first column, which Python counts as column zero.
 
 Modify the command above to the following to add the index information, and print the data associated with sample #21.
 
-```
+```{python, eval=FALSE}
 patients = pandas.read_csv(wd + "/Python_course_data/patients_gut_data.csv", index_col=0)
 
 #print(patients.dtypes)
@@ -94,7 +104,7 @@ Let's select the data relating to the age, gut microbiome diversity, and bmi_gro
 
 Modify the commands above to the following: 
 
-```
+```{python, eval=FALSE}
 patients = pandas.read_csv(wd + "/Python_course_data/patients_gut_data.csv", index_col=0)
 
 #print(patients.loc["Sample-21"])
@@ -106,7 +116,7 @@ print(type(age_div_bmi))
 ```
 
 We can see our new dataframe contains just the columns we selected, and also by checking it with the type() function,
-this new dataframe is also in the pandas format.
+this new dataframe is also in the [pandas](https://pandas.pydata.org/) format.
 
 
 ## Select records by their properties
@@ -122,7 +132,7 @@ You can always refer back to chapters 4 and 5 for a refresher on how selection s
 
 Modify the above commands to:
 
-```
+```{python, eval=FALSE}
 #print(age_div_bmi)
 #print(type(age_div_bmi))
 
@@ -136,7 +146,7 @@ We can also do something similar but using the *OR* operator instead; the pipe c
 
 Modify the end of the above commands to:
 
-```
+```{python, eval=FALSE}
 #print(overweight_over25)
 
 obese_or_severeobese = patients[(patients["bmi_group"] == "obese") | (patients["bmi_group"] == "severeobese")]
@@ -148,12 +158,12 @@ print(obese_or_severeobese)
 
 <center>![](../images/function.jpg){height=300px}![](../images/pandas_logo2.svg.png){height=300px}</center></center>
 
-Pandas provides useful methods for working with data tables, as we have seen. All of the previous approaches
+[Pandas](https://pandas.pydata.org/) provides useful methods for working with data tables, as we have seen. All of the previous approaches
 that we used in previous chapters still apply to data which has been processed using pandas.
 
 For example, we can use pandas to select the age column, and convert the number of years to months:
 
-```
+```{python, eval=FALSE}
 #print(obese_or_severeobese)
 print(patients.age*12)
 ```
@@ -165,7 +175,7 @@ Or, we could define a new function and use that with pandas data.
 Comment out the print statement above, add the following definition for an average function,
 and pass the diversity column to the new function to find the average microbiome diversity in the dataset.
 
-```
+```{python, eval=FALSE}
 #print(patients.age*12)
 
 # define new function to find the average of a list

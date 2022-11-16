@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Data Structures | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Data Structures | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -310,7 +310,7 @@ but is a common feature of many programming languages</strong>.</p>
 <span id="cb23-2"><a href="05_data_structures.html#cb23-2" aria-hidden="true" tabindex="-1"></a>gene_fold_change[<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
 <p>The same technique also works to select a range of values from the list. The upper and lower position of the range to be selected given in square brackets, separated by a colon.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="05_data_structures.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># subset the third and fourth values</span></span>
-<span id="cb24-2"><a href="05_data_structures.html#cb24-2" aria-hidden="true" tabindex="-1"></a>gene_fold_change[<span class="dv">2</span>:<span class="dv">3</span>]</span></code></pre></div>
+<span id="cb24-2"><a href="05_data_structures.html#cb24-2" aria-hidden="true" tabindex="-1"></a>gene_fold_change[<span class="dv">2</span>:<span class="dv">4</span>]</span></code></pre></div>
 <p>To subset everything from a certain position onwards, leave the upper value blank. This also works to select everything before a certain position.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="05_data_structures.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># subset the sixth value to the end</span></span>
 <span id="cb25-2"><a href="05_data_structures.html#cb25-2" aria-hidden="true" tabindex="-1"></a>gene_fold_change[<span class="dv">5</span>:]</span>
@@ -328,13 +328,13 @@ set using the <code>add()</code> method.</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="05_data_structures.html#cb26-1" aria-hidden="true" tabindex="-1"></a>plants_set <span class="op">=</span> {<span class="st">&quot;Dandelion&quot;</span>, <span class="st">&quot;Buttercup&quot;</span>, <span class="st">&quot;Clover&quot;</span>, <span class="st">&quot;Poppy&quot;</span>}</span>
 <span id="cb26-2"><a href="05_data_structures.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="05_data_structures.html#cb26-3" aria-hidden="true" tabindex="-1"></a>plants_set</span></code></pre></div>
-<p>A second round of analysis founds an extra plant species and so we can add this in as well.</p>
+<p>A second round of analysis found an extra plant species and so we can add this in as well.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="05_data_structures.html#cb27-1" aria-hidden="true" tabindex="-1"></a>plants_set.add(<span class="st">&quot;Honeysuckle&quot;</span>)</span>
 <span id="cb27-2"><a href="05_data_structures.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="05_data_structures.html#cb27-3" aria-hidden="true" tabindex="-1"></a>plants_set</span></code></pre></div>
 <p>Combining data from more samples might mean that duplicate plants were detected in the data.
 Adding plants that are already in the set has no effect as it cannot hold duplicate values.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="05_data_structures.html#cb28-1" aria-hidden="true" tabindex="-1"></a>plants_set.add(<span class="st">&quot;Buttercup&quot;</span>, <span class="st">&quot;Clover&quot;</span>)</span>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="05_data_structures.html#cb28-1" aria-hidden="true" tabindex="-1"></a>plants_set.add(<span class="st">&quot;Buttercup&quot;</span>)</span>
 <span id="cb28-2"><a href="05_data_structures.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="05_data_structures.html#cb28-3" aria-hidden="true" tabindex="-1"></a>plants_set</span></code></pre></div>
 </div>
