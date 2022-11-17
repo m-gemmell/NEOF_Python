@@ -50,7 +50,7 @@ import os
 os.getcwd()
 ```
 
-This will return something like: '/pub39/tea/nsc014'
+This will return something like: '/pub39/tea/nsc206' (your number will be different though).
 
 Highlight this filepath text, including the quote marks, right click and 'copy'.
 
