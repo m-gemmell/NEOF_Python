@@ -1,6 +1,6 @@
 # Loops
 
-<center>![](../images/loop_icon.png){height=300px}</center>
+<center>![](../images/loop_icon.png){width=30%}</center>
 
 ## Data Structure Recap
 We now have some knowledge of Python data structures (lists, sets, and dictionaries), what type of data they hold, and how we can access the elements within them. 
@@ -10,11 +10,11 @@ How might we apply something to each element of a list? Perhaps we need to count
 ## Introduction To Loops
 Where we need to apply the same function to every item in a data structure, we can use a loop. This means that we do not need to manually apply the function to every item in the list, one at a time.
 
-There are several possible types of loop; we will cover some of the most important in this section.
+There are several types of loop; we will cover some of the most important in this section.
 
 ## For Loops
 
-<center>![](../images/loop_icon2.jpg){height=300px}</center>
+<center>![](../images/loop_icon2.jpg){width=20%}</center>
 
 One of the most important and most commong types of loop is the <b>for</b> loop. 
 
@@ -22,7 +22,7 @@ The <b>for</b> loop runs through a set of variables (such as those in our list) 
 
 Imagine you have a bag of 10 potatoes that you need to peel and put into a pot.
 
-<center>![](../images/potatoes.jpg){height=300px}![](../images/boiling_pot.webp){height=300px}</center>
+<center>![](../images/potatoes.jpg){width=20%}![](../images/boiling_pot.webp){width=20%}</center>
 
 Using some pseudocode we can imagine how this script might look:
 
