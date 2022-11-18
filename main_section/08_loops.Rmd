@@ -1,66 +1,68 @@
 # Loops
 
-<center>![](../images/loop_icon.png){width=30%}</center>
+<center>![](./images/loop_icon.png){width="30%"}</center>
 
 ## Data Structure Recap
-We now have some knowledge of Python data structures (lists, sets, and dictionaries), what type of data they hold, and how we can access the elements within them. 
 
-How might we apply something to each element of a list? Perhaps we need to count the number of characters in each entry in the list?
+We now have some knowledge of Python data structures (**lists**, **sets**, and **dictionaries**), what type of data they hold, and how we can access the elements within them.
+
+How might we apply something to each element of a **list**? Perhaps we need to count the number of characters in each entry in the **list**?
 
 ## Introduction To Loops
-Where we need to apply the same function to every item in a data structure, we can use a loop. This means that we do not need to manually apply the function to every item in the list, one at a time.
 
-There are several types of loop; we will cover some of the most important in this section.
+Where we need to apply the same function to every item in a data structure, we can use a **loop**. This means that we do not need to manually apply the function to every item in the **list**, one at a time.
+
+There are several types of **loop**; we will cover some of the most important in this section.
 
 ## For Loops
 
-<center>![](../images/loop_icon2.jpg){width=20%}</center>
+<center>![](./images/loop_icon2.jpg){width="20%"}</center>
 
-One of the most important and most commong types of loop is the <b>for</b> loop. 
+One of the most important and most common types of **loop** is the **for** **loop**.
 
-The <b>for</b> loop runs through a set of variables (such as those in our list) and applies a function to each element once. This is the loop that you will most often encounter.
+The **for** **loop** runs through a set of **variables** (such as those in our list) and applies a **command** (or series of commands) to each element once. This is the **loop** that you will most often encounter.
 
 Imagine you have a bag of 10 potatoes that you need to peel and put into a pot.
 
-<center>![](../images/potatoes.jpg){width=20%}![](../images/boiling_pot.webp){width=20%}</center>
+<center>![](./images/potatoes.jpg){width="20%"}![](./images/boiling_pot.webp){width="20%"}</center>
 
 Using some pseudocode we can imagine how this script might look:
 
-1) from <b>bag_of_potatoes</b> pick up <b>potato_01</b><br>
-2) peel <b>potato_01</b><br>
-3) put <b>potato_01</b> into <b>pot</b><br>
-4) from <b>bag_of_potatoes</b> pick up <b>potato_02</b><br>
-5) peel <b>potato_02</b><br>
-6) put <b>potato_02</b> into <b>pot</b><br>
-  ....(and so on)
+1)  from bag_of_potatoes pick up potato_01
+2)  peel potato_01
+3)  put potato_01 into pot
+4)  from bag_of_potatoes pick up potato_02
+5)  peel potato_02
+6)  put potato_02 into pot ....(and so on)
 
 You can see how inefficient this code is, especially if it was a particularly large bag of potatoes!
 
-Instead, we can use a <b>for</b> loop to recycle the code.
+Instead, we can use a **for** **loop** to recycle the code.
 
-1) for each <b>potato</b> in <b>bag_of_potatoes</b>:
-    2) peel <b>potato</b>
-    3) put <b>potato</b> into pot
+1)  **for** each potato in bag_of_potatoes:
+    2)  peel potato
+    3)  put potato into pot
 
-This loop would run until the bag of potatoes is empty, achieving the job in just three lines of code.
+This **loop** would run until the bag of potatoes is empty, achieving the job in just three lines of code.
 
-This pseudocode is actually very similar to the required Python syntax. 
-The generic format of a <b>for</b> loop is:
+This pseudocode is actually very similar to the required Python syntax. The generic format of a **for** **loop** is:
+
 ```{python, eval=FALSE}
 for <value> in <data_structure>:
   do something
 ```
-<b>Note the colon starting the loop and the tab indent of any commands inside the loop.</b>
+
+Note the colon (`:`) starting the loop and the tab indent of any commands inside the loop.
 
 ## For Loop Example
-As we have seen, <b>for</b> loops are extremely useful when we have a lot of values (for example, in a list) and we need to apply some method to all of them.
 
-As an example, we will take a string of DNA nucleotides and use a <b>loop</b> to generate the complement and reverse complement sequences.
+As we have seen, **for** **loops** are extremely useful when we have a lot of values (for example, in a **list**) and we need to apply some commands to all of them.
 
-Add a string of nucleotides to the script in Gedit (you can use any random nucleotide sequence - no need to copy this one exactly),
-and code a <b>for</b> loop to move through the DNA string, printing each base to the screen. Save and run the script.
+As an example, we will take a string of DNA nucleotides and use a **loop** to generate the complement and reverse complement sequences.
 
-<b>Remember to tab indent the lines inside the for loop.</b>
+Add a string of nucleotides to the **script** (script01.py) in **Gedit** (you can use any random nucleotide sequence - no need to copy this one exactly), and code a **for** **loop** to move through the DNA string, printing each base to the screen. Save and run the script.
+
+Remember to tab indent the lines inside the for loop.
 
 ```{python, eval=FALSE}
 DNA_string = "ATTCGAAGTCGTGTAGTACCGCGTATA"
@@ -71,17 +73,18 @@ for base in DNA_string:
   # print the current base
   print(base)
 ```
-  
-We can see from the output that the <b>loop</b> allows us to process each base in the string separately; in this case by printing them individually.
+
+We can see from the output that the **loop** allows us to process each base in the string separately; in this case by printing them individually.
 
 ## Use a for loop to complement a DNA sequence
-Next, let's use this loop functionality to do something useful to each base such as translate each nucleotide to the appropriate complement base.
 
-For this, we will use a <b>dictionary</b> to swap each base for the complement. Recall that a dictionary has a <b>key</b> and <b>value</b> for each entry. We can define the 'standard' base as the key, and the 'complement' as the value.
+Next, let's use this **loop** functionality to do something useful to each base such as translate each nucleotide to the appropriate complement base.
 
-First create the dictionary holding the complementary pairs of bases. In the script this needs to come <b>before</b> the <b>for</b> loop. Modify the above to the following:
+For this, we will use a **dictionary** to swap each base for the complement. Recall that a **dictionary** has a **key** and **value** for each entry. We can define the 'standard' base as the **key**, and the 'complement' as the **value**.
 
-<b>Note</b> That each of the four rows of the dictionary need to have a leading TAB character.
+First create the **dictionary** holding the complementary pairs of bases. In the **script** this needs to come before the for **loop**. Modify the above to the following:
+
+Note That each of the four lines of the **dictionary** need to have a leading TAB character.
 
 ```{python, eval=FALSE}
 DNA_string = "ATTCGAAGTCGTGTAGTACCGCGTATA"
@@ -101,9 +104,9 @@ for base in DNA_string:
 
 ```
 
-At present, the print statement is still just going to print the base as it appears in the original string. We need to change the print statement so that in each iteration of the loop, the original nucleotide (base) is passed to the dictionary and the appropriate complementary base is returned.
+At present, the `print()` **function** is still printing the base as it appears in the original string. We need to change the **loop** so the original nucleotides (base) are passed to the **dictionary** and the appropriate complementary bases are returned.
 
-Modify the loop as follows:
+Modify the **loop** as follows:
 
 ```{python, eval=FALSE}
 # loop through each base in the string
@@ -114,15 +117,14 @@ for base in DNA_string:
   print(complements[base])
 ```
 
-Run the script and verify that the complementary base is printed each time.
+Save, and run the **script** to verify that the complementary base is printed fo each iteration of the loop.
 
-Finally, we can build up an 'output string' to format the complemented sequence.
-The complemented base is added to the variable output_sting each time and the
-whole string is printed at the end.
+Finally, we can build up an 'output string' to format the complemented sequence. The complemented base is added to the **variable** `output_sting` each time and the whole **string** is printed at the end.
 
 ```{python, eval=FALSE}
-# loop through each base in the string
+#Create and empty string to add the complemented bases to
 output_string = ""
+# loop through each base in the string
 for base in DNA_string:
   # print the current base
   #print(base)
@@ -136,13 +138,11 @@ print(DNA_string)
 print(output_string)
 ```
 
-Save, and run the script to check the output sequence is as expected.
+Save, and run the **script** to check the output sequence is as expected.
 
 ## Use a for loop to reverse-complement a DNA sequence
 
-To generate the reverse complement we can use Python's built in reversed() method
-to loop through the original DNA sequence in the reverse order.
-Comment out the original <b>for</b> loop line, and replace with the following:
+To generate the reverse complement we can use Python's built in `reversed()` **function** to **loop** through the original DNA sequence in the reverse order. Comment out the original **for** **loop** line, and replace with the following:
 
 ```{python, eval=FALSE}
 # comment out the original for loop
@@ -156,33 +156,31 @@ Running the script now will produce the reverse complement of our original DNA s
 
 ## While loops
 
-<center>![](../images/loop_icon3.png){height=300px}</center>
+<center>![](./images/loop_icon3.png){width="20%"}</center>
 
-The other type of loop you might encounter is the <b>while</b> loop.
-A <b>while</b> loop continues to run while a statement remains true.
-For example, returning to our bag of potatoes, a <b>while</b> loop for the same job might look like this:
+The other type of **loop** you might encounter is the **while** **loop**. A **while** **loop** continues to run **while** a statement remains **True**. For example, returning to our bag of potatoes, a **while** **loop** for the same job might look like this:
 
-1) while <b>bag_of_potatoes</b> is not empty :
-    2) peel <b>potato</b>
-    3) put <b>potato</b> into pot
-    
-This loop would run until the last potato has been prepared, at which point the <b>while</b> statement would return FALSE and the loop would be stopped.
+1)  while bag_of_potatoes is not empty :
+    2)  peel potato
+    3)  put potato into pot
 
-The generic format of a <b>while</b> loop is as follows:
+This **loop** would run until the last potato has been prepared, at which point the while statement would return **False** and the loop would be stopped.
+
+The generic format of a **while** **loop** is as follows:
 
 ```{python, eval=FALSE}
 while <condition> :
   do something
 ```
 
-<b>While</b> loops are much less commonly used and we will not spend any more time on them in this session.
-Hopefully you can see the difference between a for loop and a while loop and have an idea of how they run.
+**While** **loops** are much less commonly used and we will not spend any more time on them in this session. Hopefully you can see the difference between a **for** **loop** and a **while** **loop** and have an idea of how they run.
 
 ## Further control statements
-You can control loops further using break, continue and pass statements although we are not covering these in this tutorial as they are much less common. You can find good resources covering Python control statements [online](https://www.tutorialspoint.com/python/python_loop_control.htm).
+
+You can control **loops** further using break, continue and pass statements although we are not covering these in this tutorial as they are much less common. You can find good resources covering Python control statements [online](https://www.tutorialspoint.com/python/python_loop_control.htm).
 
 ## Recap
-<center>![](../images/recap.webp){height=300px}</center>
-Loops are really useful when we need to perform the same task, or function, over-and-over again. Where we have data stored in a data structure such
-as a list, we can apply something to everything in the list using a for loop.
-This is an efficient way to code as it means we do not need to duplicate the instructions.
+
+<center>![](./images/recap.webp){width="20%"}</center>
+
+**Loops** are really useful when we need to perform the same task, or commands, over-and-over again. Where we have data stored in a data structure such as a **list**, we can apply something to everything in the **list** using a **for** **loop**. This is an efficient way to code as it means we do not need to duplicate the instructions.
