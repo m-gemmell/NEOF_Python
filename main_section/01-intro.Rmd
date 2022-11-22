@@ -1,9 +1,3 @@
----
-title: "Python for Bioinformatics"
-author: Graeme Fox
-date: "`r format(Sys.time(), '%B, %Y')`"
----
-
 # Python for bioinformatics
 
 <center>![](images/python_logo.png){height="100px"} ![](images/biopython_logo.png){height="100px"}</center>

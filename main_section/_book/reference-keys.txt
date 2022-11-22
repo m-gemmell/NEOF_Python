@@ -38,7 +38,7 @@ python-conditions-if-and-else-statements
 if-statements
 if-else-statements
 recap-2
-starting-scripting-in-python
+scripting-in-python-1
 open-a-plain-text-editor
 running-a-script-from-the-terminal
 loops

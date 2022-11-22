@@ -1,18 +1,21 @@
---- 
+---
 title: "Python for Bioinformatics - Supplementary Materials"
 author: Graeme Fox
 date: "`r format(Sys.time(), '%B, %Y')`"
+favicon: images/NEOF_favicon.png
+description: NEOF book for the Python for Bioinformatics workshop - Supplementary materials
+cover-image: "images/NEOF.png"
 ---
 
 # Introduction
-<center>
-![](images/NEOF_logo.png){height=100px}</center>
 
-<br><br>
-This supplementary material is focused on working with other types of data that you might typically encounter; specifically comma delimited data tables, and also using Python to generate plots.
+<center>![](images/NEOF_logo.png){height="100px"}</center>
 
-This material serves as an introduction to two very powerful Python libraries:
+<br><br> These supplementary materials are focused on working with other types of data and generating plots with Python. We will work with comma delimited data tables and create a bar chart and scatter plot.
 
-[Pandas](https://pandas.pydata.org/) and [Matplotlib](https://matplotlib.org/).
+These material serves as an introduction to two very powerful Python libraries:
 
-This additional bookdown is an extension to the 'main' material, and expands on the use of loops, reading and writing files, subsetting data, and applying functions that you have already practiced.
+1. [`Pandas`](https://pandas.pydata.org/), a data analysis and manipulation tool.
+2. [`Matplotlib`](https://matplotlib.org/), a comprehensive library for creating static, animated, and interactive visualizations in Python.
+
+This bookdown will also expand on the use of loops, reading and writing files, subsetting data, and applying functions that you have already practiced.
