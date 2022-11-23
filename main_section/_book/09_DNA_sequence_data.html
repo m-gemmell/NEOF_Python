@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Reading sequence data | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Reading sequence data | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -90,7 +90,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -103,7 +103,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -259,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="reading-sequence-data" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">10</span> Reading sequence data<a href="09_DNA_sequence_data.html#reading-sequence-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <center>
-<img src="../images/DNA_icon.png" height="300" /><img src="../images/biopython_logo.png" height="300" />
+<img src="images/DNA_icon.png" height="300" /><img src="images/biopython_logo.png" height="300" />
 </center>
 <p>Biopython is a suite of libraries and tools designed for analysis of biological datasets in Python, largely centered around the processing of DNA sequence data.</p>
 <p>You can find much more information about Biopython on the <a href="https://biopython.org/">website</a>.</p>
@@ -268,20 +268,20 @@ will now be used to process some genomic DNA sequence data.</p>
 <div id="seqio" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> SeqIO<a href="09_DNA_sequence_data.html#seqio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <center>
-<img src="../images/DNA_computer.png" height="300" />
+<img src="images/DNA_computer.png" style="width:20.0%" />
 </center>
 <p>The SeqIO tools are the main Sequence Input/Output interface for Biopython. It provides a relatively simple, uniform interface for working with various types of DNA sequence files. The module reads raw sequence files (such as .FASTQ files you will likely receive from your sequencing facility) and converts them to a Python readable format; a <a href="https://biopython.org/wiki/SeqRecord">SeqRecord</a> class.</p>
 </div>
 <div id="reading-a-fastq-dna-data-file-into-python" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> Reading a FASTQ DNA data file into Python<a href="09_DNA_sequence_data.html#reading-a-fastq-dna-data-file-into-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One of the most common types of DNA sequence data files you will be working with is the <a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> file.
-The FASTQ file contains multiple DNA sequences, each one might be a single short read from an Illumina sequencer and the total file can contain thousands or millions of sequences depending on which sequencer was used to produce it.</p>
+The FASTQ file contains multiple DNA sequences, each one might be a single short read from an Illumina sequencer and the file can contain thousands or millions of sequences depending on which sequencer was used to produce it.</p>
 <p>The FASTQ has a very specific format and holds three important pieces of information.</p>
 </div>
 <div id="the-fastq-format" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> The FASTQ format<a href="09_DNA_sequence_data.html#the-fastq-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <center>
-<img src="../images/fastq_icon.png" height="300" />
+<img src="images/fastq_icon.png" style="width:20.0%" />
 </center>
 <p>The file has a repetitive structure of four distinct components:</p>
 <ul>
@@ -290,7 +290,7 @@ The FASTQ file contains multiple DNA sequences, each one might be a single short
 <li>A small spacer</li>
 <li>The quality score associated with each nucleotide</li>
 </ul>
-<p>The ID line always starts with the @ symbol and this is followed by a string of numbers and letters giving details such as the sequencer that produced the data, the run number, an index adapter used on the sample.</p>
+<p>The ID line always starts with the @ symbol and this is followed by a string of numbers and letters giving details such as the sequencer that produced the data, the run number, and an index adapter used on the sample.</p>
 <p>The DNA nucleotide sequence is shown as a string of ATGC characters.</p>
 <p>There is a spacer consisting of the "+" character which separates the sequence from the quality scores.</p>
 <p>The quality score associated with each nucleotide above is ASCII encoded with each symbol representing a quality score from 0 to 40 (higher being better). This line is not meant to be easily human-readable.</p>
@@ -302,15 +302,15 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD</code></pre>
 </div>
 <div id="read-a-fastq-file-into-python" class="section level2 hasAnchor" number="10.4">
 <h2><span class="header-section-number">10.4</span> Read a FASTQ file into Python<a href="09_DNA_sequence_data.html#read-a-fastq-file-into-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Scenario:</strong> You have just recieved some FASTQ formatted data back from your sequencing facility. The data was generated using a shotgun, whole-genome sequencing approach to sequence the genome of the undulate ray (<em>Raja undulata</em>).</p>
+<p><strong>Scenario:</strong> You have just received some FASTQ formatted data back from your sequencing facility. The data was generated using a shotgun, whole-genome sequencing approach to sequence the genome of the undulate ray (<em>Raja undulata</em>).</p>
 <center>
-<img src="../images/undulate_ray.jpeg" height="300" />
+<img src="images/undulate_ray.jpeg" style="width:20.0%" />
 </center>
-<p>We are going to read the data into Python ready to do some data processing and analyses.</p>
+<p>We are going to read the data into Python, ready to do some data processing and analyses.</p>
 </div>
 <div id="setting-up-a-script-to-use-biopython" class="section level2 hasAnchor" number="10.5">
 <h2><span class="header-section-number">10.5</span> Setting up a script to use BioPython<a href="09_DNA_sequence_data.html#setting-up-a-script-to-use-biopython" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Open a new file in Gedit by clicking the "Create a new document" button at the top-left.</p>
+<p>Open a new file in Gedit by clicking the "Create a new document" button (<img src="images/gedit_create_new_doc.png?display=inline-block" style="width:4.0%" />) at the top-left.</p>
 <p>We need to load a couple of Python libraries:</p>
 <p><code>Biopython</code> (a suite of bioinformatics focused Python tools)</p>
 <p>...and...</p>
@@ -325,7 +325,7 @@ Set a variable called 'wd', (working directory) to the filepath on your clipboar
 <div id="read-a-fie-of-sequence-data" class="section level2 hasAnchor" number="10.6">
 <h2><span class="header-section-number">10.6</span> Read a fie of sequence data<a href="09_DNA_sequence_data.html#read-a-fie-of-sequence-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <center>
-<img src="../images/bioinformatics_icon2.png" height="300" />
+<img src="images/bioinformatics_icon2.png" height="300" />
 </center>
 <p>We are going to use <code>SeqIO</code> (which stands for sequence in/out) and the <code>parse</code> function which splits the FASTQ file into its separate components.</p>
 <p>We store the information on which file to parse in the variable called <code>R_undulata_R1_data</code>.

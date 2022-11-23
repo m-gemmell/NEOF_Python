@@ -1,6 +1,6 @@
 # Reading sequence data
 
-<center>![](../images/DNA_icon.png){height=300px}![](../images/biopython_logo.png){height=300px}</center>
+<center>![](images/DNA_icon.png){height="300px"}![](images/biopython_logo.png){height="300px"}</center>
 
 Biopython is a suite of libraries and tools designed for analysis of biological datasets in Python, largely centered around the processing of DNA sequence data.
 
@@ -11,20 +11,20 @@ will now be used to process some genomic DNA sequence data.
 
 ## SeqIO
 
-<center>![](../images/DNA_computer.png){height=300px}</center>
+<center>![](images/DNA_computer.png){width=20%}</center>
 
 The SeqIO tools are the main Sequence Input/Output interface for Biopython. It provides a relatively simple, uniform interface for working with various types of DNA sequence files. The module reads raw sequence files (such as .FASTQ files you will likely receive from your sequencing facility) and converts them to a Python readable format; a [SeqRecord](https://biopython.org/wiki/SeqRecord) class.
 
 
 ## Reading a FASTQ DNA data file into Python
 One of the most common types of DNA sequence data files you will be working with is the [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) file. 
-The FASTQ file contains multiple DNA sequences, each one might be a single short read from an Illumina sequencer and the total file can contain thousands or millions of sequences depending on which sequencer was used to produce it.
+The FASTQ file contains multiple DNA sequences, each one might be a single short read from an Illumina sequencer and the file can contain thousands or millions of sequences depending on which sequencer was used to produce it.
 
 The FASTQ has a very specific format and holds three important pieces of information.
 
 ## The FASTQ format
 
-<center>![](../images/fastq_icon.png){height=300px}</center>
+<center>![](images/fastq_icon.png){width=20%}</center>
 
 The file has a repetitive structure of four distinct components:
 
@@ -33,7 +33,7 @@ The file has a repetitive structure of four distinct components:
 * A small spacer
 * The quality score associated with each nucleotide
 
-The ID line always starts with the @ symbol and this is followed by a string of numbers and letters giving details such as the sequencer that produced the data, the run number, an index adapter used on the sample.
+The ID line always starts with the @ symbol and this is followed by a string of numbers and letters giving details such as the sequencer that produced the data, the run number, and an index adapter used on the sample.
 
 The DNA nucleotide sequence is shown as a string of ATGC characters. 
 
@@ -50,15 +50,15 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD
 ```
 ## Read a FASTQ file into Python
 
-__Scenario:__ You have just recieved some FASTQ formatted data back from your sequencing facility. The data was generated using a shotgun, whole-genome sequencing approach to sequence the genome of the undulate ray (*Raja undulata*).
+__Scenario:__ You have just received some FASTQ formatted data back from your sequencing facility. The data was generated using a shotgun, whole-genome sequencing approach to sequence the genome of the undulate ray (*Raja undulata*).
 
-<center>![](../images/undulate_ray.jpeg){height=300px}</center>
+<center>![](images/undulate_ray.jpeg){width=20%}</center>
 
-We are going to read the data into Python ready to do some data processing and analyses.
+We are going to read the data into Python, ready to do some data processing and analyses.
 
 ## Setting up a script to use BioPython
 
-Open a new file in Gedit by clicking the "Create a new document" button at the top-left.
+Open a new file in Gedit by clicking the "Create a new document" button (![](images/gedit_create_new_doc.png?display=inline-block){width=4%}) at the top-left.
 
 We need to load a couple of Python libraries: 
 
@@ -84,9 +84,9 @@ wd = "/pub14/tea/nsc201"
 
 ## Read a fie of sequence data
 
-<center>![](../images/bioinformatics_icon2.png){height=300px}</center>
+<center>![](images/bioinformatics_icon2.png){width=20%}</center>
 
-We are going to use `SeqIO` (which stands for sequence in/out) and the `parse` function which splits the FASTQ file into its separate components.
+We are going to use `SeqIO` (which stands for sequence in/out) and the `parse` __function__ which splits the FASTQ file into its separate components.
 
 We store the information on which file to parse in the variable called `R_undulata_R1_data`.
 `SeqIO.parse` requires two arguments: 
@@ -109,13 +109,13 @@ for record in R_undulata_data:
   print(record.seq)
 ```
 
-Save the new script as 'script02.py' and run it from the terminal window to print the ID and sequences.
+Save the new script as __'script02.py'__ and run it from the terminal window to print the ID and sequences.
 
 ## Modifying reads
 
-We can perform operations on each of these elements. For example, Biopython has a built in `translate()` method to convert nucleotide sequence into protein sequence (although bear in mind that we are not considering reading frames and we likely have lots of non-coding data).
+We can perform operations on each of these elements. For example, Biopython has a built in `translate()` __method__ to convert nucleotide sequence into protein sequence (although bear in mind that we are not considering reading frames and we likely have lots of non-coding data).
 
-Modify the __for__ loop above to the following:
+Modify the __for__ __loop__ above to the following:
 
 ```{python, eval=FALSE}
 for record in R_undulata_data:
@@ -124,7 +124,11 @@ for record in R_undulata_data:
   print(record.seq.translate())
 ```
 
-We can implement a counter to tally the total number of reads in the file. Modify the __for__ loop above to the following (you do not need to add the comments however):
+Save the script and run it on the terminal.
+
+## Count reads
+
+We can implement a counter to tally the total number of reads in the file. Modify the __for__ __loop__ above to the following (you do not need to add the comments however):
 
 ```{python, eval=FALSE}
 ## start a counter to track how many reads
@@ -144,4 +148,4 @@ print("Raw sequence file has " + str(number_raw_reads) + \
 " sequence records.")
 ```
 
-Note that we need to convert the `number_raw_reads` to a string type in order for the print statement to work using str(). Python will not print variables of different types in the same statement.
+Note that we need to convert the `number_raw_reads` to a __string__ type for the print statement to work using the `str()` __function__. Python will not print variables of different types in the same statement.
