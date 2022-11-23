@@ -220,6 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.5" data-path="09_DNA_sequence_data.html"><a href="09_DNA_sequence_data.html#setting-up-a-script-to-use-biopython"><i class="fa fa-check"></i><b>10.5</b> Setting up a script to use BioPython</a></li>
 <li class="chapter" data-level="10.6" data-path="09_DNA_sequence_data.html"><a href="09_DNA_sequence_data.html#read-a-fie-of-sequence-data"><i class="fa fa-check"></i><b>10.6</b> Read a fie of sequence data</a></li>
 <li class="chapter" data-level="10.7" data-path="09_DNA_sequence_data.html"><a href="09_DNA_sequence_data.html#modifying-reads"><i class="fa fa-check"></i><b>10.7</b> Modifying reads</a></li>
+<li class="chapter" data-level="10.8" data-path="09_DNA_sequence_data.html"><a href="09_DNA_sequence_data.html#count-reads"><i class="fa fa-check"></i><b>10.8</b> Count reads</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="10_DNA_conditions.html"><a href="10_DNA_conditions.html"><i class="fa fa-check"></i><b>11</b> Using Conditions to Modify DNA Data</a>
 <ul>
@@ -325,9 +326,9 @@ Set a variable called 'wd', (working directory) to the filepath on your clipboar
 <div id="read-a-fie-of-sequence-data" class="section level2 hasAnchor" number="10.6">
 <h2><span class="header-section-number">10.6</span> Read a fie of sequence data<a href="09_DNA_sequence_data.html#read-a-fie-of-sequence-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <center>
-<img src="images/bioinformatics_icon2.png" height="300" />
+<img src="images/bioinformatics_icon2.png" style="width:20.0%" />
 </center>
-<p>We are going to use <code>SeqIO</code> (which stands for sequence in/out) and the <code>parse</code> function which splits the FASTQ file into its separate components.</p>
+<p>We are going to use <code>SeqIO</code> (which stands for sequence in/out) and the <code>parse</code> <strong>function</strong> which splits the FASTQ file into its separate components.</p>
 <p>We store the information on which file to parse in the variable called <code>R_undulata_R1_data</code>.
 <code>SeqIO.parse</code> requires two arguments:</p>
 <ul>
@@ -341,17 +342,21 @@ Each of these elements can be printed in the terminal using an appropriate print
 <div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="09_DNA_sequence_data.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
 <span id="cb51-2"><a href="09_DNA_sequence_data.html#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
 <span id="cb51-3"><a href="09_DNA_sequence_data.html#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
-<p>Save the new script as 'script02.py' and run it from the terminal window to print the ID and sequences.</p>
+<p>Save the new script as <strong>'script02.py'</strong> and run it from the terminal window to print the ID and sequences.</p>
 </div>
 <div id="modifying-reads" class="section level2 hasAnchor" number="10.7">
 <h2><span class="header-section-number">10.7</span> Modifying reads<a href="09_DNA_sequence_data.html#modifying-reads" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We can perform operations on each of these elements. For example, Biopython has a built in <code>translate()</code> method to convert nucleotide sequence into protein sequence (although bear in mind that we are not considering reading frames and we likely have lots of non-coding data).</p>
-<p>Modify the <strong>for</strong> loop above to the following:</p>
+<p>We can perform operations on each of these elements. For example, Biopython has a built in <code>translate()</code> <strong>method</strong> to convert nucleotide sequence into protein sequence (although bear in mind that we are not considering reading frames and we likely have lots of non-coding data).</p>
+<p>Modify the <strong>for</strong> <strong>loop</strong> above to the following:</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="09_DNA_sequence_data.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
 <span id="cb52-2"><a href="09_DNA_sequence_data.html#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
 <span id="cb52-3"><a href="09_DNA_sequence_data.html#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(record.seq)</span></span>
 <span id="cb52-4"><a href="09_DNA_sequence_data.html#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.seq.translate())</span></code></pre></div>
-<p>We can implement a counter to tally the total number of reads in the file. Modify the <strong>for</strong> loop above to the following (you do not need to add the comments however):</p>
+<p>Save the script and run it on the terminal.</p>
+</div>
+<div id="count-reads" class="section level2 hasAnchor" number="10.8">
+<h2><span class="header-section-number">10.8</span> Count reads<a href="09_DNA_sequence_data.html#count-reads" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can implement a counter to tally the total number of reads in the file. Modify the <strong>for</strong> <strong>loop</strong> above to the following (you do not need to add the comments however):</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="09_DNA_sequence_data.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co">## start a counter to track how many reads</span></span>
 <span id="cb53-2"><a href="09_DNA_sequence_data.html#cb53-2" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb53-3"><a href="09_DNA_sequence_data.html#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -367,7 +372,7 @@ Each of these elements can be printed in the terminal using an appropriate print
 <span id="cb53-13"><a href="09_DNA_sequence_data.html#cb53-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-14"><a href="09_DNA_sequence_data.html#cb53-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Raw sequence file has &quot;</span> <span class="op">+</span> <span class="bu">str</span>(number_raw_reads) <span class="op">+</span> <span class="op">\</span></span>
 <span id="cb53-15"><a href="09_DNA_sequence_data.html#cb53-15" aria-hidden="true" tabindex="-1"></a><span class="st">&quot; sequence records.&quot;</span>)</span></code></pre></div>
-<p>Note that we need to convert the <code>number_raw_reads</code> to a string type in order for the print statement to work using str(). Python will not print variables of different types in the same statement.</p>
+<p>Note that we need to convert the <code>number_raw_reads</code> to a <strong>string</strong> type for the print statement to work using the <code>str()</code> <strong>function</strong>. Python will not print variables of different types in the same statement.</p>
 
 </div>
 </div>
