@@ -20,7 +20,8 @@ There are two parts to consider:
   
 ## 'open'
 <center>![](images/open.png){height=220px}</center>
-The 'open' statement asks the Python interpreter to make a link to the specified file and open a data stream.
+
+The `open` __function__ asks the Python interpreter to make a link to the specified file and open a data stream.
 We need to specify the mode by which the file is opened.
 The most common modes are:
  
@@ -32,7 +33,7 @@ There are other modes but these three cover the majority of file tasks.
 
 ## 'with'
 
-The `with` statement, which is wrapped around the `open()` statement, gives this data stream a variable name (input_file).
+The `with` statement, which is wrapped around the `open` __function__, gives this data stream a variable name (input_file).
 It also performs important 'under-the-hood' cleaning up that stops files from becoming corrupted.
 
 ## Read a data file
@@ -44,6 +45,8 @@ Then add a `for` loop to print each line of the file.
 
 Save the script as "script03.py" and run it from the terminal.
 
+__Note__: Ensure `wd =` is set to your home directory.
+
 ```{python, eval=FALSE}
 wd = "/pub14/tea/nsc201"
 from Bio import SeqIO
@@ -53,15 +56,15 @@ with open(wd + "/Python_course_data/patients_gut_data.csv", 'r') as input_file:
     print(row)
 ```
 
-The data from the file is printed in the terminal window (we will learn to organise this output in a more usable way in the supplementary material).
+Run the script and the data from the file will be printed to the terminal window. We will learn to organise this output in a more usable way in the supplementary material).
 
 ## Write data to a file
 <center>![](images/write.png){height=220px}</center>
 
 Modify the script above to add a second data stream, opening a second file for *write* access.
-Again, we loop through the input_file however this time for each row in the file, we
-prepend the line of data with the string "Study_2022,", and write this new data line to the output file
-using the `.write()` method.
+We'll loop through the input_file. 
+For each row in the input file, we prepend the line of data with the string "Study_2022,".
+Then we write this new data line to the output file using the `.write()` __method__.
 
 ```{python, eval=FALSE}
 with open(wd + "/Python_course_data/patients_modified.csv", 'w') as output_file:
@@ -96,7 +99,7 @@ This trimmed, filtered file would now be ready to go into whichever subsequent a
 
 ## Recap
 
-<center>![](../images/recap.webp){height=300px}</center>
+<center>![](./images/recap.webp){height=300px}</center>
 To read or write files we need to open a data stream using the <b>with</b> and <b>open</b> functions. 
 
 Each file can be opened in one of several modes; either <b>w</b>rite, <b>r</b>ead, or <b>a</b>ppend, depending on what you need to do. 

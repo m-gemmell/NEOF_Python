@@ -1,12 +1,6 @@
----
-editor_options: 
-  markdown: 
-    wrap: sentence
----
-
 # Python Conditions: 'if' and 'else' statements
 
-<center>![](../images/if_else.jpeg){width="30%"}</center>
+<center>![](./images/if_else.jpeg){width="30%"}</center>
 
 A powerful feature of most programming languages is the ability to compare values/**variables** and to make decisions based upon the outcome.
 This type of behaviour is achieved using *logical conditions*.
@@ -42,7 +36,7 @@ These logical conditions are most typically used in **if** statements.
 
 ## If statements
 
-<center>![](../images/if_icon.png){width=20%}</center>
+<center>![](./images/if_icon.png){width=20%}</center>
 
 By testing whether certain comparisons evaluate as either **True** or **False**, we can change the flow of our programs.
 
@@ -50,7 +44,7 @@ An **if statement** is a programming statement which acts like a switch.
 If the statement is **True**, the switch is activated.
 If the statement is **False**, the switch remains inactivated.
 
-<center>![](../images/switch_icon.webp){width=20%}</center>
+<center>![](./images/switch_icon.webp){width=20%}</center>
 
 A generic **if statement** using pseudocode would have the following structure: <br>
 
@@ -82,7 +76,7 @@ We will explore using loops to move through data more in the next chapter.
 
 ## Recap
 
-<center>![](../images/recap.webp){width=20%}</center>
+<center>![](./images/recap.webp){width=20%}</center>
 
 **If** and **else statements** can be used to make decisions in our programs by comparing values.
 This might be to check if two strings are the same, two lists contain the same number of items, or a string of nucleotide data has 100 or more bases.

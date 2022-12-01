@@ -1,8 +1,3 @@
----
-title: "Python for Bioinformatics - Supplementary Materials"
-author: Graeme Fox
----
-
 # Further Reading and Resources
 
 ## Websites of the verious packages used in the workshop

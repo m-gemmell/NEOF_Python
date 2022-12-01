@@ -35,7 +35,7 @@ Save the **script** into the directory of your username (something like nsc014) 
 
 See the image below to make sure it is being saved in the correct place. This is important because we need to tell Python where the **script** is.
 
-<center>![](../images/save_script.png)</center>
+<center>![](./images/save_script.png)</center>
 
 ## Running a script from the terminal
 

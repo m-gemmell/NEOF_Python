@@ -1,10 +1,5 @@
----
-title: "Python for Bioinformatics - Supplementary Materials"
-author: Graeme Fox
----
-
 # Plotting using Python and Matplotlib
-<center>![](images/matplotlib.webp){}</center>
+<center>![](images/matplotlib.webp){width=40%}</center>
 
 We can also use Python to produce plots of our data.
 [Matplotlib](https://matplotlib.org/) is a library of powerful
@@ -58,7 +53,7 @@ cd ~
 firefox bmi_groups.png
 ```
 
-<center>![](images/bar_chart.png){}</center>
+<center>![](images/bar_chart.png){width=80%}</center>
 
 
 ## Use Matplotlib to produce a scatter plot
@@ -81,7 +76,7 @@ View the plot by running the following in the <b>terminal</b> window:
 firefox age_diversity_plot.png
 ```
 
-<center>![](images/scatter.png){}</center>
+<center>![](images/scatter.png){width=80%}</center>
 
 ## Recap
 Madplotlib is a library of very powerful tools to produce plots directly from Python. We have barely scratched the surface of what Matplotlib can do but have seen a couple of examples of how we can produce plots to explore our data.

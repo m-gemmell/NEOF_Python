@@ -1,6 +1,6 @@
 # Cluster Introduction
 
-<center>![](../images/cluster.png){width=25%}</center>
+<center>![](./images/cluster.png){width=25%}</center>
 
 ## Logon Instructions
 For this workshop we will be using Virtual Network Computing (VNC). 
@@ -8,7 +8,7 @@ Connect to the VNC with a browser by using the webVNC link you were sent.
 
 You will now be in a logged-in Linux VNC desktop with a terminal window visible. 
 You will see something as below. 
-<center>![](../images/logon_pic.png){width=75%}</center>
+<center>![](./images/logon_pic.png){width=75%}</center>
 
 If you do not see something similar please ask for assistance.
 
@@ -19,7 +19,7 @@ During the first chapters of this session you will be working directly in the te
 ## The Terminal Window
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
 
-<center>![](../images/terminal_window.png){width=75%}</center>
+<center>![](./images/terminal_window.png){width=75%}</center>
 
 You're now ready to stat the workshop!
 

@@ -1,6 +1,6 @@
 # Scripting in Python
 
-<center>![](../images/python_logo.png){height=200px}![](../images/scripting_icon.png){height=200px}</center>
+<center>![](./images/python_logo.png){height=200px}![](./images/scripting_icon.png){height=200px}</center>
 
 ## Introduction to commands and scripts
 There are two important components to programming in Python; the commands that are committed by the user, and the interpreter which receives and implements the commands.
@@ -60,7 +60,7 @@ Throughout the workshop, we will build up more complex scripts and submit them t
 
 ## A note on indentation
 
-<center>![](../images/tab.jpg){height=200px}</center>
+<center>![](./images/tab.jpg){height=200px}</center>
 
   Indentation refers to any spaces or tab characters at the beginning of a line
   of code. Indentation helps readability of code by helping to define code blocks
