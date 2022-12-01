@@ -84,11 +84,13 @@ head Python_course_data/patients_modified.csv
 ```
 
 ## Write out the filtered Undulate ray sequence data
-Returning to our example data relating to the undulate ray, we have a list of sequence records (trimmed_sequences) which have passed our filters and we now want to write out the FASTQ file so that it might be further analysed using another piece of software.
+Returning to our example data relating to the undulate ray, we have a list of sequence records (trimmed_sequences).
+These have passed our filters and we now want to write out the FASTQ file so that it might be further analysed using another piece of software.
 
 <b>Return to the script in Gedit that was concerned with the FastQ data (named script02.py).</b>
 
-At the bottom of the script, we will open up a data stream to a new output file, and then used SeqIO's built in write method to write out data, specifying that we want a FASTQ format file:
+At the bottom of the script, we will open up a data stream to a new output file.
+Then using SeqIO's built in `write` __method__ we will write out data, specifying we want a FASTQ format file:
 
 ```{python, eval=FALSE}
 with open(wd + "/Python_course_data/R_undulata_filtered_seqs.fastq", 'w') as output_file:
@@ -96,6 +98,12 @@ with open(wd + "/Python_course_data/R_undulata_filtered_seqs.fastq", 'w') as out
 ```  
 
 This trimmed, filtered file would now be ready to go into whichever subsequent analysis was desired.
+
+In your linux terminal list the contents of your "Python_course_data" directory to see that the newly created file exists.
+
+```{bash, eval=FALSE}
+ls Python_course_data
+```
 
 ## Recap
 

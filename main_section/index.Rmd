@@ -6,11 +6,13 @@ description: NEOF book for the Python for Bioinformatics workshop
 cover-image: "images/NEOF.png"
 ---
 
+<center>![](images/NEOF_logo.png){width=30%}</center>
+
 # Introduction
 
-<center>![](images/NEOF_logo.png){height="100px"}</center>
+<center>![](images/python.png){width=30%}</center>
 
-<br><br> In this practical session we are going to learn Python programming skills. We will be learning the fundamentals of Python scripting and several Python tools focused on data manipulation. Whilst we will be working mostly with DNA sequence data, the methods and approaches can be modified to work with most types of data.
+In this practical session we are going to learn Python programming skills. We will be learning the fundamentals of Python scripting and several Python tools focused on data manipulation. Whilst we will be working mostly with DNA sequence data, the methods and approaches can be modified to work with most types of data.
 
 During this session we will work through the following sections:
 

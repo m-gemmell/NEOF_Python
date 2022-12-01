@@ -25,6 +25,7 @@ Over the next two days you will:
 We will cover the theory behind Python concepts and terminology. Python is designed to be human-readable code and understanding the underlying processes is important. There will be lots of opportunity to practice writing Python. Practice will involve typing and running Python code whilst working through the workshop materials. This will allow you to see the output of Python commands and help you to understand how Python works.
 
 ## Materials Covered in the Course
+<center>![](images/materials.png){width=15%}</center>
 
 After learning some of the basics of Python we will import some DNA sequence data and perform some common types of analyses. The focus is on learning the theory and the ways in which Python can be used, rather than the specifics of the analysis. Hopefully you will take away new skills that can be applied to your own data.
 
@@ -39,6 +40,7 @@ Commands are in the following font and colour and should be run in the VNC windo
 ```
 
 ## Pseudocode
+<center>![](images/noun-cherry-cake-5973.png){width=15%}</center>
 
 Sometimes to illustrate how a concept works, we will illustrate it with some <b>pseudocode</b>. This is a way of representing a concept in simple terms that can be understood without knowing the correct programming terminology or syntax.
 

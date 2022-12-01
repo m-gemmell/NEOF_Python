@@ -15,7 +15,9 @@ These are two distinct *commands*, but together they form a *script* for how to 
 
 In Python we can either issue commands one at a time to the Python interpreter or we can put them into a file and submit the whole script at once.
 
-## Issuing commands directly to the interpretator
+## Issuing commands directly to the interpreter
+<center>![](./images/translator.png){width=15%}</center>
+
 
 Open up the Python interpreter in the terminal window of the VNC with the following command. We are using Python version 3, the current version.
 
@@ -59,8 +61,7 @@ So far we have issued simple instructions to Python but if we had lots of comple
 Throughout the workshop, we will build up more complex scripts and submit them to the interpreter to be run all at once.
 
 ## A note on indentation
-
-<center>![](./images/tab.jpg){height=200px}</center>
+<center>![](./images/tab.png){width=20%}</center>
 
   Indentation refers to any spaces or tab characters at the beginning of a line
   of code. Indentation helps readability of code by helping to define code blocks

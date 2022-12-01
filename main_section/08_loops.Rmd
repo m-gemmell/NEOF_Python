@@ -77,6 +77,7 @@ for base in DNA_string:
 We can see from the output that the **loop** allows us to process each base in the string separately; in this case by printing them individually.
 
 ## Use a for loop to complement a DNA sequence
+<center>![](./images/complement.png){width="15%"}</center>
 
 Next, let's use this **loop** functionality to do something useful to each base such as translate each nucleotide to the appropriate complement base.
 

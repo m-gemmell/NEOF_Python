@@ -127,6 +127,7 @@ for record in R_undulata_data:
 Save the script and run it on the terminal.
 
 ## Count reads
+<center>![](./images/count.png){width="15%"}</center>
 
 We can implement a counter to tally the total number of reads in the file. Modify the __for__ __loop__ above to the following (you do not need to add the comments however):
 
