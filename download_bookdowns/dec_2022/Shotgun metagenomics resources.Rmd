@@ -82,3 +82,6 @@ You can download the html files of the bookdown below. Ensure you unzip the dire
 [__Download zipped bookdown__](https://neof-workshops.github.io/Python_m4zqwb/Bookdown/Python_for_bioinformatics_bookdowns.zip)
 
 
+
+<!--chapter:end:01-Python_for_bioinformatics.Rmd-->
+
