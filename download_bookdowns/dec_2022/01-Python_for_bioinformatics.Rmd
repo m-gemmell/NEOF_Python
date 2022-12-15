@@ -1,0 +1,84 @@
+--- 
+title: "Python for bioinformatics resources"
+author: "Graeme Fox"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+favicon: figures/NEOF_favicon.png
+description: NEOF book for the Python for bioinformatics workshop resources
+cover-image: "figures/NEOF.png"
+---
+
+```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
+knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
+``` 
+
+# Videos, slides, & files
+
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/python.png", auto_pdf = TRUE)
+``` 
+
+## Intro & Foundations
+
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=EzpFa8w7_k8")
+```
+
+[__Slides__](https://neof-workshops.github.io/Python_m4zqwb/resources/Slides/01_NEOF_Python_for_bioinformatics.pdf)
+
+## Structure & concepts
+
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=9KlnFBczkbY")
+```
+
+[__Slides__](https://neof-workshops.github.io/Python_m4zqwb/resources/Slides/02_NEOF_Python_for_bioinformatics.pdf)
+
+## Working with DNA data
+
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+#embed_url("")
+```
+
+[__Slides__](https://neof-workshops.github.io/Python_m4zqwb/resources/Slides/03_NEOF_Python_for_bioinformatics.pdf)
+
+## Reading & writing files
+
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+#embed_url("")
+```
+
+[__Slides__](https://neof-workshops.github.io/Python_m4zqwb/resources/Slides/04_NEOF_Python_for_bioinformatics.pdf)
+
+## Workshop files
+
+The below compressed directory is provided so you may attempt the workshop materials on a computer/cluster available to you.
+
+Note:
+
+- The file locations will not match
+
+[__Download files__](https://neof-workshops.github.io/Python_m4zqwb/Bookdown/Python_for_bioinformatics_bookdowns.zip)
+
+## Bookdown html
+
+Links to the online versions of the Bookdowns.
+
+[__Main section__](https://neof-workshops.github.io/Python_m4zqwb/Course/)
+
+[__Supplementary__](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/)
+
+You can download the html files of the bookdown below. Ensure you unzip the directory before use.
+
+[__Download zipped bookdown__](https://neof-workshops.github.io/Python_m4zqwb/Bookdown/Python_for_bioinformatics_bookdowns.zip)
+
+

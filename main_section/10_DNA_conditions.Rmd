@@ -114,7 +114,7 @@ print("Found and trimmed " + str(number_sequences_trimmed) + \
     
 ```
 
-Save and one the code one more time to see your three lines of information printed to screen.
+Save and run the code one more time to see your three lines of information printed to screen.
 
 ## Recap
 
