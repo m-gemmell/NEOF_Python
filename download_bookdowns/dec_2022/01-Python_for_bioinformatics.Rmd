@@ -67,7 +67,7 @@ Note:
 
 - The file locations will not match
 
-[__Download files__](https://neof-workshops.github.io/Python_m4zqwb/Bookdown/Python_for_bioinformatics_bookdowns.zip)
+[__Download files__](https://neof-workshops.github.io/Python_m4zqwb/resources/Files/Python_course_data.zip)
 
 ## Bookdown html
 
@@ -79,6 +79,6 @@ Links to the online versions of the Bookdowns.
 
 You can download the html files of the bookdown below. Ensure you unzip the directory before use.
 
-[__Download zipped bookdown__](https://neof-workshops.github.io/Python_m4zqwb/Bookdown/Python_for_bioinformatics_bookdowns.zip)
+[__Download zipped bookdown__](https://neof-workshops.github.io/Python_m4zqwb/resources/Bookdown/Python_for_bioinformatics_bookdowns.zip)
 
 
