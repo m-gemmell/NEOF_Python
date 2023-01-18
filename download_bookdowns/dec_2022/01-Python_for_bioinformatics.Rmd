@@ -71,11 +71,9 @@ Note:
 
 ## Bookdown html
 
-Links to the online versions of the Bookdowns.
+Links to the online versions of the Bookdown.
 
-[__Main section__](https://neof-workshops.github.io/Python_m4zqwb/Course/)
-
-[__Supplementary__](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/)
+[__Coursen__](https://neof-workshops.github.io/Python_m4zqwb/Course/)
 
 You can download the html files of the bookdown below. Ensure you unzip the directory before use.
 
