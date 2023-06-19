@@ -1,0 +1,26 @@
+# (APPENDIX) Appendix {-}
+
+# Mamba installs
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/mamba_logo.png", auto_pdf = TRUE)
+```
+
+## Mamba installation and environment {#mamba_install}
+
+Mamba is a reimplementation of conda.
+It is a great tool for installing bioinformatic packages including R packages.
+
+Mamba github: https://github.com/mamba-org/mamba
+
+Mamba installation: https://github.com/conda-forge/miniforge#mambaforge
+
+Mamba guide: https://mamba.readthedocs.io/en/latest/user_guide/mamba.html
+
+To create the mamba environment `python` run the below commands in your bash. You will need to have installed `mamba` first.
+
+```{bash, eval=FALSE}
+#Python
+mamba create -n python
+mamba activate python
+mamba install -c anaconda jupyter
+```
