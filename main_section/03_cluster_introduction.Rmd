@@ -30,7 +30,7 @@ In the terminal window, issue the following commands to copy the data into your 
 
 ```{bash, eval=FALSE}
 cd ~
-cp -r /pub14/tea/nsc201/Python_course_data .
+cp -r /pub14/tea/nsc206/NEOF/Python_course_data .
 
 ```
 

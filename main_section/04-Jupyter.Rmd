@@ -50,12 +50,22 @@ icons::fontawesome("bars")
 knitr::include_graphics(path = "figures/jupyter_notebook_example_1.png", auto_pdf = TRUE)
 ```
 
-## Create R notebook
+## Changing directories
 
-The next step is to create a R notebook.
+To move around the directories you can click on directory names.
+
+Click on __"Python_course_data"__ to move into that directory. You will then see the below showing the files in the directory.
+
+```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
+knitr::include_graphics(path = "figures/jupyter_notebook_example_files.png", auto_pdf = TRUE)
+```
+
+## Create notebook
+
+The next step is to create a python notebook.
 
 1.  Click on the **"New"** button towards the top right, right of the "Upload" button.
-2.  From the dropdown click **"R"** below "Python 3 (ipykernel)".
+2.  From the dropdown click __Python 3 (ipykernel)__.
 
 This will open up a new R notebook like below.
 
@@ -71,7 +81,6 @@ There will already be one **cell**. Within the **cell**, type in the below comma
 
 ```{r, eval=FALSE}
 1+1
-2-3
 ```
 
 When pressing enter in **cells** it will create a new line. To run all commands in a **cell** press `CTRL + enter`.
@@ -94,8 +103,8 @@ You can create new **cells** by 2 different means.
 With that knowledge add a second **cell** below the first **cell**. Add the following code to your second **cell** but do not run it.
 
 ```{r, eval=FALSE}
-num_1 <- 3
-num_2 <- 10
+num_1 = 3
+num_2 = 10
 ```
 
 **Tip:** Notice there are green lines around your selected cell.
@@ -131,7 +140,7 @@ There is no output printed for __cell__ 2 because we are assigning variables. Ho
 knitr::include_graphics(path = "figures/r_save.png", auto_pdf = TRUE)
 ```
 
-As with RStudio and other good coding interfaces we can save our notebook.
+As with many good coding interfaces we can save our notebook.
 
 First we should rename the file. Rename the notebook to **"jupyter_tut"**:
 
@@ -192,7 +201,7 @@ For more info on `jupter-notebook` please see the [appendix](#jupyter_appendix).
 ## Video tutorial
 
 ::: container
-<iframe src="https://www.youtube.com/embed/-c_6HoPMw9g" frameborder="0" allowfullscreen class="video">
+<iframe src="https://www.youtube.com/embed/2jqOdreD1c4" frameborder="0" allowfullscreen class="video">
 
 </iframe>
 :::
