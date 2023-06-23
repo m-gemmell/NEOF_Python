@@ -19,3 +19,11 @@ saving-the-file
 title-cells-with-markdown
 close-the-notebook
 video-tutorial
+scripting-in-python
+introduction-to-commands-and-scripts
+issuing-commands
+print
+working-directory
+a-note-on-indentation
+tabs-vs-spaces
+scripting-recap-mcqs
