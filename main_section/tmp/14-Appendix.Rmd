@@ -1,20 +1,20 @@
-# (APPENDIX) Appendix {-}
+# (APPENDIX) Appendix {.unnumbered}
 
 # Mamba installs
+
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/mamba_logo.png", auto_pdf = TRUE)
 ```
 
 ## Mamba installation and environment {#mamba_install}
 
-Mamba is a reimplementation of conda.
-It is a great tool for installing bioinformatic packages including R packages.
+Mamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.
 
-Mamba github: https://github.com/mamba-org/mamba
+Mamba github: <https://github.com/mamba-org/mamba>
 
-Mamba installation: https://github.com/conda-forge/miniforge#mambaforge
+Mamba installation: <https://github.com/conda-forge/miniforge#mambaforge>
 
-Mamba guide: https://mamba.readthedocs.io/en/latest/user_guide/mamba.html
+Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
 
 To create the mamba environment `python` run the below commands in your bash. You will need to have installed `mamba` first.
 
@@ -24,3 +24,81 @@ mamba create -n python
 mamba activate python
 mamba install -c anaconda jupyter
 ```
+
+# Definitions
+
+__MAYBE PUT DEFINTIONS HERE__
+
+
+
+# Cheatsheet {#cheatsheet}
+
+## Functions
+
+- __`print()`__: Print specified text.
+- __`type()`__: Check __class/type__ of a __variable__.
+- __`str()`__ : Transform __variable__ to string __class__.
+- __`int()`__ : Transform __variable__ to integer __class__.
+- __`float()`__ : Transform __variable__ to float __class__.
+- __`len()`__: Calculate number of characters in a string __variable__.
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+
+## Methods
+
+### String methods
+
+- __`.upper()`__: Convert string to upper case.
+- __`.lower()`__: Convert string to lower case.
+- __`.count()`__: Count number of specified string pattern in string __variable__.
+- __`.split()`__: Split string by specified delimiter.
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
