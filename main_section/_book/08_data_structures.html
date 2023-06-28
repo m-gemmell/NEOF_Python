@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Cluster Introduction | Python for Bioinformatics</title>
+  <title>8 Data Structures | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Cluster Introduction | Python for Bioinformatics" />
+  <meta property="og:title" content="8 Data Structures | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/figures/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Cluster Introduction | Python for Bioinformatics" />
+  <meta name="twitter:title" content="8 Data Structures | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-<link rel="prev" href="02-intro.html"/>
-<link rel="next" href="04-Jupyter.html"/>
+<link rel="prev" href="07_functions_and_methods.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -237,54 +237,164 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cluster-introduction" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Cluster Introduction<a href="03_cluster_introduction.html#cluster-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<center>
-<img src="figures/cluster.png" style="width:25.0%" />
-</center>
-<div id="logon-instructions" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Logon Instructions<a href="03_cluster_introduction.html#logon-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For this workshop we will be using Virtual Network Computing (VNC).
-Connect to the VNC with a browser by using the webVNC link you were sent.</p>
-You will now be in a logged-in Linux VNC desktop with a terminal window visible.
-You will see something as below.
-<center>
-<img src="figures/logon_pic.png" style="width:75.0%" />
-</center>
-<p>If you do not see something similar please ask for assistance.</p>
-<p>If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.</p>
-<p>During the first chapters of this session you will be working directly in the terminal window in the VNC. During the latter chapters we will open a plain text editor called <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>.</p>
+<div id="data-structures" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Data Structures<a href="08_data_structures.html#data-structures" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="figures/python_data_structure.png" width="20%" style="display: block; margin: auto;" /></p>
+<p>We now know the different types of data points that Python can hold, whether
+they are <strong>integers</strong>, <strong>floats</strong>, <strong>strings</strong> of text, or <strong>boolean</strong> values.</p>
+<p>Typically, data points do not exist in isolation but instead are in a group.
+For example, consider a set of measurements of the peak day temperature over
+a period of a week.
+A group of data points such as these can be stored in a <strong>list</strong>.</p>
+<p>Use the same notebook (<strong>"01-Fundamentals"</strong>) and add the following <strong>markdown cell</strong>:</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="08_data_structures.html#cb80-1" tabindex="-1"></a><span class="co">## Data structures</span></span>
+<span id="cb80-2"><a href="08_data_structures.html#cb80-2" tabindex="-1"></a><span class="co">### Lists</span></span></code></pre></div>
+<p>From now on you won't be instructed to make <strong>markdown cells</strong>, instead use your judgement and make your own.</p>
+<div id="lists" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Lists<a href="08_data_structures.html#lists" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/shopping_list.png" width="15%" style="display: block; margin: auto;" /></p>
+<p><strong>Lists</strong> are used to store multiple items within a single <strong>variable</strong>.
+<strong>Lists</strong> allow duplicate values and once defined are always in the same order (ordered).
+Additional items can be added to the <strong>list</strong> and by default will appear at the bottom.
+Finally, <strong>lists</strong> are indexed meaning that we can easily retrieve the 1st, 2nd....nth item from the <strong>list</strong>.</p>
+<p>We define a <strong>list</strong> like any other <strong>variable</strong>.
+To add multiple values to the <strong>list</strong> we enclose them in square braces (<code>[]</code>) and include a comma between each value.</p>
+<p>Create the list in the below code block.
+It consists of made up fold-change values generated by an RNA-Seq type experiment.</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="08_data_structures.html#cb81-1" tabindex="-1"></a>gene_fold_change <span class="op">=</span> [<span class="fl">0.25</span>, <span class="op">-</span><span class="fl">0.42</span>, <span class="fl">0.62</span>, <span class="fl">1.27</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="dv">0</span>]</span>
+<span id="cb81-2"><a href="08_data_structures.html#cb81-2" tabindex="-1"></a>gene_fold_change</span></code></pre></div>
+<p>To add an additional value to the <strong>end</strong> of the list, we can use the <code>.append()</code> <strong>method</strong>:</p>
+<p><strong>Reminder</strong>: Each unique <strong>method</strong> can only be used on one type of data. The <code>append()</code> method can only be used with <strong>lists</strong>.</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="08_data_structures.html#cb82-1" tabindex="-1"></a>gene_fold_change.append(<span class="fl">0.33</span>)</span>
+<span id="cb82-2"><a href="08_data_structures.html#cb82-2" tabindex="-1"></a>gene_fold_change</span></code></pre></div>
+<p>You can create <strong>lists</strong> containing strings.</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="08_data_structures.html#cb83-1" tabindex="-1"></a>taxonomy_levels <span class="op">=</span> [<span class="st">&quot;Kingdom&quot;</span>, <span class="st">&quot;Phylum&quot;</span>, <span class="st">&quot;Class&quot;</span>, <span class="st">&quot;Order&quot;</span>, <span class="st">&quot;Family&quot;</span>, <span class="st">&quot;Genus&quot;</span>, <span class="st">&quot;Species&quot;</span>]</span>
+<span id="cb83-2"><a href="08_data_structures.html#cb83-2" tabindex="-1"></a>taxonomy_levels</span></code></pre></div>
+<p>You can even create a list with multiple data <strong>classes</strong>.</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="08_data_structures.html#cb84-1" tabindex="-1"></a>numerals <span class="op">=</span> [<span class="st">&quot;I&quot;</span>, <span class="dv">1</span>, <span class="st">&quot;V&quot;</span>, <span class="dv">5</span>, <span class="va">True</span>]</span>
+<span id="cb84-2"><a href="08_data_structures.html#cb84-2" tabindex="-1"></a>numerals</span></code></pre></div>
+<p>That is a quick intro to making <strong>lists</strong>, next we'll learn how to manipulate them.</p>
 </div>
-<div id="the-terminal-window" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> The Terminal Window<a href="03_cluster_introduction.html#the-terminal-window" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.</p>
-<center>
-<img src="figures/terminal_window.png" style="width:75.0%" />
-</center>
-<p>You're now ready to start the workshop!</p>
+<div id="subsetting-data" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Subsetting data<a href="08_data_structures.html#subsetting-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/R_square_bracket.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>A value from a <strong>list</strong> can be retrieved by the <strong>position</strong> it occupies in the list.
+This selection can be carried out using square braces (<code>[]</code>).</p>
+<p>This process of selecting a certain portion of data is known as <strong>subsetting</strong>.</p>
+<p>One of the most vital aspects to grasp for Python is that data structures start at position <strong>zero</strong>.
+This can be confusing but is a common feature of many programming languages.</p>
+<div id="single-values" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Single values<a href="08_data_structures.html#single-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To select the first entry in a <strong>list</strong>, we therefore pass position "0" in the square braces:</p>
+<p><strong>Reminder</strong>: Create your own informative <strong>markdown cells</strong>.</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="08_data_structures.html#cb85-1" tabindex="-1"></a><span class="co">#Get the first value</span></span>
+<span id="cb85-2"><a href="08_data_structures.html#cb85-2" tabindex="-1"></a>gene_fold_change[<span class="dv">0</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="08_data_structures.html#cb86-1" tabindex="-1"></a><span class="co">#Get the fifth value</span></span>
+<span id="cb86-2"><a href="08_data_structures.html#cb86-2" tabindex="-1"></a>gene_fold_change[<span class="dv">4</span>]</span></code></pre></div>
+<p>We can also use a negative value to count from the other end of the <strong>list</strong>. I.e. to get the last value in the list.</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="08_data_structures.html#cb87-1" tabindex="-1"></a><span class="co">#Get the last value (without knowing the length of the list)</span></span>
+<span id="cb87-2"><a href="08_data_structures.html#cb87-2" tabindex="-1"></a>gene_fold_change[<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
 </div>
-<div id="load-workshop-data" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Load workshop data<a href="03_cluster_introduction.html#load-workshop-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Before we get started, we need to copy across some data files to analyse later in the workshop.</p>
-<p>In the terminal window, issue the following commands to copy the data into your account:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="03_cluster_introduction.html#cb2-1" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb2-2"><a href="03_cluster_introduction.html#cb2-2" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub14/tea/nsc206/NEOF/Python_course_data .</span></code></pre></div>
+<div id="multiple-values" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Multiple values<a href="08_data_structures.html#multiple-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The same technique also works to select a range of values from the list. The upper and lower position of the range to be selected given in square brackets, separated by a colon (<code>X:Y</code>).</p>
+<p>When using a range in this manner:</p>
+<ul>
+<li>The first number (<code>X:</code>) is inclusive.</li>
+<li>The last number (<code>:Y</code>) is exclusive.</li>
+</ul>
+<p>In other words all the positions except the last one will be selected.</p>
+<p>Try out the following code blocks to see this in practice.</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="08_data_structures.html#cb88-1" tabindex="-1"></a><span class="co">#Create a list containing the numbers 1 to 7</span></span>
+<span id="cb88-2"><a href="08_data_structures.html#cb88-2" tabindex="-1"></a>one_to_seven <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>]</span>
+<span id="cb88-3"><a href="08_data_structures.html#cb88-3" tabindex="-1"></a>one_to_seven</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="08_data_structures.html#cb89-1" tabindex="-1"></a><span class="co">#Subset the third and fourth values</span></span>
+<span id="cb89-2"><a href="08_data_structures.html#cb89-2" tabindex="-1"></a>one_to_seven[<span class="dv">2</span>:<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb90-1"><a href="08_data_structures.html#cb90-1" tabindex="-1"></a><span class="co">#Subset the first to fifth value</span></span>
+<span id="cb90-2"><a href="08_data_structures.html#cb90-2" tabindex="-1"></a>one_to_seven[<span class="dv">0</span>:<span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="08_data_structures.html#cb91-1" tabindex="-1"></a><span class="co">#Subset the first values</span></span>
+<span id="cb91-2"><a href="08_data_structures.html#cb91-2" tabindex="-1"></a>one_to_seven[<span class="dv">0</span>:<span class="dv">1</span>]</span></code></pre></div>
+<p>If you find this confusing you are not the only one so please don't feel bad about it.
+It will take time and effort for most people to get used to this.</p>
+<p>To subset everything from a certain position onwards, leave the upper value blank. This also works to select everything before a certain position.</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="08_data_structures.html#cb92-1" tabindex="-1"></a><span class="co">#Subset the sixth value to the end</span></span>
+<span id="cb92-2"><a href="08_data_structures.html#cb92-2" tabindex="-1"></a>one_to_seven[<span class="dv">5</span>:]</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="08_data_structures.html#cb93-1" tabindex="-1"></a><span class="co">#Subset everything up to (but excluding) the third value</span></span>
+<span id="cb93-2"><a href="08_data_structures.html#cb93-2" tabindex="-1"></a>one_to_seven[:<span class="dv">2</span>]</span></code></pre></div>
+<p><strong>Lists</strong> are incredibly useful but have their limitations so it is good to learn other data structures.</p>
 </div>
-<div id="mamba" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Mamba<a href="03_cluster_introduction.html#mamba" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/mamba_logo.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>This workshop requires some programs.
-These can be difficult to install.
-Instead we have used Mamba forge to install the programs including Jupyter-notebook.
-To learn more about Mamba-forge and how to create your own environment please see the <a href="#mamba_install">appendix</a>.</p>
-<p>To set-up your environment for this workshop please run the following code (you must include the full stop and space at the front of the command).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="03_cluster_introduction.html#cb3-1" tabindex="-1"></a><span class="bu">.</span> usepython</span></code></pre></div>
-<p>You will have successfully activated the environment if you now see <code>(python)</code> at the start of your command prompt.
-This indicates you are now in the mamba environment called <code>python</code> created by the instructor.</p>
-<p>If you are interested in the use script you can look at its contents.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="03_cluster_introduction.html#cb4-1" tabindex="-1"></a><span class="fu">less</span> /usr/local/bin/usepython</span></code></pre></div>
-<p><strong>Tip:</strong> press <code>q</code> to quit <code>less</code>.</p>
-<p>For more about mamba and how to create your own <code>python</code> environment please see the <a href="#mamba_install">appendix</a></p>
+</div>
+<div id="set" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Set<a href="08_data_structures.html#set" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/uk_plants.png" width="20%" style="display: block; margin: auto;" /></p>
+<p>A <strong>set</strong> is similar to a <strong>list</strong> except that it can only hold <strong>unique</strong> values.
+A <strong>set</strong> also differs from a <strong>list</strong> in that they do not retain the order of the elements (unordered).</p>
+<p><strong>Sets</strong> are defined using the curly braces (<code>{}</code>). Define a <strong>set</strong> containing the plants found on the one pound coin.</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb94-1"><a href="08_data_structures.html#cb94-1" tabindex="-1"></a>plants_set <span class="op">=</span> {<span class="st">&quot;Leek&quot;</span>, <span class="st">&quot;Rose&quot;</span>, <span class="st">&quot;Shamrock&quot;</span>}</span>
+<span id="cb94-2"><a href="08_data_structures.html#cb94-2" tabindex="-1"></a>plants_set</span></code></pre></div>
+<p>We forgot the Scottish thistle!
+We can add a new element to our <strong>set</strong> using the <code>.add()</code> <strong>method</strong>.</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="08_data_structures.html#cb95-1" tabindex="-1"></a>plants_set.add(<span class="st">&quot;Thistle&quot;</span>)</span>
+<span id="cb95-2"><a href="08_data_structures.html#cb95-2" tabindex="-1"></a>plants_set</span></code></pre></div>
+<p>In real world analysis combining data from more samples might mean that duplicate plants were detected in the data.
+Adding plants that are already in the set has no effect as it cannot hold duplicate values.</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb96-1"><a href="08_data_structures.html#cb96-1" tabindex="-1"></a>plants_set.add(<span class="st">&quot;Shamrock&quot;</span>)</span>
+<span id="cb96-2"><a href="08_data_structures.html#cb96-2" tabindex="-1"></a>plants_set</span></code></pre></div>
+</div>
+<div id="convert-a-list-to-a-set" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Convert a list to a set<a href="08_data_structures.html#convert-a-list-to-a-set" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/list_to_set.png" width="65%" style="display: block; margin: auto;" /></p>
+<p>Sometimes we have a <strong>list</strong> of non-unique values and it is useful to extract the unique values. We can do this by transforming a <strong>list</strong> into a <strong>set</strong>.</p>
+<p>Add some gene IDs to a <strong>list</strong>.</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="08_data_structures.html#cb97-1" tabindex="-1"></a>gene_IDs <span class="op">=</span> [<span class="st">&quot;Agl&quot;</span>, <span class="st">&quot;Pygm&quot;</span>, <span class="st">&quot;Pgm2&quot;</span>, <span class="st">&quot;Ugp2&quot;</span>, <span class="st">&quot;Pygm&quot;</span>, <span class="st">&quot;Pgm2&quot;</span>]</span>
+<span id="cb97-2"><a href="08_data_structures.html#cb97-2" tabindex="-1"></a>gene_IDs</span></code></pre></div>
+<p>We can transform the <strong>list</strong> into a <strong>set</strong> using the <strong>function</strong> <code>set()</code>.</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="08_data_structures.html#cb98-1" tabindex="-1"></a>gene_set <span class="op">=</span> <span class="bu">set</span>(gene_IDs)</span>
+<span id="cb98-2"><a href="08_data_structures.html#cb98-2" tabindex="-1"></a>gene_set</span></code></pre></div>
+</div>
+<div id="dictionary" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Dictionary<a href="08_data_structures.html#dictionary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/dictionary.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>The third data structure we will learn is the <strong>dictionary</strong>. A <strong>dictionary</strong> is an
+ordered data structure which holds <strong>pairs</strong> of values; a <strong>key</strong> and a <strong>value</strong>.</p>
+<p>For example, say we want to store the gene identifiers alongside our fold-change data
+that we recorded earlier in a <strong>list</strong>.
+Each gene identifier/fold-change pair is the <strong>key</strong>/<strong>value</strong> of the <strong>dictionary</strong>.</p>
+<p><strong>Dictionaries</strong> are also defined using the curly braces but a pair of values are given each time, separated by a colon (<code>{key:value}</code>).</p>
+<p>Enter the following.</p>
+<p><strong>Note</strong>: You need to press enter after each line.</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="08_data_structures.html#cb99-1" tabindex="-1"></a>gene_fold_change <span class="op">=</span> {</span>
+<span id="cb99-2"><a href="08_data_structures.html#cb99-2" tabindex="-1"></a>  <span class="st">&quot;Agl&quot;</span> : <span class="fl">0.25</span>,</span>
+<span id="cb99-3"><a href="08_data_structures.html#cb99-3" tabindex="-1"></a>  <span class="st">&quot;Pygm&quot;</span> : <span class="op">-</span><span class="fl">0.42</span>,</span>
+<span id="cb99-4"><a href="08_data_structures.html#cb99-4" tabindex="-1"></a>  <span class="st">&quot;Pgm2&quot;</span> : <span class="fl">0.62</span>,</span>
+<span id="cb99-5"><a href="08_data_structures.html#cb99-5" tabindex="-1"></a>  <span class="st">&quot;Ugp2&quot;</span> : <span class="fl">1.27</span>,</span>
+<span id="cb99-6"><a href="08_data_structures.html#cb99-6" tabindex="-1"></a>  <span class="st">&quot;Gys1&quot;</span> : <span class="op">-</span><span class="fl">0.5</span>,</span>
+<span id="cb99-7"><a href="08_data_structures.html#cb99-7" tabindex="-1"></a>  <span class="st">&quot;Phka1&quot;</span> : <span class="dv">0</span>,</span>
+<span id="cb99-8"><a href="08_data_structures.html#cb99-8" tabindex="-1"></a>  <span class="st">&quot;Phkg1&quot;</span> : <span class="fl">0.33</span></span>
+<span id="cb99-9"><a href="08_data_structures.html#cb99-9" tabindex="-1"></a>}</span>
+<span id="cb99-10"><a href="08_data_structures.html#cb99-10" tabindex="-1"></a>gene_fold_change</span></code></pre></div>
+<p><strong>Dictionaries</strong> are <strong>indexed</strong> meaning that individual records can be retrieved
+very quickly (important if you are working with very large dictionaries).</p>
+<p>We can retrieve the information for "Gys1" by using the identifier as the <strong>key</strong>
+and the <strong>dictionary</strong> will then return the <strong>value</strong>.</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="08_data_structures.html#cb100-1" tabindex="-1"></a>gene_fold_change[<span class="st">&quot;Gys1&quot;</span>]</span></code></pre></div>
+<p>New values can be added to the <strong>dictionary</strong> in a similar way to how they are retrieved:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="08_data_structures.html#cb101-1" tabindex="-1"></a>gene_fold_change[<span class="st">&quot;ZT1&quot;</span>] <span class="op">=</span> <span class="fl">3.2</span></span>
+<span id="cb101-2"><a href="08_data_structures.html#cb101-2" tabindex="-1"></a>gene_fold_change[<span class="st">&quot;ZT1&quot;</span>]</span></code></pre></div>
+<p>You <strong>cannot</strong> subset <strong>dictionaries</strong> with numbers like a <strong>list</strong>.</p>
+<p>The pairing up of values in <strong>dictionaries</strong> is extremely useful if you are working with DNA sequence files (Fasta or FastQ).
+It offers an easy way of matching up the read identifier with the DNA nucleotide data, for example.
+Once indexed, the individual records can then be accessed extremely quickly.</p>
+</div>
+<div id="data-structures-mcq-recap" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Data structures MCQ recap<a href="08_data_structures.html#data-structures-mcq-recap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/question_bubble_purple.png" width="15%" style="display: block; margin: auto;" /></p>
+<p><strong>Lists</strong> hold an ordered catalogue of values.
+Values can be accessed by their position in the list (remember to count from zero!).</p>
+<p><strong>Sets</strong> can only hold unique values.</p>
+<p><strong>Dictionaries</strong> hold pairs of values (key and value) and can be used to quickly access individual records, even when they are extremely large.</p>
+<p>We are going to be using these data structures to look at and manipulate DNA sequence data specifically, but the principles apply to any datasets stored in these structures.</p>
+<p>Ensure you save your notebook. However, don't close it as you may find its contents useful for the next chapter.</p>
 
 </div>
 </div>
@@ -499,8 +609,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="02-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="04-Jupyter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="07_functions_and_methods.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

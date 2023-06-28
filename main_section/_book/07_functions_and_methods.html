@@ -29,7 +29,7 @@
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="06_python_fundamentals.html"/>
-
+<link rel="next" href="08_data_structures.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -204,6 +204,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2" data-path="07_functions_and_methods.html"><a href="07_functions_and_methods.html#methods"><i class="fa fa-check"></i><b>7.2</b> Methods</a></li>
 <li class="chapter" data-level="7.3" data-path="07_functions_and_methods.html"><a href="07_functions_and_methods.html#functions-and-methods-mcq-recap"><i class="fa fa-check"></i><b>7.3</b> Functions and methods MCQ recap</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="08_data_structures.html"><a href="08_data_structures.html"><i class="fa fa-check"></i><b>8</b> Data Structures</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08_data_structures.html"><a href="08_data_structures.html#lists"><i class="fa fa-check"></i><b>8.1</b> Lists</a></li>
+<li class="chapter" data-level="8.2" data-path="08_data_structures.html"><a href="08_data_structures.html#subsetting-data"><i class="fa fa-check"></i><b>8.2</b> Subsetting data</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="08_data_structures.html"><a href="08_data_structures.html#single-values"><i class="fa fa-check"></i><b>8.2.1</b> Single values</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08_data_structures.html"><a href="08_data_structures.html#multiple-values"><i class="fa fa-check"></i><b>8.2.2</b> Multiple values</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="08_data_structures.html"><a href="08_data_structures.html#set"><i class="fa fa-check"></i><b>8.3</b> Set</a></li>
+<li class="chapter" data-level="8.4" data-path="08_data_structures.html"><a href="08_data_structures.html#convert-a-list-to-a-set"><i class="fa fa-check"></i><b>8.4</b> Convert a list to a set</a></li>
+<li class="chapter" data-level="8.5" data-path="08_data_structures.html"><a href="08_data_structures.html#dictionary"><i class="fa fa-check"></i><b>8.5</b> Dictionary</a></li>
+<li class="chapter" data-level="8.6" data-path="08_data_structures.html"><a href="08_data_structures.html#data-structures-mcq-recap"><i class="fa fa-check"></i><b>8.6</b> Data structures MCQ recap</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -232,7 +245,6 @@ This may be a task that you need to run repeatedly on your data.
 By storing these instructions in a single <strong>function/method</strong>, you only need to enter the code once and simply re-use it each time.
 A <strong>function/method</strong> returns a value after it has performed the specific task.</p>
 <p>Use the same notebook (<strong>"01-Fundamentals"</strong>) and add the following <strong>markdown cell</strong>:</p>
-<p>Create a new <strong>markdown cell</strong> with the following:</p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="07_functions_and_methods.html#cb63-1" tabindex="-1"></a><span class="co">## Functions &amp; methods</span></span>
 <span id="cb63-2"><a href="07_functions_and_methods.html#cb63-2" tabindex="-1"></a><span class="co">### Functions</span></span></code></pre></div>
 <div id="functions" class="section level2 hasAnchor" number="7.1">
@@ -313,28 +325,28 @@ During this course and afterwards you can refere to the <a href="#cheatsheet">ch
 <p>Choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>________ are associated a specific <strong>class</strong>.
-<div id="radio_MSXORYEYMK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MSXORYEYMK" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MSXORYEYMK" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MSXORYEYMK" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_QBCHFZROMC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QBCHFZROMC" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QBCHFZROMC" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QBCHFZROMC" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The syntax of ________ are <code>command_name(data)</code>.
-<div id="radio_DXZIGLLAEN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DXZIGLLAEN" value="answer"></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DXZIGLLAEN" value=""></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DXZIGLLAEN" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_NXNZGQWCSN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NXNZGQWCSN" value="answer"></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NXNZGQWCSN" value=""></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NXNZGQWCSN" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The syntax of ________ are <code>data.command_name()</code>.
-<div id="radio_LWMAJNLNAM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LWMAJNLNAM" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LWMAJNLNAM" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LWMAJNLNAM" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_POTONFAKYJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_POTONFAKYJ" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_POTONFAKYJ" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_POTONFAKYJ" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The <strong>function</strong> ________ can count the number of characters in a string.
-<div id="radio_HVHBJEOBLK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HVHBJEOBLK" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HVHBJEOBLK" value="answer"></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HVHBJEOBLK" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_DULULVIDFS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DULULVIDFS" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DULULVIDFS" value="answer"></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DULULVIDFS" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 <li>The <strong>method</strong> ________ can count the number of instances of a pattern in a string <strong>variable</strong>.
-<div id="radio_UJEDAYQIWY" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UJEDAYQIWY" value="answer"></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UJEDAYQIWY" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UJEDAYQIWY" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_KCIHBQGDAC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KCIHBQGDAC" value="answer"></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KCIHBQGDAC" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KCIHBQGDAC" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 <li>The <strong>method</strong> ________ can convert a string <strong>variable</strong> to lower-case.
-<div id="radio_WXEYFXGVHT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WXEYFXGVHT" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WXEYFXGVHT" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WXEYFXGVHT" value="answer"></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_DDEZRCRSXN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DDEZRCRSXN" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DDEZRCRSXN" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DDEZRCRSXN" value="answer"></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 </ol>
 
@@ -551,8 +563,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="06_python_fundamentals.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="06_python_fundamentals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="08_data_structures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

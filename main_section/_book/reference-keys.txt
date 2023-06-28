@@ -42,3 +42,12 @@ functions-and-methods
 functions
 methods
 functions-and-methods-mcq-recap
+data-structures
+lists
+subsetting-data
+single-values
+multiple-values
+set
+convert-a-list-to-a-set
+dictionary
+data-structures-mcq-recap

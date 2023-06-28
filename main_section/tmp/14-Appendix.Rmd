@@ -41,7 +41,7 @@ __MAYBE PUT DEFINTIONS HERE__
 - __`int()`__ : Transform __variable__ to integer __class__.
 - __`float()`__ : Transform __variable__ to float __class__.
 - __`len()`__: Calculate number of characters in a string __variable__.
-- __``__
+- __`set()`__: Transform a __list__ to a __set__.
 - __``__
 - __``__
 - __``__
@@ -83,6 +83,10 @@ __MAYBE PUT DEFINTIONS HERE__
 - __``__
 - __``__
 - __``__
+
+### List methods
+
+- __`.append()`__: Append a value to the end of a __list__.
 - __``__
 - __``__
 - __``__
@@ -92,8 +96,10 @@ __MAYBE PUT DEFINTIONS HERE__
 - __``__
 - __``__
 - __``__
-- __``__
-- __``__
+
+### Set methods
+
+- __`.add()`__: Add a value to a __set__.
 - __``__
 - __``__
 - __``__

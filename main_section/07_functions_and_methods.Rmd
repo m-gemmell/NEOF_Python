@@ -10,8 +10,6 @@ A __function/method__ returns a value after it has performed the specific task.
 
 Use the same notebook (__"01-Fundamentals"__) and add the following __markdown cell__:
 
-Create a new __markdown cell__ with the following:
-
 ```{python, eval=FALSE}
 ## Functions & methods
 ### Functions
