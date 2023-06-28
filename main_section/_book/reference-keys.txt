@@ -51,3 +51,15 @@ set
 convert-a-list-to-a-set
 dictionary
 data-structures-mcq-recap
+fundamental-exercise
+notebook
+moth-light-trap-challenges
+challenge-1
+challenge-2
+challenge-3
+challenge-4
+challenge-5
+challenge-6
+challenge-7
+challenge-8
+exercise-conclusion

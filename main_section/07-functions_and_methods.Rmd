@@ -155,7 +155,7 @@ We have explored __functions__ (`function_name(variable)`) and __methods__ (`var
 You'll learn more __functions__ and __methods__ throughout this course.
 
 It is nigh impossible to learn all the __function__ and __methods.
-During this course and afterwards you can refere to the [cheatsheet in the appendix](#cheatsheet) to get a quick summary of all the __functions__ and __methods__ used in this book.
+During this course and afterwards you can refer to the [cheatsheet in the appendix](#cheatsheet) to get a quick summary of all the __functions__ and __methods__ used in this book.
 
 Choose the correct option to complete the below sentences:
 

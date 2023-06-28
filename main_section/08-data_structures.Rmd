@@ -57,18 +57,16 @@ taxonomy_levels = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Sp
 taxonomy_levels
 ```
 
-You can even create a list with multiple data __classes__.
+You can even create __lists__ with multiple data __classes__.
 
 ```{python, eval=FALSE}
 numerals = ["I", 1, "V", 5, True]
 numerals
 ```
 
-That is a quick intro to making __lists__, next we'll learn how to manipulate them.
-
 ## Subsetting data
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/R_square_bracket.png", auto_pdf = TRUE)
+knitr::include_graphics(path = "figures/noun-list-5537185.png", auto_pdf = TRUE)
 ```
 
 A value from a __list__ can be retrieved by the **position** it occupies in the list.
@@ -80,6 +78,9 @@ One of the most vital aspects to grasp for Python is that data structures start 
 This can be confusing but is a common feature of many programming languages.
 
 ### Single values
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/one_hand.png", auto_pdf = TRUE)
+```
 
 To select the first entry in a __list__, we therefore pass position "0" in the square braces:
 
@@ -102,6 +103,9 @@ gene_fold_change[-1]
 ```
 
 ### Multiple values
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/four_hand.png", auto_pdf = TRUE)
+```
 
 The same technique also works to select a range of values from the list. The upper and lower position of the range to be selected given in square brackets, separated by a colon (`X:Y`). 
 
@@ -258,15 +262,61 @@ Once indexed, the individual records can then be accessed extremely quickly.
 knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
 ```
 
+Brilliant! You have learnt about different data structures in __Python__.
 
-**Lists** hold an ordered catalogue of values. 
-Values can be accessed by their position in the list (remember to count from zero!). 
+Try choosing the correct option in the below senteces to recap what you have learnt.
 
-**Sets** can only hold unique values.
+```{r, echo = FALSE}
+opts_p <- c("__Dictionaries__", answer="__Lists__", "__Sets__")
+```
+1. ________ hold an ordered catalogue of values. `r longmcq(opts_p)`
 
-**Dictionaries** hold pairs of values (key and value) and can be used to quickly access individual records, even when they are extremely large.
+```{r, echo = FALSE}
+opts_p <- c("__Dictionaries__", "__Lists__", answer="__Sets__")
+```
+2. ________ can only hold unique values. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Dictionaries__", "__Lists__", "__Sets__")
+```
+3. ________ hold pairs of values (key and value). They can be used to quickly access individual records, even when they are extremely large. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__-1__", answer="__0__", "__1__")
+```
+4. Data structures in Python start at position ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Exclusive__", answer="__Inclusive__", "__Key__")
+```
+5. When subsetting values in a __list__ the first number (`[X:]`) is ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Exclusive__", "__Inclusive__", "__Key__")
+```
+6. When subsetting values in a __list__ the last number (`[:Y]`) is ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Exclusive__", "__Inclusive__", answer="__Key__")
+```
+7. You can access the __value__ of a __dictionary__ with its matching ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.add()`__", answer="__`.append()`__", "__`set()`__")
+```
+8. The ________ __method__ can add a value to a __list__. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`.add()`__", "__`.append()`__", "__`set()`__")
+```
+9. The ________ __method__ can add a value to a __set__. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.add()`__", "__`.append()`__", answer="__`set()`__")
+```
+10. The ________ __function__ can create a __set__ from a __list__. `r longmcq(opts_p)`
+
 
 We are going to be using these data structures to look at and manipulate DNA sequence data specifically, but the principles apply to any datasets stored in these structures.
 
-
-Ensure you save your notebook. However, don't close it as you may find its contents useful for the next chapter.
+Ensure you save your notebook. However, don't close it as you may find its contents useful for the next chapter of exercises.

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Python for bioinformatics | Python for Bioinformatics</title>
+  <title>9 Fundamental exercise | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Python for bioinformatics | Python for Bioinformatics" />
+  <meta property="og:title" content="9 Fundamental exercise | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/figures/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Python for bioinformatics | Python for Bioinformatics" />
+  <meta name="twitter:title" content="9 Fundamental exercise | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-<link rel="prev" href="01-Python.html"/>
-<link rel="next" href="03_cluster_introduction.html"/>
+<link rel="prev" href="08-data_structures.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -253,48 +253,187 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="python-for-bioinformatics" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Python for bioinformatics<a href="02-intro.html#python-for-bioinformatics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<center>
-<img src="figures/python_logo.png" height="100" /> <img src="figures/biopython_logo.png" height="100" />
-</center>
-<p>This is a course to explore and learn the fundamentals of programming in the Python language with a specific focus on how this tool can be used in bioinformatics.</p>
-<p><a href="https://www.python.org">Python</a> is a high level programming language enabling very rapid development of applications or scripts. It has a simple, easy-to-read syntax and is very accessible as a first or second programming language. Python has many pre-built modules and packages, allowing you to import lots of functionality, and avoid the need to "re-invent the wheel".</p>
-<p>Python is favoured by many programmers for the flexibility it affords and the speed at which it can be written.</p>
-<p>This course assumes absolutely no Python experience or prior programming experience in any other language.</p>
-<p>Over the next two days you will:</p>
-<ul>
-<li><strong>Learn</strong> the fundamental components of a Python script</li>
-<li><strong>Discover</strong> how to write, edit and run a Python script</li>
-<li><strong>Understand</strong> and use variables</li>
-<li><strong>Understand</strong> and choose data structures</li>
-<li><strong>Use</strong> control structure (conditions and loops)</li>
-<li><strong>Learn</strong> string manipulation</li>
-<li><strong>Read</strong> and manipulate DNA sequence data</li>
-<li><strong>Be able to</strong> read input files and write output files</li>
-<li><strong>Have a plan</strong> on what to do next to further your knowledge.</li>
-</ul>
-<p>We will cover the theory behind Python concepts and terminology. Python is designed to be human-readable code and understanding the underlying processes is important. There will be lots of opportunity to practice writing Python. Practice will involve typing and running Python code whilst working through the workshop materials. This will allow you to see the output of Python commands and help you to understand how Python works.</p>
-<div id="materials-covered-in-the-course" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Materials Covered in the Course<a href="02-intro.html#materials-covered-in-the-course" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<center>
-<img src="figures/materials.png" style="width:15.0%" />
-</center>
-<p>After learning some of the basics of Python we will import some DNA sequence data and perform some common types of analyses. The focus is on learning the theory and the ways in which Python can be used, rather than the specifics of the analysis. Hopefully you will take away new skills that can be applied to your own data.</p>
-<p>In the supplementary material, we import and work with a different form of data often encountered by biologists; the comma delimited file.</p>
+<div id="fundamental-exercise" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Fundamental exercise<a href="09-fundamental-exercises.html#fundamental-exercise" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="figures/exercise_2.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>To reinforce what you have learnt please try the exercise in this chapter.</p>
+<p>Solutions are in the expandable boxes.
+Try your best to solve the challenge but use the solutions for help if you would like.
+Even if your solution works it can be good to check the solution as there are many ways to do the same thing in python.</p>
+<p>In this exercise you are going to create, investigate, and manipulate data of UK moths found in light traps.</p>
+<div id="notebook" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Notebook<a href="09-fundamental-exercises.html#notebook" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/notebook.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Create a new notebook called "02-Fundamental_exercises". Use this notebook to carry out the exercises.</p>
+<p>Remember to use <strong>markdown cells</strong> to make headers.</p>
 </div>
-<div id="inputting-commands" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Inputting Commands<a href="02-intro.html#inputting-commands" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Commands are in the following font and colour and should be run in the VNC window following the link provided to you by the course coordinators. (Do not try to run the following, however.)</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="02-intro.html#cb1-1" tabindex="-1"></a>    This <span class="kw">is</span> an example of a command.</span></code></pre></div>
+<div id="moth-light-trap-challenges" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Moth light trap challenges<a href="09-fundamental-exercises.html#moth-light-trap-challenges" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="challenge-1" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Challenge 1<a href="09-fundamental-exercises.html#challenge-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_1.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Create a <strong>list variable</strong> called <strong>"moth_sightings_21sep"</strong> with the ordered <strong>string</strong> values:</p>
+<ol style="list-style-type: decimal">
+<li>"Poplar Hawk-moth"</li>
+<li>"Elephant Hawk-moth"</li>
+<li>"Elephant Hawk-moth"</li>
+<li>"Cinnabar"</li>
+<li>"Poplar Hawk-moth"</li>
+<li>"Scarlet Tiger"</li>
+<li>"Scalloped Oak"</li>
+</ol>
+<p>This is the species of the individual moths that visited the light trap on the 21st night of September.</p>
+<p>Then view the <strong>list</strong>.</p>
+<div class="webex-solution">
+<button>
+Moth 1 solution
+</button>
+<div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb102-1"><a href="09-fundamental-exercises.html#cb102-1" tabindex="-1"></a><span class="co">#1</span></span>
+<span id="cb102-2"><a href="09-fundamental-exercises.html#cb102-2" tabindex="-1"></a>moth_sightings_21sep <span class="op">=</span> [<span class="st">&quot;Poplar Hawk-moth&quot;</span>, <span class="st">&quot;Elephant Hawk-moth&quot;</span>, <span class="st">&quot;Elephant Hawk-moth&quot;</span>,</span>
+<span id="cb102-3"><a href="09-fundamental-exercises.html#cb102-3" tabindex="-1"></a>                        <span class="st">&quot;Cinnabar&quot;</span>, <span class="st">&quot;Poplar Hawk-moth&quot;</span>, <span class="st">&quot;Scarlet Tiger&quot;</span>, <span class="st">&quot;Scalloped Oak&quot;</span>]</span>
+<span id="cb102-4"><a href="09-fundamental-exercises.html#cb102-4" tabindex="-1"></a>moth_sightings_21sep</span></code></pre></div>
 </div>
-<div id="pseudocode" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Pseudocode<a href="02-intro.html#pseudocode" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<center>
-<img src="figures/noun-cherry-cake-5973.png" style="width:15.0%" />
-</center>
-<p>Sometimes to illustrate how a concept works, we will illustrate it with some <b>pseudocode</b>. This is a way of representing a concept in simple terms that can be understood without knowing the correct programming terminology or syntax.</p>
-<p>Do not try to run the pseudocode as Python will not understand it.</p>
+</div>
+<div id="challenge-2" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Challenge 2<a href="09-fundamental-exercises.html#challenge-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_2.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Using python code calculate the percentage of individuals that were <strong>Elephant Hawk-moths</strong> in <strong>"moth_sightings_21sep"</strong>.</p>
+<p><strong>Tip:</strong> Operators, the <strong>function</strong> <code>len()</code> and the <strong>method</strong> <code>.count()</code> (it can be used on string <strong>lists</strong>) will be useful.</p>
+<div class="webex-solution">
+<button>
+Moth 2 solution
+</button>
+<div class="sourceCode" id="cb103"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="09-fundamental-exercises.html#cb103-1" tabindex="-1"></a><span class="co">#2</span></span>
+<span id="cb103-2"><a href="09-fundamental-exercises.html#cb103-2" tabindex="-1"></a>(moth_sightings_21sep.count(<span class="st">&quot;Elephant Hawk-moth&quot;</span>) <span class="op">/</span> <span class="bu">len</span>(moth_sightings_21sep)) <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+</div>
+</div>
+<div id="challenge-3" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Challenge 3<a href="09-fundamental-exercises.html#challenge-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_3.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Create a <strong>set</strong> called <strong>unique_moths</strong> from the <strong>"moth_sightings_21sep"</strong> list.</p>
+<div class="webex-solution">
+<button>
+Moth 3 solution
+</button>
+<div class="sourceCode" id="cb104"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb104-1"><a href="09-fundamental-exercises.html#cb104-1" tabindex="-1"></a><span class="co">#3</span></span>
+<span id="cb104-2"><a href="09-fundamental-exercises.html#cb104-2" tabindex="-1"></a>unique_moths <span class="op">=</span> <span class="bu">set</span>(moth_sightings_21sep)</span>
+<span id="cb104-3"><a href="09-fundamental-exercises.html#cb104-3" tabindex="-1"></a>unique_moths</span></code></pre></div>
+</div>
+</div>
+<div id="challenge-4" class="section level3 hasAnchor" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> Challenge 4<a href="09-fundamental-exercises.html#challenge-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_4.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Create a new <strong>list variable</strong> called <strong>"moth_sightings_22sep"</strong> with the ordered <strong>string</strong> values:</p>
+<ol style="list-style-type: decimal">
+<li>"Poplar Hawk-moth"</li>
+<li>"Elephant Hawk-moth"</li>
+<li>"Elephant Hawk-moth"</li>
+<li>"Cinnabar"</li>
+<li>"Feathered Thorn"</li>
+<li>"Scarlet Tiger"</li>
+<li>"Elephant Hawk-moth"</li>
+</ol>
+<p><strong>Tip</strong>: It can be useful to copy, paste, and edit previous code.</p>
+<div class="webex-solution">
+<button>
+Moth 4 solution
+</button>
+<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="09-fundamental-exercises.html#cb105-1" tabindex="-1"></a><span class="co">#4</span></span>
+<span id="cb105-2"><a href="09-fundamental-exercises.html#cb105-2" tabindex="-1"></a>moth_sightings_22sep <span class="op">=</span> [<span class="st">&quot;Poplar Hawk-moth&quot;</span>, <span class="st">&quot;Elephant Hawk-moth&quot;</span>, <span class="st">&quot;Elephant Hawk-moth&quot;</span>,</span>
+<span id="cb105-3"><a href="09-fundamental-exercises.html#cb105-3" tabindex="-1"></a>                        <span class="st">&quot;Cinnabar&quot;</span>, <span class="st">&quot;Feathered Thorn&quot;</span>, <span class="st">&quot;Scarlet Tiger&quot;</span>, <span class="st">&quot;Elephant Hawk-moth&quot;</span>]</span>
+<span id="cb105-4"><a href="09-fundamental-exercises.html#cb105-4" tabindex="-1"></a>moth_sightings_22sep</span></code></pre></div>
+</div>
+</div>
+<div id="challenge-5" class="section level3 hasAnchor" number="9.2.5">
+<h3><span class="header-section-number">9.2.5</span> Challenge 5<a href="09-fundamental-exercises.html#challenge-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_5.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Add the string <strong>variable</strong> <strong>"Feathered Thorn"</strong> to the <strong>set</strong> <strong>unique_moths</strong>.</p>
+<div class="webex-solution">
+<button>
+Moth 5 solution
+</button>
+<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="09-fundamental-exercises.html#cb106-1" tabindex="-1"></a><span class="co">#5</span></span>
+<span id="cb106-2"><a href="09-fundamental-exercises.html#cb106-2" tabindex="-1"></a>unique_moths.add(<span class="st">&quot;Feathered Thorn&quot;</span>)</span>
+<span id="cb106-3"><a href="09-fundamental-exercises.html#cb106-3" tabindex="-1"></a>unique_moths</span></code></pre></div>
+</div>
+</div>
+<div id="challenge-6" class="section level3 hasAnchor" number="9.2.6">
+<h3><span class="header-section-number">9.2.6</span> Challenge 6<a href="09-fundamental-exercises.html#challenge-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_6.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>This is a multi stage challenge.
+Subset the <strong>lists</strong> in the following ways:</p>
+<ol style="list-style-type: decimal">
+<li>Subset the 1st value of <strong>"moth_sightings_21sep"</strong>.</li>
+<li>Subset the 3rd to 5th values of <strong>"moth_sightings_22sep"</strong>.</li>
+<li>Subset the second last value of <strong>"moth_sightings_21sep"</strong>.</li>
+<li>Subset the first 4 values of <strong>"moth_sightings_22sep"</strong>.</li>
+<li>Subset the values from the 5th to the end of <strong>"moth_sightings_21sep"</strong>.</li>
+<li>Subset the three last values of <strong>"moth_sightings_22sep"</strong>.</li>
+</ol>
+<div class="webex-solution">
+<button>
+Moth 6 solution
+</button>
+<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="09-fundamental-exercises.html#cb107-1" tabindex="-1"></a><span class="co">#6.1</span></span>
+<span id="cb107-2"><a href="09-fundamental-exercises.html#cb107-2" tabindex="-1"></a>moth_sightings_21sep[<span class="dv">0</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="09-fundamental-exercises.html#cb108-1" tabindex="-1"></a><span class="co">#6.2</span></span>
+<span id="cb108-2"><a href="09-fundamental-exercises.html#cb108-2" tabindex="-1"></a>moth_sightings_22sep[<span class="dv">2</span>:<span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="09-fundamental-exercises.html#cb109-1" tabindex="-1"></a><span class="co">#6.3</span></span>
+<span id="cb109-2"><a href="09-fundamental-exercises.html#cb109-2" tabindex="-1"></a>moth_sightings_21sep[<span class="op">-</span><span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="09-fundamental-exercises.html#cb110-1" tabindex="-1"></a><span class="co">#6.4</span></span>
+<span id="cb110-2"><a href="09-fundamental-exercises.html#cb110-2" tabindex="-1"></a>moth_sightings_22sep[:<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="09-fundamental-exercises.html#cb111-1" tabindex="-1"></a><span class="co">#6.5</span></span>
+<span id="cb111-2"><a href="09-fundamental-exercises.html#cb111-2" tabindex="-1"></a>moth_sightings_21sep[<span class="dv">4</span>:]</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="09-fundamental-exercises.html#cb112-1" tabindex="-1"></a><span class="co">#6.4</span></span>
+<span id="cb112-2"><a href="09-fundamental-exercises.html#cb112-2" tabindex="-1"></a>moth_sightings_22sep[<span class="op">-</span><span class="dv">3</span>:]</span></code></pre></div>
+</div>
+</div>
+<div id="challenge-7" class="section level3 hasAnchor" number="9.2.7">
+<h3><span class="header-section-number">9.2.7</span> Challenge 7<a href="09-fundamental-exercises.html#challenge-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_7.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Create a <strong>dictionary</strong> called <strong>"moth_visits_sep"</strong> containing the following <strong>key</strong> &amp; <strong>value</strong> pairs:</p>
+<ol style="list-style-type: decimal">
+<li>"Poplar Hawk-moth" : 45</li>
+<li>"Elephant Hawk-moth" : 72</li>
+<li>"Cinnabar" : 23</li>
+<li>"Scarlet Tiger" : 32</li>
+<li>"Scalloped Oak" : 10</li>
+<li>"Feathered Thorn" : 13</li>
+</ol>
+<div class="webex-solution">
+<button>
+Moth 7 solution
+</button>
+<div class="sourceCode" id="cb113"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="09-fundamental-exercises.html#cb113-1" tabindex="-1"></a><span class="co">#7</span></span>
+<span id="cb113-2"><a href="09-fundamental-exercises.html#cb113-2" tabindex="-1"></a>moth_visits_sep <span class="op">=</span> {</span>
+<span id="cb113-3"><a href="09-fundamental-exercises.html#cb113-3" tabindex="-1"></a>  <span class="st">&quot;Poplar Hawk-moth&quot;</span> :  <span class="dv">45</span>, </span>
+<span id="cb113-4"><a href="09-fundamental-exercises.html#cb113-4" tabindex="-1"></a>  <span class="st">&quot;Elephant Hawk-moth&quot;</span> : <span class="dv">72</span>,</span>
+<span id="cb113-5"><a href="09-fundamental-exercises.html#cb113-5" tabindex="-1"></a>  <span class="st">&quot;Cinnabar&quot;</span> : <span class="dv">23</span>,</span>
+<span id="cb113-6"><a href="09-fundamental-exercises.html#cb113-6" tabindex="-1"></a>  <span class="st">&quot;Scarlet Tiger&quot;</span> : <span class="dv">32</span>,</span>
+<span id="cb113-7"><a href="09-fundamental-exercises.html#cb113-7" tabindex="-1"></a>  <span class="st">&quot;Scalloped Oak&quot;</span> : <span class="dv">10</span></span>
+<span id="cb113-8"><a href="09-fundamental-exercises.html#cb113-8" tabindex="-1"></a>}</span>
+<span id="cb113-9"><a href="09-fundamental-exercises.html#cb113-9" tabindex="-1"></a>moth_visits_sep</span></code></pre></div>
+</div>
+</div>
+<div id="challenge-8" class="section level3 hasAnchor" number="9.2.8">
+<h3><span class="header-section-number">9.2.8</span> Challenge 8<a href="09-fundamental-exercises.html#challenge-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/moth_8.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Add the <strong>key/value</strong> pair <strong>"Feathered Thorn" : 13</strong> to the <strong>dictionary</strong> <strong>"moth_visits_sep"</strong>.</p>
+<div class="webex-solution">
+<button>
+Moth 8 solution
+</button>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="09-fundamental-exercises.html#cb114-1" tabindex="-1"></a><span class="co">#8</span></span>
+<span id="cb114-2"><a href="09-fundamental-exercises.html#cb114-2" tabindex="-1"></a>moth_visits_sep[<span class="st">&quot;Feathered Thorn] = 13</span></span>
+<span id="cb114-3"><a href="09-fundamental-exercises.html#cb114-3" tabindex="-1"></a><span class="er">moth_visits_sep</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="exercise-conclusion" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Exercise conclusion<a href="09-fundamental-exercises.html#exercise-conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/finish.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>Hopefully you found those challenges helpful in practising and solidifying your python skills and knowledge.
+In the next section we'll start playing with some real sequence data.</p>
 
 </div>
 </div>
@@ -509,8 +648,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="01-Python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="03_cluster_introduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="08-data_structures.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
