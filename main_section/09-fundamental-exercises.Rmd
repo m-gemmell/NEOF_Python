@@ -11,7 +11,7 @@ Even if your solution works it can be good to check the solution as there are ma
 
 In this exercise you are going to create, investigate, and manipulate data of UK moths found in light traps.
 
-## Notebook
+## Fundamental exercise notebook
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/notebook.png", auto_pdf = TRUE)
 ```
@@ -214,3 +214,5 @@ knitr::include_graphics(path = "figures/finish.png", auto_pdf = TRUE)
 
 Hopefully you found those challenges helpful in practising and solidifying your python skills and knowledge.
 In the next section we'll start playing with some real sequence data.
+
+You can now save and __close and halt__ your __notebooks__.

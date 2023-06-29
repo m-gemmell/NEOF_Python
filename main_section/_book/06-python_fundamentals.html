@@ -219,7 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html"><i class="fa fa-check"></i><b>9</b> Fundamental exercise</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#notebook"><i class="fa fa-check"></i><b>9.1</b> Notebook</a></li>
+<li class="chapter" data-level="9.1" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#fundamental-exercise-notebook"><i class="fa fa-check"></i><b>9.1</b> Fundamental exercise notebook</a></li>
 <li class="chapter" data-level="9.2" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#moth-light-trap-challenges"><i class="fa fa-check"></i><b>9.2</b> Moth light trap challenges</a>
 <ul>
 <li class="chapter" data-level="9.2.1" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#challenge-1"><i class="fa fa-check"></i><b>9.2.1</b> Challenge 1</a></li>
@@ -232,6 +232,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.8" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#challenge-8"><i class="fa fa-check"></i><b>9.2.8</b> Challenge 8</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#exercise-conclusion"><i class="fa fa-check"></i><b>9.3</b> Exercise conclusion</a></li>
+</ul></li>
+<li class="part"><span><b>Programmatic coding</b></span></li>
+<li class="chapter" data-level="10" data-path="10_conditions.html"><a href="10_conditions.html"><i class="fa fa-check"></i><b>10</b> Python Conditions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10_conditions.html"><a href="10_conditions.html#logical-conditions"><i class="fa fa-check"></i><b>10.1</b> Logical conditions</a></li>
+<li class="chapter" data-level="10.2" data-path="10_conditions.html"><a href="10_conditions.html#if-statements"><i class="fa fa-check"></i><b>10.2</b> If statements</a></li>
+<li class="chapter" data-level="10.3" data-path="10_conditions.html"><a href="10_conditions.html#if-else-statements"><i class="fa fa-check"></i><b>10.3</b> If else statements</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="10_conditions.html"><a href="10_conditions.html#dna-length-comparison"><i class="fa fa-check"></i><b>10.3.1</b> DNA length comparison</a></li>
+<li class="chapter" data-level="10.3.2" data-path="10_conditions.html"><a href="10_conditions.html#nucleotide-count-comparison"><i class="fa fa-check"></i><b>10.3.2</b> Nucleotide count comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="10_conditions.html"><a href="10_conditions.html#conditions-reflection"><i class="fa fa-check"></i><b>10.4</b> Conditions reflection</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -281,7 +293,7 @@ Within it create a new <strong>Markdown</strong> cell with the following headers
 <li><strong><code>-</code></strong> (subtraction)</li>
 <li><strong><code>*</code></strong> (multiplication)</li>
 <li><strong><code>/</code></strong> (division)</li>
-<li><strong><code>**</code></strong> (power)</li>
+<li><strong><code>**</code></strong> (power/exponent)</li>
 <li><strong><code>//</code></strong> (Floor division)</li>
 <li><strong><code>%</code></strong> (modulo operator. Find the remainder after dividing 2 numbers)</li>
 </ul>
@@ -477,28 +489,28 @@ It is good practice to save it regularly.</p>
 <p>Choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>All <strong>variables</strong> have a ________.
-<div id="radio_XBBVXQTDJM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XBBVXQTDJM" value="answer"></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XBBVXQTDJM" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XBBVXQTDJM" value=""></input> <span><strong>String</strong></span></label>
+<div id="radio_KWWNHLHSBW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KWWNHLHSBW" value="answer"></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KWWNHLHSBW" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KWWNHLHSBW" value=""></input> <span><strong>String</strong></span></label>
 </div></li>
 <li>The hashtag (<code>#</code>) can be used to add ________ to code.
-<div id="radio_MRHVSMHKYL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MRHVSMHKYL" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MRHVSMHKYL" value="answer"></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MRHVSMHKYL" value=""></input> <span><strong>String</strong></span></label>
+<div id="radio_NUKZVCJNXZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NUKZVCJNXZ" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NUKZVCJNXZ" value="answer"></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NUKZVCJNXZ" value=""></input> <span><strong>String</strong></span></label>
 </div></li>
 <li>Quotes ('single' or "double") are used to create ________ <strong>variables</strong>.
-<div id="radio_PRPHPIBQEE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PRPHPIBQEE" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PRPHPIBQEE" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PRPHPIBQEE" value="answer"></input> <span><strong>String</strong></span></label>
+<div id="radio_QHNTVSEXVT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QHNTVSEXVT" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QHNTVSEXVT" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QHNTVSEXVT" value="answer"></input> <span><strong>String</strong></span></label>
 </div></li>
 <li>________ is a numeric <strong>class</strong> which <strong>does not</strong> contain decimal points (whole numbers).
-<div id="radio_YLHLOFFEGN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YLHLOFFEGN" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YLHLOFFEGN" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YLHLOFFEGN" value="answer"></input> <span><strong>Integer</strong></span></label>
+<div id="radio_NGLGIBDATS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NGLGIBDATS" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NGLGIBDATS" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NGLGIBDATS" value="answer"></input> <span><strong>Integer</strong></span></label>
 </div></li>
 <li>________ is a numeric <strong>class</strong> which <strong>does</strong> contain decimal points (real numbers).
-<div id="radio_YERYHJGUBU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YERYHJGUBU" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YERYHJGUBU" value="answer"></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YERYHJGUBU" value=""></input> <span><strong>Integer</strong></span></label>
+<div id="radio_TRAFUGTQUT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TRAFUGTQUT" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TRAFUGTQUT" value="answer"></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TRAFUGTQUT" value=""></input> <span><strong>Integer</strong></span></label>
 </div></li>
 <li>________ is a <strong>class</strong> that stores <code>True</code> or <code>False</code>.
-<div id="radio_WIIURUMBSF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WIIURUMBSF" value="answer"></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WIIURUMBSF" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WIIURUMBSF" value=""></input> <span><strong>Integer</strong></span></label>
+<div id="radio_ASDJJQSPCU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ASDJJQSPCU" value="answer"></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ASDJJQSPCU" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ASDJJQSPCU" value=""></input> <span><strong>Integer</strong></span></label>
 </div></li>
 </ol>
 

@@ -219,7 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html"><i class="fa fa-check"></i><b>9</b> Fundamental exercise</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#notebook"><i class="fa fa-check"></i><b>9.1</b> Notebook</a></li>
+<li class="chapter" data-level="9.1" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#fundamental-exercise-notebook"><i class="fa fa-check"></i><b>9.1</b> Fundamental exercise notebook</a></li>
 <li class="chapter" data-level="9.2" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#moth-light-trap-challenges"><i class="fa fa-check"></i><b>9.2</b> Moth light trap challenges</a>
 <ul>
 <li class="chapter" data-level="9.2.1" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#challenge-1"><i class="fa fa-check"></i><b>9.2.1</b> Challenge 1</a></li>
@@ -232,6 +232,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.8" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#challenge-8"><i class="fa fa-check"></i><b>9.2.8</b> Challenge 8</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="09-fundamental-exercises.html"><a href="09-fundamental-exercises.html#exercise-conclusion"><i class="fa fa-check"></i><b>9.3</b> Exercise conclusion</a></li>
+</ul></li>
+<li class="part"><span><b>Programmatic coding</b></span></li>
+<li class="chapter" data-level="10" data-path="10_conditions.html"><a href="10_conditions.html"><i class="fa fa-check"></i><b>10</b> Python Conditions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10_conditions.html"><a href="10_conditions.html#logical-conditions"><i class="fa fa-check"></i><b>10.1</b> Logical conditions</a></li>
+<li class="chapter" data-level="10.2" data-path="10_conditions.html"><a href="10_conditions.html#if-statements"><i class="fa fa-check"></i><b>10.2</b> If statements</a></li>
+<li class="chapter" data-level="10.3" data-path="10_conditions.html"><a href="10_conditions.html#if-else-statements"><i class="fa fa-check"></i><b>10.3</b> If else statements</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="10_conditions.html"><a href="10_conditions.html#dna-length-comparison"><i class="fa fa-check"></i><b>10.3.1</b> DNA length comparison</a></li>
+<li class="chapter" data-level="10.3.2" data-path="10_conditions.html"><a href="10_conditions.html#nucleotide-count-comparison"><i class="fa fa-check"></i><b>10.3.2</b> Nucleotide count comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="10_conditions.html"><a href="10_conditions.html#conditions-reflection"><i class="fa fa-check"></i><b>10.4</b> Conditions reflection</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -410,44 +422,44 @@ Once indexed, the individual records can then be accessed extremely quickly.</p>
 <p>Try choosing the correct option in the below senteces to recap what you have learnt.</p>
 <ol style="list-style-type: decimal">
 <li>________ hold an ordered catalogue of values.
-<div id="radio_WJXKJGWWNK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WJXKJGWWNK" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WJXKJGWWNK" value="answer"></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WJXKJGWWNK" value=""></input> <span><strong>Sets</strong></span></label>
+<div id="radio_QWBDARWJBM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QWBDARWJBM" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QWBDARWJBM" value="answer"></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QWBDARWJBM" value=""></input> <span><strong>Sets</strong></span></label>
 </div></li>
 <li>________ can only hold unique values.
-<div id="radio_GLGJIQRMWP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GLGJIQRMWP" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GLGJIQRMWP" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GLGJIQRMWP" value="answer"></input> <span><strong>Sets</strong></span></label>
+<div id="radio_EWHMLWYXVB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EWHMLWYXVB" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EWHMLWYXVB" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EWHMLWYXVB" value="answer"></input> <span><strong>Sets</strong></span></label>
 </div></li>
 <li>________ hold pairs of values (key and value). They can be used to quickly access individual records, even when they are extremely large.
-<div id="radio_XSNPYATZTC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XSNPYATZTC" value="answer"></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XSNPYATZTC" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XSNPYATZTC" value=""></input> <span><strong>Sets</strong></span></label>
+<div id="radio_LSRLMHNIYV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LSRLMHNIYV" value="answer"></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LSRLMHNIYV" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LSRLMHNIYV" value=""></input> <span><strong>Sets</strong></span></label>
 </div></li>
 <li>Data structures in Python start at position ________.
-<div id="radio_TDTTPHJKMS" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TDTTPHJKMS" value=""></input> <span><strong>-1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TDTTPHJKMS" value="answer"></input> <span><strong>0</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TDTTPHJKMS" value=""></input> <span><strong>1</strong></span></label>
+<div id="radio_MCETEYEFZN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MCETEYEFZN" value=""></input> <span><strong>-1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCETEYEFZN" value="answer"></input> <span><strong>0</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCETEYEFZN" value=""></input> <span><strong>1</strong></span></label>
 </div></li>
 <li>When subsetting values in a <strong>list</strong> the first number (<code>[X:]</code>) is ________.
-<div id="radio_BZQZDTAAFD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BZQZDTAAFD" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BZQZDTAAFD" value="answer"></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BZQZDTAAFD" value=""></input> <span><strong>Key</strong></span></label>
+<div id="radio_LLZSLBOCRS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LLZSLBOCRS" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LLZSLBOCRS" value="answer"></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LLZSLBOCRS" value=""></input> <span><strong>Key</strong></span></label>
 </div></li>
 <li>When subsetting values in a <strong>list</strong> the last number (<code>[:Y]</code>) is ________.
-<div id="radio_YEPHRFCRKG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YEPHRFCRKG" value="answer"></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YEPHRFCRKG" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YEPHRFCRKG" value=""></input> <span><strong>Key</strong></span></label>
+<div id="radio_LDCHEAJCLU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LDCHEAJCLU" value="answer"></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LDCHEAJCLU" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LDCHEAJCLU" value=""></input> <span><strong>Key</strong></span></label>
 </div></li>
 <li>You can access the <strong>value</strong> of a <strong>dictionary</strong> with its matching ________.
-<div id="radio_KIVJVTQVSO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KIVJVTQVSO" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KIVJVTQVSO" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KIVJVTQVSO" value="answer"></input> <span><strong>Key</strong></span></label>
+<div id="radio_ZVJVPPBOKB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZVJVPPBOKB" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZVJVPPBOKB" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZVJVPPBOKB" value="answer"></input> <span><strong>Key</strong></span></label>
 </div></li>
 <li>The ________ <strong>method</strong> can add a value to a <strong>list</strong>.
-<div id="radio_RICLIWQINR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RICLIWQINR" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RICLIWQINR" value="answer"></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RICLIWQINR" value=""></input> <span><strong><code>set()</code></strong></span></label>
+<div id="radio_EALQPDXYWU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EALQPDXYWU" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_EALQPDXYWU" value="answer"></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_EALQPDXYWU" value=""></input> <span><strong><code>set()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>method</strong> can add a value to a <strong>set</strong>.
-<div id="radio_UVSYOYGXHO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UVSYOYGXHO" value="answer"></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UVSYOYGXHO" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UVSYOYGXHO" value=""></input> <span><strong><code>set()</code></strong></span></label>
+<div id="radio_NWFWGGWWXI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NWFWGGWWXI" value="answer"></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NWFWGGWWXI" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NWFWGGWWXI" value=""></input> <span><strong><code>set()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>function</strong> can create a <strong>set</strong> from a <strong>list</strong>.
-<div id="radio_SFCOCHHVLF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SFCOCHHVLF" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SFCOCHHVLF" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SFCOCHHVLF" value="answer"></input> <span><strong><code>set()</code></strong></span></label>
+<div id="radio_BZMWTTJNAP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BZMWTTJNAP" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BZMWTTJNAP" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BZMWTTJNAP" value="answer"></input> <span><strong><code>set()</code></strong></span></label>
 </div></li>
 </ol>
 <p>We are going to be using these data structures to look at and manipulate DNA sequence data specifically, but the principles apply to any datasets stored in these structures.</p>

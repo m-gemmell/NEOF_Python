@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Python for Bioinformatics</title>
+  <title>10 Python Conditions | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Python for Bioinformatics" />
+  <meta property="og:title" content="10 Python Conditions | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/figures/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Python for Bioinformatics" />
+  <meta name="twitter:title" content="10 Python Conditions | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-
+<link rel="prev" href="09-fundamental-exercises.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -265,11 +265,175 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="python-conditions" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> Python Conditions<a href="10_conditions.html#python-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="figures/python_condition.png" width="20%" style="display: block; margin: auto;" /></p>
+<p>In this section we are going to learn some programmatic <strong>Python</strong> coding including <strong>conditions</strong> and <strong>loops</strong>.</p>
+<p>Create a new notebook called <strong>"03-Programmatic_coding"</strong>. Use this notebook in this chapter.</p>
+<div id="logical-conditions" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Logical conditions<a href="10_conditions.html#logical-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/logical.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>A powerful feature of most programming languages is the ability to compare values/<strong>variables</strong> and to make decisions based upon the outcome.
+This type of behaviour is achieved using <em>logical conditions</em>.</p>
+<p>The <strong>conditions</strong> allowed depends on the type of data you are comparing.
+You cannot use greater than (<code>&gt;</code>) or less than (<code>&lt;</code>) on <strong>string variables</strong> directly (although you could compare their lengths).</p>
+<p><strong>Python supports the following logical conditions:</strong></p>
+<ul>
+<li>Equals: <code>a == b</code></li>
+<li>Does not equal: <code>a != b</code></li>
+<li>Less than: <code>a &lt; b</code></li>
+<li>Less than or equal to: <code>a &lt;= b</code></li>
+<li>Greater than: <code>a &gt; b</code></li>
+<li>Greater than or equal to: <code>a &gt;= b</code></li>
+</ul>
+<p>Try the following:</p>
+<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="10_conditions.html#cb115-1" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;ATTGCG&quot;</span></span>
+<span id="cb115-2"><a href="10_conditions.html#cb115-2" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot;AGCGAT&quot;</span></span>
+<span id="cb115-3"><a href="10_conditions.html#cb115-3" tabindex="-1"></a>a<span class="op">==</span>b</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="10_conditions.html#cb116-1" tabindex="-1"></a><span class="bu">len</span>(a) <span class="op">==</span> <span class="bu">len</span>(b)</span></code></pre></div>
+<p>These logical conditions are most typically used in <strong>if</strong> statements.</p>
+</div>
+<div id="if-statements" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> If statements<a href="10_conditions.html#if-statements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/switch.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>By testing whether certain comparisons evaluate as either <strong>True</strong> or <strong>False</strong>, we can change the flow of our programs.</p>
+<p>An <strong>if statement</strong> is a programming statement which acts like a switch.
+If the statement is <strong>True</strong>, the switch is activated.
+If the statement is <strong>False</strong>, the switch remains inactivated.</p>
+<p>A generic <strong>if statement</strong> using pseudocode would have the following structure: <br></p>
+<ol style="list-style-type: decimal">
+<li><p>If a condition is met:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Perform a task</li>
+</ol></li>
+</ol>
+<p>Try out the examples below.
+You will notice no results will appear when the conditions are <code>False</code>.</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="10_conditions.html#cb117-1" tabindex="-1"></a><span class="cf">if</span> <span class="dv">1</span> <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb117-2"><a href="10_conditions.html#cb117-2" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;1 is 1&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="10_conditions.html#cb118-1" tabindex="-1"></a><span class="cf">if</span> <span class="st">&quot;team&quot;</span> <span class="op">!=</span> <span class="st">&quot;teaim:</span></span>
+<span id="cb118-2"><a href="10_conditions.html#cb118-2" tabindex="-1"></a><span class="er">  print</span>(<span class="st">&quot;There is no I in team&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="10_conditions.html#cb119-1" tabindex="-1"></a><span class="cf">if</span> (<span class="dv">2</span><span class="op">+</span><span class="dv">2</span>) <span class="op">==</span> <span class="dv">5</span>:</span>
+<span id="cb119-2"><a href="10_conditions.html#cb119-2" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;4 is equal to 5&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="10_conditions.html#cb120-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">8</span> <span class="op">*</span><span class="dv">8</span></span>
+<span id="cb120-2"><a href="10_conditions.html#cb120-2" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">4</span> <span class="op">**</span> <span class="dv">3</span></span>
+<span id="cb120-3"><a href="10_conditions.html#cb120-3" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> y:</span>
+<span id="cb120-4"><a href="10_conditions.html#cb120-4" tabindex="-1"></a>  <span class="bu">print</span>(<span class="bu">str</span>(<span class="dv">8</span><span class="op">*</span><span class="dv">8</span>) <span class="op">+</span> <span class="st">&quot; is less than &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="dv">4</span><span class="op">**</span><span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="10_conditions.html#cb121-1" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;=</span> y:</span>
+<span id="cb121-2"><a href="10_conditions.html#cb121-2" tabindex="-1"></a>  <span class="bu">print</span>(<span class="bu">str</span>(<span class="dv">8</span><span class="op">*</span><span class="dv">8</span>) <span class="op">+</span> <span class="st">&quot; is greater or equal to  &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="dv">4</span><span class="op">**</span><span class="dv">3</span>))</span></code></pre></div>
+</div>
+<div id="if-else-statements" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> If else statements<a href="10_conditions.html#if-else-statements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/wrong.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>We can also include an action for when the condition has not been met using <strong>else</strong>.
+The <strong>else statement</strong> works in conjunction with the <strong>if</strong> and offers a different action if the condition evaluated to <strong>False</strong>.</p>
+<ol style="list-style-type: decimal">
+<li>If a condition is met:
+<ul>
+<li>Perform a task</li>
+</ul></li>
+<li>Else:
+<ul>
+<li>Do something else</li>
+</ul></li>
+</ol>
+<p>For example, we might have a string of nucleotide data which we want to move through, translating any thymine (T) bases into uracil (U).
+The other three bases (A, C, and G) do not require any processing.</p>
+<p>The <strong>if</strong> and <strong>else statements</strong> to do this would look something like (again, using pseudocode):</p>
+<ol style="list-style-type: decimal">
+<li>If the current nucleotide is "T":
+<ul>
+<li>Print "U"</li>
+</ul></li>
+<li>Else:
+<ul>
+<li>Print the current nucleotide</li>
+</ul></li>
+</ol>
+<p>We will explore using loops to move through data more in the next chapter. For now, try out the below <code>if else statements</code>.</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="10_conditions.html#cb122-1" tabindex="-1"></a><span class="co">#Create some DNA variables</span></span>
+<span id="cb122-2"><a href="10_conditions.html#cb122-2" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&quot;ATTGCG&quot;</span></span>
+<span id="cb122-3"><a href="10_conditions.html#cb122-3" tabindex="-1"></a>b <span class="op">=</span> <span class="st">&quot;AGCGAT&quot;</span></span>
+<span id="cb122-4"><a href="10_conditions.html#cb122-4" tabindex="-1"></a>c <span class="op">=</span> <span class="st">&quot;GGTCATtat&quot;</span></span></code></pre></div>
+<div id="dna-length-comparison" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> DNA length comparison<a href="10_conditions.html#dna-length-comparison" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/measuring_tape.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>In the below code we create our new variables for the <strong>statement</strong>.
+This is so we only have to change the one set of <strong>variables</strong> if we change the input data.
+This is a common technique with <strong>conditions</strong> and <strong>loops</strong>.</p>
+<p><strong>Tip</strong>: It is always useful to copy and paste code.</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="10_conditions.html#cb123-1" tabindex="-1"></a><span class="co">#Compare lengths of a and b</span></span>
+<span id="cb123-2"><a href="10_conditions.html#cb123-2" tabindex="-1"></a>dna1 <span class="op">=</span> a</span>
+<span id="cb123-3"><a href="10_conditions.html#cb123-3" tabindex="-1"></a>dna2 <span class="op">=</span> b</span>
+<span id="cb123-4"><a href="10_conditions.html#cb123-4" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(dna1) <span class="op">==</span> <span class="bu">len</span>(dna2):</span>
+<span id="cb123-5"><a href="10_conditions.html#cb123-5" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences are the same length&quot;</span>)</span>
+<span id="cb123-6"><a href="10_conditions.html#cb123-6" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb123-7"><a href="10_conditions.html#cb123-7" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Length difference is &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="bu">len</span>(dna1) <span class="op">-</span> <span class="bu">len</span>(dna2)))</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="10_conditions.html#cb124-1" tabindex="-1"></a><span class="co">#Compare lengths of a and c</span></span>
+<span id="cb124-2"><a href="10_conditions.html#cb124-2" tabindex="-1"></a>dna1 <span class="op">=</span> a</span>
+<span id="cb124-3"><a href="10_conditions.html#cb124-3" tabindex="-1"></a>dna2 <span class="op">=</span> b</span>
+<span id="cb124-4"><a href="10_conditions.html#cb124-4" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(dna1) <span class="op">==</span> <span class="bu">len</span>(dna2):</span>
+<span id="cb124-5"><a href="10_conditions.html#cb124-5" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences are the same length&quot;</span>)</span>
+<span id="cb124-6"><a href="10_conditions.html#cb124-6" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb124-7"><a href="10_conditions.html#cb124-7" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Length difference is &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="bu">len</span>(dna1) <span class="op">-</span> <span class="bu">len</span>(dna2)))</span></code></pre></div>
+</div>
+<div id="nucleotide-count-comparison" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Nucleotide count comparison<a href="10_conditions.html#nucleotide-count-comparison" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/abacus.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>In the below examples we'll compare the number of specific nucleotides.
+We'll use the <strong>method</strong> <code>.count()</code>.
+In this case we'll calculate the nucleotide content outside of the <strong>condition</strong>.</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="10_conditions.html#cb125-1" tabindex="-1"></a><span class="co">#Compare A content of a and b</span></span>
+<span id="cb125-2"><a href="10_conditions.html#cb125-2" tabindex="-1"></a>nt <span class="op">=</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb125-3"><a href="10_conditions.html#cb125-3" tabindex="-1"></a>nt_count_1 <span class="op">=</span> a.count(nt)</span>
+<span id="cb125-4"><a href="10_conditions.html#cb125-4" tabindex="-1"></a>nt_count_1 <span class="op">=</span> b.count(nt)</span>
+<span id="cb125-5"><a href="10_conditions.html#cb125-5" tabindex="-1"></a><span class="cf">if</span> nt_count_1 <span class="op">==</span> nt_count_1:</span>
+<span id="cb125-6"><a href="10_conditions.html#cb125-6" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences have the same count of &quot;</span> <span class="op">+</span> nt)</span>
+<span id="cb125-7"><a href="10_conditions.html#cb125-7" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb125-8"><a href="10_conditions.html#cb125-8" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences do not have the same count of &quot;</span> <span class="op">+</span> nt)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="10_conditions.html#cb126-1" tabindex="-1"></a><span class="co">#Compare A content of c and b</span></span>
+<span id="cb126-2"><a href="10_conditions.html#cb126-2" tabindex="-1"></a>nt <span class="op">=</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb126-3"><a href="10_conditions.html#cb126-3" tabindex="-1"></a>nt_count_1 <span class="op">=</span> c.count(nt)</span>
+<span id="cb126-4"><a href="10_conditions.html#cb126-4" tabindex="-1"></a>nt_count_1 <span class="op">=</span> b.count(nt)</span>
+<span id="cb126-5"><a href="10_conditions.html#cb126-5" tabindex="-1"></a><span class="cf">if</span> nt_count_1 <span class="op">==</span> nt_count_1:</span>
+<span id="cb126-6"><a href="10_conditions.html#cb126-6" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences have the same count of &quot;</span> <span class="op">+</span> nt)</span>
+<span id="cb126-7"><a href="10_conditions.html#cb126-7" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb126-8"><a href="10_conditions.html#cb126-8" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences do not have the same count of &quot;</span> <span class="op">+</span> nt)</span></code></pre></div>
+<p>You will notice both pieces of code say the compared sequences don't have the same amounts of As.
+However <code>b</code> &amp; <code>c</code> both have 2 As.
+This result occurs as the <strong>method</strong> <code>.count()</code> is case sensitive.
+Therefore, it's counting 2 As for <code>b</code> and only 1 for <code>c</code>.</p>
+<p>To fix this we'll also use the <strong>method</strong> <code>.upper()</code>.
+This is good practice with DNA sequences.</p>
+<p>Edit your previous <strong>code cells</strong> to:</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="10_conditions.html#cb127-1" tabindex="-1"></a><span class="co">#Compare A content of a and b</span></span>
+<span id="cb127-2"><a href="10_conditions.html#cb127-2" tabindex="-1"></a>nt <span class="op">=</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb127-3"><a href="10_conditions.html#cb127-3" tabindex="-1"></a>nt_count_1 <span class="op">=</span> a.upper().count(nt)</span>
+<span id="cb127-4"><a href="10_conditions.html#cb127-4" tabindex="-1"></a>nt_count_1 <span class="op">=</span> b.upper().count(nt)</span>
+<span id="cb127-5"><a href="10_conditions.html#cb127-5" tabindex="-1"></a><span class="cf">if</span> nt_count_1 <span class="op">==</span> nt_count_1:</span>
+<span id="cb127-6"><a href="10_conditions.html#cb127-6" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences have the same count of &quot;</span> <span class="op">+</span> nt)</span>
+<span id="cb127-7"><a href="10_conditions.html#cb127-7" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb127-8"><a href="10_conditions.html#cb127-8" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences do not have the same count of &quot;</span> <span class="op">+</span> nt)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="10_conditions.html#cb128-1" tabindex="-1"></a><span class="co">#Compare A content of c and b</span></span>
+<span id="cb128-2"><a href="10_conditions.html#cb128-2" tabindex="-1"></a>nt <span class="op">=</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb128-3"><a href="10_conditions.html#cb128-3" tabindex="-1"></a>nt_count_1 <span class="op">=</span> c.upper().count(nt)</span>
+<span id="cb128-4"><a href="10_conditions.html#cb128-4" tabindex="-1"></a>nt_count_1 <span class="op">=</span> b.upper().count(nt)</span>
+<span id="cb128-5"><a href="10_conditions.html#cb128-5" tabindex="-1"></a><span class="cf">if</span> nt_count_1 <span class="op">==</span> nt_count_1:</span>
+<span id="cb128-6"><a href="10_conditions.html#cb128-6" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences have the same count of &quot;</span> <span class="op">+</span> nt)</span>
+<span id="cb128-7"><a href="10_conditions.html#cb128-7" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb128-8"><a href="10_conditions.html#cb128-8" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;DNA sequences do not have the same count of &quot;</span> <span class="op">+</span> nt)</span></code></pre></div>
+<p>When you run the above code, they will now be correct for our purposes.</p>
+</div>
+</div>
+<div id="conditions-reflection" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Conditions reflection<a href="10_conditions.html#conditions-reflection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/reflection.png" width="15%" style="display: block; margin: auto;" /></p>
+<p><strong>If</strong> and <strong>else statements</strong> can be used to make decisions in our programs by comparing values.
+This might be to check if two strings are the same, two lists contain the same number of items, or a string of nucleotide data has 100 or more bases.
+We can think of them as switches.</p>
+<p>Often we need to make these <strong>if</strong>/<strong>else</strong> comparisons for every item in a data structure and to do this we can use loops.</p>
+
+</div>
 </div>
 <script>
 
@@ -482,7 +646,7 @@ window.onload = function() {
           </div>
         </div>
       </div>
-
+<a href="09-fundamental-exercises.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
