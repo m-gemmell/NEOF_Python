@@ -23,6 +23,7 @@ To create the mamba environment `python` run the below commands in your bash. Yo
 mamba create -n python
 mamba activate python
 mamba install -c anaconda jupyter
+mamba install -c conda-forge biopython
 ```
 
 # Definitions
@@ -42,7 +43,7 @@ __MAYBE PUT DEFINTIONS HERE__
 - __`float()`__ : Transform __variable__ to float __class__.
 - __`len()`__: Calculate number of characters in a string __variable__.
 - __`set()`__: Transform a __list__ to a __set__.
-- __``__
+- __`reversed()`__: Reverse a __string__.
 - __``__
 - __``__
 - __``__

@@ -70,3 +70,12 @@ if-else-statements
 dna-length-comparison
 nucleotide-count-comparison
 conditions-reflection
+loops
+for-loops
+loop-through-dna-nucleotides
+complement-a-dna-sequence
+reverse-complement-a-dna-sequence
+transcription-challenge
+while-loops
+further-control-statements
+loop-reflection
