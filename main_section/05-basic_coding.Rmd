@@ -76,10 +76,8 @@ __Indentation__ helps readability of code.
 It defines code blocks dedicated to a single purpose. 
 However, __indentation__ in __Python__ is __mandatory__ and the interpreter will give an error if the __indentation__ is wrong.
   
-__MATTHEW CHEK THIS LATTER__  
-  
-The code editor we are going to be using today attempts to *auto* indent code but we still  need to take care that the level of indentation in the script matches
-  that in the workbook *exactly*.
+`Jupyter-notebook` attempts to *auto* indent code.
+However, you still need to take care that the level of indentation in the script matches that in the workbook __exactly__.
   
 ### Tabs vs spaces
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }

@@ -37,6 +37,7 @@ floats-floating-point-numbers
 booleans
 classes-of-variable
 transforming-variables
+why-so-many-code-cells
 fundamentals-mcq-recap
 functions-and-methods
 functions
@@ -79,3 +80,14 @@ transcription-challenge
 while-loops
 further-control-statements
 loop-reflection
+reading-sequence-data
+seqio
+the-fastq-format
+read-a-fastq-file-into-python
+loading-the-python-library
+read-a-file-of-sequence-data
+fastq-record-elements
+reading-and-using-files
+modifying-reads
+count-reads
+reading-sequence-data-mcq-recap

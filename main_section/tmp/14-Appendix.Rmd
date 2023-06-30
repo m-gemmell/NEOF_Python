@@ -106,6 +106,9 @@ __MAYBE PUT DEFINTIONS HERE__
 - __``__
 - __``__
 - __``__
-- __``__
+
+### Biopython methods
+
+- __`.translate()`__: Translate a DNA sequence record element to a protein sequence.
 - __``__
 - __``__

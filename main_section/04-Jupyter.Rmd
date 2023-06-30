@@ -1,5 +1,4 @@
 # Jupyter
-
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/jupyter_logo.png", auto_pdf = TRUE)
 ```
@@ -79,7 +78,7 @@ knitr::include_graphics(path = "figures/jupyter_notebook_example_2.png", auto_pd
 
 There will already be one **cell**. Within the **cell**, type in the below commands.
 
-```{r, eval=FALSE}
+```{python, eval=FALSE}
 1+1
 ```
 
@@ -102,7 +101,7 @@ You can create new **cells** by 2 different means.
 
 With that knowledge add a second **cell** below the first **cell**. Add the following code to your second **cell** but do not run it.
 
-```{r, eval=FALSE}
+```{python, eval=FALSE}
 num_1 = 3
 num_2 = 10
 ```
@@ -111,7 +110,7 @@ num_2 = 10
 
 Insert a third **cell** and add the following code to it. Do not run the code.
 
-```{r, eval=FALSE}
+```{python, eval=FALSE}
 num_1 * num_2
 ```
 
@@ -171,7 +170,7 @@ knitr::include_graphics(path = "figures/jupyter_notebook_example_5.png", auto_pd
 -   Add the following to the **"Markdown"** cell to create a first level header.
     -   Ensure you have a space between the `#` and header text ("Tutorial").
 
-```{r, eval=FALSE}
+```{python, eval=FALSE}
 # Tutorial
 ```
 

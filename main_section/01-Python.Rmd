@@ -12,6 +12,9 @@ cover-image: "figures/NEOF.png"
 knitr::write_bib(c(
   .packages(), 'bookdown', 'webexercises'
 ), 'packages.bib')
+#Below code block sets style to be used in python code blocks
+#This is to give it a border so each cell is more obvious
+#https://bookdown.org/yihui/rmarkdown-cookbook/chunk-styling.html
 ```
 
 <center>![](figures/NEOF_logo.png){width=30%}</center>

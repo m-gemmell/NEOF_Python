@@ -378,6 +378,38 @@ a_float_string = "3.14"
 float(a_float_string)
 ```
 
+## Why so many code cells?
+
+We are using a __code cell__ per piece of code that gives an output. This is because normally `jupyter-notebook` will only show the last output from a __code cell__.
+
+Create and run the below __code cells__ to see this in action.
+
+```{python, eval=FALSE}
+1+1
+2+2
+```
+
+```{python, eval=FALSE}
+1 == 1
+2 > 4
+```
+
+However, you can use the `print()` function to bypass this. 
+The output from every single `print()` function will be printed in `jupyter-notebook`.
+
+Try it out with the below single __code cell__:
+
+```{python, eval=FALSE}
+print(1+1)
+print(2+2)
+print(1 == 1)
+print(2 > 4)
+```
+
+This is essential when writing longer pieces of code that need multiple outputs.
+In this book we will stick with the multiple __code cells__ approach as we find it easier than having to use `print()` constantly.
+However, if you prefer using fewer __code cells__ and more `print()` __functions__ please feel free to do so.
+
 ## Fundamentals MCQ recap
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
