@@ -14,8 +14,6 @@ If you do not see something similar please ask for assistance.
 
 If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
 
-During the first chapters of this session you will be working directly in the terminal window in the VNC. During the latter chapters we will open a plain text editor called [Gedit](https://wiki.gnome.org/Apps/Gedit).
-
 ## The Terminal Window
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
 
@@ -41,8 +39,8 @@ knitr::include_graphics(path = "figures//mamba_logo.png", auto_pdf = TRUE)
 
 This workshop requires some programs. 
 These can be difficult to install. 
-Instead we have used Mamba forge to install the programs including Jupyter-notebook. 
-To learn more about Mamba-forge and how to create your own environment please see the [appendix](#mamba_install).
+Instead we have used Mambaforge to install the programs including Jupyter-notebook. 
+To learn more about Mambaforge and how to create your own environment please see the [appendix](#mamba_install).
 
 To set-up your environment for this workshop please run the following code (you must include the full stop and space at the front of the command).
 

@@ -22,7 +22,7 @@ Over the next two days you will:
 -   **Be able to** read input files and write output files
 -   **Have a plan** on what to do next to further your knowledge.
 
-We will cover the theory behind Python concepts and terminology. Python is designed to be human-readable code and understanding the underlying processes is important. There will be lots of opportunity to practice writing Python. Practice will involve typing and running Python code whilst working through the workshop materials. This will allow you to see the output of Python commands and help you to understand how Python works.
+We will cover the theory behind Python concepts and terminology. Python code is designed to be human-readable and understanding the underlying processes is important. There will be lots of opportunity to practice writing Python. Practice will involve typing and running Python code whilst working through the workshop materials. This will allow you to see the output of Python commands and help you to understand how Python works.
 
 ## Materials Covered in the Course
 <center>![](figures/materials.png){width=15%}</center>
