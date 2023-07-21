@@ -10,7 +10,7 @@ your own methods and code.
 
 You definitely do not need to memorise all the information here as all of these
 concepts will be explored more in the rest of the tutorial. The best way to
-learn how various aspects of the Python language work is by *doing* rather
+learn how various aspects of the Python language works is by *doing* rather
 than by *reading*. 
 
 Consider
@@ -30,7 +30,7 @@ Within it create a new __Markdown__ cell with the following headers:
 knitr::include_graphics(path = "figures/bodmas_ribbon.png", auto_pdf = TRUE)
 ```
 
-Python allows the use of the usual arithmetic operators and follows the traditional rules of mathematical precedence (BODMAS). 
+Python allows the use of the usual arithmetic __operators__ and follows the traditional rules of mathematical precedence (BODMAS). 
 
 The main mathematical operators are:
 
@@ -45,10 +45,27 @@ The main mathematical operators are:
 For each code block below create a __code cell__, enter the code, and run it.
 This will demonstrate the code output and give you some practice.
 
-__Tip__: You can can create a bunch of empty cells and then use the up and down arrow keys to move your cell selection up and down. 
-You can then start typing in your selected cell so you don't need to constantly switch between mouse and keyboard, , you may need to press enter to start typing in the cell.
+`r hide("Moving across cells in jupyter-notebook")`
+For convenience you can can create a bunch of empty cells and then use the up and down arrow keys to move to other cells.
+This requires knowing the two different interaction modes.
 
-```{python, eval=FALSE}
+- __esc mode__: This mode allows you to move up and down between cells. You are in __esc mode__ if the highlighted border of your current cell is blue (leftside) and grey.
+```{r, fig.align = 'center',out.width= '95%', echo=FALSE }
+knitr::include_graphics(path = "figures/jupyter_esc_mode_cell.png", auto_pdf = TRUE)
+```
+- __command mode__: This mode allows you to type in the cell. You are in __command mode__ if the highlighted border of your current cell is green.
+```{r, fig.align = 'center',out.width= '95%', echo=FALSE }
+knitr::include_graphics(path = "figures/jupyter_command_mode_cell.png", auto_pdf = TRUE)
+```
+
+Press __enter__ when on a cell in __esc mode__ to enter __command mode__. This allows you to start typing in the selected cell.
+
+When you run code (ctrl + enter) in __command mode__ you will then enter __esc mode__.
+
+Be careful! If you press a number key whilst in __esc mode__ you will change the cell to a __markdown cell__. Additionally, you will change the first line to a header line equal to the number you pressed. I.e. if you pressed 2, the following would be added to the start of the first line of the cell: `## `.
+`r unhide()`
+
+```{r, eval=FALSE}
 1+1
 ```
 ```{python, eval=FALSE}
@@ -81,9 +98,9 @@ You can then start typing in your selected cell so you don't need to constantly 
 knitr::include_graphics(path = "figures/hashtag2.png", auto_pdf = TRUE)
 ```
 
-It is often useful to include human-readable comments in your scripts and code.
-Comments/Annotations in Python are indicated by the hash symbol (`#`). 
-Anything to the right of the hash is considered a comment and is ignored by the interpreter.
+It is often useful to include human-readable __comments__ in your scripts and code.
+__Comments/Annotations__ in Python are indicated by the hash symbol (`#`). 
+Anything to the right of the hash is considered a __comment__ and is ignored by the interpreter.
 
 Create a new __Markdown cell__ with the following.
 
@@ -91,7 +108,7 @@ Create a new __Markdown cell__ with the following.
 ### Annotation
 ```
 
-In a new cell, enter and run the below.
+In a new __cell__, enter and run the below.
 
 ```{python, eval=FALSE}
 # This line is a comment
@@ -100,8 +117,8 @@ print("This section will print") # This section is ignored
 
 Only the `print()` command is used by the python interpreter. 
 The other text is ignored due to the hashtags.
-You will also notice that the text of comments/annotations are uniquely coloured in `jupyter-notebook`.
-This is useful to quickly see what are parts of comments and not.
+You will also notice that the text of __comments/annotations__ are uniquely coloured in `jupyter-notebook`.
+This is useful to quickly see what are parts of __comments__ and not.
 
 ## Variables
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
@@ -117,7 +134,9 @@ __Variables__ are assigned a value using the equals (`=`) character.
 __Variable name rules__:
 
 - Must start with either a letter or an underscore
+  - Cannot start with a number.
 - Must only contain alphanumeric characters (and underscores)
+  - No punctuation such as full stops, quotes, commas, colons, etc are allowed.
 - They are case sensitive.
 
 Python supports several classes (or types) of __variables__ including __strings__, __integers__, __floats__, and __booleans__.
@@ -134,9 +153,9 @@ In a new __Markdown cell__ add the following:
 knitr::include_graphics(path = "figures/string_bubble.png", auto_pdf = TRUE)
 ```
 
-__Strings__ are used to store alphanumeric text. A __string__ is defined by enclosing the text with either single or double quotes.
+__Strings__ are used to store alphanumeric text. A __string__ is defined by enclosing the text with either single (`'text'`) or double quotes (`"text"`).
     
-Enter the following into the Python terminal, pressing enter after each line. Here we define two __string variables__, and then retrieve them again by using their name, or identifier.
+In the below code we define two __string variables__, and then retrieve them again by using their name, or identifier.
 
 As before, for each code block below create a __code cell__, enter the code, and run it.
 Do this for all future code examples.
@@ -148,7 +167,6 @@ amino_acids = "ARG VAL TRP"
 #Call the DNA_string variable
 DNA_string
 ```
-
 ```{python, eval=FALSE}
 #Call the amino_acid string variable
 amino_acids
@@ -251,8 +269,8 @@ yet_another_float
 knitr::include_graphics(path = "figures/true_or_false.png", auto_pdf = TRUE)
 ```
 
-**Booleans** are a special type of variable than can represent one of
-two values: *True* or *False*. 
+**Booleans** are a special type of variable that can represent one of
+two values: __True__ or __False__. 
 You can compare any two values in Python and get a result of either __True__ or __False__.
 
 - To check if two values are equal we use double equals: `==`
@@ -346,7 +364,7 @@ type(variable4)
 knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
 ```
 
-__Variables__ can be transformed from one __class/type__ to another provided the value can be coerced into the new data type (I.e. you could not transform a  __string__ of text to a floating point number). 
+__Variables__ can be transformed from one __class/type__ to another provided the value can be coerced into the new data type (I.e. you could not transform a  __string__ of text to a __floating point number__). 
 
 Create a new __markdown cell__ with the following:
 
@@ -372,15 +390,18 @@ a_numeric_string = "256"
 int(a_numeric_string)
 ```
 
-You can also transform to a floating point using `float()`:
+You can also transform to a __floating point__ using `float()`:
 ```{python, eval=FALSE}
 a_float_string = "3.14"
 float(a_float_string)
 ```
 
 ## Why so many code cells?
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/cells.png", auto_pdf = TRUE)
+```
 
-We are using a __code cell__ per piece of code that gives an output. This is because normally `jupyter-notebook` will only show the last output from a __code cell__.
+We are using a __code cell__ per piece of code that gives an output. We do this as `jupyter-notebook` will normally only show the last output from a __code cell__.
 
 Create and run the below __code cells__ to see this in action.
 
@@ -415,11 +436,11 @@ However, if you prefer using fewer __code cells__ and more `print()` __functions
 knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
 ``` 
 
-Brilliant, that is the end of this chapter. 
+Brilliant! That is the end of this chapter. 
 Have you saved your notebook?
 It is good practice to save it regularly.
 
-Choose the correct option to complete the below sentences:
+Choose the correct option to complete each sentence below:
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__Class__", "__Comments__", "__String__")

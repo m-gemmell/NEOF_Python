@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Loops | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Loops | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -117,10 +117,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="www/webex.css" type="text/css" />
@@ -300,13 +296,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="figures/loopdeloo.png" width="20%" style="display: block; margin: auto;" /></p>
 <p>We now have some knowledge of Python data structures (<strong>lists</strong>, <strong>sets</strong>, and <strong>dictionaries</strong>), what type of data they hold, and how we can access the elements within them.</p>
 <p>How might we apply something to each element of a <strong>list</strong>? Perhaps we need to count the number of characters in each entry in the <strong>list</strong>?</p>
-<p>Where we need to apply the same function to every item in a data structure, we can use a <strong>loop</strong>. This means that we do not need to manually apply the function to every item in the <strong>list</strong>, one at a time.</p>
+<p>Where we need to apply the same commands to every item in a data structure, we can use a <strong>loop</strong>. This means that we do not need to manually apply the commands to every item in the <strong>list</strong>, one at a time.</p>
 <p>There are several types of <strong>loop</strong>; we will cover some of the most important in this section.</p>
-<p><strong>NOte</strong>: Continue using the notebook <strong>"03-Programmatic_coding"</strong> for this chapter.</p>
+<p><strong>Note</strong>: Continue using the notebook <strong>"03-Programmatic_coding"</strong> for this chapter.</p>
 <div id="for-loops" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> For Loops<a href="11-loops.html#for-loops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/assembly_line_robot.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>One of the most important and most common types of <strong>loop</strong> is the <strong>for</strong> <strong>loop</strong>.</p>
+<p>One of the most important and most common type of <strong>loops</strong> is the <strong>for</strong> <strong>loop</strong>.</p>
 <p>The <strong>for</strong> <strong>loop</strong> runs through a set of <strong>variables</strong> (such as those in our list) and applies a <strong>command</strong> (or series of commands) to each element once. This is the <strong>loop</strong> that you will most often encounter.</p>
 <p>Imagine you have a bag of 10 potatoes that you need to peel and put into a pot.</p>
 <center>
@@ -332,25 +328,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>This <strong>loop</strong> would run until the bag of potatoes is empty, achieving the job in just three lines of code.</p>
 <p>This pseudocode is actually very similar to the required Python syntax. The generic format of a <strong>for</strong> <strong>loop</strong> is:</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb132-1"><a href="11-loops.html#cb132-1" tabindex="-1"></a><span class="cf">for</span> <span class="op">&lt;</span>value<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>data_structure<span class="op">&gt;</span>:</span>
-<span id="cb132-2"><a href="11-loops.html#cb132-2" tabindex="-1"></a>  do something</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb132-1"><a href="11-loops.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">&lt;</span>value<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>data_structure<span class="op">&gt;</span>:</span>
+<span id="cb132-2"><a href="11-loops.html#cb132-2" aria-hidden="true" tabindex="-1"></a>  do something</span></code></pre></div>
 <p>Note the colon (<code>:</code>) starting the loop and the tab indent of any commands inside the loop.</p>
 <div id="loop-through-dna-nucleotides" class="section level3 hasAnchor" number="11.1.1">
 <h3><span class="header-section-number">11.1.1</span> Loop through DNA nucleotides<a href="11-loops.html#loop-through-dna-nucleotides" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="figures/loop_thru_dna.png" width="15%" style="display: block; margin: auto;" /></p>
 <p><strong>For loops</strong> are extremely useful when we have a lot of values (for example, in a <strong>list</strong>) and we need to apply some commands to all of them.</p>
-<p>As an example, we will take a string of DNA nucleotides and use a <strong>loop</strong> to generate the complement and reverse complement sequences.</p>
+<p>As an example, we will take a <strong>string</strong> of DNA nucleotides and use a couple <strong>loops</strong> to generate the complement and reverse complement sequences.</p>
 <p>Run the below code.
 The <strong>for loop</strong> will move through the DNA string, printing each base to the screen.</p>
 <p><strong>Note</strong>: Ensure lines inside a <strong>for loop</strong> are indented.
 Thankfully <code>jupyter-notebook</code> will automate a lot of this for you.</p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb133-1"><a href="11-loops.html#cb133-1" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
-<span id="cb133-2"><a href="11-loops.html#cb133-2" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
-<span id="cb133-3"><a href="11-loops.html#cb133-3" tabindex="-1"></a></span>
-<span id="cb133-4"><a href="11-loops.html#cb133-4" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
-<span id="cb133-5"><a href="11-loops.html#cb133-5" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
-<span id="cb133-6"><a href="11-loops.html#cb133-6" tabindex="-1"></a>  <span class="co">#Print the current base</span></span>
-<span id="cb133-7"><a href="11-loops.html#cb133-7" tabindex="-1"></a>  <span class="bu">print</span>(base)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb133-1"><a href="11-loops.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
+<span id="cb133-2"><a href="11-loops.html#cb133-2" aria-hidden="true" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
+<span id="cb133-3"><a href="11-loops.html#cb133-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb133-4"><a href="11-loops.html#cb133-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
+<span id="cb133-5"><a href="11-loops.html#cb133-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb133-6"><a href="11-loops.html#cb133-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Print the current base</span></span>
+<span id="cb133-7"><a href="11-loops.html#cb133-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(base)</span></code></pre></div>
 <p>We can see from the output that the <strong>loop</strong> allows us to process each base in the string separately; in this case by printing them individually.</p>
 <p><strong>Note</strong>: The <strong>loop variable name</strong> <code>base</code> is arbitrary and chosen by us.</p>
 </div>
@@ -359,96 +355,87 @@ Thankfully <code>jupyter-notebook</code> will automate a lot of this for you.</p
 <p><img src="figures/complement.png" width="15%" style="display: block; margin: auto;" /></p>
 <p>Next, let's use this <strong>loop</strong> functionality to do something useful to each base such as converting each nucleotide to the appropriate complement base.</p>
 <p>For this, we will use a <strong>dictionary</strong> to swap each base for the complement. Recall that a <strong>dictionary</strong> has a <strong>key</strong> and <strong>value</strong> for each entry. We can define the 'standard' base as the <strong>key</strong>, and the 'complement' as the <strong>value</strong>.</p>
-<p>Create and run the below code in a new _code cell__.
+<p>Create and run the below code in a new <strong>code cell</strong>.
 With the code we first create the <strong>dictionary</strong> holding the complementary pairs of bases.
-This needs to come before the for <strong>loop</strong>.</p>
+This needs to come before the <strong>for loop</strong>.</p>
 <p><strong>Note</strong>: Each of the four lines of the <strong>dictionary</strong> need to have a leading TAB character.</p>
-<div class="sourceCode" id="cb134"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb134-1"><a href="11-loops.html#cb134-1" tabindex="-1"></a><span class="co">#Complement</span></span>
-<span id="cb134-2"><a href="11-loops.html#cb134-2" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
-<span id="cb134-3"><a href="11-loops.html#cb134-3" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
-<span id="cb134-4"><a href="11-loops.html#cb134-4" tabindex="-1"></a></span>
-<span id="cb134-5"><a href="11-loops.html#cb134-5" tabindex="-1"></a><span class="co">#Define our dictionary of complements</span></span>
-<span id="cb134-6"><a href="11-loops.html#cb134-6" tabindex="-1"></a>complements <span class="op">=</span> {</span>
-<span id="cb134-7"><a href="11-loops.html#cb134-7" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;T&quot;</span>,</span>
-<span id="cb134-8"><a href="11-loops.html#cb134-8" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
-<span id="cb134-9"><a href="11-loops.html#cb134-9" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
-<span id="cb134-10"><a href="11-loops.html#cb134-10" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
-<span id="cb134-11"><a href="11-loops.html#cb134-11" tabindex="-1"></a>}</span>
-<span id="cb134-12"><a href="11-loops.html#cb134-12" tabindex="-1"></a></span>
-<span id="cb134-13"><a href="11-loops.html#cb134-13" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
-<span id="cb134-14"><a href="11-loops.html#cb134-14" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
-<span id="cb134-15"><a href="11-loops.html#cb134-15" tabindex="-1"></a>  <span class="co">#Print the complemented base</span></span>
-<span id="cb134-16"><a href="11-loops.html#cb134-16" tabindex="-1"></a>  <span class="bu">print</span>(complements[base])</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb134-1"><a href="11-loops.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Complement</span></span>
+<span id="cb134-2"><a href="11-loops.html#cb134-2" aria-hidden="true" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
+<span id="cb134-3"><a href="11-loops.html#cb134-3" aria-hidden="true" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
+<span id="cb134-4"><a href="11-loops.html#cb134-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb134-5"><a href="11-loops.html#cb134-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Define our dictionary of complements</span></span>
+<span id="cb134-6"><a href="11-loops.html#cb134-6" aria-hidden="true" tabindex="-1"></a>complements <span class="op">=</span> {</span>
+<span id="cb134-7"><a href="11-loops.html#cb134-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;T&quot;</span>,</span>
+<span id="cb134-8"><a href="11-loops.html#cb134-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
+<span id="cb134-9"><a href="11-loops.html#cb134-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
+<span id="cb134-10"><a href="11-loops.html#cb134-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
+<span id="cb134-11"><a href="11-loops.html#cb134-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb134-12"><a href="11-loops.html#cb134-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb134-13"><a href="11-loops.html#cb134-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
+<span id="cb134-14"><a href="11-loops.html#cb134-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb134-15"><a href="11-loops.html#cb134-15" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Print the complemented base</span></span>
+<span id="cb134-16"><a href="11-loops.html#cb134-16" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(complements[base])</span></code></pre></div>
 <p>The code will print out the complementary base for each iteration of the loop.</p>
-<p>Most likely we won't our output to be have a each base on its own line.
-We can therefore build up an 'output string' to format the complemented sequence.
+<p>Most likely we won't want our output to consist of separate bases on their own lines.
+We can therefore build up an 'output <strong>string</strong>' to format the complemented sequence.
 The complemented base is added to the <strong>variable</strong> <code>complement_DNA</code> each time and the whole <strong>string</strong> is printed at the end.</p>
 <p>Edit, your previous code to the following:</p>
 <p><strong>Note:</strong> The <strong>variable</strong> <code>complement_DNA</code> needs to be created before the <strong>for loop</strong> is run.</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb135-1"><a href="11-loops.html#cb135-1" tabindex="-1"></a><span class="co">#Complement</span></span>
-<span id="cb135-2"><a href="11-loops.html#cb135-2" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
-<span id="cb135-3"><a href="11-loops.html#cb135-3" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
-<span id="cb135-4"><a href="11-loops.html#cb135-4" tabindex="-1"></a></span>
-<span id="cb135-5"><a href="11-loops.html#cb135-5" tabindex="-1"></a><span class="co">#Define our dictionary of complements</span></span>
-<span id="cb135-6"><a href="11-loops.html#cb135-6" tabindex="-1"></a>complements <span class="op">=</span> {</span>
-<span id="cb135-7"><a href="11-loops.html#cb135-7" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;T&quot;</span>,</span>
-<span id="cb135-8"><a href="11-loops.html#cb135-8" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
-<span id="cb135-9"><a href="11-loops.html#cb135-9" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
-<span id="cb135-10"><a href="11-loops.html#cb135-10" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
-<span id="cb135-11"><a href="11-loops.html#cb135-11" tabindex="-1"></a>}</span>
-<span id="cb135-12"><a href="11-loops.html#cb135-12" tabindex="-1"></a></span>
-<span id="cb135-13"><a href="11-loops.html#cb135-13" tabindex="-1"></a><span class="co">#Create an empty string to add the complemented bases to</span></span>
-<span id="cb135-14"><a href="11-loops.html#cb135-14" tabindex="-1"></a>complement_DNA <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb135-15"><a href="11-loops.html#cb135-15" tabindex="-1"></a></span>
-<span id="cb135-16"><a href="11-loops.html#cb135-16" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
-<span id="cb135-17"><a href="11-loops.html#cb135-17" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
-<span id="cb135-18"><a href="11-loops.html#cb135-18" tabindex="-1"></a>  <span class="co">#Print the complemented base</span></span>
-<span id="cb135-19"><a href="11-loops.html#cb135-19" tabindex="-1"></a>  <span class="co">#print(complements[base])</span></span>
-<span id="cb135-20"><a href="11-loops.html#cb135-20" tabindex="-1"></a>  <span class="co">#Add the complemented base to the output string</span></span>
-<span id="cb135-21"><a href="11-loops.html#cb135-21" tabindex="-1"></a>  complement_DNA <span class="op">=</span> complement_DNA <span class="op">+</span> complements[base]</span>
-<span id="cb135-22"><a href="11-loops.html#cb135-22" tabindex="-1"></a></span>
-<span id="cb135-23"><a href="11-loops.html#cb135-23" tabindex="-1"></a><span class="co">#Print the output string</span></span>
-<span id="cb135-24"><a href="11-loops.html#cb135-24" tabindex="-1"></a><span class="bu">print</span>(complement_DNA)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb135-1"><a href="11-loops.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Complement</span></span>
+<span id="cb135-2"><a href="11-loops.html#cb135-2" aria-hidden="true" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
+<span id="cb135-3"><a href="11-loops.html#cb135-3" aria-hidden="true" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
+<span id="cb135-4"><a href="11-loops.html#cb135-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb135-5"><a href="11-loops.html#cb135-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Define our dictionary of complements</span></span>
+<span id="cb135-6"><a href="11-loops.html#cb135-6" aria-hidden="true" tabindex="-1"></a>complements <span class="op">=</span> {</span>
+<span id="cb135-7"><a href="11-loops.html#cb135-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;T&quot;</span>,</span>
+<span id="cb135-8"><a href="11-loops.html#cb135-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
+<span id="cb135-9"><a href="11-loops.html#cb135-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
+<span id="cb135-10"><a href="11-loops.html#cb135-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
+<span id="cb135-11"><a href="11-loops.html#cb135-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb135-12"><a href="11-loops.html#cb135-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb135-13"><a href="11-loops.html#cb135-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Create an empty string to add the complemented bases to</span></span>
+<span id="cb135-14"><a href="11-loops.html#cb135-14" aria-hidden="true" tabindex="-1"></a>complement_DNA <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb135-15"><a href="11-loops.html#cb135-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb135-16"><a href="11-loops.html#cb135-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
+<span id="cb135-17"><a href="11-loops.html#cb135-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb135-18"><a href="11-loops.html#cb135-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Print the complemented base</span></span>
+<span id="cb135-19"><a href="11-loops.html#cb135-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(complements[base])</span></span>
+<span id="cb135-20"><a href="11-loops.html#cb135-20" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add the complemented base to the output string</span></span>
+<span id="cb135-21"><a href="11-loops.html#cb135-21" aria-hidden="true" tabindex="-1"></a>  complement_DNA <span class="op">=</span> complement_DNA <span class="op">+</span> complements[base]</span>
+<span id="cb135-22"><a href="11-loops.html#cb135-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb135-23"><a href="11-loops.html#cb135-23" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the output string</span></span>
+<span id="cb135-24"><a href="11-loops.html#cb135-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(complement_DNA)</span></code></pre></div>
 <p>Now you have a <strong>variable</strong> containing the complemented sequences.</p>
 </div>
 <div id="reverse-complement-a-dna-sequence" class="section level3 hasAnchor" number="11.1.3">
 <h3><span class="header-section-number">11.1.3</span> Reverse-complement a DNA sequence<a href="11-loops.html#reverse-complement-a-dna-sequence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="figures/reverse_complement.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>To generate the reverse complement we can use Python's built in <code>reversed()</code> <strong>function</strong> to reverse the string.
-This reversed string can then be used in the complementation.
-Copy your complementation code into a new <strong>code cell</strong>.
+<p>To generate the reverse complement we can use Python's built in <code>reversed()</code> <strong>function</strong> to reverse the <strong>string</strong>.
+This reversed <strong>string</strong> can then be used in the complementation.
+Copy your previous complementation code into a new <strong>code cell</strong>.
 Edit it to the below and run it.</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="11-loops.html#cb136-1" tabindex="-1"></a><span class="co"># comment out the original for loop</span></span>
-<span id="cb136-2"><a href="11-loops.html#cb136-2" tabindex="-1"></a><span class="co">#for base in DNA_string:</span></span>
-<span id="cb136-3"><a href="11-loops.html#cb136-3" tabindex="-1"></a></span>
-<span id="cb136-4"><a href="11-loops.html#cb136-4" tabindex="-1"></a><span class="co"># replace with</span></span>
-<span id="cb136-5"><a href="11-loops.html#cb136-5" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> <span class="bu">reversed</span>(DNA_string):</span>
-<span id="cb136-6"><a href="11-loops.html#cb136-6" tabindex="-1"></a>  </span>
-<span id="cb136-7"><a href="11-loops.html#cb136-7" tabindex="-1"></a>  </span>
-<span id="cb136-8"><a href="11-loops.html#cb136-8" tabindex="-1"></a><span class="co">#Reverse complement</span></span>
-<span id="cb136-9"><a href="11-loops.html#cb136-9" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
-<span id="cb136-10"><a href="11-loops.html#cb136-10" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
-<span id="cb136-11"><a href="11-loops.html#cb136-11" tabindex="-1"></a></span>
-<span id="cb136-12"><a href="11-loops.html#cb136-12" tabindex="-1"></a><span class="co">#Define our dictionary of complements</span></span>
-<span id="cb136-13"><a href="11-loops.html#cb136-13" tabindex="-1"></a>complements <span class="op">=</span> {</span>
-<span id="cb136-14"><a href="11-loops.html#cb136-14" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;T&quot;</span>,</span>
-<span id="cb136-15"><a href="11-loops.html#cb136-15" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
-<span id="cb136-16"><a href="11-loops.html#cb136-16" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
-<span id="cb136-17"><a href="11-loops.html#cb136-17" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
-<span id="cb136-18"><a href="11-loops.html#cb136-18" tabindex="-1"></a>}</span>
-<span id="cb136-19"><a href="11-loops.html#cb136-19" tabindex="-1"></a></span>
-<span id="cb136-20"><a href="11-loops.html#cb136-20" tabindex="-1"></a><span class="co">#Create an empty string to add the complemented bases to</span></span>
-<span id="cb136-21"><a href="11-loops.html#cb136-21" tabindex="-1"></a>rc_DNA <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb136-22"><a href="11-loops.html#cb136-22" tabindex="-1"></a></span>
-<span id="cb136-23"><a href="11-loops.html#cb136-23" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
-<span id="cb136-24"><a href="11-loops.html#cb136-24" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> <span class="bu">reversed</span>(DNA_string):</span>
-<span id="cb136-25"><a href="11-loops.html#cb136-25" tabindex="-1"></a>  <span class="co">#Print the complemented base</span></span>
-<span id="cb136-26"><a href="11-loops.html#cb136-26" tabindex="-1"></a>  <span class="co">#print(complements[base])</span></span>
-<span id="cb136-27"><a href="11-loops.html#cb136-27" tabindex="-1"></a>  <span class="co">#Add the complemented base to the output string</span></span>
-<span id="cb136-28"><a href="11-loops.html#cb136-28" tabindex="-1"></a>  rc_DNA <span class="op">=</span> rc_DNA <span class="op">+</span> complements[base]</span>
-<span id="cb136-29"><a href="11-loops.html#cb136-29" tabindex="-1"></a></span>
-<span id="cb136-30"><a href="11-loops.html#cb136-30" tabindex="-1"></a><span class="co">#Print the output string</span></span>
-<span id="cb136-31"><a href="11-loops.html#cb136-31" tabindex="-1"></a><span class="bu">print</span>(rc_DNA)</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb136-1"><a href="11-loops.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Reverse complement</span></span>
+<span id="cb136-2"><a href="11-loops.html#cb136-2" aria-hidden="true" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
+<span id="cb136-3"><a href="11-loops.html#cb136-3" aria-hidden="true" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
+<span id="cb136-4"><a href="11-loops.html#cb136-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb136-5"><a href="11-loops.html#cb136-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Define our dictionary of complements</span></span>
+<span id="cb136-6"><a href="11-loops.html#cb136-6" aria-hidden="true" tabindex="-1"></a>complements <span class="op">=</span> {</span>
+<span id="cb136-7"><a href="11-loops.html#cb136-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;T&quot;</span>,</span>
+<span id="cb136-8"><a href="11-loops.html#cb136-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
+<span id="cb136-9"><a href="11-loops.html#cb136-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
+<span id="cb136-10"><a href="11-loops.html#cb136-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
+<span id="cb136-11"><a href="11-loops.html#cb136-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb136-12"><a href="11-loops.html#cb136-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb136-13"><a href="11-loops.html#cb136-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Create an empty string to add the complemented bases to</span></span>
+<span id="cb136-14"><a href="11-loops.html#cb136-14" aria-hidden="true" tabindex="-1"></a>rc_DNA <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb136-15"><a href="11-loops.html#cb136-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb136-16"><a href="11-loops.html#cb136-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Loop through each base in the reversed string</span></span>
+<span id="cb136-17"><a href="11-loops.html#cb136-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> <span class="bu">reversed</span>(DNA_string):</span>
+<span id="cb136-18"><a href="11-loops.html#cb136-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add the complemented base to the output string</span></span>
+<span id="cb136-19"><a href="11-loops.html#cb136-19" aria-hidden="true" tabindex="-1"></a>  rc_DNA <span class="op">=</span> rc_DNA <span class="op">+</span> complements[base]</span>
+<span id="cb136-20"><a href="11-loops.html#cb136-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb136-21"><a href="11-loops.html#cb136-21" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the output string</span></span>
+<span id="cb136-22"><a href="11-loops.html#cb136-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rc_DNA)</span></code></pre></div>
 <p>Running this new code will produce the reverse complement of our original DNA sequence.</p>
 </div>
 <div id="transcription-challenge" class="section level3 hasAnchor" number="11.1.4">
@@ -463,28 +450,28 @@ For example, the DNA sequence <strong>"ACGT"</strong> will become the RNA sequen
 <button>
 Transcribe loop
 </button>
-<div class="sourceCode" id="cb137"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb137-1"><a href="11-loops.html#cb137-1" tabindex="-1"></a><span class="co">#Transcribe</span></span>
-<span id="cb137-2"><a href="11-loops.html#cb137-2" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
-<span id="cb137-3"><a href="11-loops.html#cb137-3" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
-<span id="cb137-4"><a href="11-loops.html#cb137-4" tabindex="-1"></a></span>
-<span id="cb137-5"><a href="11-loops.html#cb137-5" tabindex="-1"></a><span class="co">#Define our dictionary of transcripts</span></span>
-<span id="cb137-6"><a href="11-loops.html#cb137-6" tabindex="-1"></a>transcripts <span class="op">=</span> {</span>
-<span id="cb137-7"><a href="11-loops.html#cb137-7" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;U&quot;</span>,</span>
-<span id="cb137-8"><a href="11-loops.html#cb137-8" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
-<span id="cb137-9"><a href="11-loops.html#cb137-9" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
-<span id="cb137-10"><a href="11-loops.html#cb137-10" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
-<span id="cb137-11"><a href="11-loops.html#cb137-11" tabindex="-1"></a>}</span>
-<span id="cb137-12"><a href="11-loops.html#cb137-12" tabindex="-1"></a></span>
-<span id="cb137-13"><a href="11-loops.html#cb137-13" tabindex="-1"></a><span class="co">#Create an empty string to add the RNA bases to</span></span>
-<span id="cb137-14"><a href="11-loops.html#cb137-14" tabindex="-1"></a>RNA <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb137-15"><a href="11-loops.html#cb137-15" tabindex="-1"></a></span>
-<span id="cb137-16"><a href="11-loops.html#cb137-16" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
-<span id="cb137-17"><a href="11-loops.html#cb137-17" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
-<span id="cb137-18"><a href="11-loops.html#cb137-18" tabindex="-1"></a>  <span class="co">#Add the RNA base to the output string</span></span>
-<span id="cb137-19"><a href="11-loops.html#cb137-19" tabindex="-1"></a>  RNA <span class="op">=</span> RNA <span class="op">+</span> transcripts[base]</span>
-<span id="cb137-20"><a href="11-loops.html#cb137-20" tabindex="-1"></a></span>
-<span id="cb137-21"><a href="11-loops.html#cb137-21" tabindex="-1"></a><span class="co">#Print the output string</span></span>
-<span id="cb137-22"><a href="11-loops.html#cb137-22" tabindex="-1"></a><span class="bu">print</span>(RNA)</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb137-1"><a href="11-loops.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Transcribe</span></span>
+<span id="cb137-2"><a href="11-loops.html#cb137-2" aria-hidden="true" tabindex="-1"></a><span class="co">#DNA string variable, yours does not need to be exactly the same</span></span>
+<span id="cb137-3"><a href="11-loops.html#cb137-3" aria-hidden="true" tabindex="-1"></a>DNA_string <span class="op">=</span> <span class="st">&quot;ATTCGAAGTCGTGTAGTACCGCGTATA&quot;</span></span>
+<span id="cb137-4"><a href="11-loops.html#cb137-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-5"><a href="11-loops.html#cb137-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Define our dictionary of transcripts</span></span>
+<span id="cb137-6"><a href="11-loops.html#cb137-6" aria-hidden="true" tabindex="-1"></a>transcripts <span class="op">=</span> {</span>
+<span id="cb137-7"><a href="11-loops.html#cb137-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span> : <span class="st">&quot;U&quot;</span>,</span>
+<span id="cb137-8"><a href="11-loops.html#cb137-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;T&quot;</span> : <span class="st">&quot;A&quot;</span>,</span>
+<span id="cb137-9"><a href="11-loops.html#cb137-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;G&quot;</span> : <span class="st">&quot;C&quot;</span>,</span>
+<span id="cb137-10"><a href="11-loops.html#cb137-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;C&quot;</span> : <span class="st">&quot;G&quot;</span></span>
+<span id="cb137-11"><a href="11-loops.html#cb137-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb137-12"><a href="11-loops.html#cb137-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-13"><a href="11-loops.html#cb137-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Create an empty string to add the RNA bases to</span></span>
+<span id="cb137-14"><a href="11-loops.html#cb137-14" aria-hidden="true" tabindex="-1"></a>RNA <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb137-15"><a href="11-loops.html#cb137-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-16"><a href="11-loops.html#cb137-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Loop through each base in the string</span></span>
+<span id="cb137-17"><a href="11-loops.html#cb137-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> DNA_string:</span>
+<span id="cb137-18"><a href="11-loops.html#cb137-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Add the RNA base to the output string</span></span>
+<span id="cb137-19"><a href="11-loops.html#cb137-19" aria-hidden="true" tabindex="-1"></a>  RNA <span class="op">=</span> RNA <span class="op">+</span> transcripts[base]</span>
+<span id="cb137-20"><a href="11-loops.html#cb137-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-21"><a href="11-loops.html#cb137-21" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the output string</span></span>
+<span id="cb137-22"><a href="11-loops.html#cb137-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RNA)</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -499,40 +486,40 @@ Transcribe loop
 <li>put potato into pot</li>
 </ol></li>
 </ol>
-<p>This <strong>loop</strong> would run until the last potato has been prepared, at which point the while statement would return <strong>False</strong> and the loop would be stopped.</p>
+<p>This <strong>loop</strong> would run until the last potato has been prepared, at which point the <strong>while statement</strong> would return <strong>False</strong> and the <strong>loop</strong> would be stopped.</p>
 <p>The generic format of a <strong>while</strong> <strong>loop</strong> is as follows:</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb138-1"><a href="11-loops.html#cb138-1" tabindex="-1"></a><span class="cf">while</span> <span class="op">&lt;</span>condition<span class="op">&gt;</span> :</span>
-<span id="cb138-2"><a href="11-loops.html#cb138-2" tabindex="-1"></a>  do something</span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb138-1"><a href="11-loops.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">&lt;</span>condition<span class="op">&gt;</span> :</span>
+<span id="cb138-2"><a href="11-loops.html#cb138-2" aria-hidden="true" tabindex="-1"></a>  do something</span></code></pre></div>
 <p>Below are a few examples of <strong>while loops</strong> you can create and run.
-Ensure you understand while the code is giving you the output.
+Ensure you understand why the code is giving you the output.
 If you are not sure please ask a demonstrator.</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb139-1"><a href="11-loops.html#cb139-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb139-2"><a href="11-loops.html#cb139-2" tabindex="-1"></a><span class="co">#While loop</span></span>
-<span id="cb139-3"><a href="11-loops.html#cb139-3" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">10</span>:</span>
-<span id="cb139-4"><a href="11-loops.html#cb139-4" tabindex="-1"></a>  x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb139-5"><a href="11-loops.html#cb139-5" tabindex="-1"></a>x</span></code></pre></div>
-<div class="sourceCode" id="cb140"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb140-1"><a href="11-loops.html#cb140-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb140-2"><a href="11-loops.html#cb140-2" tabindex="-1"></a><span class="co">#Create new list containing 1 to add loop data to</span></span>
-<span id="cb140-3"><a href="11-loops.html#cb140-3" tabindex="-1"></a>num_list <span class="op">=</span> [x]</span>
-<span id="cb140-4"><a href="11-loops.html#cb140-4" tabindex="-1"></a><span class="co">#While loop</span></span>
-<span id="cb140-5"><a href="11-loops.html#cb140-5" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&gt;=</span> <span class="op">-</span><span class="dv">9</span>:</span>
-<span id="cb140-6"><a href="11-loops.html#cb140-6" tabindex="-1"></a>  x <span class="op">=</span> x <span class="op">-</span> <span class="dv">2</span></span>
-<span id="cb140-7"><a href="11-loops.html#cb140-7" tabindex="-1"></a>  num_list.append(x)</span>
-<span id="cb140-8"><a href="11-loops.html#cb140-8" tabindex="-1"></a>num_list</span></code></pre></div>
-<div class="sourceCode" id="cb141"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb141-1"><a href="11-loops.html#cb141-1" tabindex="-1"></a><span class="co">#Find first number after 101 that is divisible by 37</span></span>
-<span id="cb141-2"><a href="11-loops.html#cb141-2" tabindex="-1"></a>x  <span class="op">=</span> <span class="dv">101</span></span>
-<span id="cb141-3"><a href="11-loops.html#cb141-3" tabindex="-1"></a><span class="co">#Use modulus operator to end loop when the remainder from division is 0</span></span>
-<span id="cb141-4"><a href="11-loops.html#cb141-4" tabindex="-1"></a><span class="cf">while</span> (x <span class="op">%</span> <span class="dv">37</span>) <span class="op">!=</span> <span class="dv">0</span>:</span>
-<span id="cb141-5"><a href="11-loops.html#cb141-5" tabindex="-1"></a>  x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb141-6"><a href="11-loops.html#cb141-6" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb139-1"><a href="11-loops.html#cb139-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb139-2"><a href="11-loops.html#cb139-2" aria-hidden="true" tabindex="-1"></a><span class="co">#While loop</span></span>
+<span id="cb139-3"><a href="11-loops.html#cb139-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">10</span>:</span>
+<span id="cb139-4"><a href="11-loops.html#cb139-4" aria-hidden="true" tabindex="-1"></a>  x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb139-5"><a href="11-loops.html#cb139-5" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb140-1"><a href="11-loops.html#cb140-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb140-2"><a href="11-loops.html#cb140-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Create new list containing 1 to add loop data to</span></span>
+<span id="cb140-3"><a href="11-loops.html#cb140-3" aria-hidden="true" tabindex="-1"></a>num_list <span class="op">=</span> [x]</span>
+<span id="cb140-4"><a href="11-loops.html#cb140-4" aria-hidden="true" tabindex="-1"></a><span class="co">#While loop</span></span>
+<span id="cb140-5"><a href="11-loops.html#cb140-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&gt;=</span> <span class="op">-</span><span class="dv">9</span>:</span>
+<span id="cb140-6"><a href="11-loops.html#cb140-6" aria-hidden="true" tabindex="-1"></a>  x <span class="op">=</span> x <span class="op">-</span> <span class="dv">2</span></span>
+<span id="cb140-7"><a href="11-loops.html#cb140-7" aria-hidden="true" tabindex="-1"></a>  num_list.append(x)</span>
+<span id="cb140-8"><a href="11-loops.html#cb140-8" aria-hidden="true" tabindex="-1"></a>num_list</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb141-1"><a href="11-loops.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Find first number after 101 that is divisible by 37</span></span>
+<span id="cb141-2"><a href="11-loops.html#cb141-2" aria-hidden="true" tabindex="-1"></a>x  <span class="op">=</span> <span class="dv">101</span></span>
+<span id="cb141-3"><a href="11-loops.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Use modulus operator to end loop when the remainder from division is 0</span></span>
+<span id="cb141-4"><a href="11-loops.html#cb141-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (x <span class="op">%</span> <span class="dv">37</span>) <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb141-5"><a href="11-loops.html#cb141-5" aria-hidden="true" tabindex="-1"></a>  x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb141-6"><a href="11-loops.html#cb141-6" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <p><strong>While</strong> <strong>loops</strong> are much less commonly used and we will not spend any more time on them in this book. Hopefully you can see the difference between a <strong>for</strong> <strong>loop</strong> and a <strong>while</strong> <strong>loop</strong> and have an idea of how they run.</p>
 </div>
 <div id="further-control-statements" class="section level2 hasAnchor" number="11.3">
 <h2><span class="header-section-number">11.3</span> Further control statements<a href="11-loops.html#further-control-statements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/controller.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>You can control <strong>loops</strong> further using break, continue and pass statements.
+<p>You can control <strong>loops</strong> further using <strong>break</strong>, <strong>continue</strong> and <strong>pass</strong> <strong>statements</strong>.
 We won't cover these in this tutorial as they are much less common.
-You can find good resources covering Python control statements <a href="https://www.tutorialspoint.com/python/python_loop_control.htm">online</a>.</p>
+You can find good resources covering <strong>Python control statements</strong> <a href="https://www.tutorialspoint.com/python/python_loop_control.htm">online</a>.</p>
 </div>
 <div id="loop-reflection" class="section level2 hasAnchor" number="11.4">
 <h2><span class="header-section-number">11.4</span> Loop reflection<a href="11-loops.html#loop-reflection" class="anchor-section" aria-label="Anchor link to header"></a></h2>

@@ -7,18 +7,18 @@ We now have some knowledge of Python data structures (**lists**, **sets**, and *
 
 How might we apply something to each element of a **list**? Perhaps we need to count the number of characters in each entry in the **list**?
 
-Where we need to apply the same function to every item in a data structure, we can use a **loop**. This means that we do not need to manually apply the function to every item in the **list**, one at a time.
+Where we need to apply the same commands to every item in a data structure, we can use a **loop**. This means that we do not need to manually apply the commands to every item in the **list**, one at a time.
 
 There are several types of **loop**; we will cover some of the most important in this section.
 
-__NOte__: Continue using the notebook __"03-Programmatic_coding"__ for this chapter.
+__Note__: Continue using the notebook __"03-Programmatic_coding"__ for this chapter.
 
 ## For Loops
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/assembly_line_robot.png", auto_pdf = TRUE)
 ```
 
-One of the most important and most common types of **loop** is the **for** **loop**.
+One of the most important and most common type of **loops** is the **for** **loop**.
 
 The **for** **loop** runs through a set of **variables** (such as those in our list) and applies a **command** (or series of commands) to each element once. This is the **loop** that you will most often encounter.
 
@@ -61,7 +61,7 @@ knitr::include_graphics(path = "figures/loop_thru_dna.png", auto_pdf = TRUE)
 
 **For loops** are extremely useful when we have a lot of values (for example, in a **list**) and we need to apply some commands to all of them.
 
-As an example, we will take a string of DNA nucleotides and use a **loop** to generate the complement and reverse complement sequences.
+As an example, we will take a __string__ of DNA nucleotides and use a couple **loops** to generate the complement and reverse complement sequences.
 
 Run the below code. 
 The __for loop__ will move through the DNA string, printing each base to the screen.
@@ -92,9 +92,9 @@ Next, let's use this **loop** functionality to do something useful to each base 
 
 For this, we will use a **dictionary** to swap each base for the complement. Recall that a **dictionary** has a **key** and **value** for each entry. We can define the 'standard' base as the **key**, and the 'complement' as the **value**.
 
-Create and run the below code in a new _code cell__.
+Create and run the below code in a new __code cell__.
 With the code we first create the **dictionary** holding the complementary pairs of bases. 
-This needs to come before the for **loop**. 
+This needs to come before the __for loop__. 
 
 __Note__: Each of the four lines of the **dictionary** need to have a leading TAB character.
 
@@ -119,8 +119,8 @@ for base in DNA_string:
 
 The code will print out the complementary base for each iteration of the loop.
 
-Most likely we won't our output to be have a each base on its own line.
-We can therefore build up an 'output string' to format the complemented sequence. 
+Most likely we won't want our output to consist of separate bases on their own lines.
+We can therefore build up an 'output __string__' to format the complemented sequence. 
 The complemented base is added to the **variable** `complement_DNA` each time and the whole **string** is printed at the end.
 
 Edit, your previous code to the following:
@@ -161,19 +161,12 @@ Now you have a __variable__ containing the complemented sequences.
 knitr::include_graphics(path = "figures/reverse_complement.png", auto_pdf = TRUE)
 ```
 
-To generate the reverse complement we can use Python's built in `reversed()` **function** to reverse the string.
-This reversed string can then be used in the complementation. 
-Copy your complementation code into a new __code cell__.
+To generate the reverse complement we can use Python's built in `reversed()` **function** to reverse the __string__.
+This reversed __string__ can then be used in the complementation. 
+Copy your previous complementation code into a new __code cell__.
 Edit it to the below and run it.
 
 ```{python, eval=FALSE}
-# comment out the original for loop
-#for base in DNA_string:
-
-# replace with
-for base in reversed(DNA_string):
-  
-  
 #Reverse complement
 #DNA string variable, yours does not need to be exactly the same
 DNA_string = "ATTCGAAGTCGTGTAGTACCGCGTATA"
@@ -189,10 +182,8 @@ complements = {
 #Create an empty string to add the complemented bases to
 rc_DNA = ""
 
-#Loop through each base in the string
+#Loop through each base in the reversed string
 for base in reversed(DNA_string):
-  #Print the complemented base
-  #print(complements[base])
   #Add the complemented base to the output string
   rc_DNA = rc_DNA + complements[base]
 
@@ -253,7 +244,7 @@ The other type of **loop** you might encounter is the **while** **loop**. A **wh
     2)  peel potato
     3)  put potato into pot
 
-This **loop** would run until the last potato has been prepared, at which point the while statement would return **False** and the loop would be stopped.
+This **loop** would run until the last potato has been prepared, at which point the __while statement__ would return **False** and the __loop__ would be stopped.
 
 The generic format of a **while** **loop** is as follows:
 
@@ -263,7 +254,7 @@ while <condition> :
 ```
 
 Below are a few examples of __while loops__ you can create and run.
-Ensure you understand while the code is giving you the output.
+Ensure you understand why the code is giving you the output.
 If you are not sure please ask a demonstrator.
 
 ```{python, eval=FALSE}
@@ -299,9 +290,9 @@ x
 knitr::include_graphics(path = "figures/controller.png", auto_pdf = TRUE)
 ```
 
-You can control **loops** further using break, continue and pass statements.
+You can control **loops** further using __break__, __continue__ and __pass__ __statements__.
 We won't cover these in this tutorial as they are much less common. 
-You can find good resources covering Python control statements [online](https://www.tutorialspoint.com/python/python_loop_control.htm).
+You can find good resources covering __Python control statements__ [online](https://www.tutorialspoint.com/python/python_loop_control.htm).
 
 ## Loop reflection
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }

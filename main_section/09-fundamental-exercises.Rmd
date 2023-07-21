@@ -1,9 +1,9 @@
 # Fundamental exercise
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
+knitr::include_graphics(path = "figures/Mimas tiliae.png", auto_pdf = TRUE)
 ```
 
-To reinforce what you have learnt please try the exercise in this chapter.
+To reinforce what you have learnt please try the challenges in this chapter.
 
 Solutions are in the expandable boxes.
 Try your best to solve the challenge but use the solutions for help if you would like.
@@ -16,7 +16,7 @@ In this exercise you are going to create, investigate, and manipulate data of UK
 knitr::include_graphics(path = "figures/notebook.png", auto_pdf = TRUE)
 ```
 
-Create a new notebook called "02-Fundamental_exercises". Use this notebook to carry out the exercises.
+Create a new notebook called "02-Fundamental_exercises". Use this notebook to carry out the challenges.
 
 Remember to use __markdown cells__ to make headers.
 
@@ -112,7 +112,7 @@ moth_sightings_22sep
 knitr::include_graphics(path = "figures/moth_5.png", auto_pdf = TRUE)
 ```
 
-Add the string __variable__ __"Feathered Thorn"__ to the __set__  __unique_moths__.
+Add the string __variable__ __"Feathered Thorn"__ to the __set__  __"unique_moths"__.
 
 `r hide("Moth 5 solution")`
 ```{python, eval=FALSE}
@@ -159,7 +159,7 @@ moth_sightings_22sep[:4]
 moth_sightings_21sep[4:]
 ```
 ```{python, eval=FALSE}
-#6.4
+#6.6
 moth_sightings_22sep[-3:]
 ```
 `r unhide()`
@@ -202,7 +202,7 @@ Add the __key/value__ pair __"Feathered Thorn" : 13__ to the __dictionary__ __"m
 `r hide("Moth 8 solution")`
 ```{python, eval=FALSE}
 #8
-moth_visits_sep["Feathered Thorn] = 13
+moth_visits_sep["Feathered Thorn"] = 13
 moth_visits_sep
 ```
 `r unhide()`
@@ -213,6 +213,5 @@ knitr::include_graphics(path = "figures/finish.png", auto_pdf = TRUE)
 ```
 
 Hopefully you found those challenges helpful in practising and solidifying your python skills and knowledge.
-In the next section we'll start playing with some real sequence data.
 
 You can now save and __close and halt__ your __notebooks__.

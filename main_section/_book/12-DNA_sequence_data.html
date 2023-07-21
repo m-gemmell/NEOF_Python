@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12 Reading sequence data | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12 Reading sequence data | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -117,10 +117,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="www/webex.css" type="text/css" />
@@ -298,31 +294,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="reading-sequence-data" class="section level1 hasAnchor" number="12">
 <h1><span class="header-section-number">12</span> Reading sequence data<a href="12-DNA_sequence_data.html#reading-sequence-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><img src="figures/biopython_logo.png" width="20%" style="display: block; margin: auto;" /></p>
-<p><strong>Biopython</strong> is a suite of libraries and tools designed for analysis of biological datasets in Python, largely centred around the processing of DNA sequence data.</p>
+<p><strong>Biopython</strong> is a suite of <strong>libraries</strong> and tools designed for analysis of biological datasets in Python, largely centred around the processing of DNA sequence data.</p>
 <p>You can find much more information about <strong>Biopython</strong> on the <a href="https://biopython.org/">website</a>.</p>
-<p>During this section on <strong>Biopython</strong> we are going to be using the <strong>SeqIO</strong> module.</p>
+<p>During this section on <strong>Biopython</strong> we are going to be using the <strong>SeqIO</strong> <strong>module</strong>.</p>
 <p>The knowledge and approaches from the previous chapters will now be used to process some genomic DNA sequence data.</p>
 <p>Create a new notebook called <strong>"04-Practical_python"</strong>. Use this notebook in this chapter.</p>
 <div id="seqio" class="section level2 hasAnchor" number="12.1">
 <h2><span class="header-section-number">12.1</span> SeqIO<a href="12-DNA_sequence_data.html#seqio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/seqio.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>The <strong>SeqIO</strong> tools are the main Sequence Input/Output interface for <strong>Biopython</strong>
-It provides a relatively simple, uniform interface for working with various types of DNA sequence files.
-The module reads raw sequence files (such as .FASTQ files you will likely receive from your sequencing facility) and converts them to a Python readable format; a <a href="https://biopython.org/wiki/SeqRecord">SeqRecord</a> class.</p>
+<p>The <strong>SeqIO</strong> tools are the main Sequence Input/Output interface for <strong>Biopython</strong>. It provides a relatively simple, uniform interface for working with various types of DNA sequence files. The <strong>module</strong> reads raw sequence files (such as .FASTQ files you will likely receive from your sequencing facility) and converts them to a Python readable format; a <a href="https://biopython.org/wiki/SeqRecord">SeqRecord</a> <strong>class</strong>.</p>
 </div>
 <div id="the-fastq-format" class="section level2 hasAnchor" number="12.2">
 <h2><span class="header-section-number">12.2</span> The FASTQ format<a href="12-DNA_sequence_data.html#the-fastq-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/fastq.png" width="10%" style="display: block; margin: auto;" /></p>
-<p>One of the most common types of DNA sequence data files you will be working with is the <a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> file.
-FASTQ files contain multiple DNA sequences.
-Each one might be a single short read from an Illumina sequencer.
-The file can contain thousands or millions of sequences depending on which sequencer was used to produce it.</p>
+<p>One of the most common types of DNA sequence data files you will be working with is the <a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ</a> file. FASTQ files contain multiple DNA sequences. Each one might be a single short read from an Illumina sequencer. The file can contain thousands or millions of sequences depending on which sequencer was used to produce it.</p>
 <p>FASTQ files have a very specific format and hold three important pieces of information.</p>
 <p>The file has a repetitive structure of four distinct components:</p>
 <ul>
 <li>A unique sequence identifier (ID)
 <ul>
-<li>Always starts with the __<span class="citation">@__</span> symbol followed by a string of numbers and letters</li>
+<li>Always starts with the <strong>"@"</strong> symbol followed by a string of numbers and letters</li>
 <li>This contains details such as the sequencer that produced the data, the run number, and an index adapter used on the sample.</li>
 </ul></li>
 <li>The DNA nucleotide sequence
@@ -331,15 +322,16 @@ The file can contain thousands or millions of sequences depending on which seque
 </ul></li>
 <li>A small spacer
 <ul>
-<li>Consisting of the "<strong>+</strong>" character which separates the sequence from the quality scores</li>
+<li>Consisting of the <strong>"+"</strong> character which separates the sequence from the quality scores</li>
 </ul></li>
 <li>The quality score associated with each nucleotide
 <ul>
 <li>The quality score associated with each nucleotide above is ASCII encoded with each symbol representing a quality score from 0 to 40 (higher being better).</li>
 <li>This line is not meant to be easily human-readable.</li>
-<li>An example of a single unit of this four line repeat can be seen below:</li>
 </ul></li>
 </ul>
+<p>Below is an example of a single FASTQ entry:</p>
+<!-- -->
 <pre><code>@MISEQ:42:000000000-A8DD3:1:1101:15046:1468
 TTCACATCCTGACCATTCAGTTGAGCAAAATAGTTCTTCAGT
 +
@@ -365,14 +357,14 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD</code></pre>
 </ul></li>
 </ul>
 <p>To load (<strong>import</strong>) these __libraries and <strong>modules</strong> add the following towards the top of your notebook.</p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb143-1"><a href="12-DNA_sequence_data.html#cb143-1" tabindex="-1"></a><span class="co">#Import libraries and modules</span></span>
-<span id="cb143-2"><a href="12-DNA_sequence_data.html#cb143-2" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
-<span id="cb143-3"><a href="12-DNA_sequence_data.html#cb143-3" tabindex="-1"></a><span class="im">import</span> re</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb143-1"><a href="12-DNA_sequence_data.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Import libraries and modules</span></span>
+<span id="cb143-2"><a href="12-DNA_sequence_data.html#cb143-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
+<span id="cb143-3"><a href="12-DNA_sequence_data.html#cb143-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span></code></pre></div>
 <p>It is also good to create a <strong>variable</strong> called "wd" that contains your working directory when working with files.</p>
 <p>Set a variable called 'wd', (working directory) to the filepath on your clipboard by adding a version of the following:</p>
 <p><strong>Note</strong>: The below code is an instructor's directory. Ensure to set your own. A <a href="05-basic_coding.html#working-directory">previous command</a> may be useful.</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb144-1"><a href="12-DNA_sequence_data.html#cb144-1" tabindex="-1"></a><span class="co">#Working directory</span></span>
-<span id="cb144-2"><a href="12-DNA_sequence_data.html#cb144-2" tabindex="-1"></a>wd <span class="op">=</span> <span class="st">&quot;/pub14/tea/nsc201/Python_course_data&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb144-1"><a href="12-DNA_sequence_data.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Working directory</span></span>
+<span id="cb144-2"><a href="12-DNA_sequence_data.html#cb144-2" aria-hidden="true" tabindex="-1"></a>wd <span class="op">=</span> <span class="st">&quot;/pub14/tea/nsc201/Python_course_data&quot;</span></span></code></pre></div>
 </div>
 <div id="read-a-file-of-sequence-data" class="section level3 hasAnchor" number="12.3.2">
 <h3><span class="header-section-number">12.3.2</span> Read a file of sequence data<a href="12-DNA_sequence_data.html#read-a-file-of-sequence-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -384,8 +376,8 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD</code></pre>
 <li>The filepath of the file to be read.</li>
 <li>The format of that file.</li>
 </ul>
-<div class="sourceCode" id="cb145"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb145-1"><a href="12-DNA_sequence_data.html#cb145-1" tabindex="-1"></a><span class="co">#Parse file</span></span>
-<span id="cb145-2"><a href="12-DNA_sequence_data.html#cb145-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb145-1"><a href="12-DNA_sequence_data.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Parse file</span></span>
+<span id="cb145-2"><a href="12-DNA_sequence_data.html#cb145-2" aria-hidden="true" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span></code></pre></div>
 </div>
 <div id="fastq-record-elements" class="section level3 hasAnchor" number="12.3.3">
 <h3><span class="header-section-number">12.3.3</span> Fastq record elements<a href="12-DNA_sequence_data.html#fastq-record-elements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -397,10 +389,10 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD</code></pre>
 <li><strong><code>.seq</code></strong>: The sequence.</li>
 </ul>
 <p>We can print this information for each record with the following <strong>for loop</strong>.</p>
-<div class="sourceCode" id="cb146"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb146-1"><a href="12-DNA_sequence_data.html#cb146-1" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
-<span id="cb146-2"><a href="12-DNA_sequence_data.html#cb146-2" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb146-3"><a href="12-DNA_sequence_data.html#cb146-3" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
-<span id="cb146-4"><a href="12-DNA_sequence_data.html#cb146-4" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb146-1"><a href="12-DNA_sequence_data.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
+<span id="cb146-2"><a href="12-DNA_sequence_data.html#cb146-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb146-3"><a href="12-DNA_sequence_data.html#cb146-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
+<span id="cb146-4"><a href="12-DNA_sequence_data.html#cb146-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
 </div>
 </div>
 <div id="reading-and-using-files" class="section level2 hasAnchor" number="12.4">
@@ -408,79 +400,75 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD</code></pre>
 <p><img src="figures/disappear.png" width="15%" style="display: block; margin: auto;" /></p>
 <p>A peculiarity of <strong>Python</strong> is that when a file has been read and then used it is removed from memory.</p>
 <p>To demonstrate, create and run the three below <strong>code cells</strong>:</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb147-1"><a href="12-DNA_sequence_data.html#cb147-1" tabindex="-1"></a><span class="co">#Parse file</span></span>
-<span id="cb147-2"><a href="12-DNA_sequence_data.html#cb147-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb148"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb148-1"><a href="12-DNA_sequence_data.html#cb148-1" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
-<span id="cb148-2"><a href="12-DNA_sequence_data.html#cb148-2" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb148-3"><a href="12-DNA_sequence_data.html#cb148-3" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb149"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb149-1"><a href="12-DNA_sequence_data.html#cb149-1" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
-<span id="cb149-2"><a href="12-DNA_sequence_data.html#cb149-2" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb149-3"><a href="12-DNA_sequence_data.html#cb149-3" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
-<p>Running them from top to bottom you will find that only the second <strong>code cell</strong> gives you output.
-The data in the variable <strong>R_undulata_data</strong> was used by the <strong>for loop</strong> in the 2nd code cell.
-Because it is a <strong>python variable</strong> created by reading a file the information is then removed.
-Once you have read information and used it once you need to reread the information.</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb147-1"><a href="12-DNA_sequence_data.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Parse file</span></span>
+<span id="cb147-2"><a href="12-DNA_sequence_data.html#cb147-2" aria-hidden="true" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb148-1"><a href="12-DNA_sequence_data.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
+<span id="cb148-2"><a href="12-DNA_sequence_data.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb148-3"><a href="12-DNA_sequence_data.html#cb148-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb149-1"><a href="12-DNA_sequence_data.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
+<span id="cb149-2"><a href="12-DNA_sequence_data.html#cb149-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb149-3"><a href="12-DNA_sequence_data.html#cb149-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
+<p>Running them from top to bottom you will find that only the second <strong>code cell</strong> gives you output. The data in the variable <strong>R_undulata_data</strong> was used by the <strong>for loop</strong> in the 2nd code cell. Because it is a <strong>python variable</strong> created by reading a file the information is then removed. Once you have read information and used it once you need to reread the information.</p>
 <p>Try running the code from the 3 <strong>code cells</strong> in 1 <strong>code cell</strong>.</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb150-1"><a href="12-DNA_sequence_data.html#cb150-1" tabindex="-1"></a><span class="co">#Parse file</span></span>
-<span id="cb150-2"><a href="12-DNA_sequence_data.html#cb150-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
-<span id="cb150-3"><a href="12-DNA_sequence_data.html#cb150-3" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
-<span id="cb150-4"><a href="12-DNA_sequence_data.html#cb150-4" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb150-5"><a href="12-DNA_sequence_data.html#cb150-5" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
-<span id="cb150-6"><a href="12-DNA_sequence_data.html#cb150-6" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
-<span id="cb150-7"><a href="12-DNA_sequence_data.html#cb150-7" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb150-8"><a href="12-DNA_sequence_data.html#cb150-8" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb150-1"><a href="12-DNA_sequence_data.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Parse file</span></span>
+<span id="cb150-2"><a href="12-DNA_sequence_data.html#cb150-2" aria-hidden="true" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
+<span id="cb150-3"><a href="12-DNA_sequence_data.html#cb150-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
+<span id="cb150-4"><a href="12-DNA_sequence_data.html#cb150-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb150-5"><a href="12-DNA_sequence_data.html#cb150-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
+<span id="cb150-6"><a href="12-DNA_sequence_data.html#cb150-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
+<span id="cb150-7"><a href="12-DNA_sequence_data.html#cb150-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb150-8"><a href="12-DNA_sequence_data.html#cb150-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
 <p>Again, you will only get the <strong>ID</strong> information.</p>
 <p>However, if you read the file again after using the <strong>ID</strong> information you can get both.</p>
 <p>If you try the below you will need to scroll through a lot of <strong>IDs</strong> to see the <strong>Sequences</strong>.</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb151-1"><a href="12-DNA_sequence_data.html#cb151-1" tabindex="-1"></a><span class="co">#Parse file</span></span>
-<span id="cb151-2"><a href="12-DNA_sequence_data.html#cb151-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
-<span id="cb151-3"><a href="12-DNA_sequence_data.html#cb151-3" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
-<span id="cb151-4"><a href="12-DNA_sequence_data.html#cb151-4" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb151-5"><a href="12-DNA_sequence_data.html#cb151-5" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
-<span id="cb151-6"><a href="12-DNA_sequence_data.html#cb151-6" tabindex="-1"></a><span class="co">#Parse file</span></span>
-<span id="cb151-7"><a href="12-DNA_sequence_data.html#cb151-7" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
-<span id="cb151-8"><a href="12-DNA_sequence_data.html#cb151-8" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
-<span id="cb151-9"><a href="12-DNA_sequence_data.html#cb151-9" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb151-10"><a href="12-DNA_sequence_data.html#cb151-10" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb151-1"><a href="12-DNA_sequence_data.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Parse file</span></span>
+<span id="cb151-2"><a href="12-DNA_sequence_data.html#cb151-2" aria-hidden="true" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
+<span id="cb151-3"><a href="12-DNA_sequence_data.html#cb151-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
+<span id="cb151-4"><a href="12-DNA_sequence_data.html#cb151-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb151-5"><a href="12-DNA_sequence_data.html#cb151-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
+<span id="cb151-6"><a href="12-DNA_sequence_data.html#cb151-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Parse file</span></span>
+<span id="cb151-7"><a href="12-DNA_sequence_data.html#cb151-7" aria-hidden="true" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
+<span id="cb151-8"><a href="12-DNA_sequence_data.html#cb151-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and sequences</span></span>
+<span id="cb151-9"><a href="12-DNA_sequence_data.html#cb151-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb151-10"><a href="12-DNA_sequence_data.html#cb151-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.seq)</span></code></pre></div>
 <p>This is an important concept so we'll touch on it again later.</p>
 </div>
 <div id="modifying-reads" class="section level2 hasAnchor" number="12.5">
 <h2><span class="header-section-number">12.5</span> Modifying reads<a href="12-DNA_sequence_data.html#modifying-reads" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/DNA_translation.png" width="15%" style="display: block; margin: auto;" /></p>
 <p>We can perform operations on each of the record elements.</p>
-<p>Biopython has a built in <code>.translate()</code> <strong>method</strong> to convert nucleotide sequences into protein sequences.
-In this case we are not considering reading frames and we'll likely have lots of non-coding data.</p>
+<p>Biopython has a built in <code>.translate()</code> <strong>method</strong> to convert nucleotide sequences into protein sequences. In this case we are not considering reading frames and we'll likely have lots of non-coding data.</p>
 <p>See this in action with the below code.</p>
-<div class="sourceCode" id="cb152"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb152-1"><a href="12-DNA_sequence_data.html#cb152-1" tabindex="-1"></a><span class="co">#Translate</span></span>
-<span id="cb152-2"><a href="12-DNA_sequence_data.html#cb152-2" tabindex="-1"></a><span class="co">#Parse file</span></span>
-<span id="cb152-3"><a href="12-DNA_sequence_data.html#cb152-3" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
-<span id="cb152-4"><a href="12-DNA_sequence_data.html#cb152-4" tabindex="-1"></a><span class="co">#Print IDs and translated sequences</span></span>
-<span id="cb152-5"><a href="12-DNA_sequence_data.html#cb152-5" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb152-6"><a href="12-DNA_sequence_data.html#cb152-6" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
-<span id="cb152-7"><a href="12-DNA_sequence_data.html#cb152-7" tabindex="-1"></a>  <span class="bu">print</span>(record.seq.translate())</span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb152-1"><a href="12-DNA_sequence_data.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Translate</span></span>
+<span id="cb152-2"><a href="12-DNA_sequence_data.html#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Parse file</span></span>
+<span id="cb152-3"><a href="12-DNA_sequence_data.html#cb152-3" aria-hidden="true" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
+<span id="cb152-4"><a href="12-DNA_sequence_data.html#cb152-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Print IDs and translated sequences</span></span>
+<span id="cb152-5"><a href="12-DNA_sequence_data.html#cb152-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb152-6"><a href="12-DNA_sequence_data.html#cb152-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.<span class="bu">id</span>)</span>
+<span id="cb152-7"><a href="12-DNA_sequence_data.html#cb152-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(record.seq.translate())</span></code></pre></div>
 </div>
 <div id="count-reads" class="section level2 hasAnchor" number="12.6">
 <h2><span class="header-section-number">12.6</span> Count reads<a href="12-DNA_sequence_data.html#count-reads" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/count.png" width="15%" style="display: block; margin: auto;" /></p>
 <p>We can implement a counter to tally the total number of reads in the file.</p>
 <p>Create the below <strong>for</strong> <strong>loop</strong> to count the number of reads/records:</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb153-1"><a href="12-DNA_sequence_data.html#cb153-1" tabindex="-1"></a><span class="co">#Count reads/records</span></span>
-<span id="cb153-2"><a href="12-DNA_sequence_data.html#cb153-2" tabindex="-1"></a><span class="co">#Parse file</span></span>
-<span id="cb153-3"><a href="12-DNA_sequence_data.html#cb153-3" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
-<span id="cb153-4"><a href="12-DNA_sequence_data.html#cb153-4" tabindex="-1"></a></span>
-<span id="cb153-5"><a href="12-DNA_sequence_data.html#cb153-5" tabindex="-1"></a><span class="co">#Start a counter to track the number of reads/records</span></span>
-<span id="cb153-6"><a href="12-DNA_sequence_data.html#cb153-6" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb153-7"><a href="12-DNA_sequence_data.html#cb153-7" tabindex="-1"></a></span>
-<span id="cb153-8"><a href="12-DNA_sequence_data.html#cb153-8" tabindex="-1"></a><span class="co">#Count reads/records</span></span>
-<span id="cb153-9"><a href="12-DNA_sequence_data.html#cb153-9" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb153-10"><a href="12-DNA_sequence_data.html#cb153-10" tabindex="-1"></a>  <span class="co">#Increase the counter by 1 each time it sees a new read</span></span>
-<span id="cb153-11"><a href="12-DNA_sequence_data.html#cb153-11" tabindex="-1"></a>  counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb153-12"><a href="12-DNA_sequence_data.html#cb153-12" tabindex="-1"></a></span>
-<span id="cb153-13"><a href="12-DNA_sequence_data.html#cb153-13" tabindex="-1"></a><span class="co">#Save the number of reads/records for later use</span></span>
-<span id="cb153-14"><a href="12-DNA_sequence_data.html#cb153-14" tabindex="-1"></a>num_raw_reads <span class="op">=</span> counter</span>
-<span id="cb153-15"><a href="12-DNA_sequence_data.html#cb153-15" tabindex="-1"></a></span>
-<span id="cb153-16"><a href="12-DNA_sequence_data.html#cb153-16" tabindex="-1"></a><span class="co">#Print the information</span></span>
-<span id="cb153-17"><a href="12-DNA_sequence_data.html#cb153-17" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Raw sequence file has &quot;</span> <span class="op">+</span> <span class="bu">str</span>(num_raw_reads) <span class="op">+</span> <span class="st">&quot; sequence records.&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb153-1"><a href="12-DNA_sequence_data.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Count reads/records</span></span>
+<span id="cb153-2"><a href="12-DNA_sequence_data.html#cb153-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Parse file</span></span>
+<span id="cb153-3"><a href="12-DNA_sequence_data.html#cb153-3" aria-hidden="true" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
+<span id="cb153-4"><a href="12-DNA_sequence_data.html#cb153-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb153-5"><a href="12-DNA_sequence_data.html#cb153-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Start a counter to track the number of reads/records</span></span>
+<span id="cb153-6"><a href="12-DNA_sequence_data.html#cb153-6" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb153-7"><a href="12-DNA_sequence_data.html#cb153-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb153-8"><a href="12-DNA_sequence_data.html#cb153-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Count reads/records</span></span>
+<span id="cb153-9"><a href="12-DNA_sequence_data.html#cb153-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb153-10"><a href="12-DNA_sequence_data.html#cb153-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Increase the counter by 1 each time it sees a new read</span></span>
+<span id="cb153-11"><a href="12-DNA_sequence_data.html#cb153-11" aria-hidden="true" tabindex="-1"></a>  counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb153-12"><a href="12-DNA_sequence_data.html#cb153-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb153-13"><a href="12-DNA_sequence_data.html#cb153-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Save the number of reads/records for later use</span></span>
+<span id="cb153-14"><a href="12-DNA_sequence_data.html#cb153-14" aria-hidden="true" tabindex="-1"></a>num_raw_reads <span class="op">=</span> counter</span>
+<span id="cb153-15"><a href="12-DNA_sequence_data.html#cb153-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb153-16"><a href="12-DNA_sequence_data.html#cb153-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the information</span></span>
+<span id="cb153-17"><a href="12-DNA_sequence_data.html#cb153-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Raw sequence file has &quot;</span> <span class="op">+</span> <span class="bu">str</span>(num_raw_reads) <span class="op">+</span> <span class="st">&quot; sequence records.&quot;</span>)</span></code></pre></div>
 </div>
 <div id="reading-sequence-data-mcq-recap" class="section level2 hasAnchor" number="12.7">
 <h2><span class="header-section-number">12.7</span> Reading sequence data MCQ recap<a href="12-DNA_sequence_data.html#reading-sequence-data-mcq-recap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -489,28 +477,28 @@ In this case we are not considering reading frames and we'll likely have lots of
 <p>For a quick recap, choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>________ is a suite of Python <strong>libraries</strong> and tools, useful for analysing biological datasets.
-<div id="radio_OJPHNWGJUX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OJPHNWGJUX" value="answer"></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OJPHNWGJUX" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OJPHNWGJUX" value=""></input> <span><strong>Read</strong></span></label>
+<div id="radio_QPFBGFDRRB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QPFBGFDRRB" value="answer"></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QPFBGFDRRB" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QPFBGFDRRB" value=""></input> <span><strong>Read</strong></span></label>
 </div></li>
 <li>Information on ________ files is lost once used.
-<div id="radio_GWCVQSTTJT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GWCVQSTTJT" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GWCVQSTTJT" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GWCVQSTTJT" value="answer"></input> <span><strong>Read</strong></span></label>
+<div id="radio_KESDCENSSF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KESDCENSSF" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KESDCENSSF" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KESDCENSSF" value="answer"></input> <span><strong>Read</strong></span></label>
 </div></li>
 <li>________ files have 4 elements per record/entry.
-<div id="radio_KTNPBADMTM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KTNPBADMTM" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KTNPBADMTM" value="answer"></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KTNPBADMTM" value=""></input> <span><strong>Read</strong></span></label>
+<div id="radio_HUEXSSEQUA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HUEXSSEQUA" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HUEXSSEQUA" value="answer"></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HUEXSSEQUA" value=""></input> <span><strong>Read</strong></span></label>
 </div></li>
 <li>The <strong>function</strong> ________ can read/parse fastq files.
-<div id="radio_UMSOEDCGFH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UMSOEDCGFH" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UMSOEDCGFH" value="answer"></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UMSOEDCGFH" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
+<div id="radio_XEPJDGRFXQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XEPJDGRFXQ" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_XEPJDGRFXQ" value="answer"></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_XEPJDGRFXQ" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
 </div></li>
 <li>The <code>SeqIO</code> <strong>method</strong> ________ can be used to translate DNA sequences to amino acid sequences.
-<div id="radio_FXQWPCFOZJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FXQWPCFOZJ" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FXQWPCFOZJ" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FXQWPCFOZJ" value="answer"></input> <span><strong><code>.translate()</code></strong></span></label>
+<div id="radio_HNXWBSCWOF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HNXWBSCWOF" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HNXWBSCWOF" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HNXWBSCWOF" value="answer"></input> <span><strong><code>.translate()</code></strong></span></label>
 </div></li>
 <li>The sequence element in a parsed fastq file is referred to by the suffix ________.
-<div id="radio_CUUCVMBWXW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CUUCVMBWXW" value="answer"></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CUUCVMBWXW" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CUUCVMBWXW" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
+<div id="radio_QVHCQJEVOW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QVHCQJEVOW" value="answer"></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QVHCQJEVOW" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QVHCQJEVOW" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
 </div></li>
 </ol>
 

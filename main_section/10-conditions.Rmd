@@ -15,7 +15,7 @@ knitr::include_graphics(path = "figures/logical.png", auto_pdf = TRUE)
 ```
 
 A powerful feature of most programming languages is the ability to compare values/**variables** and to make decisions based upon the outcome.
-This type of behaviour is achieved using *logical conditions*.
+This type of behaviour is achieved using __logical conditions__.
 
 The __conditions__ allowed depends on the type of data you are comparing.
 You cannot use greater than (`>`) or less than (`<`) on **string variables** directly (although you could compare their lengths).
@@ -67,7 +67,7 @@ if 1 == 1:
   print("1 is 1")
 ```
 ```{python, eval=FALSE}
-if "team" != "teaim:
+if "team" != "teaim":
   print("There is no I in team")
 ```
 ```{python, eval=FALSE}
@@ -75,7 +75,7 @@ if (2+2) == 5:
   print("4 is equal to 5")
 ```
 ```{python, eval=FALSE}
-x = 8 *8
+x = 8 * 8
 y = 4 ** 3
 if x < y:
   print(str(8*8) + " is less than " + str(4**3))
@@ -108,7 +108,7 @@ The **if** and **else statements** to do this would look something like (again, 
 2.  Else:
     -   Print the current nucleotide
 
-We will explore using loops to move through data more in the next chapter. For now, try out the below `if else statements`.
+We will explore using __loops__ to move through data more in the next chapter. For now, create the below __variables__ which we will use for some `if else statements`.
 
 ```{python, eval=FALSE}
 #Create some DNA variables
@@ -122,9 +122,10 @@ c = "GGTCATtat"
 knitr::include_graphics(path = "figures/measuring_tape.png", auto_pdf = TRUE)
 ```
 
-In the below code we create our new variables for the __statement__.
+In the below code we create new variables for the __statement__.
 This is so we only have to change the one set of __variables__ if we change the input data.
 This is a common technique with __conditions__ and __loops__.
+It is cumbersome and error prone to change all the __variables__ within the __statement__.
 
 __Tip__: It is always useful to copy and paste code.
 
@@ -140,7 +141,7 @@ else:
 ```{python, eval=FALSE}
 #Compare lengths of a and c
 dna1 = a
-dna2 = b
+dna2 = c
 if len(dna1) == len(dna2):
   print("DNA sequences are the same length")
 else:
@@ -160,8 +161,8 @@ In this case we'll calculate the nucleotide content outside of the __condition__
 #Compare A content of a and b
 nt = "A"
 nt_count_1 = a.count(nt)
-nt_count_1 = b.count(nt)
-if nt_count_1 == nt_count_1:
+nt_count_2 = b.count(nt)
+if nt_count_1 == nt_count_2:
   print("DNA sequences have the same count of " + nt)
 else:
   print("DNA sequences do not have the same count of " + nt)
@@ -170,8 +171,8 @@ else:
 #Compare A content of c and b
 nt = "A"
 nt_count_1 = c.count(nt)
-nt_count_1 = b.count(nt)
-if nt_count_1 == nt_count_1:
+nt_count_2 = b.count(nt)
+if nt_count_1 == nt_count_2:
   print("DNA sequences have the same count of " + nt)
 else:
   print("DNA sequences do not have the same count of " + nt)
@@ -191,8 +192,8 @@ Edit your previous __code cells__ to:
 #Compare A content of a and b
 nt = "A"
 nt_count_1 = a.upper().count(nt)
-nt_count_1 = b.upper().count(nt)
-if nt_count_1 == nt_count_1:
+nt_count_2 = b.upper().count(nt)
+if nt_count_1 == nt_count_2:
   print("DNA sequences have the same count of " + nt)
 else:
   print("DNA sequences do not have the same count of " + nt)
@@ -201,8 +202,8 @@ else:
 #Compare A content of c and b
 nt = "A"
 nt_count_1 = c.upper().count(nt)
-nt_count_1 = b.upper().count(nt)
-if nt_count_1 == nt_count_1:
+nt_count_2 = b.upper().count(nt)
+if nt_count_1 == nt_count_2:
   print("DNA sequences have the same count of " + nt)
 else:
   print("DNA sequences do not have the same count of " + nt)
@@ -216,7 +217,7 @@ knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
 ```
 
 **If** and **else statements** can be used to make decisions in our programs by comparing values.
-This might be to check if two strings are the same, two lists contain the same number of items, or a string of nucleotide data has 100 or more bases.
+This might be to check if two __strings__ are the same, two __lists__ contain the same number of items, or a __string__ of nucleotide data has 100 or more bases.
 We can think of them as switches.
 
 Often we need to make these **if**/**else** comparisons for every item in a data structure and to do this we can use loops.

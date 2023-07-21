@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Jupyter | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Jupyter | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -117,10 +117,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="www/webex.css" type="text/css" />
@@ -311,7 +307,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="open-jupyter-notebook" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Open Jupyter-notebook<a href="04-Jupyter.html#open-jupyter-notebook" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The first step is to open <code>jupyter-notebook</code>. Run the below command in your <code>(python)</code> environment.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="04-Jupyter.html#cb5-1" tabindex="-1"></a><span class="ex">jupyter-notebook</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb5-1"><a href="04-Jupyter.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter-notebook</span></span></code></pre></div>
 <p>This will open <code>jupyter-notebook</code> in firefox. We won't need to access the linux terminal in this book anymore. Leave the terminal running <code>jupyter-notebook</code> and full screen your <code>firefox</code> so you should see something like below.</p>
 <div class="webex-solution">
 <button>
@@ -320,10 +316,16 @@ Can't see the whole webVNC window?
 <p>You may need to zoom out with your browser so you can see the full webVNC window.</p>
 <ul>
 <li><strong>Chrome</strong>: Click on the <strong>three dots in vertical line</strong> (
-<svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"> <circle cx="256" cy="256" r="48"></circle> <circle cx="256" cy="416" r="48"></circle> <circle cx="256" cy="96" r="48"></circle></svg>
+<svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<title>
+</title>
+<circle cx="256" cy="256" r="48"></circle> <circle cx="256" cy="416" r="48"></circle> <circle cx="256" cy="96" r="48"></circle></svg>
 ) on the top left for a dropdown menu which includes zoom options.</li>
 <li><strong>Edge</strong>: Click on the <strong>three horizontal lines</strong> (
-<svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"> <circle cx="256" cy="256" r="48"></circle> <circle cx="416" cy="256" r="48"></circle> <circle cx="96" cy="256" r="48"></circle></svg>
+<svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<title>
+</title>
+<circle cx="256" cy="256" r="48"></circle> <circle cx="416" cy="256" r="48"></circle> <circle cx="96" cy="256" r="48"></circle></svg>
 ) on the top left for a dropdown menu which includes zoom options.</li>
 <li><strong>Firefox</strong>: Click on the <strong>three dots in horizontal line</strong> (
 <svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
@@ -352,7 +354,7 @@ Can't see the whole webVNC window?
 <h2><span class="header-section-number">4.4</span> Cells and code<a href="04-Jupyter.html#cells-and-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><code>Jupyter-notebook</code> uses <strong>cells</strong> (the gray boxes) to separate code. This is very useful to compartmentalise our code.</p>
 <p>There will already be one <strong>cell</strong>. Within the <strong>cell</strong>, type in the below commands.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="04-Jupyter.html#cb6-1" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb6-1"><a href="04-Jupyter.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code></pre></div>
 <p>When pressing enter in <strong>cells</strong> it will create a new line. To run all commands in a <strong>cell</strong> press <code>CTRL + enter</code>.</p>
 <p>Run your current <strong>cell</strong> and you should see something like below.</p>
 <p><img src="figures/jupyter_notebook_example_3.png" width="100%" style="display: block; margin: auto;" /></p>
@@ -361,16 +363,22 @@ Can't see the whole webVNC window?
 <h2><span class="header-section-number">4.5</span> Create new cells<a href="04-Jupyter.html#create-new-cells" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You can create new <strong>cells</strong> by 2 different means.</p>
 <ul>
-<li>Press the <code>+</code> button on the tool bar (between the floppy disk <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M380.93,57.37A32,32,0,0,0,358.3,48H94.22A46.21,46.21,0,0,0,48,94.22V417.78A46.21,46.21,0,0,0,94.22,464H417.78A46.36,46.36,0,0,0,464,417.78V153.7a32,32,0,0,0-9.37-22.63ZM256,416a64,64,0,1,1,64-64A63.92,63.92,0,0,1,256,416Zm48-224H112a16,16,0,0,1-16-16V112a16,16,0,0,1,16-16H304a16,16,0,0,1,16,16v64A16,16,0,0,1,304,192Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg> and scissors <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M103.48,224a71.64,71.64,0,0,0,44.76-15.66l41.5,16.89,6.82-12.63a39.15,39.15,0,0,1,4.32-6.37l14.22-14.42-41.17-24.94A72,72,0,1,0,103.48,224Zm0-112a40,40,0,1,1-40,40A40,40,0,0,1,103.48,112Z"></path> <path d="M480,169l-5.52-12.58c-4.48-10.42-14.74-16-32.78-17.85-10.12-1-26.95-1.24-49.69,3.81-20,4.45-122.14,28.2-164.95,58.62C206.81,215.39,203,234.67,200,250.16c-2.78,14.14-5,25.31-18,35-15,11.14-27.27,16.38-33.58,18.6a71.74,71.74,0,1,0,24.79,38ZM255.48,256a16,16,0,1,1,16-16A16,16,0,0,1,255.48,256Zm-152,144a40,40,0,1,1,40-40A40,40,0,0,1,103.48,400Z"></path> <path d="M343.79,259.87l-83.74,48.18,27.63,13.08,3.62,1.74C310,331.92,359.74,356,410.53,359c3.89.23,7.47.34,10.78.34C442,359.31,453,354,459.75,350L480,336Z"></path></svg>). This will add a <strong>cell</strong> below your currently selected <strong>cell</strong>.</li>
+<li>Press the <code>+</code> button on the tool bar (between the floppy disk <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<title>
+</title>
+<path d="M380.93,57.37A32,32,0,0,0,358.3,48H94.22A46.21,46.21,0,0,0,48,94.22V417.78A46.21,46.21,0,0,0,94.22,464H417.78A46.36,46.36,0,0,0,464,417.78V153.7a32,32,0,0,0-9.37-22.63ZM256,416a64,64,0,1,1,64-64A63.92,63.92,0,0,1,256,416Zm48-224H112a16,16,0,0,1-16-16V112a16,16,0,0,1,16-16H304a16,16,0,0,1,16,16v64A16,16,0,0,1,304,192Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg> and scissors <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<title>
+</title>
+<path d="M103.48,224a71.64,71.64,0,0,0,44.76-15.66l41.5,16.89,6.82-12.63a39.15,39.15,0,0,1,4.32-6.37l14.22-14.42-41.17-24.94A72,72,0,1,0,103.48,224Zm0-112a40,40,0,1,1-40,40A40,40,0,0,1,103.48,112Z"></path> <path d="M480,169l-5.52-12.58c-4.48-10.42-14.74-16-32.78-17.85-10.12-1-26.95-1.24-49.69,3.81-20,4.45-122.14,28.2-164.95,58.62C206.81,215.39,203,234.67,200,250.16c-2.78,14.14-5,25.31-18,35-15,11.14-27.27,16.38-33.58,18.6a71.74,71.74,0,1,0,24.79,38ZM255.48,256a16,16,0,1,1,16-16A16,16,0,0,1,255.48,256Zm-152,144a40,40,0,1,1,40-40A40,40,0,0,1,103.48,400Z"></path> <path d="M343.79,259.87l-83.74,48.18,27.63,13.08,3.62,1.74C310,331.92,359.74,356,410.53,359c3.89.23,7.47.34,10.78.34C442,359.31,453,354,459.75,350L480,336Z"></path></svg>). This will add a <strong>cell</strong> below your currently selected <strong>cell</strong>.</li>
 <li>Click on the <strong><code>Insert</code></strong> button and use the dropdown to add a cell above or below your currently selected cell.</li>
 </ul>
 <p><strong>Tip:</strong> Hover over the toolbar icons to display a text based description of its function.</p>
 <p>With that knowledge add a second <strong>cell</strong> below the first <strong>cell</strong>. Add the following code to your second <strong>cell</strong> but do not run it.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="04-Jupyter.html#cb7-1" tabindex="-1"></a>num_1 <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb7-2"><a href="04-Jupyter.html#cb7-2" tabindex="-1"></a>num_2 <span class="op">=</span> <span class="dv">10</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb7-1"><a href="04-Jupyter.html#cb7-1" aria-hidden="true" tabindex="-1"></a>num_1 <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb7-2"><a href="04-Jupyter.html#cb7-2" aria-hidden="true" tabindex="-1"></a>num_2 <span class="op">=</span> <span class="dv">10</span></span></code></pre></div>
 <p><strong>Tip:</strong> Notice there are green lines around your selected cell.</p>
 <p>Insert a third <strong>cell</strong> and add the following code to it. Do not run the code.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="04-Jupyter.html#cb8-1" tabindex="-1"></a>num_1 <span class="op">*</span> num_2</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb8-1"><a href="04-Jupyter.html#cb8-1" aria-hidden="true" tabindex="-1"></a>num_1 <span class="op">*</span> num_2</span></code></pre></div>
 </div>
 <div id="running-code" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Running code<a href="04-Jupyter.html#running-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -400,7 +408,10 @@ Can't see the whole webVNC window?
 </ol>
 <p>Now we can save the file. Two methods to save are:</p>
 <ul>
-<li>Click the floppy disk <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M380.93,57.37A32,32,0,0,0,358.3,48H94.22A46.21,46.21,0,0,0,48,94.22V417.78A46.21,46.21,0,0,0,94.22,464H417.78A46.36,46.36,0,0,0,464,417.78V153.7a32,32,0,0,0-9.37-22.63ZM256,416a64,64,0,1,1,64-64A63.92,63.92,0,0,1,256,416Zm48-224H112a16,16,0,0,1-16-16V112a16,16,0,0,1,16-16H304a16,16,0,0,1,16,16v64A16,16,0,0,1,304,192Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg> on the toolbar.</li>
+<li>Click the floppy disk <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<title>
+</title>
+<path d="M380.93,57.37A32,32,0,0,0,358.3,48H94.22A46.21,46.21,0,0,0,48,94.22V417.78A46.21,46.21,0,0,0,94.22,464H417.78A46.36,46.36,0,0,0,464,417.78V153.7a32,32,0,0,0-9.37-22.63ZM256,416a64,64,0,1,1,64-64A63.92,63.92,0,0,1,256,416Zm48-224H112a16,16,0,0,1-16-16V112a16,16,0,0,1,16-16H304a16,16,0,0,1,16,16v64A16,16,0,0,1,304,192Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg> on the toolbar.</li>
 <li>Click on the <strong>"File"</strong> button. Click <strong>"Save and Checkpoint"</strong> from the dropdown options.</li>
 </ul>
 </div>
@@ -422,7 +433,7 @@ Can't see the whole webVNC window?
 <li>Ensure you have a space between the <code>#</code> and header text ("Tutorial").</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="04-Jupyter.html#cb9-1" tabindex="-1"></a><span class="co"># Tutorial</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb9-1"><a href="04-Jupyter.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tutorial</span></span></code></pre></div>
 <p>Great, we can now add nice headers in our notebooks. <strong>Save</strong> the notebook once more before carrying on to the next section.</p>
 <div class="webex-solution">
 <button>
@@ -438,7 +449,10 @@ Markdown
 <li>Click on <strong>"File"</strong>.</li>
 <li>From the dropdown options click <strong>"Close and Halt"</strong>.</li>
 </ul>
-<p>When you are back in the file explorer page you may not yet set the new file you saved. If so, you will need to refresh the page with the Refresh button <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M320,146s24.36-12-64-12A160,160,0,1,0,416,294" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></path> <polyline points="256 58 336 138 256 218" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></polyline></svg> towards the top right.</p>
+When you are back in the file explorer page you may not yet set the new file you saved. If so, you will need to refresh the page with the Refresh button <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg">
+<title>
+</title>
+<p><path d="M320,146s24.36-12-64-12A160,160,0,1,0,416,294" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></path> <polyline points="256 58 336 138 256 218" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></polyline></svg> towards the top right.</p>
 <p><img src="figures/jupyter_notebook_refresh.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>With that quick tutorial of <code>jupyter-notebook</code> we can start our community analysis in the next chapter.</p>
 <p>For more info on <code>jupter-notebook</code> please see the <a href="#jupyter_appendix">appendix</a>.</p>
