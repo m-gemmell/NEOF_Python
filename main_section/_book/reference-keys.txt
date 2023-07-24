@@ -94,7 +94,10 @@ reading-sequence-data-mcq-recap
 modifying-dna-data
 length-filtering
 remove-pcr-primers
-filter-by-gc
+filter-by-gc-range
 and-logical-operator
 gc-filter
+amino-acid-detection
+or-logical-operator
+presence-of-at-least-one-amino-acid
 recap
