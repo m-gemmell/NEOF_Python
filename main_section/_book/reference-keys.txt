@@ -91,3 +91,10 @@ reading-and-using-files
 modifying-reads
 count-reads
 reading-sequence-data-mcq-recap
+modifying-dna-data
+length-filtering
+remove-pcr-primers
+filter-by-gc
+and-logical-operator
+gc-filter
+recap

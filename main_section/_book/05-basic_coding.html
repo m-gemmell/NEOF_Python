@@ -275,6 +275,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="12-DNA_sequence_data.html"><a href="12-DNA_sequence_data.html#count-reads"><i class="fa fa-check"></i><b>12.6</b> Count reads</a></li>
 <li class="chapter" data-level="12.7" data-path="12-DNA_sequence_data.html"><a href="12-DNA_sequence_data.html#reading-sequence-data-mcq-recap"><i class="fa fa-check"></i><b>12.7</b> Reading sequence data MCQ recap</a></li>
 </ul></li>
+<li class="chapter" data-level="13" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html"><i class="fa fa-check"></i><b>13</b> Modifying DNA Data</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#length-filtering"><i class="fa fa-check"></i><b>13.1</b> Length filtering</a></li>
+<li class="chapter" data-level="13.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#remove-pcr-primers"><i class="fa fa-check"></i><b>13.2</b> Remove PCR primers</a></li>
+<li class="chapter" data-level="13.3" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#filter-by-gc"><i class="fa fa-check"></i><b>13.3</b> Filter by GC%</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#and-logical-operator"><i class="fa fa-check"></i><b>13.3.1</b> and logical operator</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#gc-filter"><i class="fa fa-check"></i><b>13.3.2</b> GC filter</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#recap"><i class="fa fa-check"></i><b>13.4</b> Recap</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -369,20 +380,20 @@ However, you still need to take care that the level of indentation in the script
 <p>Choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>The command ________ gets your current working directory.
-<div id="radio_BFPZISSMVX" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BFPZISSMVX" value="answer"></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BFPZISSMVX" value=""></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BFPZISSMVX" value=""></input> <span><strong><code>print()</code></strong></span></label>
+<div id="radio_UPJCECZGDP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UPJCECZGDP" value="answer"></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UPJCECZGDP" value=""></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UPJCECZGDP" value=""></input> <span><strong><code>print()</code></strong></span></label>
 </div></li>
 <li>The command ________ prints text.
-<div id="radio_ESMTELZNDD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ESMTELZNDD" value=""></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ESMTELZNDD" value=""></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ESMTELZNDD" value="answer"></input> <span><strong><code>print()</code></strong></span></label>
+<div id="radio_YCXBGUSAMA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YCXBGUSAMA" value=""></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YCXBGUSAMA" value=""></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YCXBGUSAMA" value="answer"></input> <span><strong><code>print()</code></strong></span></label>
 </div></li>
 <li>The module ________ is needed for the <code>getcwd()</code> command.
-<div id="radio_DEDAXRMJDV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DEDAXRMJDV" value=""></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DEDAXRMJDV" value="answer"></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DEDAXRMJDV" value=""></input> <span><strong><code>print()</code></strong></span></label>
+<div id="radio_BPPJJBWKEA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BPPJJBWKEA" value=""></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BPPJJBWKEA" value="answer"></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BPPJJBWKEA" value=""></input> <span><strong><code>print()</code></strong></span></label>
 </div></li>
 <li>________ can be used for <strong>indentation</strong> in <strong>Python</strong>.
-<div id="radio_WTATIBZXHP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WTATIBZXHP" value=""></input> <span><strong>Tabs</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WTATIBZXHP" value=""></input> <span><strong>Spaces</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WTATIBZXHP" value="answer"></input> <span><strong>Tabs or Spaces</strong></span></label>
+<div id="radio_TEKVIOUXQB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TEKVIOUXQB" value=""></input> <span><strong>Tabs</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TEKVIOUXQB" value=""></input> <span><strong>Spaces</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TEKVIOUXQB" value="answer"></input> <span><strong>Tabs or Spaces</strong></span></label>
 </div></li>
 </ol>
 

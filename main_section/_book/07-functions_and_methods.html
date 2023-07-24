@@ -275,6 +275,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="12-DNA_sequence_data.html"><a href="12-DNA_sequence_data.html#count-reads"><i class="fa fa-check"></i><b>12.6</b> Count reads</a></li>
 <li class="chapter" data-level="12.7" data-path="12-DNA_sequence_data.html"><a href="12-DNA_sequence_data.html#reading-sequence-data-mcq-recap"><i class="fa fa-check"></i><b>12.7</b> Reading sequence data MCQ recap</a></li>
 </ul></li>
+<li class="chapter" data-level="13" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html"><i class="fa fa-check"></i><b>13</b> Modifying DNA Data</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#length-filtering"><i class="fa fa-check"></i><b>13.1</b> Length filtering</a></li>
+<li class="chapter" data-level="13.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#remove-pcr-primers"><i class="fa fa-check"></i><b>13.2</b> Remove PCR primers</a></li>
+<li class="chapter" data-level="13.3" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#filter-by-gc"><i class="fa fa-check"></i><b>13.3</b> Filter by GC%</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#and-logical-operator"><i class="fa fa-check"></i><b>13.3.1</b> and logical operator</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#gc-filter"><i class="fa fa-check"></i><b>13.3.2</b> GC filter</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#recap"><i class="fa fa-check"></i><b>13.4</b> Recap</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -383,28 +394,28 @@ During this course and afterwards you can refer to the <a href="#cheatsheet">che
 <p>Choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>________ are associated with a specific <strong>class</strong>.
-<div id="radio_GQQARIBWKK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GQQARIBWKK" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GQQARIBWKK" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GQQARIBWKK" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_HFWUPXNXLS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HFWUPXNXLS" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HFWUPXNXLS" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HFWUPXNXLS" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The syntax of ________ are <code>command_name(data)</code>.
-<div id="radio_FYLBNMDQDP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FYLBNMDQDP" value="answer"></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FYLBNMDQDP" value=""></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FYLBNMDQDP" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_BPRKNKUGRW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BPRKNKUGRW" value="answer"></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BPRKNKUGRW" value=""></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BPRKNKUGRW" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The syntax of ________ are <code>data.command_name()</code>.
-<div id="radio_TNWIGVHXCA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TNWIGVHXCA" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TNWIGVHXCA" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TNWIGVHXCA" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_BYDOIDHIPC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BYDOIDHIPC" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BYDOIDHIPC" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BYDOIDHIPC" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The <strong>function</strong> ________ can count the number of characters in a string.
-<div id="radio_DKAIXANWKT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DKAIXANWKT" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DKAIXANWKT" value="answer"></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DKAIXANWKT" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_TOBWIJSIYZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TOBWIJSIYZ" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TOBWIJSIYZ" value="answer"></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TOBWIJSIYZ" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 <li>The <strong>method</strong> ________ can count the number of instances of a pattern in a string <strong>variable</strong>.
-<div id="radio_GAEPSDVGSQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GAEPSDVGSQ" value="answer"></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GAEPSDVGSQ" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GAEPSDVGSQ" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_XBMAOJDUHA" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XBMAOJDUHA" value="answer"></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_XBMAOJDUHA" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_XBMAOJDUHA" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 <li>The <strong>method</strong> ________ can convert a string <strong>variable</strong> to lower-case.
-<div id="radio_FZWDYKXAFB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FZWDYKXAFB" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FZWDYKXAFB" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FZWDYKXAFB" value="answer"></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_HXMPVHRREK" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HXMPVHRREK" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HXMPVHRREK" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_HXMPVHRREK" value="answer"></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 </ol>
 

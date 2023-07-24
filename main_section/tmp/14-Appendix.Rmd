@@ -34,6 +34,37 @@ __MAYBE PUT DEFINTIONS HERE__
 
 # Cheatsheet {#cheatsheet}
 
+## Operators
+
+- __`+`__ (addition)
+- __`-`__ (subtraction)
+- __`*`__ (multiplication)
+- __`/`__ (division)
+- __`**`__ (power/exponent)
+- __`//`__ (Floor division)
+- __`%`__ (modulo operator. Find the remainder after dividing 2 numbers)
+- __`and`__ logical operator. 
+  - If both comparisons are `True` return `True`.
+  - If either or both comparisons are `False` return `False`.
+- __`or`__ logical operator.
+  - If either or both comparisons are `True` return `True`.
+  - If both comparisons are `False` return `False`.
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+- __``__
+
 ## Functions
 
 - __`print()`__: Print specified text.
@@ -79,7 +110,7 @@ __MAYBE PUT DEFINTIONS HERE__
 - __`.lower()`__: Convert string to lower case.
 - __`.count()`__: Count number of specified string pattern in string __variable__.
 - __`.split()`__: Split string by specified delimiter.
-- __``__
+- __`.startswith()`__: Check if a string starts with a particular sub-string. Returns `True` or `False`.
 - __``__
 - __``__
 - __``__

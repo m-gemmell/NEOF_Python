@@ -275,6 +275,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="12-DNA_sequence_data.html"><a href="12-DNA_sequence_data.html#count-reads"><i class="fa fa-check"></i><b>12.6</b> Count reads</a></li>
 <li class="chapter" data-level="12.7" data-path="12-DNA_sequence_data.html"><a href="12-DNA_sequence_data.html#reading-sequence-data-mcq-recap"><i class="fa fa-check"></i><b>12.7</b> Reading sequence data MCQ recap</a></li>
 </ul></li>
+<li class="chapter" data-level="13" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html"><i class="fa fa-check"></i><b>13</b> Modifying DNA Data</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#length-filtering"><i class="fa fa-check"></i><b>13.1</b> Length filtering</a></li>
+<li class="chapter" data-level="13.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#remove-pcr-primers"><i class="fa fa-check"></i><b>13.2</b> Remove PCR primers</a></li>
+<li class="chapter" data-level="13.3" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#filter-by-gc"><i class="fa fa-check"></i><b>13.3</b> Filter by GC%</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#and-logical-operator"><i class="fa fa-check"></i><b>13.3.1</b> and logical operator</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#gc-filter"><i class="fa fa-check"></i><b>13.3.2</b> GC filter</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#recap"><i class="fa fa-check"></i><b>13.4</b> Recap</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -559,28 +570,28 @@ It is good practice to save it regularly.</p>
 <p>Choose the correct option to complete each sentence below:</p>
 <ol style="list-style-type: decimal">
 <li>All <strong>variables</strong> have a ________.
-<div id="radio_JDPFQRAAFT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JDPFQRAAFT" value="answer"></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JDPFQRAAFT" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JDPFQRAAFT" value=""></input> <span><strong>String</strong></span></label>
+<div id="radio_AJKNWTRTWD" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AJKNWTRTWD" value="answer"></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AJKNWTRTWD" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AJKNWTRTWD" value=""></input> <span><strong>String</strong></span></label>
 </div></li>
 <li>The hashtag (<code>#</code>) can be used to add ________ to code.
-<div id="radio_JMGOYTYMKG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JMGOYTYMKG" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JMGOYTYMKG" value="answer"></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JMGOYTYMKG" value=""></input> <span><strong>String</strong></span></label>
+<div id="radio_APDOJHSFPK" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_APDOJHSFPK" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_APDOJHSFPK" value="answer"></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_APDOJHSFPK" value=""></input> <span><strong>String</strong></span></label>
 </div></li>
 <li>Quotes ('single' or "double") are used to create ________ <strong>variables</strong>.
-<div id="radio_LOYSQRBQIL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LOYSQRBQIL" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LOYSQRBQIL" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LOYSQRBQIL" value="answer"></input> <span><strong>String</strong></span></label>
+<div id="radio_PZKUCMKHFP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PZKUCMKHFP" value=""></input> <span><strong>Class</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PZKUCMKHFP" value=""></input> <span><strong>Comments</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PZKUCMKHFP" value="answer"></input> <span><strong>String</strong></span></label>
 </div></li>
 <li>________ is a numeric <strong>class</strong> which <strong>does not</strong> contain decimal points (whole numbers).
-<div id="radio_HQOZQLDLIG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HQOZQLDLIG" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HQOZQLDLIG" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HQOZQLDLIG" value="answer"></input> <span><strong>Integer</strong></span></label>
+<div id="radio_JPEEMKQOOJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JPEEMKQOOJ" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JPEEMKQOOJ" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JPEEMKQOOJ" value="answer"></input> <span><strong>Integer</strong></span></label>
 </div></li>
 <li>________ is a numeric <strong>class</strong> which <strong>does</strong> contain decimal points (real numbers).
-<div id="radio_MHUYWUATOM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MHUYWUATOM" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MHUYWUATOM" value="answer"></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MHUYWUATOM" value=""></input> <span><strong>Integer</strong></span></label>
+<div id="radio_FLMEJBRVVN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FLMEJBRVVN" value=""></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FLMEJBRVVN" value="answer"></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FLMEJBRVVN" value=""></input> <span><strong>Integer</strong></span></label>
 </div></li>
 <li>________ is a <strong>class</strong> that stores <code>True</code> or <code>False</code>.
-<div id="radio_IOUFAAVFAM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_IOUFAAVFAM" value="answer"></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IOUFAAVFAM" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IOUFAAVFAM" value=""></input> <span><strong>Integer</strong></span></label>
+<div id="radio_ZDLVVREFDJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZDLVVREFDJ" value="answer"></input> <span><strong>Boolean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZDLVVREFDJ" value=""></input> <span><strong>Float</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZDLVVREFDJ" value=""></input> <span><strong>Integer</strong></span></label>
 </div></li>
 </ol>
 
