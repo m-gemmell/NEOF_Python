@@ -279,17 +279,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="13.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#length-filtering"><i class="fa fa-check"></i><b>13.1</b> Length filtering</a></li>
 <li class="chapter" data-level="13.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#remove-pcr-primers"><i class="fa fa-check"></i><b>13.2</b> Remove PCR primers</a></li>
-<li class="chapter" data-level="13.3" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#filter-by-gc-range"><i class="fa fa-check"></i><b>13.3</b> Filter by GC% range</a>
-<ul>
-<li class="chapter" data-level="13.3.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#and-logical-operator"><i class="fa fa-check"></i><b>13.3.1</b> and logical operator</a></li>
-<li class="chapter" data-level="13.3.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#gc-filter"><i class="fa fa-check"></i><b>13.3.2</b> GC filter</a></li>
+<li class="chapter" data-level="13.3" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#recap"><i class="fa fa-check"></i><b>13.3</b> Recap</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#amino-acid-detection"><i class="fa fa-check"></i><b>13.4</b> Amino acid detection</a>
+<li class="chapter" data-level="14" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html"><i class="fa fa-check"></i><b>14</b> Reading and writing files</a>
 <ul>
-<li class="chapter" data-level="13.4.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#or-logical-operator"><i class="fa fa-check"></i><b>13.4.1</b> or logical operator</a></li>
-<li class="chapter" data-level="13.4.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#presence-of-at-least-one-amino-acid"><i class="fa fa-check"></i><b>13.4.2</b> Presence of at least one amino acid</a></li>
+<li class="chapter" data-level="14.1" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#open"><i class="fa fa-check"></i><b>14.1</b> 'open'</a></li>
+<li class="chapter" data-level="14.2" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#read-a-data-file"><i class="fa fa-check"></i><b>14.2</b> Read a data file</a></li>
+<li class="chapter" data-level="14.3" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#write-data-to-a-file"><i class="fa fa-check"></i><b>14.3</b> Write data to a file</a></li>
+<li class="chapter" data-level="14.4" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#write-out-the-filtered-undulate-ray-sequence-data"><i class="fa fa-check"></i><b>14.4</b> Write out the filtered Undulate ray sequence data</a></li>
+<li class="chapter" data-level="14.5" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#recap-1"><i class="fa fa-check"></i><b>14.5</b> Recap</a></li>
 </ul></li>
-<li class="chapter" data-level="13.5" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#recap"><i class="fa fa-check"></i><b>13.5</b> Recap</a></li>
+<li class="chapter" data-level="15" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html"><i class="fa fa-check"></i><b>15</b> Logical operators</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#and-logical-operator"><i class="fa fa-check"></i><b>15.1</b> and logical operator</a></li>
+<li class="chapter" data-level="15.2" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#filter-by-gc-range"><i class="fa fa-check"></i><b>15.2</b> Filter by GC% range</a></li>
+<li class="chapter" data-level="15.3" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#or-logical-operator"><i class="fa fa-check"></i><b>15.3</b> or logical operator</a></li>
+<li class="chapter" data-level="15.4" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#amino-acid-detection"><i class="fa fa-check"></i><b>15.4</b> Amino acid detection</a></li>
+<li class="chapter" data-level="15.5" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#recap-2"><i class="fa fa-check"></i><b>15.5</b> Recap</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -496,28 +502,28 @@ CCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDD</code></pre>
 <p>For a quick recap, choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>________ is a suite of Python <strong>libraries</strong> and tools, useful for analysing biological datasets.
-<div id="radio_XHYWQVBCXJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XHYWQVBCXJ" value="answer"></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XHYWQVBCXJ" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XHYWQVBCXJ" value=""></input> <span><strong>Read</strong></span></label>
+<div id="radio_HJBKYLJHOP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HJBKYLJHOP" value="answer"></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HJBKYLJHOP" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HJBKYLJHOP" value=""></input> <span><strong>Read</strong></span></label>
 </div></li>
 <li>Information on ________ files is lost once used.
-<div id="radio_ARNCFRYYAA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ARNCFRYYAA" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ARNCFRYYAA" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ARNCFRYYAA" value="answer"></input> <span><strong>Read</strong></span></label>
+<div id="radio_RDDKMTIFEZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RDDKMTIFEZ" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RDDKMTIFEZ" value=""></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RDDKMTIFEZ" value="answer"></input> <span><strong>Read</strong></span></label>
 </div></li>
 <li>________ files have 4 elements per record/entry.
-<div id="radio_NHERTCRYLT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NHERTCRYLT" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NHERTCRYLT" value="answer"></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NHERTCRYLT" value=""></input> <span><strong>Read</strong></span></label>
+<div id="radio_GMKVGPGEPO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GMKVGPGEPO" value=""></input> <span><strong>Biopython</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GMKVGPGEPO" value="answer"></input> <span><strong>Fastq</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GMKVGPGEPO" value=""></input> <span><strong>Read</strong></span></label>
 </div></li>
 <li>The <strong>function</strong> ________ can read/parse fastq files.
-<div id="radio_BXAQPPMGVV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BXAQPPMGVV" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BXAQPPMGVV" value="answer"></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BXAQPPMGVV" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
+<div id="radio_JGSIVPHZLO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JGSIVPHZLO" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_JGSIVPHZLO" value="answer"></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_JGSIVPHZLO" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
 </div></li>
 <li>The <code>SeqIO</code> <strong>method</strong> ________ can be used to translate DNA sequences to amino acid sequences.
-<div id="radio_LMDUTFMJAJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LMDUTFMJAJ" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LMDUTFMJAJ" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LMDUTFMJAJ" value="answer"></input> <span><strong><code>.translate()</code></strong></span></label>
+<div id="radio_QYIUNGTXBG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QYIUNGTXBG" value=""></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QYIUNGTXBG" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QYIUNGTXBG" value="answer"></input> <span><strong><code>.translate()</code></strong></span></label>
 </div></li>
 <li>The sequence element in a parsed fastq file is referred to by the suffix ________.
-<div id="radio_RVOBRRANSL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RVOBRRANSL" value="answer"></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RVOBRRANSL" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RVOBRRANSL" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
+<div id="radio_KGQONWEMWN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KGQONWEMWN" value="answer"></input> <span><strong><code>.seq</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGQONWEMWN" value=""></input> <span><strong><code>SeqIO.parse()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGQONWEMWN" value=""></input> <span><strong><code>.translate()</code></strong></span></label>
 </div></li>
 </ol>
 

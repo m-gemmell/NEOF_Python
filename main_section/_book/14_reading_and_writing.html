@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Cluster Introduction | Python for Bioinformatics</title>
+  <title>14 Reading and writing files | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Cluster Introduction | Python for Bioinformatics" />
+  <meta property="og:title" content="14 Reading and writing files | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/figures/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Cluster Introduction | Python for Bioinformatics" />
+  <meta name="twitter:title" content="14 Reading and writing files | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-<link rel="prev" href="02-intro.html"/>
-<link rel="next" href="04-Jupyter.html"/>
+<link rel="prev" href="13_DNA_conditions.html"/>
+<link rel="next" href="15_Logical_statements.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -317,53 +317,104 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cluster-introduction" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Cluster Introduction<a href="03_cluster_introduction.html#cluster-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<center>
-<img src="figures/cluster.png" style="width:25.0%" />
-</center>
-<div id="logon-instructions" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Logon Instructions<a href="03_cluster_introduction.html#logon-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For this workshop we will be using Virtual Network Computing (VNC).
-Connect to the VNC with a browser by using the webVNC link you were sent.</p>
-You will now be in a logged-in Linux VNC desktop with a terminal window visible.
-You will see something as below.
-<center>
-<img src="figures/logon_pic.png" style="width:75.0%" />
-</center>
-<p>If you do not see something similar please ask for assistance.</p>
-<p>If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.</p>
+<div id="reading-and-writing-files" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">14</span> Reading and writing files<a href="14_reading_and_writing.html#reading-and-writing-files" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="figures/contract.png" width="20%" style="display: block; margin: auto;" /></p>
+<p>Often we want to <strong>read</strong> from a data file, perform some task with the data, and <strong>write</strong> out
+another file.</p>
+<p>To <strong>read/write</strong> a file in Python we <strong>open</strong> a data stream using a statement such as:</p>
+<p>(don't add this line to the notebook)</p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb157-1"><a href="14_reading_and_writing.html#cb157-1" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(path_to_file, <span class="st">&#39;open_mode&#39;</span>) <span class="im">as</span> input_file:</span></code></pre></div>
+<p>There are two parts to consider:</p>
+<ul>
+<li><p>open(path_to_file, mode)</p></li>
+<li><p>with(...<code>&lt;input-file&gt;</code>...) as input_file:</p></li>
+</ul>
+<p>Create a new notebook with the name <strong>"05-Reading_and_writing"</strong> we'll learn to <strong>open</strong>, <strong>read</strong>, and <strong>write</strong> files with it.</p>
+<div id="open" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> 'open'<a href="14_reading_and_writing.html#open" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/open_file.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>The <code>open</code> <strong>function</strong> asks the Python interpreter to make a link to the specified file and <strong>open</strong> a data stream.
+We need to specify the <strong>mode</strong> by which the file is <strong>opened</strong>.
+The most common <strong>modes</strong> are:</p>
+<ul>
+<li><strong>'w' - WRITE</strong>: <strong>Open</strong> for writing. If the file doesn't exist, it will be created. If it does exist, it will be replaced by a new, empty file.</li>
+<li><strong>'r' - READ</strong>: <strong>Open</strong> an existing file for reading.</li>
+<li><strong>'a' - APPEND</strong>: <strong>Open</strong> for reading and writing. If the file doesn't exist, it will be created. If it does exist, new data will be added to the end of the existing file.</li>
+</ul>
+<p>There are other modes but these three cover the majority of file tasks.</p>
 </div>
-<div id="the-terminal-window" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> The Terminal Window<a href="03_cluster_introduction.html#the-terminal-window" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.</p>
+<div id="read-a-data-file" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> Read a data file<a href="14_reading_and_writing.html#read-a-data-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/reading_glasses.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>Create your first coding <strong>cell</strong> in your <strong>"05-Reading_and_writing"</strong> notebook. Add the location of your working directory and load the <strong>SeqIO library</strong>.</p>
+<p><strong>Note</strong>: Ensure <code>wd =</code> is set to <strong>your</strong> working directory.</p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb158-1"><a href="14_reading_and_writing.html#cb158-1" tabindex="-1"></a>wd <span class="op">=</span> <span class="st">&quot;/pub14/tea/nsc201/Python_course_data&quot;</span></span>
+<span id="cb158-2"><a href="14_reading_and_writing.html#cb158-2" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span></code></pre></div>
+<p>Add the below code to <strong>read</strong> the provided file <strong>"patients_data.csv"</strong>.
+We have 2 new python words in the code:</p>
+<ul>
+<li><strong><code>with</code></strong>: This python <strong>statement</strong> allows us to carry out further tasks <strong>with</strong> some data.
+<ul>
+<li>In this case we are using data <strong>read</strong> from the file <strong>"patients_gut_data.csv"</strong>.</li>
+<li>This is then passed to a <strong>for loop statement</strong> to print each line of the file.</li>
+<li>This is known as a <strong>data stream</strong>.</li>
+</ul></li>
+<li><strong><code>as</code></strong>: This python <strong>keyword</strong> creates an alias for our <code>with</code> <strong>statement</strong>.
+<ul>
+<li>In the below code we <strong>open</strong> a file and store the read information as a <strong>variable</strong> called <code>input_file</code>.</li>
+<li>The variable name is arbitrary and chosen by the user.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb159"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb159-1"><a href="14_reading_and_writing.html#cb159-1" tabindex="-1"></a><span class="co">#Open input file for reading and add to a data stream</span></span>
+<span id="cb159-2"><a href="14_reading_and_writing.html#cb159-2" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(wd <span class="op">+</span> <span class="st">&quot;/patients_gut_data.csv&quot;</span>, <span class="st">&#39;r&#39;</span>) <span class="im">as</span> input_file:</span>
+<span id="cb159-3"><a href="14_reading_and_writing.html#cb159-3" tabindex="-1"></a>  <span class="co">#Loop through lines/rows of input_file</span></span>
+<span id="cb159-4"><a href="14_reading_and_writing.html#cb159-4" tabindex="-1"></a>  <span class="cf">for</span> row <span class="kw">in</span> input_file:</span>
+<span id="cb159-5"><a href="14_reading_and_writing.html#cb159-5" tabindex="-1"></a>    <span class="bu">print</span>(row)</span></code></pre></div>
+<p>When you run the code the file contents will be printed. We will learn to organise this output in a more usable way in the supplementary material).</p>
+</div>
+<div id="write-data-to-a-file" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Write data to a file<a href="14_reading_and_writing.html#write-data-to-a-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/write_feather.png" width="10%" style="display: block; margin: auto;" /></p>
+<p>Copy, paste, and edit your code to add a second <strong>data stream</strong>.
+This is done by first opening a new file for <strong>write</strong> access.</p>
+<p>Looping through the <code>input_file</code>, for each row/line, we'll add the string "Study_2022," to the start.
+This modified line/row will be <strong>written</strong> to the output file using the <code>.write()</code> <strong>method</strong>.</p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb160-1"><a href="14_reading_and_writing.html#cb160-1" tabindex="-1"></a><span class="co">#Create output file for writing and add to a data stream</span></span>
+<span id="cb160-2"><a href="14_reading_and_writing.html#cb160-2" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(wd <span class="op">+</span> <span class="st">&quot;/patients_modified.csv&quot;</span>, <span class="st">&#39;w&#39;</span>) <span class="im">as</span> output_file:</span>
+<span id="cb160-3"><a href="14_reading_and_writing.html#cb160-3" tabindex="-1"></a>  <span class="co">#Open input file for reading and add to a data stream</span></span>
+<span id="cb160-4"><a href="14_reading_and_writing.html#cb160-4" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(wd <span class="op">+</span> <span class="st">&quot;/patients_gut_data.csv&quot;</span>, <span class="st">&#39;r&#39;</span>) <span class="im">as</span> input_file:</span>
+<span id="cb160-5"><a href="14_reading_and_writing.html#cb160-5" tabindex="-1"></a>    <span class="co">#Loop through lines/rows of input_file</span></span>
+<span id="cb160-6"><a href="14_reading_and_writing.html#cb160-6" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> input_file:</span>
+<span id="cb160-7"><a href="14_reading_and_writing.html#cb160-7" tabindex="-1"></a>      <span class="co">#Write row/line to output_file</span></span>
+<span id="cb160-8"><a href="14_reading_and_writing.html#cb160-8" tabindex="-1"></a>      output_file.write(<span class="st">&quot;Study_2022,&quot;</span> <span class="op">+</span> row)</span></code></pre></div>
+<p>Open your new file (<strong>"patients_modified.csv"</strong>) in the <code>jupyter-notebook</code> file navigator by clicking on it.
+You will see that each row in the data now starts with the "Study_2022" string.</p>
+</div>
+<div id="write-out-the-filtered-undulate-ray-sequence-data" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> Write out the filtered Undulate ray sequence data<a href="14_reading_and_writing.html#write-out-the-filtered-undulate-ray-sequence-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/Leucoraja%20erinacea.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>Returning to our example data relating to the undulate ray, we have a list of sequence records (trimmed_sequences).
+These have passed our filters and we now want to write out the FASTQ file so that it might be further analysed using another piece of software.</p>
+<p><b>Return to your "04-Practical_python" notebook.</b></p>
+<p>At the bottom of the notebook, we'll <strong>write</strong> the trimmed data to a new fastq file.
+We will use <code>SeqIO's</code> built in <code>write()</code> <strong>method</strong>, specifying we want a FASTQ format file.</p>
+<p><strong>Note:</strong> Ensure the <strong>cells</strong> above your new <strong>cell</strong> have been run.</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb161-1"><a href="14_reading_and_writing.html#cb161-1" tabindex="-1"></a><span class="co">#Open a new file for writing and add it to a data stream</span></span>
+<span id="cb161-2"><a href="14_reading_and_writing.html#cb161-2" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(wd <span class="op">+</span> <span class="st">&quot;/R_undulata_filtered_seqs.fastq&quot;</span>, <span class="st">&#39;w&#39;</span>) <span class="im">as</span> output_file:</span>
+<span id="cb161-3"><a href="14_reading_and_writing.html#cb161-3" tabindex="-1"></a>  <span class="co">#Write the previously created trimmed_sequence data to the output file as a fastq file</span></span>
+<span id="cb161-4"><a href="14_reading_and_writing.html#cb161-4" tabindex="-1"></a>  SeqIO.write(trimmed_sequences, output_file, <span class="st">&quot;fastq&quot;</span>)</span></code></pre></div>
+<p>This trimmed, filtered file would now be ready to go into whichever subsequent analysis was desired.</p>
+<p>Use your <code>jupyter-notebook</code> file navigator to check that the file exists and that it is approximately 3MBs in size.</p>
+</div>
+<div id="recap-1" class="section level2 hasAnchor" number="14.5">
+<h2><span class="header-section-number">14.5</span> Recap<a href="14_reading_and_writing.html#recap-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <center>
-<img src="figures/terminal_window.png" style="width:75.0%" />
+<img src="figures/recap.webp" height="300" />
 </center>
-<p>You're now ready to start the workshop!</p>
-</div>
-<div id="load-workshop-data" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Load workshop data<a href="03_cluster_introduction.html#load-workshop-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Before we get started, we need to copy across some data files to analyse later in the workshop.</p>
-<p>In the terminal window, issue the following commands to copy the data into your account:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb2-1"><a href="03_cluster_introduction.html#cb2-1" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb2-2"><a href="03_cluster_introduction.html#cb2-2" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub14/tea/nsc206/NEOF/Python_course_data .</span></code></pre></div>
-</div>
-<div id="mamba" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Mamba<a href="03_cluster_introduction.html#mamba" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/mamba_logo.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>This workshop requires some programs.
-These can be difficult to install.
-Instead we have used Mambaforge to install the programs including Jupyter-notebook.
-To learn more about Mambaforge and how to create your own environment please see the <a href="#mamba_install">appendix</a>.</p>
-<p>To set-up your environment for this workshop please run the following code (you must include the full stop and space at the front of the command).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb3-1"><a href="03_cluster_introduction.html#cb3-1" tabindex="-1"></a><span class="bu">.</span> usepython</span></code></pre></div>
-<p>You will have successfully activated the environment if you now see <code>(python)</code> at the start of your command prompt.
-This indicates you are now in the mamba environment called <code>python</code> created by the instructor.</p>
-<p>If you are interested in the use script you can look at its contents.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb4-1"><a href="03_cluster_introduction.html#cb4-1" tabindex="-1"></a><span class="fu">less</span> /usr/local/bin/usepython</span></code></pre></div>
-<p><strong>Tip:</strong> press <code>q</code> to quit <code>less</code>.</p>
-<p>For more about mamba and how to create your own <code>python</code> environment please see the <a href="#mamba_install">appendix</a></p>
+<p>To read or write files we need to open a data stream using the <b>with</b> and <b>open</b> functions.</p>
+<p>Each file can be opened in one of several modes; either <b>w</b>rite, <b>r</b>ead, or <b>a</b>ppend, depending on what you need to do.</p>
+<p>Once files are written to the disk they are available to use in further analyses or other pieces of software.</p>
 
 </div>
 </div>
@@ -578,8 +629,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="02-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="04-Jupyter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="13_DNA_conditions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="15_Logical_statements.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

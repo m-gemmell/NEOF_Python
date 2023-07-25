@@ -29,7 +29,7 @@
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
 <link rel="prev" href="12-DNA_sequence_data.html"/>
-
+<link rel="next" href="14_reading_and_writing.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -279,17 +279,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="13.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#length-filtering"><i class="fa fa-check"></i><b>13.1</b> Length filtering</a></li>
 <li class="chapter" data-level="13.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#remove-pcr-primers"><i class="fa fa-check"></i><b>13.2</b> Remove PCR primers</a></li>
-<li class="chapter" data-level="13.3" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#filter-by-gc-range"><i class="fa fa-check"></i><b>13.3</b> Filter by GC% range</a>
-<ul>
-<li class="chapter" data-level="13.3.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#and-logical-operator"><i class="fa fa-check"></i><b>13.3.1</b> and logical operator</a></li>
-<li class="chapter" data-level="13.3.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#gc-filter"><i class="fa fa-check"></i><b>13.3.2</b> GC filter</a></li>
+<li class="chapter" data-level="13.3" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#recap"><i class="fa fa-check"></i><b>13.3</b> Recap</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#amino-acid-detection"><i class="fa fa-check"></i><b>13.4</b> Amino acid detection</a>
+<li class="chapter" data-level="14" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html"><i class="fa fa-check"></i><b>14</b> Reading and writing files</a>
 <ul>
-<li class="chapter" data-level="13.4.1" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#or-logical-operator"><i class="fa fa-check"></i><b>13.4.1</b> or logical operator</a></li>
-<li class="chapter" data-level="13.4.2" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#presence-of-at-least-one-amino-acid"><i class="fa fa-check"></i><b>13.4.2</b> Presence of at least one amino acid</a></li>
+<li class="chapter" data-level="14.1" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#open"><i class="fa fa-check"></i><b>14.1</b> 'open'</a></li>
+<li class="chapter" data-level="14.2" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#read-a-data-file"><i class="fa fa-check"></i><b>14.2</b> Read a data file</a></li>
+<li class="chapter" data-level="14.3" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#write-data-to-a-file"><i class="fa fa-check"></i><b>14.3</b> Write data to a file</a></li>
+<li class="chapter" data-level="14.4" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#write-out-the-filtered-undulate-ray-sequence-data"><i class="fa fa-check"></i><b>14.4</b> Write out the filtered Undulate ray sequence data</a></li>
+<li class="chapter" data-level="14.5" data-path="14_reading_and_writing.html"><a href="14_reading_and_writing.html#recap-1"><i class="fa fa-check"></i><b>14.5</b> Recap</a></li>
 </ul></li>
-<li class="chapter" data-level="13.5" data-path="13_DNA_conditions.html"><a href="13_DNA_conditions.html#recap"><i class="fa fa-check"></i><b>13.5</b> Recap</a></li>
+<li class="chapter" data-level="15" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html"><i class="fa fa-check"></i><b>15</b> Logical operators</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#and-logical-operator"><i class="fa fa-check"></i><b>15.1</b> and logical operator</a></li>
+<li class="chapter" data-level="15.2" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#filter-by-gc-range"><i class="fa fa-check"></i><b>15.2</b> Filter by GC% range</a></li>
+<li class="chapter" data-level="15.3" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#or-logical-operator"><i class="fa fa-check"></i><b>15.3</b> or logical operator</a></li>
+<li class="chapter" data-level="15.4" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#amino-acid-detection"><i class="fa fa-check"></i><b>15.4</b> Amino acid detection</a></li>
+<li class="chapter" data-level="15.5" data-path="15_Logical_statements.html"><a href="15_Logical_statements.html#recap-2"><i class="fa fa-check"></i><b>15.5</b> Recap</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -319,14 +325,13 @@ For example, we could:</p>
 <ul>
 <li>Remove reads of a certain length.</li>
 <li>Remove sections of a sequence such as PCR primers.</li>
-<li>Filter reads by GC%.</li>
-<li>Detect amino acids.</li>
 </ul>
 <p>In this chapter we will use our knowledge of <strong>loops</strong> and <strong>conditions</strong> to perform these tasks. Continue using <strong>"04-Practical_python"</strong> notebook.</p>
 <div id="length-filtering" class="section level2 hasAnchor" number="13.1">
 <h2><span class="header-section-number">13.1</span> Length filtering<a href="13_DNA_conditions.html#length-filtering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/filter_2.png" width="15%" style="display: block; margin: auto;" /></p>
 <p>Using what we know, we will create code to remove/filter reads shorter than a specified read-length threshold from a FastQ file.</p>
+<p>Write, run, and try to understand the below code.</p>
 <div class="sourceCode" id="cb154"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb154-1"><a href="13_DNA_conditions.html#cb154-1" tabindex="-1"></a><span class="co">#Read in the fastq data</span></span>
 <span id="cb154-2"><a href="13_DNA_conditions.html#cb154-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/Python_course_data/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
 <span id="cb154-3"><a href="13_DNA_conditions.html#cb154-3" tabindex="-1"></a></span>
@@ -405,157 +410,9 @@ This will contain records that have been:</p>
 <span id="cb156-19"><a href="13_DNA_conditions.html#cb156-19" tabindex="-1"></a>    trimmed_sequences.append(record)</span>
 <span id="cb156-20"><a href="13_DNA_conditions.html#cb156-20" tabindex="-1"></a></span>
 <span id="cb156-21"><a href="13_DNA_conditions.html#cb156-21" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Number of sequences with the PCR sequence present: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(pcr_records))</span></code></pre></div>
-<p>Save and run the code one more time to see your three lines of information printed to screen.</p>
 </div>
-<div id="filter-by-gc-range" class="section level2 hasAnchor" number="13.3">
-<h2><span class="header-section-number">13.3</span> Filter by GC% range<a href="13_DNA_conditions.html#filter-by-gc-range" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/range.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>The next bit of coding will retain reads with a GC% between 40% and 60%. This is not normally something you would do but instead we've included it for demonstration purposes.</p>
-<div id="and-logical-operator" class="section level3 hasAnchor" number="13.3.1">
-<h3><span class="header-section-number">13.3.1</span> and logical operator<a href="13_DNA_conditions.html#and-logical-operator" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/and.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>For this we will use the <code>and</code> <strong>logical operator</strong>. This allows us to test multiple comparisons <code>and</code> <strong>if</strong> they are all <code>True</code> the <strong>condition</strong> will return the output. Lets show a few examples.</p>
-<p>First create a few demonstration variables.</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb157-1"><a href="13_DNA_conditions.html#cb157-1" tabindex="-1"></a>num_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]</span>
-<span id="cb157-2"><a href="13_DNA_conditions.html#cb157-2" tabindex="-1"></a>string_list <span class="op">=</span> [<span class="st">&quot;one&quot;</span>,<span class="st">&quot;two&quot;</span>,<span class="st">&quot;three&quot;</span>,<span class="st">&quot;four&quot;</span>,<span class="st">&quot;five&quot;</span>,<span class="st">&quot;six&quot;</span>,<span class="st">&quot;seven&quot;</span>,<span class="st">&quot;eight&quot;</span>,<span class="st">&quot;nine&quot;</span>]</span></code></pre></div>
-<p>Print numbers between 3 <strong>and</strong> 7.</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb158-1"><a href="13_DNA_conditions.html#cb158-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
-<span id="cb158-2"><a href="13_DNA_conditions.html#cb158-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
-<span id="cb158-3"><a href="13_DNA_conditions.html#cb158-3" tabindex="-1"></a>  <span class="co">#If number is greater than 3 and less than 7</span></span>
-<span id="cb158-4"><a href="13_DNA_conditions.html#cb158-4" tabindex="-1"></a>  <span class="cf">if</span> num <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> num <span class="op">&lt;</span> <span class="dv">7</span>:</span>
-<span id="cb158-5"><a href="13_DNA_conditions.html#cb158-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
-<span id="cb158-6"><a href="13_DNA_conditions.html#cb158-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
-<p>Print numbers divisible by 2 that are also greater than 5.</p>
-<div class="sourceCode" id="cb159"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb159-1"><a href="13_DNA_conditions.html#cb159-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
-<span id="cb159-2"><a href="13_DNA_conditions.html#cb159-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
-<span id="cb159-3"><a href="13_DNA_conditions.html#cb159-3" tabindex="-1"></a>  <span class="co">#If number is divisible by 2 and greater than 5</span></span>
-<span id="cb159-4"><a href="13_DNA_conditions.html#cb159-4" tabindex="-1"></a>  <span class="cf">if</span> num<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> num <span class="op">&gt;</span> <span class="dv">5</span>:</span>
-<span id="cb159-5"><a href="13_DNA_conditions.html#cb159-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
-<span id="cb159-6"><a href="13_DNA_conditions.html#cb159-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
-<p>Print strings longer than three characters <strong>and</strong> has at least on letter <strong>e</strong>.</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb160-1"><a href="13_DNA_conditions.html#cb160-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
-<span id="cb160-2"><a href="13_DNA_conditions.html#cb160-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
-<span id="cb160-3"><a href="13_DNA_conditions.html#cb160-3" tabindex="-1"></a>  <span class="co">#If string length is greater than 3 and the &quot;e&quot; count is greater than 0</span></span>
-<span id="cb160-4"><a href="13_DNA_conditions.html#cb160-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> string.count(<span class="st">&quot;e&quot;</span>) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb160-5"><a href="13_DNA_conditions.html#cb160-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
-<span id="cb160-6"><a href="13_DNA_conditions.html#cb160-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
-<p>Print strings shorter or equal to 3 characters <strong>and</strong> that have no <strong>e</strong>.</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb161-1"><a href="13_DNA_conditions.html#cb161-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
-<span id="cb161-2"><a href="13_DNA_conditions.html#cb161-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
-<span id="cb161-3"><a href="13_DNA_conditions.html#cb161-3" tabindex="-1"></a>  <span class="co">#If string length is less than or equal to 3 and the &quot;e&quot; count is 0</span></span>
-<span id="cb161-4"><a href="13_DNA_conditions.html#cb161-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&lt;=</span> <span class="dv">3</span> <span class="kw">and</span> string.count(<span class="st">&quot;e&quot;</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb161-5"><a href="13_DNA_conditions.html#cb161-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
-<span id="cb161-6"><a href="13_DNA_conditions.html#cb161-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
-<p>In the above examples we have only used one <code>and</code> <strong>operator</strong>. You can use multiple but of course the more you use the more complex your <strong>statement</strong> becomes.</p>
-</div>
-<div id="gc-filter" class="section level3 hasAnchor" number="13.3.2">
-<h3><span class="header-section-number">13.3.2</span> GC filter<a href="13_DNA_conditions.html#gc-filter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/40_60_range.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>With the <code>and</code> <strong>logical operator</strong> we can filter by a GC% range.</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb162-1"><a href="13_DNA_conditions.html#cb162-1" tabindex="-1"></a><span class="co">#Read in the fastq data</span></span>
-<span id="cb162-2"><a href="13_DNA_conditions.html#cb162-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/Python_course_data/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
-<span id="cb162-3"><a href="13_DNA_conditions.html#cb162-3" tabindex="-1"></a></span>
-<span id="cb162-4"><a href="13_DNA_conditions.html#cb162-4" tabindex="-1"></a><span class="co">#Initialise an empty list to hold the records that we want to keep</span></span>
-<span id="cb162-5"><a href="13_DNA_conditions.html#cb162-5" tabindex="-1"></a>gc_sequences <span class="op">=</span> []</span>
-<span id="cb162-6"><a href="13_DNA_conditions.html#cb162-6" tabindex="-1"></a></span>
-<span id="cb162-7"><a href="13_DNA_conditions.html#cb162-7" tabindex="-1"></a><span class="co">#Variables for choice of min and max gc%</span></span>
-<span id="cb162-8"><a href="13_DNA_conditions.html#cb162-8" tabindex="-1"></a>min_gc <span class="op">=</span> <span class="dv">40</span></span>
-<span id="cb162-9"><a href="13_DNA_conditions.html#cb162-9" tabindex="-1"></a>max_gc <span class="op">=</span> <span class="dv">60</span></span>
-<span id="cb162-10"><a href="13_DNA_conditions.html#cb162-10" tabindex="-1"></a></span>
-<span id="cb162-11"><a href="13_DNA_conditions.html#cb162-11" tabindex="-1"></a><span class="co">#Loop through the fastq records</span></span>
-<span id="cb162-12"><a href="13_DNA_conditions.html#cb162-12" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb162-13"><a href="13_DNA_conditions.html#cb162-13" tabindex="-1"></a>  <span class="co">#Calculate GC%</span></span>
-<span id="cb162-14"><a href="13_DNA_conditions.html#cb162-14" tabindex="-1"></a>  gc_count <span class="op">=</span> record.seq.upper().count(<span class="st">&quot;G&quot;</span>) <span class="op">+</span> record.seq.upper().count(<span class="st">&quot;C&quot;</span>)</span>
-<span id="cb162-15"><a href="13_DNA_conditions.html#cb162-15" tabindex="-1"></a>  gc_perc <span class="op">=</span> (gc_count <span class="op">/</span> <span class="bu">len</span>(record.seq)) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb162-16"><a href="13_DNA_conditions.html#cb162-16" tabindex="-1"></a>  <span class="co">#If GC percent is greater than min and less than max</span></span>
-<span id="cb162-17"><a href="13_DNA_conditions.html#cb162-17" tabindex="-1"></a>  <span class="cf">if</span> gc_perc <span class="op">&gt;</span> min_gc <span class="kw">and</span> gc_perc <span class="op">&lt;</span> max_gc:</span>
-<span id="cb162-18"><a href="13_DNA_conditions.html#cb162-18" tabindex="-1"></a>    <span class="co">#Add the record to the list of records</span></span>
-<span id="cb162-19"><a href="13_DNA_conditions.html#cb162-19" tabindex="-1"></a>    gc_sequences.append(record)</span>
-<span id="cb162-20"><a href="13_DNA_conditions.html#cb162-20" tabindex="-1"></a></span>
-<span id="cb162-21"><a href="13_DNA_conditions.html#cb162-21" tabindex="-1"></a><span class="co">#Print statement to show number of reads retained after length filtering</span></span>
-<span id="cb162-22"><a href="13_DNA_conditions.html#cb162-22" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Found &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="bu">len</span>(gc_sequences)) <span class="op">+</span> <span class="st">&quot; reads with GC</span><span class="sc">% r</span><span class="st">ange between &quot;</span> <span class="op">+</span> </span>
-<span id="cb162-23"><a href="13_DNA_conditions.html#cb162-23" tabindex="-1"></a>  <span class="bu">str</span>(min_gc) <span class="op">+</span> <span class="st">&quot;% and &quot;</span> <span class="op">+</span> <span class="bu">str</span>(max_gc) <span class="op">+</span> <span class="st">&quot;%.&quot;</span>)</span></code></pre></div>
-<p>Ensure you understand the above code before continuing.
-Please ask a demonstrator if you are unsure.</p>
-</div>
-</div>
-<div id="amino-acid-detection" class="section level2 hasAnchor" number="13.4">
-<h2><span class="header-section-number">13.4</span> Amino acid detection<a href="13_DNA_conditions.html#amino-acid-detection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/amino_acid.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>In this part you will translate part of each sequence with <code>.translate()</code>.
-Then you will count the number of sequences that have at least one translated <strong>Glutamine (Q)</strong> or <em>Serine (S)</em>.</p>
-<div id="or-logical-operator" class="section level3 hasAnchor" number="13.4.1">
-<h3><span class="header-section-number">13.4.1</span> or logical operator<a href="13_DNA_conditions.html#or-logical-operator" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/oar.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>For this we will use the <code>or</code> <strong>logical operator</strong>. This allows us to test two comparisons and <strong>if</strong> the first <strong>or</strong> second is <code>True</code> the <strong>condition</strong> will return the output. Lets go through a few examples.</p>
-<p>We will use the same variables as our <code>and</code> <strong>operator</strong> examples.</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb163-1"><a href="13_DNA_conditions.html#cb163-1" tabindex="-1"></a>num_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]</span>
-<span id="cb163-2"><a href="13_DNA_conditions.html#cb163-2" tabindex="-1"></a>string_list <span class="op">=</span> [<span class="st">&quot;one&quot;</span>,<span class="st">&quot;two&quot;</span>,<span class="st">&quot;three&quot;</span>,<span class="st">&quot;four&quot;</span>,<span class="st">&quot;five&quot;</span>,<span class="st">&quot;six&quot;</span>,<span class="st">&quot;seven&quot;</span>,<span class="st">&quot;eight&quot;</span>,<span class="st">&quot;nine&quot;</span>]</span></code></pre></div>
-<p>Print numbers greater than 4 <strong>or</strong> if they are odd.</p>
-<div class="sourceCode" id="cb164"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb164-1"><a href="13_DNA_conditions.html#cb164-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
-<span id="cb164-2"><a href="13_DNA_conditions.html#cb164-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
-<span id="cb164-3"><a href="13_DNA_conditions.html#cb164-3" tabindex="-1"></a>  <span class="co">#If number is greater than 4 or odd</span></span>
-<span id="cb164-4"><a href="13_DNA_conditions.html#cb164-4" tabindex="-1"></a>  <span class="cf">if</span> num <span class="op">&gt;</span> <span class="dv">4</span> <span class="kw">or</span> num<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb164-5"><a href="13_DNA_conditions.html#cb164-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
-<span id="cb164-6"><a href="13_DNA_conditions.html#cb164-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
-<p>Print numbers less than or equal to 2 <strong>or</strong> greater than or equal to 8.</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb165-1"><a href="13_DNA_conditions.html#cb165-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
-<span id="cb165-2"><a href="13_DNA_conditions.html#cb165-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
-<span id="cb165-3"><a href="13_DNA_conditions.html#cb165-3" tabindex="-1"></a>  <span class="co">#If number is less than or equal to 2 or greater than or qual to 8</span></span>
-<span id="cb165-4"><a href="13_DNA_conditions.html#cb165-4" tabindex="-1"></a>  <span class="cf">if</span> num <span class="op">&lt;=</span> <span class="dv">2</span> <span class="kw">or</span> num <span class="op">&gt;=</span> <span class="dv">8</span>:</span>
-<span id="cb165-5"><a href="13_DNA_conditions.html#cb165-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
-<span id="cb165-6"><a href="13_DNA_conditions.html#cb165-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
-<p>Print strings shorter than 4 characters <strong>or</strong> longer than 4 characters.</p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb166-1"><a href="13_DNA_conditions.html#cb166-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
-<span id="cb166-2"><a href="13_DNA_conditions.html#cb166-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
-<span id="cb166-3"><a href="13_DNA_conditions.html#cb166-3" tabindex="-1"></a>  <span class="co">#If string length is less than or greater than 4</span></span>
-<span id="cb166-4"><a href="13_DNA_conditions.html#cb166-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&lt;</span> <span class="dv">4</span> <span class="kw">or</span> <span class="bu">len</span>(string) <span class="op">&gt;</span> <span class="dv">4</span>:</span>
-<span id="cb166-5"><a href="13_DNA_conditions.html#cb166-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
-<span id="cb166-6"><a href="13_DNA_conditions.html#cb166-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
-<p>Print strings with an <strong>n</strong> count of more than 1 <strong>or</strong> an <strong>e</strong> count of 0.</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb167-1"><a href="13_DNA_conditions.html#cb167-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
-<span id="cb167-2"><a href="13_DNA_conditions.html#cb167-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
-<span id="cb167-3"><a href="13_DNA_conditions.html#cb167-3" tabindex="-1"></a>  <span class="co">#If n count is greater than 0 or e count is 0</span></span>
-<span id="cb167-4"><a href="13_DNA_conditions.html#cb167-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&lt;=</span> <span class="dv">3</span> <span class="kw">and</span> string.count(<span class="st">&quot;e&quot;</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb167-5"><a href="13_DNA_conditions.html#cb167-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
-<span id="cb167-6"><a href="13_DNA_conditions.html#cb167-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
-</div>
-<div id="presence-of-at-least-one-amino-acid" class="section level3 hasAnchor" number="13.4.2">
-<h3><span class="header-section-number">13.4.2</span> Presence of at least one amino acid<a href="13_DNA_conditions.html#presence-of-at-least-one-amino-acid" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/presence.png" width="6%" style="display: block; margin: auto;" /></p>
-<p>With a <code>or</code> <strong>logical operator</strong> we can count the number of translated sequences that have a <strong>Glutamine (Q)</strong> <strong>or</strong> <em>Serine (S)</em>.</p>
-<p>When translating the sequence length needs to be divisible by three to match codon lengths. We will translate the first 10 codons (30 bases).</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb168-1"><a href="13_DNA_conditions.html#cb168-1" tabindex="-1"></a><span class="co">#Read in the fastq data</span></span>
-<span id="cb168-2"><a href="13_DNA_conditions.html#cb168-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/Python_course_data/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
-<span id="cb168-3"><a href="13_DNA_conditions.html#cb168-3" tabindex="-1"></a></span>
-<span id="cb168-4"><a href="13_DNA_conditions.html#cb168-4" tabindex="-1"></a><span class="co">#Initialise a variable for the counter</span></span>
-<span id="cb168-5"><a href="13_DNA_conditions.html#cb168-5" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb168-6"><a href="13_DNA_conditions.html#cb168-6" tabindex="-1"></a></span>
-<span id="cb168-7"><a href="13_DNA_conditions.html#cb168-7" tabindex="-1"></a><span class="co">#Variables for amino acids</span></span>
-<span id="cb168-8"><a href="13_DNA_conditions.html#cb168-8" tabindex="-1"></a>aa_1 <span class="op">=</span> <span class="st">&quot;S&quot;</span></span>
-<span id="cb168-9"><a href="13_DNA_conditions.html#cb168-9" tabindex="-1"></a>aa_2 <span class="op">=</span> <span class="st">&quot;Q&quot;</span></span>
-<span id="cb168-10"><a href="13_DNA_conditions.html#cb168-10" tabindex="-1"></a></span>
-<span id="cb168-11"><a href="13_DNA_conditions.html#cb168-11" tabindex="-1"></a><span class="co">#Loop through the fastq records</span></span>
-<span id="cb168-12"><a href="13_DNA_conditions.html#cb168-12" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
-<span id="cb168-13"><a href="13_DNA_conditions.html#cb168-13" tabindex="-1"></a>  <span class="co">#Extract the first 30 bases</span></span>
-<span id="cb168-14"><a href="13_DNA_conditions.html#cb168-14" tabindex="-1"></a>  subset_seq <span class="op">=</span> record.seq[:<span class="dv">30</span>]</span>
-<span id="cb168-15"><a href="13_DNA_conditions.html#cb168-15" tabindex="-1"></a>  <span class="co">#Translate sequence</span></span>
-<span id="cb168-16"><a href="13_DNA_conditions.html#cb168-16" tabindex="-1"></a>  aa_seq <span class="op">=</span> subset_seq.translate()</span>
-<span id="cb168-17"><a href="13_DNA_conditions.html#cb168-17" tabindex="-1"></a>  <span class="co">#Amino acid counts</span></span>
-<span id="cb168-18"><a href="13_DNA_conditions.html#cb168-18" tabindex="-1"></a>  aa_1_count <span class="op">=</span> aa_seq.upper().count(aa_1)</span>
-<span id="cb168-19"><a href="13_DNA_conditions.html#cb168-19" tabindex="-1"></a>  aa_2_count <span class="op">=</span> aa_seq.upper().count(aa_2)</span>
-<span id="cb168-20"><a href="13_DNA_conditions.html#cb168-20" tabindex="-1"></a>  <span class="co">#If aa_1 is present or aa_2 is present</span></span>
-<span id="cb168-21"><a href="13_DNA_conditions.html#cb168-21" tabindex="-1"></a>  <span class="cf">if</span> aa_1_count <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">or</span> aa_2_count <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb168-22"><a href="13_DNA_conditions.html#cb168-22" tabindex="-1"></a>    <span class="co">#Add 1 to counter</span></span>
-<span id="cb168-23"><a href="13_DNA_conditions.html#cb168-23" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb168-24"><a href="13_DNA_conditions.html#cb168-24" tabindex="-1"></a></span>
-<span id="cb168-25"><a href="13_DNA_conditions.html#cb168-25" tabindex="-1"></a><span class="co">#Print statement to show number translated seqeunces with either of the amino acids</span></span>
-<span id="cb168-26"><a href="13_DNA_conditions.html#cb168-26" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Found &quot;</span> <span class="op">+</span> <span class="bu">str</span>(counter) <span class="op">+</span> <span class="st">&quot; reads with a translated &quot;</span> <span class="op">+</span> </span>
-<span id="cb168-27"><a href="13_DNA_conditions.html#cb168-27" tabindex="-1"></a>  aa_1 <span class="op">+</span> <span class="st">&quot; or &quot;</span> <span class="op">+</span> aa_2 <span class="op">+</span> <span class="st">&quot; in the first 10 codons.&quot;</span>)</span></code></pre></div>
-</div>
-</div>
-<div id="recap" class="section level2 hasAnchor" number="13.5">
-<h2><span class="header-section-number">13.5</span> Recap<a href="13_DNA_conditions.html#recap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="recap" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Recap<a href="13_DNA_conditions.html#recap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="figures/recap.webp" width="20%" style="display: block; margin: auto;" /></p>
 <p>Using our knowledge of reading FASTQ files, looping through the data, and using conditions to check certain characteristics of the data we have been able to filter out short-reads and also remove primer contamination. We are starting to build a pipeline!</p>
 <p>We will learn to write data out and store it in a new file in the next chapter.</p>
@@ -773,8 +630,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="12-DNA_sequence_data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="12-DNA_sequence_data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="14_reading_and_writing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

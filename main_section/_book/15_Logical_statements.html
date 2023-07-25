@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Cluster Introduction | Python for Bioinformatics</title>
+  <title>15 Logical operators | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Cluster Introduction | Python for Bioinformatics" />
+  <meta property="og:title" content="15 Logical operators | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/figures/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Cluster Introduction | Python for Bioinformatics" />
+  <meta name="twitter:title" content="15 Logical operators | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-<link rel="prev" href="02-intro.html"/>
-<link rel="next" href="04-Jupyter.html"/>
+<link rel="prev" href="14_reading_and_writing.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -317,53 +317,167 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cluster-introduction" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Cluster Introduction<a href="03_cluster_introduction.html#cluster-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<center>
-<img src="figures/cluster.png" style="width:25.0%" />
-</center>
-<div id="logon-instructions" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Logon Instructions<a href="03_cluster_introduction.html#logon-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For this workshop we will be using Virtual Network Computing (VNC).
-Connect to the VNC with a browser by using the webVNC link you were sent.</p>
-You will now be in a logged-in Linux VNC desktop with a terminal window visible.
-You will see something as below.
-<center>
-<img src="figures/logon_pic.png" style="width:75.0%" />
-</center>
-<p>If you do not see something similar please ask for assistance.</p>
-<p>If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.</p>
+<div id="logical-operators" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">15</span> Logical operators<a href="15_Logical_statements.html#logical-operators" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="figures/logic.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>In this chapter you will learn how to use 2 different <strong>logical operators</strong>:</p>
+<ul>
+<li><code>and</code></li>
+<li><code>or</code></li>
+</ul>
+<p>With these statements you will:</p>
+<ul>
+<li>Filter reads by GC% ranges.</li>
+<li>Detect the presence of 1 or more amino acids.</li>
+</ul>
+<p>This will further solidify your use of <strong>loops</strong> and <strong>conditions</strong>.</p>
+<p>Use a new notebook called <strong>"06-Logical_statements"</strong>.</p>
+<div id="and-logical-operator" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> and logical operator<a href="15_Logical_statements.html#and-logical-operator" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/and.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>We will first look at the <code>and</code> <strong>logical operator</strong>.
+This allows us to compare two comparisons.
+<strong>If</strong> both are <code>True</code> the <strong>conditional statement</strong> will return as <code>True</code>.
+<strong>If</strong> either/both are <code>False</code> the <strong>conditional statement</strong> will return as <code>False</code>.
+Lets show a few examples.</p>
+<p>First create a few demonstration variables.</p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb162-1"><a href="15_Logical_statements.html#cb162-1" tabindex="-1"></a>num_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]</span>
+<span id="cb162-2"><a href="15_Logical_statements.html#cb162-2" tabindex="-1"></a>string_list <span class="op">=</span> [<span class="st">&quot;one&quot;</span>,<span class="st">&quot;two&quot;</span>,<span class="st">&quot;three&quot;</span>,<span class="st">&quot;four&quot;</span>,<span class="st">&quot;five&quot;</span>,<span class="st">&quot;six&quot;</span>,<span class="st">&quot;seven&quot;</span>,<span class="st">&quot;eight&quot;</span>,<span class="st">&quot;nine&quot;</span>]</span></code></pre></div>
+<p>Print numbers between 3 <strong>and</strong> 7.</p>
+<div class="sourceCode" id="cb163"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb163-1"><a href="15_Logical_statements.html#cb163-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
+<span id="cb163-2"><a href="15_Logical_statements.html#cb163-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
+<span id="cb163-3"><a href="15_Logical_statements.html#cb163-3" tabindex="-1"></a>  <span class="co">#If number is greater than 3 and less than 7</span></span>
+<span id="cb163-4"><a href="15_Logical_statements.html#cb163-4" tabindex="-1"></a>  <span class="cf">if</span> num <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> num <span class="op">&lt;</span> <span class="dv">7</span>:</span>
+<span id="cb163-5"><a href="15_Logical_statements.html#cb163-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
+<span id="cb163-6"><a href="15_Logical_statements.html#cb163-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
+<p>Print numbers divisible by 2 that are also greater than 5.</p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb164-1"><a href="15_Logical_statements.html#cb164-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
+<span id="cb164-2"><a href="15_Logical_statements.html#cb164-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
+<span id="cb164-3"><a href="15_Logical_statements.html#cb164-3" tabindex="-1"></a>  <span class="co">#If number is divisible by 2 and greater than 5</span></span>
+<span id="cb164-4"><a href="15_Logical_statements.html#cb164-4" tabindex="-1"></a>  <span class="cf">if</span> num<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> num <span class="op">&gt;</span> <span class="dv">5</span>:</span>
+<span id="cb164-5"><a href="15_Logical_statements.html#cb164-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
+<span id="cb164-6"><a href="15_Logical_statements.html#cb164-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
+<p>Print strings longer than three characters <strong>and</strong> has at least on letter <strong>e</strong>.</p>
+<div class="sourceCode" id="cb165"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb165-1"><a href="15_Logical_statements.html#cb165-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
+<span id="cb165-2"><a href="15_Logical_statements.html#cb165-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
+<span id="cb165-3"><a href="15_Logical_statements.html#cb165-3" tabindex="-1"></a>  <span class="co">#If string length is greater than 3 and the &quot;e&quot; count is greater than 0</span></span>
+<span id="cb165-4"><a href="15_Logical_statements.html#cb165-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> string.count(<span class="st">&quot;e&quot;</span>) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb165-5"><a href="15_Logical_statements.html#cb165-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
+<span id="cb165-6"><a href="15_Logical_statements.html#cb165-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
+<p>Print strings shorter or equal to 3 characters <strong>and</strong> that have no <strong>e</strong>.</p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb166-1"><a href="15_Logical_statements.html#cb166-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
+<span id="cb166-2"><a href="15_Logical_statements.html#cb166-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
+<span id="cb166-3"><a href="15_Logical_statements.html#cb166-3" tabindex="-1"></a>  <span class="co">#If string length is less than or equal to 3 and the &quot;e&quot; count is 0</span></span>
+<span id="cb166-4"><a href="15_Logical_statements.html#cb166-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&lt;=</span> <span class="dv">3</span> <span class="kw">and</span> string.count(<span class="st">&quot;e&quot;</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb166-5"><a href="15_Logical_statements.html#cb166-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
+<span id="cb166-6"><a href="15_Logical_statements.html#cb166-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
+<p>In the above examples we have only used one <code>and</code> <strong>operator</strong>. You can use multiple but of course the more you use the more complex your <strong>statement</strong> becomes.</p>
 </div>
-<div id="the-terminal-window" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> The Terminal Window<a href="03_cluster_introduction.html#the-terminal-window" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.</p>
-<center>
-<img src="figures/terminal_window.png" style="width:75.0%" />
-</center>
-<p>You're now ready to start the workshop!</p>
+<div id="filter-by-gc-range" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Filter by GC% range<a href="15_Logical_statements.html#filter-by-gc-range" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/40_60_range.png" width="40%" style="display: block; margin: auto;" /></p>
+<p>With the <code>and</code> <strong>logical operator</strong> we can filter by a GC% range.</p>
+<p>The next bit of coding will retain reads with a GC% between 40% and 60%. This is not normally something you would do but instead we've included it for demonstration purposes.</p>
+<div class="sourceCode" id="cb167"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb167-1"><a href="15_Logical_statements.html#cb167-1" tabindex="-1"></a><span class="co">#Read in the fastq data</span></span>
+<span id="cb167-2"><a href="15_Logical_statements.html#cb167-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/Python_course_data/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
+<span id="cb167-3"><a href="15_Logical_statements.html#cb167-3" tabindex="-1"></a></span>
+<span id="cb167-4"><a href="15_Logical_statements.html#cb167-4" tabindex="-1"></a><span class="co">#Initialise an empty list to hold the records that we want to keep</span></span>
+<span id="cb167-5"><a href="15_Logical_statements.html#cb167-5" tabindex="-1"></a>gc_sequences <span class="op">=</span> []</span>
+<span id="cb167-6"><a href="15_Logical_statements.html#cb167-6" tabindex="-1"></a></span>
+<span id="cb167-7"><a href="15_Logical_statements.html#cb167-7" tabindex="-1"></a><span class="co">#Variables for choice of min and max gc%</span></span>
+<span id="cb167-8"><a href="15_Logical_statements.html#cb167-8" tabindex="-1"></a>min_gc <span class="op">=</span> <span class="dv">40</span></span>
+<span id="cb167-9"><a href="15_Logical_statements.html#cb167-9" tabindex="-1"></a>max_gc <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb167-10"><a href="15_Logical_statements.html#cb167-10" tabindex="-1"></a></span>
+<span id="cb167-11"><a href="15_Logical_statements.html#cb167-11" tabindex="-1"></a><span class="co">#Loop through the fastq records</span></span>
+<span id="cb167-12"><a href="15_Logical_statements.html#cb167-12" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb167-13"><a href="15_Logical_statements.html#cb167-13" tabindex="-1"></a>  <span class="co">#Calculate GC%</span></span>
+<span id="cb167-14"><a href="15_Logical_statements.html#cb167-14" tabindex="-1"></a>  gc_count <span class="op">=</span> record.seq.upper().count(<span class="st">&quot;G&quot;</span>) <span class="op">+</span> record.seq.upper().count(<span class="st">&quot;C&quot;</span>)</span>
+<span id="cb167-15"><a href="15_Logical_statements.html#cb167-15" tabindex="-1"></a>  gc_perc <span class="op">=</span> (gc_count <span class="op">/</span> <span class="bu">len</span>(record.seq)) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb167-16"><a href="15_Logical_statements.html#cb167-16" tabindex="-1"></a>  <span class="co">#If GC percent is greater than min and less than max</span></span>
+<span id="cb167-17"><a href="15_Logical_statements.html#cb167-17" tabindex="-1"></a>  <span class="cf">if</span> gc_perc <span class="op">&gt;</span> min_gc <span class="kw">and</span> gc_perc <span class="op">&lt;</span> max_gc:</span>
+<span id="cb167-18"><a href="15_Logical_statements.html#cb167-18" tabindex="-1"></a>    <span class="co">#Add the record to the list of records</span></span>
+<span id="cb167-19"><a href="15_Logical_statements.html#cb167-19" tabindex="-1"></a>    gc_sequences.append(record)</span>
+<span id="cb167-20"><a href="15_Logical_statements.html#cb167-20" tabindex="-1"></a></span>
+<span id="cb167-21"><a href="15_Logical_statements.html#cb167-21" tabindex="-1"></a><span class="co">#Print statement to show number of reads retained after length filtering</span></span>
+<span id="cb167-22"><a href="15_Logical_statements.html#cb167-22" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Found &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="bu">len</span>(gc_sequences)) <span class="op">+</span> <span class="st">&quot; reads with GC</span><span class="sc">% r</span><span class="st">ange between &quot;</span> <span class="op">+</span> </span>
+<span id="cb167-23"><a href="15_Logical_statements.html#cb167-23" tabindex="-1"></a>  <span class="bu">str</span>(min_gc) <span class="op">+</span> <span class="st">&quot;% and &quot;</span> <span class="op">+</span> <span class="bu">str</span>(max_gc) <span class="op">+</span> <span class="st">&quot;%.&quot;</span>)</span></code></pre></div>
+<p>Ensure you understand the above code before continuing.
+Please ask a demonstrator if you are unsure.</p>
 </div>
-<div id="load-workshop-data" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Load workshop data<a href="03_cluster_introduction.html#load-workshop-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Before we get started, we need to copy across some data files to analyse later in the workshop.</p>
-<p>In the terminal window, issue the following commands to copy the data into your account:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb2-1"><a href="03_cluster_introduction.html#cb2-1" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb2-2"><a href="03_cluster_introduction.html#cb2-2" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /pub14/tea/nsc206/NEOF/Python_course_data .</span></code></pre></div>
+<div id="or-logical-operator" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> or logical operator<a href="15_Logical_statements.html#or-logical-operator" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/oar.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>For this we will use the <code>or</code> <strong>logical operator</strong>. This allows us to test two comparisons and <strong>if</strong> the first <strong>or</strong> second is <code>True</code> the <strong>condition</strong> will return the output. Lets go through a few examples.</p>
+<p>We will use the same variables as our <code>and</code> <strong>operator</strong> examples.</p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb168-1"><a href="15_Logical_statements.html#cb168-1" tabindex="-1"></a>num_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]</span>
+<span id="cb168-2"><a href="15_Logical_statements.html#cb168-2" tabindex="-1"></a>string_list <span class="op">=</span> [<span class="st">&quot;one&quot;</span>,<span class="st">&quot;two&quot;</span>,<span class="st">&quot;three&quot;</span>,<span class="st">&quot;four&quot;</span>,<span class="st">&quot;five&quot;</span>,<span class="st">&quot;six&quot;</span>,<span class="st">&quot;seven&quot;</span>,<span class="st">&quot;eight&quot;</span>,<span class="st">&quot;nine&quot;</span>]</span></code></pre></div>
+<p>Print numbers greater than 4 <strong>or</strong> if they are odd.</p>
+<div class="sourceCode" id="cb169"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb169-1"><a href="15_Logical_statements.html#cb169-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
+<span id="cb169-2"><a href="15_Logical_statements.html#cb169-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
+<span id="cb169-3"><a href="15_Logical_statements.html#cb169-3" tabindex="-1"></a>  <span class="co">#If number is greater than 4 or odd</span></span>
+<span id="cb169-4"><a href="15_Logical_statements.html#cb169-4" tabindex="-1"></a>  <span class="cf">if</span> num <span class="op">&gt;</span> <span class="dv">4</span> <span class="kw">or</span> num<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb169-5"><a href="15_Logical_statements.html#cb169-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
+<span id="cb169-6"><a href="15_Logical_statements.html#cb169-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
+<p>Print numbers less than or equal to 2 <strong>or</strong> greater than or equal to 8.</p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb170-1"><a href="15_Logical_statements.html#cb170-1" tabindex="-1"></a><span class="co">#Loop through numbers</span></span>
+<span id="cb170-2"><a href="15_Logical_statements.html#cb170-2" tabindex="-1"></a><span class="cf">for</span> num <span class="kw">in</span> num_list:</span>
+<span id="cb170-3"><a href="15_Logical_statements.html#cb170-3" tabindex="-1"></a>  <span class="co">#If number is less than or equal to 2 or greater than or qual to 8</span></span>
+<span id="cb170-4"><a href="15_Logical_statements.html#cb170-4" tabindex="-1"></a>  <span class="cf">if</span> num <span class="op">&lt;=</span> <span class="dv">2</span> <span class="kw">or</span> num <span class="op">&gt;=</span> <span class="dv">8</span>:</span>
+<span id="cb170-5"><a href="15_Logical_statements.html#cb170-5" tabindex="-1"></a>    <span class="co">#Print number</span></span>
+<span id="cb170-6"><a href="15_Logical_statements.html#cb170-6" tabindex="-1"></a>    <span class="bu">print</span>(num)</span></code></pre></div>
+<p>Print strings shorter than 4 characters <strong>or</strong> longer than 4 characters.</p>
+<div class="sourceCode" id="cb171"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb171-1"><a href="15_Logical_statements.html#cb171-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
+<span id="cb171-2"><a href="15_Logical_statements.html#cb171-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
+<span id="cb171-3"><a href="15_Logical_statements.html#cb171-3" tabindex="-1"></a>  <span class="co">#If string length is less than or greater than 4</span></span>
+<span id="cb171-4"><a href="15_Logical_statements.html#cb171-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&lt;</span> <span class="dv">4</span> <span class="kw">or</span> <span class="bu">len</span>(string) <span class="op">&gt;</span> <span class="dv">4</span>:</span>
+<span id="cb171-5"><a href="15_Logical_statements.html#cb171-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
+<span id="cb171-6"><a href="15_Logical_statements.html#cb171-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
+<p>Print strings with an <strong>n</strong> count of more than 1 <strong>or</strong> an <strong>e</strong> count of 0.</p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb172-1"><a href="15_Logical_statements.html#cb172-1" tabindex="-1"></a><span class="co">#Loop through strings</span></span>
+<span id="cb172-2"><a href="15_Logical_statements.html#cb172-2" tabindex="-1"></a><span class="cf">for</span> string <span class="kw">in</span> string_list:</span>
+<span id="cb172-3"><a href="15_Logical_statements.html#cb172-3" tabindex="-1"></a>  <span class="co">#If n count is greater than 0 or e count is 0</span></span>
+<span id="cb172-4"><a href="15_Logical_statements.html#cb172-4" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&lt;=</span> <span class="dv">3</span> <span class="kw">and</span> string.count(<span class="st">&quot;e&quot;</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb172-5"><a href="15_Logical_statements.html#cb172-5" tabindex="-1"></a>    <span class="co">#Print the string</span></span>
+<span id="cb172-6"><a href="15_Logical_statements.html#cb172-6" tabindex="-1"></a>    <span class="bu">print</span>(string)</span></code></pre></div>
 </div>
-<div id="mamba" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Mamba<a href="03_cluster_introduction.html#mamba" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/mamba_logo.png" width="20%" style="display: block; margin: auto;" /></p>
-<p>This workshop requires some programs.
-These can be difficult to install.
-Instead we have used Mambaforge to install the programs including Jupyter-notebook.
-To learn more about Mambaforge and how to create your own environment please see the <a href="#mamba_install">appendix</a>.</p>
-<p>To set-up your environment for this workshop please run the following code (you must include the full stop and space at the front of the command).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb3-1"><a href="03_cluster_introduction.html#cb3-1" tabindex="-1"></a><span class="bu">.</span> usepython</span></code></pre></div>
-<p>You will have successfully activated the environment if you now see <code>(python)</code> at the start of your command prompt.
-This indicates you are now in the mamba environment called <code>python</code> created by the instructor.</p>
-<p>If you are interested in the use script you can look at its contents.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb4-1"><a href="03_cluster_introduction.html#cb4-1" tabindex="-1"></a><span class="fu">less</span> /usr/local/bin/usepython</span></code></pre></div>
-<p><strong>Tip:</strong> press <code>q</code> to quit <code>less</code>.</p>
-<p>For more about mamba and how to create your own <code>python</code> environment please see the <a href="#mamba_install">appendix</a></p>
+<div id="amino-acid-detection" class="section level2 hasAnchor" number="15.4">
+<h2><span class="header-section-number">15.4</span> Amino acid detection<a href="15_Logical_statements.html#amino-acid-detection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/amino_acid.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>In this part you will translate part of each sequence with <code>.translate()</code>.
+Then you will count the number of sequences that have at least one translated <strong>Glutamine (Q)</strong> or <em>Serine (S)</em>.
+This will be carried out with the <code>or</code> <strong>logical operator</strong>.</p>
+<p>When translating the sequence length needs to be divisible by three to match codon lengths. We will only translate the first 10 codons (30 bases) to check.</p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb173-1"><a href="15_Logical_statements.html#cb173-1" tabindex="-1"></a><span class="co">#Read in the fastq data</span></span>
+<span id="cb173-2"><a href="15_Logical_statements.html#cb173-2" tabindex="-1"></a>R_undulata_data <span class="op">=</span> SeqIO.parse(wd <span class="op">+</span> <span class="st">&quot;/Python_course_data/R_undulata_WGS.fastq&quot;</span>, <span class="st">&quot;fastq&quot;</span>)</span>
+<span id="cb173-3"><a href="15_Logical_statements.html#cb173-3" tabindex="-1"></a></span>
+<span id="cb173-4"><a href="15_Logical_statements.html#cb173-4" tabindex="-1"></a><span class="co">#Initialise a variable for the counter</span></span>
+<span id="cb173-5"><a href="15_Logical_statements.html#cb173-5" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb173-6"><a href="15_Logical_statements.html#cb173-6" tabindex="-1"></a></span>
+<span id="cb173-7"><a href="15_Logical_statements.html#cb173-7" tabindex="-1"></a><span class="co">#Variables for amino acids</span></span>
+<span id="cb173-8"><a href="15_Logical_statements.html#cb173-8" tabindex="-1"></a>aa_1 <span class="op">=</span> <span class="st">&quot;S&quot;</span></span>
+<span id="cb173-9"><a href="15_Logical_statements.html#cb173-9" tabindex="-1"></a>aa_2 <span class="op">=</span> <span class="st">&quot;Q&quot;</span></span>
+<span id="cb173-10"><a href="15_Logical_statements.html#cb173-10" tabindex="-1"></a></span>
+<span id="cb173-11"><a href="15_Logical_statements.html#cb173-11" tabindex="-1"></a><span class="co">#Loop through the fastq records</span></span>
+<span id="cb173-12"><a href="15_Logical_statements.html#cb173-12" tabindex="-1"></a><span class="cf">for</span> record <span class="kw">in</span> R_undulata_data:</span>
+<span id="cb173-13"><a href="15_Logical_statements.html#cb173-13" tabindex="-1"></a>  <span class="co">#Extract the first 30 bases</span></span>
+<span id="cb173-14"><a href="15_Logical_statements.html#cb173-14" tabindex="-1"></a>  subset_seq <span class="op">=</span> record.seq[:<span class="dv">30</span>]</span>
+<span id="cb173-15"><a href="15_Logical_statements.html#cb173-15" tabindex="-1"></a>  <span class="co">#Translate sequence</span></span>
+<span id="cb173-16"><a href="15_Logical_statements.html#cb173-16" tabindex="-1"></a>  aa_seq <span class="op">=</span> subset_seq.translate()</span>
+<span id="cb173-17"><a href="15_Logical_statements.html#cb173-17" tabindex="-1"></a>  <span class="co">#Amino acid counts</span></span>
+<span id="cb173-18"><a href="15_Logical_statements.html#cb173-18" tabindex="-1"></a>  aa_1_count <span class="op">=</span> aa_seq.upper().count(aa_1)</span>
+<span id="cb173-19"><a href="15_Logical_statements.html#cb173-19" tabindex="-1"></a>  aa_2_count <span class="op">=</span> aa_seq.upper().count(aa_2)</span>
+<span id="cb173-20"><a href="15_Logical_statements.html#cb173-20" tabindex="-1"></a>  <span class="co">#If aa_1 is present or aa_2 is present</span></span>
+<span id="cb173-21"><a href="15_Logical_statements.html#cb173-21" tabindex="-1"></a>  <span class="cf">if</span> aa_1_count <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">or</span> aa_2_count <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb173-22"><a href="15_Logical_statements.html#cb173-22" tabindex="-1"></a>    <span class="co">#Add 1 to counter</span></span>
+<span id="cb173-23"><a href="15_Logical_statements.html#cb173-23" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb173-24"><a href="15_Logical_statements.html#cb173-24" tabindex="-1"></a></span>
+<span id="cb173-25"><a href="15_Logical_statements.html#cb173-25" tabindex="-1"></a><span class="co">#Print statement to show number translated seqeunces with either of the amino acids</span></span>
+<span id="cb173-26"><a href="15_Logical_statements.html#cb173-26" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Found &quot;</span> <span class="op">+</span> <span class="bu">str</span>(counter) <span class="op">+</span> <span class="st">&quot; reads with a translated &quot;</span> <span class="op">+</span> </span>
+<span id="cb173-27"><a href="15_Logical_statements.html#cb173-27" tabindex="-1"></a>  aa_1 <span class="op">+</span> <span class="st">&quot; or &quot;</span> <span class="op">+</span> aa_2 <span class="op">+</span> <span class="st">&quot; in the first 10 codons.&quot;</span>)</span></code></pre></div>
+</div>
+<div id="recap-2" class="section level2 hasAnchor" number="15.5">
+<h2><span class="header-section-number">15.5</span> Recap<a href="15_Logical_statements.html#recap-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="figures/recap.webp" width="20%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
@@ -578,8 +692,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="02-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="04-Jupyter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="14_reading_and_writing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
