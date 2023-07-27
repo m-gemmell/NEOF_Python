@@ -1,4 +1,4 @@
-# Fundamental exercise
+# Fundamental exercise {#fundamental_exercise}
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/Mimas tiliae.png", auto_pdf = TRUE)
 ```
@@ -22,7 +22,7 @@ Remember to use __markdown cells__ to make headers.
 
 ## Moth light trap challenges
 
-### Challenge 1
+### Moth challenge 1
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_1.png", auto_pdf = TRUE)
 ```
@@ -50,7 +50,7 @@ moth_sightings_21sep
 ```
 `r unhide()`
 
-### Challenge 2
+### Moth challenge 2
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_2.png", auto_pdf = TRUE)
 ```
@@ -66,7 +66,7 @@ __Tip:__ Operators, the __function__ `len()` and the __method__ `.count()` (it c
 ```
 `r unhide()`
 
-### Challenge 3
+### Moth challenge 3
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_3.png", auto_pdf = TRUE)
 ```
@@ -81,7 +81,7 @@ unique_moths
 ```
 `r unhide()`
 
-### Challenge 4
+### Moth challenge 4
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_4.png", auto_pdf = TRUE)
 ```
@@ -107,7 +107,7 @@ moth_sightings_22sep
 ```
 `r unhide()`
 
-### Challenge 5
+### Moth challenge 5
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_5.png", auto_pdf = TRUE)
 ```
@@ -122,7 +122,7 @@ unique_moths
 ```
 `r unhide()`
 
-### Challenge 6
+### Moth challenge 6
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_6.png", auto_pdf = TRUE)
 ```
@@ -164,7 +164,7 @@ moth_sightings_22sep[-3:]
 ```
 `r unhide()`
 
-### Challenge 7
+### Moth challenge 7
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_7.png", auto_pdf = TRUE)
 ```
@@ -192,7 +192,7 @@ moth_visits_sep
 ```
 `r unhide()`
 
-### Challenge 8
+### Moth challenge 8
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
 knitr::include_graphics(path = "figures/moth_8.png", auto_pdf = TRUE)
 ```

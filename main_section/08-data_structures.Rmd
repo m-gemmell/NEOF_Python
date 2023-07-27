@@ -1,4 +1,4 @@
-# Data Structures
+# Data Structures {#data_structures}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/python_data_structure.png", auto_pdf = TRUE)
 ```

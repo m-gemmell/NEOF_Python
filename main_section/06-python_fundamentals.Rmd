@@ -1,4 +1,4 @@
-# Python Fundamentals
+# Python Fundamentals {#python_fundamentals}
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/python_fundamentals.png", auto_pdf = TRUE)
 ```

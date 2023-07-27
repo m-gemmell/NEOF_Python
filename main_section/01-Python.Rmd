@@ -37,15 +37,19 @@ In this practical session we are going to learn Python programming skills. This 
 
 During this session we will work through the following sections:
 
-- [Course Introduction][Python for bioinformatics]
-- [Working in the VNC][Cluster Introduction]
-- [Scripting in Python][Scripting in Python]
-- [Python Fundamentals][Python Fundamentals]
-- [Data Structures][Data Structures]
-- [Conditions (if and else statements)][Python Conditions: 'if' and 'else' statements]
-- [Loops][Loops]
-- [Working with DNA Sequence Data][Reading sequence data]
-- [Manipulating Sequence Data][Using Conditions to Modify DNA Data]
-- [Reading and Writing Files][Reading and writing files]
+- [Course Introduction](#intro)
+- [Working in the VNC](#cluster)
+- [Jupyer-notebook](#jupyter)
+- [Scripting in Python](#scripting)
+- [Python Fundamentals](#python_fundamentals)
+- [Functions and methods](#functions_methods)
+- [Data Structures](#data_structures)
+- [Fundamental exercise](#fundamental_exercise)
+- [Conditions (if and else statements)](#python_conditions)
+- [Loops](#loops)
+- [Working with DNA Sequence Data](#reading_seq_data)
+- [Manipulating Sequence Data](#modify_dna_data)
+- [Reading and Writing Files](#reading_writing)
+- [Logical operators](#logical_operators)
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

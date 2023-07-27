@@ -1,4 +1,4 @@
-# Python for bioinformatics
+# Python for bioinformatics {#intro}
 
 <center>![](figures/python_logo.png){height="100px"} ![](figures/biopython_logo.png){height="100px"}</center>
 

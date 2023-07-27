@@ -1,6 +1,6 @@
 # (PART\*) Programmatic coding {-}
 
-# Python Conditions
+# Python Conditions {#python_conditions}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/python_condition.png", auto_pdf = TRUE)
 ```

@@ -1,4 +1,4 @@
-# Functions and methods
+# Functions and methods {#functions_methods}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/function.png", auto_pdf = TRUE)
 ```

@@ -1,4 +1,4 @@
-# Logical operators
+# Logical operators {#logical_operators}
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/logic.png", auto_pdf = TRUE)
 ```
@@ -214,13 +214,18 @@ for record in R_undulata_data:
     #Add 1 to counter
     counter = counter + 1
 
-#Print statement to show number translated seqeunces with either of the amino acids
+#Print statement to show number translated sequences with either of the amino acids
 print("Found " + str(counter) + " reads with a translated " + 
   aa_1 + " or " + aa_2 + " in the first 10 codons.")
 ```
 
-## Recap
+## Logical operators reflection
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/recap.webp", auto_pdf = TRUE)
+knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
 ``` 
+
+Excellent! You have learnt how to use the `and` and `or` __logical operators__.
+You now have a good tool kit to carry out a lot of different python coding and be able to learn more yourself.
+
+We'll finish this book with some challenges to give you practice with all you have learnt followed by an overall recap.
 

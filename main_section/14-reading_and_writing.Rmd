@@ -1,4 +1,4 @@
-# Reading and writing files
+# Reading and writing files {#reading_writing}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/contract.png", auto_pdf = TRUE)
 ```
@@ -43,7 +43,7 @@ knitr::include_graphics(path = "figures/reading_glasses.png", auto_pdf = TRUE)
 
 Create your first coding __cell__ in your __"05-Reading_and_writing"__ notebook. Add the location of your working directory and load the __SeqIO library__.
 
-__Note__: Ensure `wd =` is set to __your__ working directory.
+__Note__: Ensure `wd =` is set to __your__ working directory (not `nsc201`).
 
 ```{python, eval=FALSE}
 wd = "/pub14/tea/nsc201/Python_course_data"
@@ -94,7 +94,7 @@ with open(wd + "/patients_modified.csv", 'w') as output_file:
 ```
 
 Open your new file (__"patients_modified.csv"__) in the `jupyter-notebook` file navigator by clicking on it.
-You will see that each row in the data now starts with the "Study_2022" string.
+You will see that each row in the data now starts with the "Study_2022" __string__.
 
 ## Write out the filtered Undulate ray sequence data
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
@@ -107,7 +107,7 @@ These have passed our filters and we now want to write out the FASTQ file so tha
 <b>Return to your "04-Practical_python" notebook.</b>
 
 At the bottom of the notebook, we'll __write__ the trimmed data to a new fastq file.
-We will use `SeqIO's` built in `write()` __method__, specifying we want a FASTQ format file.
+We can carry this out with `SeqIO's` built in `write()` __method__, specifying we want a FASTQ format file.
 
 __Note:__ Ensure the __cells__ above your new __cell__ have been run.
 
@@ -122,11 +122,42 @@ This trimmed, filtered file would now be ready to go into whichever subsequent a
 
 Use your `jupyter-notebook` file navigator to check that the file exists and that it is approximately 3MBs in size.
 
-## Recap
+## Reading and writing MCQ recap
 
-<center>![](./figures/recap.webp){height=300px}</center>
-To read or write files we need to open a data stream using the <b>with</b> and <b>open</b> functions. 
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
+```
 
-Each file can be opened in one of several modes; either <b>w</b>rite, <b>r</b>ead, or <b>a</b>ppend, depending on what you need to do. 
+Grand! You've successfully finished this chapter.
 
-Once files are written to the disk they are available to use in further analyses or other pieces of software.
+For a quick recap, choose the correct option to complete the below sentences:
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`open()`__", "__`SeqIO.write()`__", "__`.write()`__")
+```
+1. The \_\_\_\_\_\_\_\_ __function__ is used to __read__, __write__, or __append__ data from/to files. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`open()`__", "__`SeqIO.write()`__", answer="__`.write()`__")
+```
+2. The \_\_\_\_\_\_\_\_ __method__ is used to __write__ data to a file. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`open()`__", answer="__`SeqIO.write()`__", "__`.write()`__")
+```
+3. The \_\_\_\_\_\_\_\_ __function__ is used to write biological data (such as fastq) to files. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`>=`__", "__`.startswith()`__", answer="__`with`__")
+```
+4. The \_\_\_\_\_\_\_\_ __statement__ opens a data stream allowing you to carry out more tasks with opened data. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`>=`__", "__`.startswith()`__", "__`with`__")
+```
+5. In chapter 13 we checked the lengths of reads with the logical comparison \_\_\_\_\_\_\_\_. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`>=`__", answer="__`.startswith()`__", "__`with`__")
+```
+6. In chapter 13 we checked for the presence of a PCR sequence at the start of each sequence with the __method__ \_\_\_\_\_\_\_\_. `r longmcq(opts_p)`

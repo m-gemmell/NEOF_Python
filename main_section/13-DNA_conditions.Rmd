@@ -1,4 +1,4 @@
-# Modifying DNA Data
+# Modifying DNA Data {#modify_dna_data}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/modify_dna.png", auto_pdf = TRUE)
 ```
@@ -113,11 +113,18 @@ for record in wanted_sequences:
 print("Number of sequences with the PCR sequence present: " + str(pcr_records))
 ```
 
-## Recap
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/recap.webp", auto_pdf = TRUE)
+## Modifying DNA reflection
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
 ``` 
 
-Using our knowledge of reading FASTQ files, looping through the data, and using conditions to check certain characteristics of the data we have been able to filter out short-reads and also remove primer contamination. We are starting to build a pipeline!
+In this chapter we used your knowledge of reading FASTQ files, to:
 
-We will learn to write data out and store it in a new file in the next chapter.
+- Loop through the data.
+- Use conditions to check certain characteristics of the data.
+- Filter out short reads.
+- Trim off PCR primers.
+
+With this we've created a pipeline.
+
+In the next chapter we'll learn how to write data out and store it in a new file.

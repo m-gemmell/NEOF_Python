@@ -1,4 +1,4 @@
-# Loops
+# Loops {#loops}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/loopdeloo.png", auto_pdf = TRUE)
 ```

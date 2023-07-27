@@ -1,6 +1,6 @@
 # (PART\*) Practical python {.unnumbered}
 
-# Reading sequence data
+# Reading sequence data {#reading_seq_data}
 
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/biopython_logo.png", auto_pdf = TRUE)
