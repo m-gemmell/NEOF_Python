@@ -63,7 +63,7 @@ moth-challenge-5
 moth-challenge-6
 moth-challenge-7
 moth-challenge-8
-exercise-conclusion
+moth-exercise-conclusion
 python_conditions
 logical-conditions
 if-statements
@@ -111,4 +111,14 @@ exercise-1
 e1-challenge-1
 e1-challenge-2
 e1-challenge-3
-e1-challenge-x
+e1-challenge-4
+e1-challenge-5
+exercise-1-conclusion
+exercise-2
+national-animal-challenges
+national-animal-challenge-1
+national-animal-challenge-2
+national-animal-challenge-3
+national-animal-challenge-4
+national-animal-challenge-5
+national-animal-challenge-6

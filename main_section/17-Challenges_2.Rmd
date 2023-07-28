@@ -1,0 +1,208 @@
+# Exercise 2
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
+```
+
+In this section you'll be going through multiple exercises.
+These will try to bring in everything you have learnt throughout the course.
+
+Solutions are in the expandable boxes. Try your best to solve the challenge but use the solutions for help if you would like. Even if your solution works it can be good to check the solution as there are many ways to do the same thing in python.
+
+This exercise will primarily focus on the fundamentals you learnt in chapters 5 to 9.
+
+Create a new notebook called __"07-Exercise_1"__ to carry out the below challenges.
+
+__Tip__ The Appendix will be useful for quick lookup of various python __functions__, __methods__, etc..
+
+## National animal challenges
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/header_footbal.png", auto_pdf = TRUE)
+```
+
+The first set of challenges will involve a file containing two columns; __Country__ and __National Animal__. This dataset was found in [kaggle](https://www.kaggle.com/datasets/rambomind/countries-and-their-national-animals).
+
+Create a new `jupyter-notebook` called __"08-National_animals_challenges"__ to attempt the challenges.
+
+### National animal challenge 1
+
+Read in the file __"national-animals.csv"__ in your __"Python_course_data"__ directory. Then __print__ the line "The national animal of \<country\> is the \<animal\>" for each line.
+
+`r hide("National animals 1 solution")`
+```{python, eval=FALSE}
+#NAC1
+#Read in the file using with statement
+#If your jupyter notebook is in the same directory as the file you only need to provide the file name
+with open("national-animals.csv", 'r') as input_file:
+  #Loop through the lines of input_file
+  for row in input_file:
+    #Set country and animal to variables using .split() method
+    country = row.split(",")[0]
+    animal = row.split(",")[1]
+    #Print function
+    print("The national animal of " + country + " is the " + animal)
+```
+`r unhide()`
+
+You will notice that there are spaces between the lines. This is because there is a newline character (`\n`) at the end of each line in the file. You can remove these with the __method__ `.strip()`. It removes any leading (start of sentence) and trailing (end of sentence) white spaces (including `\n`). It's very useful to quickly clean the input from files.
+
+__Note:__ The `.strip()`__method__ works on strings, not data from files. See the below solution for an example on how to use it.
+
+`r hide("National animals 1 solution with .strip()")`
+```{python, eval=FALSE}
+#NAC1
+#Read in the file using with statement
+#If your jupyter notebook is in the same directory as the file you only need to provide the file name
+with open("national-animals.csv", 'r') as input_file:
+  #Loop through the lines of input_file
+  #Can't strip input_file as it's aa file object
+  for row in input_file:
+    #Set country and animal to variables using .split() method
+    country = row.split(",")[0]
+    #Can strip the row variable as it is a string variable extracted from the file object
+    animal = row.strip().split(",")[1]
+    #Print function
+    print("The national animal of " + country + " is the " + animal)
+```
+`r unhide()`
+
+__Ensure__ you use `.strip()` in this challenge and the next to remove the `\n` characters.
+
+### National animal challenge 2
+
+Read in the file __"national-animals.csv"__. Then convert the data into a dictionary called __"national_animals"__. Ensure the __key__ is the __country__ and the __value__ is the __animal__.
+
+Once created __print__ the __dictionary's__ contents.
+
+__Tip__: You may be able to copy and edit the __loop__ you made in the first challenge.
+
+`r hide("National animals 2 solution")`
+```{python, eval=FALSE}
+#NAC2
+#Create empty dictionary
+national_animals = {}
+#Read in the file using with statement
+with open("national-animals.csv", 'r') as input_file:
+  #Loop through the lines of input_file
+  for row in input_file:
+    #Set country and animal to variables using .split() method
+    country = row.split(",")[0]
+    animal = row.strip().split(",")[1]
+    #Set key and value
+    national_animals[country] = animal
+#Print dictionary
+print(national_animals)
+```
+`r unhide()`
+
+You may have noticed that the first __pair__ is `'Country': 'National Animal'`. This is the header of the file and we do not want to keep it. 
+
+There are various ways to not include the header when __reading__ in a file. One straightforward method is to create your data and then remove the header. This can be carried out in different ways for different __data structures__:
+
+- __List__: Subset to only include all the values except the first one
+  - E.g `list = list[1:]`.
+- __Dictionary__: Use the `del` __keyword__ to delete a pair.
+  - E.g: `del dictionary[key]`.
+
+Try this yourself or see the edited solution below.
+
+`r hide("National animals 2 solution with del")`
+```{python, eval=FALSE}
+#NAC2
+#Create empty dictionary
+national_animals = {}
+#Read in the file using with statement
+with open("national-animals.csv", 'r') as input_file:
+  #Loop through the lines of input_file
+  for row in input_file:
+    #Set country and animal to variables using .split() method
+    country = row.split(",")[0]
+    animal = row.strip().split(",")[1]
+    #Set key and value
+    national_animals[country] = animal
+#Remove the pair from the header
+del national_animals["Country"]
+#Print dictionary
+print(national_animals)
+```
+`r unhide()`
+
+What if you what to automate this so you don't have to manually enter the __key__ from the first __pair__?
+
+You can extract the first line of a file with the __method__ `.readline()`. You can then get the string of the first column of the first line with:
+
+```{python, eval=FALSE}
+fstring = open("national-animals.csv", 'r').readline().strip().split(",")[0]
+```
+
+This can then be used with `del`. I encourage you to attempt this before looking at the below solution.
+
+`r hide("National animals 2 solution with del automated")`
+```{python, eval=FALSE}
+#NAC2
+#Create empty dictionary
+national_animals = {}
+#Read in the file using with statement
+with open("national-animals.csv", 'r') as input_file:
+  #Loop through the lines of input_file
+  for row in input_file:
+    #Set country and animal to variables using .split() method
+    country = row.split(",")[0]
+    animal = row.strip().split(",")[1]
+    #Set key and value
+    national_animals[country] = animal
+#Get key from first line
+fstring = open("national-animals.csv", 'r').readline().strip().split()[0]
+#Remove the pair from the header
+del national_animals[fstring]
+#Print dictionary
+print(national_animals)
+```
+`r unhide()`
+
+There are many other ways to do this but this made the most sense to me. You could also remove the header line with a text editor or bash before reading it in.
+
+__Ensure__ your __dictionary__ __"national_animals"__ does not have the header information before continuing.
+
+### National animal challenge 3
+
+__Print__ out the national animals of the following countries:
+
+- __Niger__
+- __Kuwait__
+- __Brazil__
+- __Switzerland__
+
+Use the __dictionary__ __"national_animals"__ and carry out this challenge in one __coding cell__.
+
+### National animal challenge 4
+
+Create a __set__ of the animals using the __values__ from the __dictionary__ __"national_animals"__. The __print__ the set.
+
+__Tip__: The __method__ `.values()` can extract the __values__ from a __dictionary__. These __strings__ can be looped through, e.g. `for value in national_animals.values()`
+
+### National animal challenge 5
+
+How many more countries are there compared to the number of unique national animals?
+
+
+
+### National animal challenge 6
+
+Create a __dictionary__ where the __key__ is the animal and the __value__ is the number of countries it is a national animal for. Call it __"animal_popularity"__.
+
+__Print__ __"animal_popularity"__.
+
+__Tip__: You can count the number of times a __string__ appears as __value__ in a __list__ with `.count()`.
+
+
+
+
+### National animal challenge 7
+
+This challenge is difficult. Please, try your best to make a solution before looking at my solution. You can solve this with what you the __fuctions, methods__, etcs that you learn tin this course. Optionally, I encourage you to search online for help, this is what normal day to day bioinformatics involves.
+
+Using __"animal_popularity"__ answer the question "What animal represents the most countries as their national animal?"
+
+With this information print the statement "The most popular animal is the \<animal\> which represents \<country count\> countries as their national animal."
+
+Do not simply look through the __dictionary__ __"animal_popularity"__. Create code that could be reused for any __dictionary__ containing __integer__ __values__.

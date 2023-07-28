@@ -133,10 +133,10 @@ For a full list of `Bio.SeqIO` methods please see the [wiki](https://biopython.o
 
 - __`.upper()`__: Convert string to upper case.
 - __`.lower()`__: Convert string to lower case.
-- __`.count()`__: Count number of specified string pattern in string __variable__.
+- __`.count()`__: Count number of specified string pattern in __string variable__ or .
 - __`.split()`__: Split string by specified delimiter.
 - __`.startswith()`__: Check if a string starts with a particular sub-string. Returns `True` or `False`.
-- __``__
+- __`.strip()`__: Remove leading or trailing white spaces.
 - __``__
 - __``__
 - __``__
@@ -162,9 +162,10 @@ For a full list of `Bio.SeqIO` methods please see the [wiki](https://biopython.o
 - __``__
 - __``__
 
-### List methods
+### File methods
 
-- __`.write()`__: __Write__ data to a file __opened__ for writing.
+- __`.write()`__: __Write__ data to a file __opened__ for __writing__.
+- __`.readline()`__: Extract the first line from a file __opened__ for __reading__.
 
 ### Statements
 
