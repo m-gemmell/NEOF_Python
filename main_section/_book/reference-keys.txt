@@ -122,3 +122,4 @@ national-animal-challenge-3
 national-animal-challenge-4
 national-animal-challenge-5
 national-animal-challenge-6
+national-animal-challenge-7

@@ -68,6 +68,9 @@ with open("national-animals.csv", 'r') as input_file:
 __Ensure__ you use `.strip()` in this challenge and the next to remove the `\n` characters.
 
 ### National animal challenge 2
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/tiger.png", auto_pdf = TRUE)
+```
 
 Read in the file __"national-animals.csv"__. Then convert the data into a dictionary called __"national_animals"__. Ensure the __key__ is the __country__ and the __value__ is the __animal__.
 
@@ -164,6 +167,9 @@ There are many other ways to do this but this made the most sense to me. You cou
 __Ensure__ your __dictionary__ __"national_animals"__ does not have the header information before continuing.
 
 ### National animal challenge 3
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/Giraffa_camelopardalis.png", auto_pdf = TRUE)
+```
 
 __Print__ out the national animals of the following countries:
 
@@ -198,6 +204,9 @@ __Tip__: You can count the number of times a __string__ appears as __value__ in 
 
 
 ### National animal challenge 7
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/Panthera_leo.png", auto_pdf = TRUE)
+```
 
 This challenge is difficult. Please, try your best to make a solution before looking at my solution. You can solve this with what you the __fuctions, methods__, etcs that you learn tin this course. Optionally, I encourage you to search online for help, this is what normal day to day bioinformatics involves.
 

@@ -317,6 +317,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17.1.4" data-path="17-Challenges_2.html"><a href="17-Challenges_2.html#national-animal-challenge-4"><i class="fa fa-check"></i><b>17.1.4</b> National animal challenge 4</a></li>
 <li class="chapter" data-level="17.1.5" data-path="17-Challenges_2.html"><a href="17-Challenges_2.html#national-animal-challenge-5"><i class="fa fa-check"></i><b>17.1.5</b> National animal challenge 5</a></li>
 <li class="chapter" data-level="17.1.6" data-path="17-Challenges_2.html"><a href="17-Challenges_2.html#national-animal-challenge-6"><i class="fa fa-check"></i><b>17.1.6</b> National animal challenge 6</a></li>
+<li class="chapter" data-level="17.1.7" data-path="17-Challenges_2.html"><a href="17-Challenges_2.html#national-animal-challenge-7"><i class="fa fa-check"></i><b>17.1.7</b> National animal challenge 7</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -372,8 +373,8 @@ National animals 1 solution
 <span id="cb191-10"><a href="17-Challenges_2.html#cb191-10" tabindex="-1"></a>    <span class="co">#Print function</span></span>
 <span id="cb191-11"><a href="17-Challenges_2.html#cb191-11" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;The national animal of &quot;</span> <span class="op">+</span> country <span class="op">+</span> <span class="st">&quot; is the &quot;</span> <span class="op">+</span> animal)</span></code></pre></div>
 </div>
-<p>You will notice that there are spaces between lines. This is because there is a newline character (<code>\n</code>) at the end of each line in the file. You can remove this with the <strong>method</strong> <code>.strip()</code>. It removes any leading (start of sentence) and trailing (end of sentence) white spaces (including <code>\n</code>). It's Very useful to quickly clean the input from files.</p>
-<p><strong>Note:</strong> The <code>.strip()</code><strong>method</strong> works on strings not data from files. See the below solution for an example on how to use it.</p>
+<p>You will notice that there are spaces between the lines. This is because there is a newline character (<code>\n</code>) at the end of each line in the file. You can remove these with the <strong>method</strong> <code>.strip()</code>. It removes any leading (start of sentence) and trailing (end of sentence) white spaces (including <code>\n</code>). It's very useful to quickly clean the input from files.</p>
+<p><strong>Note:</strong> The <code>.strip()</code><strong>method</strong> works on strings, not data from files. See the below solution for an example on how to use it.</p>
 <div class="webex-solution">
 <button>
 National animals 1 solution with .strip()
@@ -392,9 +393,11 @@ National animals 1 solution with .strip()
 <span id="cb192-12"><a href="17-Challenges_2.html#cb192-12" tabindex="-1"></a>    <span class="co">#Print function</span></span>
 <span id="cb192-13"><a href="17-Challenges_2.html#cb192-13" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;The national animal of &quot;</span> <span class="op">+</span> country <span class="op">+</span> <span class="st">&quot; is the &quot;</span> <span class="op">+</span> animal)</span></code></pre></div>
 </div>
+<p><strong>Ensure</strong> you use <code>.strip()</code> in this challenge and the next to remove the <code>\n</code> characters.</p>
 </div>
 <div id="national-animal-challenge-2" class="section level3 hasAnchor" number="17.1.2">
 <h3><span class="header-section-number">17.1.2</span> National animal challenge 2<a href="17-Challenges_2.html#national-animal-challenge-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/tiger.png" width="20%" style="display: block; margin: auto;" /></p>
 <p>Read in the file <strong>"national-animals.csv"</strong>. Then convert the data into a dictionary called <strong>"national_animals"</strong>. Ensure the <strong>key</strong> is the <strong>country</strong> and the <strong>value</strong> is the <strong>animal</strong>.</p>
 <p>Once created <strong>print</strong> the <strong>dictionary's</strong> contents.</p>
 <p><strong>Tip</strong>: You may be able to copy and edit the <strong>loop</strong> you made in the first challenge.</p>
@@ -420,13 +423,16 @@ National animals 2 solution
 <p>You may have noticed that the first <strong>pair</strong> is <code>'Country': 'National Animal'</code>. This is the header of the file and we do not want to keep it.</p>
 <p>There are various ways to not include the header when <strong>reading</strong> in a file. One straightforward method is to create your data and then remove the header. This can be carried out in different ways for different <strong>data structures</strong>:</p>
 <ul>
-<li><strong>List</strong>: Subset to only include all the values except the first one <code>list[1:]</code>.</li>
+<li><strong>List</strong>: Subset to only include all the values except the first one
+<ul>
+<li>E.g <code>list = list[1:]</code>.</li>
+</ul></li>
 <li><strong>Dictionary</strong>: Use the <code>del</code> <strong>keyword</strong> to delete a pair.
 <ul>
 <li>E.g: <code>del dictionary[key]</code>.</li>
 </ul></li>
 </ul>
-<p>TRy this yourself or see the edited solution below.</p>
+<p>Try this yourself or see the edited solution below.</p>
 <div class="webex-solution">
 <button>
 National animals 2 solution with del
@@ -480,6 +486,7 @@ National animals 2 solution with del automated
 </div>
 <div id="national-animal-challenge-3" class="section level3 hasAnchor" number="17.1.3">
 <h3><span class="header-section-number">17.1.3</span> National animal challenge 3<a href="17-Challenges_2.html#national-animal-challenge-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/Giraffa_camelopardalis.png" width="15%" style="display: block; margin: auto;" /></p>
 <p><strong>Print</strong> out the national animals of the following countries:</p>
 <ul>
 <li><strong>Niger</strong></li>
@@ -491,27 +498,26 @@ National animals 2 solution with del automated
 </div>
 <div id="national-animal-challenge-4" class="section level3 hasAnchor" number="17.1.4">
 <h3><span class="header-section-number">17.1.4</span> National animal challenge 4<a href="17-Challenges_2.html#national-animal-challenge-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Create a <strong>set</strong> of the animals using the <strong>values</strong> from the <strong>dictionary</strong> <strong>"national_animals"</strong>.</li>
-</ul>
-<p><strong>Tips</strong>:</p>
-<ul>
-<li>The <strong>method</strong> <code>.values()</code> can extract the <strong>values</strong> from a <strong>dictionary</strong>.</li>
-<li>Use a <strong>for loop</strong> with the <strong>list</strong> of <strong>values</strong>.</li>
-</ul>
+<p>Create a <strong>set</strong> of the animals using the <strong>values</strong> from the <strong>dictionary</strong> <strong>"national_animals"</strong>. The <strong>print</strong> the set.</p>
+<p><strong>Tip</strong>: The <strong>method</strong> <code>.values()</code> can extract the <strong>values</strong> from a <strong>dictionary</strong>. These <strong>strings</strong> can be looped through, e.g. <code>for value in national_animals.values()</code></p>
 </div>
 <div id="national-animal-challenge-5" class="section level3 hasAnchor" number="17.1.5">
 <h3><span class="header-section-number">17.1.5</span> National animal challenge 5<a href="17-Challenges_2.html#national-animal-challenge-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>What is the length of the dictionary and what is the length of the set</li>
-</ul>
+<p>How many more countries are there compared to the number of unique national animals?</p>
 </div>
 <div id="national-animal-challenge-6" class="section level3 hasAnchor" number="17.1.6">
 <h3><span class="header-section-number">17.1.6</span> National animal challenge 6<a href="17-Challenges_2.html#national-animal-challenge-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Create a <strong>dictionary</strong> where the <strong>key</strong> is the animal and the <strong>value</strong> is the number of countries it is a national animal for.</li>
-<li>What animal</li>
-</ul>
+<p>Create a <strong>dictionary</strong> where the <strong>key</strong> is the animal and the <strong>value</strong> is the number of countries it is a national animal for. Call it <strong>"animal_popularity"</strong>.</p>
+<p><strong>Print</strong> <strong>"animal_popularity"</strong>.</p>
+<p><strong>Tip</strong>: You can count the number of times a <strong>string</strong> appears as <strong>value</strong> in a <strong>list</strong> with <code>.count()</code>.</p>
+</div>
+<div id="national-animal-challenge-7" class="section level3 hasAnchor" number="17.1.7">
+<h3><span class="header-section-number">17.1.7</span> National animal challenge 7<a href="17-Challenges_2.html#national-animal-challenge-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figures/Panthera_leo.png" width="20%" style="display: block; margin: auto;" /></p>
+<p>This challenge is difficult. Please, try your best to make a solution before looking at my solution. You can solve this with what you the <strong>fuctions, methods</strong>, etcs that you learn tin this course. Optionally, I encourage you to search online for help, this is what normal day to day bioinformatics involves.</p>
+<p>Using <strong>"animal_popularity"</strong> answer the question "What animal represents the most countries as their national animal?"</p>
+<p>With this information print the statement "The most popular animal is the &lt;animal&gt; which represents &lt;country count&gt; countries as their national animal."</p>
+<p>Do not simply look through the <strong>dictionary</strong> <strong>"animal_popularity"</strong>. Create code that could be reused for any <strong>dictionary</strong> containing <strong>integer</strong> <strong>values</strong>.</p>
 
 </div>
 </div>
