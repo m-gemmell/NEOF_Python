@@ -114,8 +114,7 @@ e1-challenge-3
 e1-challenge-4
 e1-challenge-5
 exercise-1-conclusion
-exercise-2
-national-animal-challenges
+national-animal-exercise
 national-animal-challenge-1
 national-animal-challenge-2
 national-animal-challenge-3
@@ -123,3 +122,5 @@ national-animal-challenge-4
 national-animal-challenge-5
 national-animal-challenge-6
 national-animal-challenge-7
+national-animal-challenge-8
+national-animal-conclusion
