@@ -13,7 +13,7 @@ Please check the solution in the box even if your solution works. There are many
 
 Create a new `jupyter-notebook` called __"08-National_animals_challenges"__ to attempt the challenges.
 
-### National animal challenge 1
+## NA challenge 1
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/Momotus_aequatorialis.png", auto_pdf = TRUE)
 ```
@@ -60,7 +60,7 @@ with open("national-animals.csv", 'r') as input_file:
 
 __Ensure__ you use `.strip()` in this challenge and the next to remove the `\n` characters.
 
-### National animal challenge 2
+## NA challenge 2
 ```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
 knitr::include_graphics(path = "figures/Rhizoprionodon_terraenovae.png", auto_pdf = TRUE)
 ```
@@ -159,7 +159,7 @@ There are many other ways to do this, but I will let you discover these yourself
 
 __Ensure__ your __dictionary__ __"national_animals"__ does not have the header information before continuing.
 
-### National animal challenge 3
+## NA challenge 3
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/Giraffa_camelopardalis.png", auto_pdf = TRUE)
 ```
@@ -183,7 +183,7 @@ print(national_animals["Niger"])
 ```
 `r unhide()`
 
-### National animal challenge 4
+## NA challenge 4
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/Iguana_iguana.png", auto_pdf = TRUE)
 ```
@@ -220,7 +220,7 @@ print(animals_set)
 ```
 `r unhide()`
 
-### National animal challenge 5
+## NA challenge 5
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/Aquila nipalensis.png", auto_pdf = TRUE)
 ```
@@ -252,7 +252,7 @@ print(len(national_animals) - len(animals_set))
 ```
 `r unhide()`
 
-### National animal challenge 6
+## NA challenge 6
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/Crocodylus_porosus.png", auto_pdf = TRUE)
 ```
@@ -287,7 +287,7 @@ print(animal_popularity)
 ```
 `r unhide()`
 
-### National animal challenge 7
+## NA challenge 7
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/Panthera_leo.png", auto_pdf = TRUE)
 ```
@@ -342,7 +342,7 @@ print("The most popular animal is the " + max_key + " which represents " +
 ```
 `r unhide()`
 
-### National animal challenge 8
+## NA challenge 8
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/Pteropus_medius.png", auto_pdf = TRUE)
 ```
@@ -376,9 +376,20 @@ with open("popular_national_animals.csv", 'w') as output_file:
 ```
 `r unhide()`
 
-### National animal conclusion
+## National animal conclusion
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/Gallus_gallus_domesticus.png", auto_pdf = TRUE)
 ```
 
-Superlative! 
+Superlative! That is the end of the national animals exercise. Throughout it you have:
+
+- __Read__ in a file and created a __dictionary__ with the data.
+- Extracted __values__ using the __keys__ of a __dictionary__.
+- Created a __list__ from the __values__ of a __dictionary__.
+- Created a __set__ from a __list__.
+- Extracted __values__ from a __list__.
+- Created a __dictionary__ with __integer__ values.
+- Discovered what is the most popular animal.
+- Created a new file with the most popular animals.
+
+One last set of exercises awaits you.

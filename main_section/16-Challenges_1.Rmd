@@ -1,6 +1,6 @@
 # (PART\*) Exercises {-}
 
-# Exercise 1
+# Fundamental recap exercise
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 ```
@@ -12,24 +12,24 @@ Solutions are in the expandable boxes. Try your best to solve the challenge but 
 
 This exercise will primarily focus on the fundamentals you learnt in chapters 5 to 9.
 
-Create a new notebook called __"07-Exercise_1"__ to carry out the below challenges.
+Create a new notebook called __"07-Fundamental_recap_exercise"__ to carry out the below challenges.
 
 __Tip__ The Appendix will be useful for quick lookup of various python __functions__, __methods__, etc..
 
-## E1 challenge 1
+## FRE challenge 1
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/header_footbal.png", auto_pdf = TRUE)
 ```
 
 Create a __markdown__ cell with the 1st level header "Exercise 1".
 
-`r hide("E1C1 solution")`
+`r hide("FREC1 solution")`
 ```{python, eval=FALSE}
-# Exercise 1
+# Fundamental recap exercise 1
 ```
 `r unhide()`
 
-## E1 challenge 2
+## FRE challenge 2
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/calculator_2.png", auto_pdf = TRUE)
 ```
@@ -43,30 +43,30 @@ Ensure each answer is displayed on your notebook.
 4. Multiply 0.1 by 60.
 5. Find the remainder when dividing 7 by 0.6.
 
-`r hide("E1C2 solution")`
+`r hide("FREC2 solution")`
 ```{python, eval=FALSE}
-#E1C2.1
+#FREC2.1
 1+17
 ```
 ```{python, eval=FALSE}
-#E1C2.2
+#FREC2.2
 17/6
 ```
 ```{python, eval=FALSE}
-#E1C2.3
+#FREC2.3
 5-9
 ```
 ```{python, eval=FALSE}
-#E1C2.4
+#FREC2.4
 0.1*60
 ```
 ```{python, eval=FALSE}
-#E1C2.5
+#FREC2.5
 7%0.6
 ```
 `r unhide()`
 
-## E1 challenge 3
+## FRE challenge 3
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/apple.png", auto_pdf = TRUE)
 ```
@@ -92,22 +92,22 @@ __Note__: Ensure you matching the case (upper/lower) of the sentences.
 
 __Tip__: 8 * 7 = 56
 
-`r hide("E1C3 solution")`
+`r hide("FREC3 solution")`
 ```{python, eval=FALSE}
-#E1C3.1
+#FREC3.1
 print("I have " + str(seven_int) + " " + fruit + " in a bushel")
 ```
 ```{python, eval=FALSE}
-#E1C3.2
+#FREC3.2
 print("You have " + eight_string + " " + vegetable.upper() + " in a sack")
 ```
 ```{python, eval=FALSE}
-#E1C3.3
+#FREC3.3
 print("We have " + str(seven_int * int(eight_string)) + " " + money.lower() + " in a wallet")
 ```
 `r unhide()`
 
-## E1 challenge 4
+## FRE challenge 4
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/distance.png", auto_pdf = TRUE)
 ```
@@ -142,31 +142,31 @@ Using python coding carry out the following tasks:
 
 __Tip__: This will require the retrieval of values from the __dictionary__ (dict["key"]) and the use of __logical operators__ (`>`, `<`, etc.)
 
-`r hide("E1C4 solution")`
+`r hide("FREC4 solution")`
 ```{python, eval=FALSE}
-#E1C4.1
+#FREC4.1
 length_dict["furlong"] = 201.168
 print(length_dict)
 ```
 ```{python, eval=FALSE}
-#E1C4.2
+#FREC4.2
 length_dict["mile"] == length_dict["nautical mile"]
 ```
 ```{python, eval=FALSE}
-#E1C4.3
+#FREC4.3
 length_dict["furlong"] < length_dict["league"]
 ```
 ```{python, eval=FALSE}
-#E1C4.4
+#FREC4.4
 length_dict["inch"] >= (length_dict["yard"] / 36)
 ```
 ```{python, eval=FALSE}
-#E1C4.5
+#FREC4.5
 length_dict["foot"] != length_dict["fathom"]
 ```
 `r unhide()`
 
-## E1 challenge 5
+## FRE challenge 5
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/clock.png", auto_pdf = TRUE)
 ```
@@ -182,9 +182,9 @@ Once created __print__ all these __lists__.
 
 __Note__: A __for loop__ will be useful to create `minutes` and `seconds` using the `hours` __list__.
 
-`r hide("E1C5 solution")`
+`r hide("FREC5 solution")`
 ```{python, eval=FALSE}
-#X
+#FRE5
 hours = [1,2,3,4,5,6,7,8,9]
 minutes = []
 seconds = []
