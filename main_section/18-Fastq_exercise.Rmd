@@ -1,0 +1,16 @@
+# Fastq exercise
+```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
+knitr::include_graphics(path = "figures/tiger.png", auto_pdf = TRUE)
+```
+
+
+
+## Data
+
+https://www.nature.com/articles/s41598-020-74180-z
+
+https://www.ncbi.nlm.nih.gov/sra/?term=PRJNA625720
+
+https://www.ncbi.nlm.nih.gov/sra/SRX8124700[accn]
+
+Paper trimmed 16s read with min and max of 1200 & 1400bp

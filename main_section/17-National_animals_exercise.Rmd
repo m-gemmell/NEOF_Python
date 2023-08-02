@@ -1,4 +1,4 @@
-# National animal exercise
+# National animals exercise
 ```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
 knitr::include_graphics(path = "figures/tiger.png", auto_pdf = TRUE)
 ```
@@ -192,11 +192,12 @@ Create a __list__ of the animals using the __values__ from the __dictionary__ __
 
 Additionally, create and print a __set__ of the animals called __"animals_set"__. 
 
-__Tip__: The __method__ `.values()` can extract the __values__ from a __dictionary__. These __strings__ can be looped through, e.g. `for value in national_animals.values()` try the below code to __print__ out the values.
+__Tip__: Looping through a __dictionary__ will provide the __key__ as the __loop variable__. This can be used to extract the __value__ from the __dictionary__. You can try the example code below.
 
 ```{python, eval=FALSE}
-#Loop through and print values
-for value in national_animals.values():
+#Loop dictionary and print values
+for key in national_animals:
+  value = national_animals[key]
   print(value)
 ```
 
@@ -205,9 +206,9 @@ for value in national_animals.values():
 #NAC4.1
 #Create empty list
 animals_list = []
-#Loop through values
-for value in national_animals.values():
-  animals_list.append(value)
+#Loop through keys
+for key in national_animals:
+  animals_list.append(national_animals[key])
 #Print list
 print(animals_list)
 ```
@@ -376,7 +377,7 @@ with open("popular_national_animals.csv", 'w') as output_file:
 ```
 `r unhide()`
 
-## National animal conclusion
+## National animals conclusion
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/Gallus_gallus_domesticus.png", auto_pdf = TRUE)
 ```
