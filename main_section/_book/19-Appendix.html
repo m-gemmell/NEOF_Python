@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Scripting in Python | Python for Bioinformatics</title>
+  <title>A Further resources | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Scripting in Python | Python for Bioinformatics" />
+  <meta property="og:title" content="A Further resources | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/figures/NEOF.png" />
   <meta property="og:description" content="NEOF book for the Python for Bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Scripting in Python | Python for Bioinformatics" />
+  <meta name="twitter:title" content="A Further resources | Python for Bioinformatics" />
   
   <meta name="twitter:description" content="NEOF book for the Python for Bioinformatics workshop" />
   <meta name="twitter:image" content="/figures/NEOF.png" />
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figures/NEOF_favicon.png" type="image/x-icon" />
-<link rel="prev" href="04-Jupyter.html"/>
-<link rel="next" href="06-python_fundamentals.html"/>
+<link rel="prev" href="18-Fastq_exercise.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -376,96 +376,151 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="scripting" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Scripting in Python<a href="05-basic_coding.html#scripting" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<center>
-<img src="figures/python_logo.png" height="150" /><img src="figures/scripting_icon.png" height="150" />
-</center>
-<div id="introduction-to-commands-and-scripts" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Introduction to commands and scripts<a href="05-basic_coding.html#introduction-to-commands-and-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are two important components to programming in <strong>Python</strong>; the commands that are committed by the user, and the interpreter which receives and implements the commands.</p>
-<p>Each command can be thought of as a single instruction and these can be added together into a series of steps, called a script.
-Think about how a cooking recipe is often presented:</p>
-<ol style="list-style-type: decimal">
-<li>Break a few eggs</li>
-<li>Make an omelette</li>
-</ol>
-<p>These are two distinct <em>commands</em>, but together they form a <em>script</em> for how to transform raw eggs into an omelette.</p>
+<div id="further_resources" class="section level1 hasAnchor" number="19">
+<h1><span class="header-section-number">A</span> Further resources<a href="19-Appendix.html#further_resources" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="figures/further_resources.png" width="20%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><a href="https://python.swaroopch.com/">A Byte of Python</a></li>
+<li><a href="https://docs.python-guide.org/">The Hitchhiker's Guide to Python!</a></li>
+<li><a href="https://docs.python.org/3/">Python documentation</a></li>
+<li><a href="https://biopython.org/">Biopython</a>: Set of tools for biological computation written in python.
+-<a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html">Biopython tutorial</a>
+-<a href="https://biopython.org/wiki/SeqIO">SeqIO website</a>: Interface for input and output of sequence files in python.</li>
+</ul>
 </div>
-<div id="issuing-commands" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Issuing commands<a href="05-basic_coding.html#issuing-commands" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<center>
-<img src="figures/translator.png" style="width:15.0%" />
-</center>
-<p>In this section we will learn and use some <strong>Python</strong> commands.</p>
-<p>Create a new <strong>notebook</strong> in your <strong>"Python_course_data"</strong> directory. Rename it to <strong>"01-Fundamentals"</strong> and save it.</p>
-<p>Convert the first <strong>cell</strong> to a <strong>Markdown cell</strong>. Add the following to the cell to create a 1st and 2nd level header.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb10-1"><a href="05-basic_coding.html#cb10-1" tabindex="-1"></a><span class="co"># 1-Fundamentals</span></span>
-<span id="cb10-2"><a href="05-basic_coding.html#cb10-2" tabindex="-1"></a><span class="co">## Scripting</span></span></code></pre></div>
-<div id="print" class="section level3 hasAnchor" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Print<a href="05-basic_coding.html#print" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/printer.png" width="10%" style="display: block; margin: auto;" /></p>
-<p>The first command we will use is <code>print()</code>. This will print the desired text. Type and run the below commands in 2 new <strong>Code cells</strong>.</p>
-<p><strong>Note</strong>: Python is very particular about braces/brackets and quote marks.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb11-1"><a href="05-basic_coding.html#cb11-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb12-1"><a href="05-basic_coding.html#cb12-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;I&#39;m excited to be learning some Python!&quot;</span>)</span></code></pre></div>
-<p>Below each cell you will see the specified text.</p>
-</div>
-<div id="working-directory" class="section level3 hasAnchor" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> Working directory<a href="05-basic_coding.html#working-directory" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/directory.png" width="10%" style="display: block; margin: auto;" /></p>
-<p>The command <code>getcwd()</code> stands for "get the <em>current working directory</em>". This command comes from the <strong>Python module</strong> <code>os</code>. We therefore need to <code>import</code> the module and specify it when running the command (<code>os.getcwd()</code>).</p>
-<p>Run the below in a new cell.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb13-1"><a href="05-basic_coding.html#cb13-1" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb13-2"><a href="05-basic_coding.html#cb13-2" tabindex="-1"></a>os.getcwd()</span></code></pre></div>
-<p>This will return something like: '/pub39/tea/nsc206/Python_course_data' (your nsc number will be different though).</p>
-<p><code>print()</code> and <code>os.getcwd()</code> are nice commands to start with but don't appear very useful, yet. We will see later how they can be used effectively.</p>
+<div id="mamba-installs" class="section level1 hasAnchor" number="20">
+<h1><span class="header-section-number">B</span> Mamba installs<a href="19-Appendix.html#mamba-installs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="figures/mamba_logo.png" width="20%" style="display: block; margin: auto;" /></p>
+<div id="mamba_install" class="section level2 hasAnchor" number="20.1">
+<h2><span class="header-section-number">B.1</span> Mamba installation and environment<a href="19-Appendix.html#mamba_install" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Mamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.</p>
+<p>Mamba github: <a href="https://github.com/mamba-org/mamba" class="uri">https://github.com/mamba-org/mamba</a></p>
+<p>Mamba installation: <a href="https://github.com/conda-forge/miniforge#mambaforge" class="uri">https://github.com/conda-forge/miniforge#mambaforge</a></p>
+<p>Mamba guide: <a href="https://mamba.readthedocs.io/en/latest/user_guide/mamba.html" class="uri">https://mamba.readthedocs.io/en/latest/user_guide/mamba.html</a></p>
+<p>To create the mamba environment <code>python</code> run the below commands in your bash. You will need to have installed <code>mamba</code> first.</p>
+<div class="sourceCode" id="cb216"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb216-1"><a href="19-Appendix.html#cb216-1" tabindex="-1"></a><span class="co">#Python</span></span>
+<span id="cb216-2"><a href="19-Appendix.html#cb216-2" tabindex="-1"></a><span class="ex">mamba</span> create <span class="at">-n</span> python</span>
+<span id="cb216-3"><a href="19-Appendix.html#cb216-3" tabindex="-1"></a><span class="ex">mamba</span> activate python</span>
+<span id="cb216-4"><a href="19-Appendix.html#cb216-4" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> anaconda jupyter</span>
+<span id="cb216-5"><a href="19-Appendix.html#cb216-5" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">-c</span> conda-forge biopython</span></code></pre></div>
 </div>
 </div>
-<div id="a-note-on-indentation" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> A note on indentation<a href="05-basic_coding.html#a-note-on-indentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/tab.png" width="10%" style="display: block; margin: auto;" /></p>
-<p><strong>Indentation</strong> refers to any <strong>spaces</strong> or <strong>tab</strong> characters at the beginning of a line of code.
-<strong>Indentation</strong> helps readability of code.
-It defines code blocks dedicated to a single purpose.
-However, <strong>indentation</strong> in <strong>Python</strong> is <strong>mandatory</strong> and the interpreter will give an error if the <strong>indentation</strong> is wrong.</p>
-<p><code>Jupyter-notebook</code> attempts to <em>auto</em> indent code.
-However, you still need to take care that the level of indentation in the script matches that in the workbook <strong>exactly</strong>.</p>
-<div id="tabs-vs-spaces" class="section level3 hasAnchor" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Tabs vs spaces<a href="05-basic_coding.html#tabs-vs-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/indent_python_debate.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>There is an active debate about whether tabs or spaces are more appropriate for <strong>indentation</strong>.</p>
-<p>For reference, one tab = 4 spaces.</p>
-<p>You can use either tabs or spaces, but you cannot use them interchangeably! Use one and keep consistent with your use.</p>
-<p>Do not enter the below, this is just an illustration of how three levels of tab <strong>indentation</strong> looks in a script.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python Rchunk"><code class="sourceCode python"><span id="cb14-1"><a href="05-basic_coding.html#cb14-1" tabindex="-1"></a><span class="co"># Zero level of indentation</span></span>
-<span id="cb14-2"><a href="05-basic_coding.html#cb14-2" tabindex="-1"></a>  <span class="co"># One level of indentation</span></span>
-<span id="cb14-3"><a href="05-basic_coding.html#cb14-3" tabindex="-1"></a>    <span class="co"># Two levels of identation</span></span>
-<span id="cb14-4"><a href="05-basic_coding.html#cb14-4" tabindex="-1"></a><span class="co"># Zero level of indentation</span></span></code></pre></div>
+<div id="cheatsheet" class="section level1 hasAnchor" number="21">
+<h1><span class="header-section-number">C</span> Cheatsheet<a href="19-Appendix.html#cheatsheet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="operators-1" class="section level2 hasAnchor" number="21.1">
+<h2><span class="header-section-number">C.1</span> Operators<a href="19-Appendix.html#operators-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="arithmetic-operators" class="section level3 hasAnchor" number="21.1.1">
+<h3><span class="header-section-number">C.1.1</span> Arithmetic operators<a href="19-Appendix.html#arithmetic-operators" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>+</code></strong> (addition)</li>
+<li><strong><code>-</code></strong> (subtraction)</li>
+<li><strong><code>*</code></strong> (multiplication)</li>
+<li><strong><code>/</code></strong> (division)</li>
+<li><strong><code>**</code></strong> (power/exponent)</li>
+<li><strong><code>//</code></strong> (Floor division)</li>
+<li><strong><code>%</code></strong> (modulo operator. Find the remainder after dividing 2 numbers)</li>
+</ul>
+</div>
+<div id="comparison-operators" class="section level3 hasAnchor" number="21.1.2">
+<h3><span class="header-section-number">C.1.2</span> Comparison operators<a href="19-Appendix.html#comparison-operators" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>==</code></strong>: Equals logical operator.</li>
+<li><strong><code>!=</code></strong>: Does not equal logical operator.</li>
+<li><strong><code>&lt;</code></strong>: Less than logical operator.</li>
+<li><strong><code>&lt;=</code></strong>: Less than or equal to logical operator.</li>
+<li><strong><code>&gt;</code></strong>: Greater than logical operator.</li>
+<li><strong><code>&gt;=</code></strong>: Greater than or equal to logical operator.</li>
+</ul>
+</div>
+<div id="logical-operators" class="section level3 hasAnchor" number="21.1.3">
+<h3><span class="header-section-number">C.1.3</span> Logical operators<a href="19-Appendix.html#logical-operators" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>and</code></strong> logical operator.
+<ul>
+<li>If both comparisons are <code>True</code> return <code>True</code>.</li>
+<li>If either or both comparisons are <code>False</code> return <code>False</code>.</li>
+</ul></li>
+<li><strong><code>or</code></strong> logical operator.
+<ul>
+<li>If either or both comparisons are <code>True</code> return <code>True</code>.</li>
+<li>If both comparisons are <code>False</code> return <code>False</code>.</li>
+</ul></li>
+</ul>
 </div>
 </div>
-<div id="scripting-recap-mcqs" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Scripting recap MCQs<a href="05-basic_coding.html#scripting-recap-mcqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/question_bubble_black.png" width="15%" style="display: block; margin: auto;" /></p>
-<p>Choose the correct option to complete the below sentences:</p>
-<ol style="list-style-type: decimal">
-<li>The command ________ gets your current working directory.
-<div id="radio_RAAZMVRNSW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RAAZMVRNSW" value="answer"></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RAAZMVRNSW" value=""></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_RAAZMVRNSW" value=""></input> <span><strong><code>print()</code></strong></span></label>
-</div></li>
-<li>The command ________ prints text.
-<div id="radio_TPSPIVQSUB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TPSPIVQSUB" value=""></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TPSPIVQSUB" value=""></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_TPSPIVQSUB" value="answer"></input> <span><strong><code>print()</code></strong></span></label>
-</div></li>
-<li>The module ________ is needed for the <code>getcwd()</code> command.
-<div id="radio_GSEXTQDJCK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GSEXTQDJCK" value=""></input> <span><strong><code>getcwd()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GSEXTQDJCK" value="answer"></input> <span><strong><code>os</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GSEXTQDJCK" value=""></input> <span><strong><code>print()</code></strong></span></label>
-</div></li>
-<li>________ can be used for <strong>indentation</strong> in <strong>Python</strong>.
-<div id="radio_GQRBAGNLFP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GQRBAGNLFP" value=""></input> <span><strong>Tabs</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GQRBAGNLFP" value=""></input> <span><strong>Spaces</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GQRBAGNLFP" value="answer"></input> <span><strong>Tabs or Spaces</strong></span></label>
-</div></li>
-</ol>
+<div id="functions-1" class="section level2 hasAnchor" number="21.2">
+<h2><span class="header-section-number">C.2</span> Functions<a href="19-Appendix.html#functions-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong><code>print()</code></strong>: Print specified text.</li>
+<li><strong><code>type()</code></strong>: Check <strong>class/type</strong> of a <strong>variable</strong>.</li>
+<li><strong><code>str()</code></strong> : Transform <strong>variable</strong> to string <strong>class</strong>.</li>
+<li><strong><code>int()</code></strong> : Transform <strong>variable</strong> to integer <strong>class</strong>.</li>
+<li><strong><code>float()</code></strong> : Transform <strong>variable</strong> to float <strong>class</strong>.</li>
+<li><strong><code>len()</code></strong>: Calculate number of characters in a string <strong>variable</strong>.</li>
+<li><strong><code>set()</code></strong>: Transform a <strong>list</strong> to a <strong>set</strong>.</li>
+<li><strong><code>reversed()</code></strong>: Reverse a <strong>string</strong>.</li>
+<li><strong><code>open()</code></strong>: Open a file for reading (<code>r</code>), writing (<code>w</code>), or appending (<code>a</code>).</li>
+</ul>
+<div id="biopython-functions" class="section level3 hasAnchor" number="21.2.1">
+<h3><span class="header-section-number">C.2.1</span> Biopython functions<a href="19-Appendix.html#biopython-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a full list of <code>Bio.SeqIO</code> methods please see the <a href="https://biopython.org/wiki/SeqIO">wiki</a></p>
+<ul>
+<li><strong><code>SeqIO.parse()</code></strong>: Takes a filename and format name to return a <code>SeqRecord</code> <strong>list</strong>.
+<ul>
+<li>e.g. <code>fastq_list = SeqIO.parse("example_input.fastq", "fastq")</code></li>
+</ul></li>
+<li><strong><code>SeqIO.write()</code></strong>: Writes a <code>SeqRecord</code> list as a file with a specified format.
+<ul>
+<li>e.g. <code>seqIO.write(fastq_list, "example_output.fastq", "fastq")</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="methods-1" class="section level2 hasAnchor" number="21.3">
+<h2><span class="header-section-number">C.3</span> Methods<a href="19-Appendix.html#methods-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="string-methods" class="section level3 hasAnchor" number="21.3.1">
+<h3><span class="header-section-number">C.3.1</span> String methods<a href="19-Appendix.html#string-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>.upper()</code></strong>: Convert string to upper case.</li>
+<li><strong><code>.lower()</code></strong>: Convert string to lower case.</li>
+<li><strong><code>.count()</code></strong>: Count number of specified string pattern in <strong>string variable</strong> or .</li>
+<li><strong><code>.split()</code></strong>: Split string by specified delimiter.</li>
+<li><strong><code>.startswith()</code></strong>: Check if a string starts with a particular sub-string. Returns <code>True</code> or <code>False</code>.</li>
+<li><strong><code>.strip()</code></strong>: Remove leading or trailing white spaces.</li>
+</ul>
+</div>
+<div id="list-methods" class="section level3 hasAnchor" number="21.3.2">
+<h3><span class="header-section-number">C.3.2</span> List methods<a href="19-Appendix.html#list-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>.append()</code></strong>: Append a value to the end of a <strong>list</strong>.</li>
+</ul>
+</div>
+<div id="set-methods" class="section level3 hasAnchor" number="21.3.3">
+<h3><span class="header-section-number">C.3.3</span> Set methods<a href="19-Appendix.html#set-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>.add()</code></strong>: Add a value to a <strong>set</strong>.</li>
+</ul>
+</div>
+<div id="file-methods" class="section level3 hasAnchor" number="21.3.4">
+<h3><span class="header-section-number">C.3.4</span> File methods<a href="19-Appendix.html#file-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>.write()</code></strong>: <strong>Write</strong> data to a file <strong>opened</strong> for <strong>writing</strong>.</li>
+<li><strong><code>.readline()</code></strong>: Extract the first line from a file <strong>opened</strong> for <strong>reading</strong>.</li>
+</ul>
+</div>
+<div id="biopython-methods" class="section level3 hasAnchor" number="21.3.5">
+<h3><span class="header-section-number">C.3.5</span> Biopython methods<a href="19-Appendix.html#biopython-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><code>.translate()</code></strong>: Translate a DNA sequence record element to a protein sequence.</li>
+</ul>
+</div>
+</div>
+<div id="statements" class="section level2 hasAnchor" number="21.4">
+<h2><span class="header-section-number">C.4</span> Statements<a href="19-Appendix.html#statements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong><code>for &lt;loop_variable&gt; in &lt;variable&gt;:</code></strong> : Loop through each <strong>value</strong> in a <strong>variable</strong>.</li>
+<li><strong><code>with &lt;data&gt; as &lt;variable_name&gt;:</code></strong> : Start a data stream.</li>
+</ul>
 
 </div>
 </div>
@@ -680,8 +735,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="04-Jupyter.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="06-python_fundamentals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="18-Fastq_exercise.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
