@@ -15,7 +15,14 @@ With these statements you will:
 
 This will further solidify your use of __loops__ and __conditions__. 
 
-Use a new notebook called __"06-Logical_statements"__.
+Use a new notebook called __"06-Logical_statements"__. Add the top to this notebook to loadd the required __library__.
+
+__Note__: Ensure `wd =` is set to __your__ working directory (not `nsc201`).
+
+```{python, eval=FALSE}
+wd = "/pub14/tea/nsc201/Python_course_data"
+from Bio import SeqIO
+```
 
 ## and logical operator
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }

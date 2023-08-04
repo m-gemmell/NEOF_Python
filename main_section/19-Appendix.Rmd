@@ -36,6 +36,8 @@ mamba create -n python
 mamba activate python
 mamba install -c anaconda jupyter
 mamba install -c conda-forge biopython
+mamba install -c anaconda pandas
+mamba install -c conda-forge matplotlib
 ```
 
 

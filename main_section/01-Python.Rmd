@@ -1,5 +1,6 @@
 ---
 title: "Python for Bioinformatics"
+author: Graeme Fox & Matthew R. Gemmell
 date: "`r format(Sys.time(), '%B, %Y')`"
 favicon: figures/NEOF_favicon.png
 description: NEOF book for the Python for Bioinformatics workshop

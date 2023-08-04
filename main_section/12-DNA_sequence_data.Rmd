@@ -73,19 +73,16 @@ We are going to read the data into Python, ready to do some data processing and 
 knitr::include_graphics(path = "figures/library_1.png", auto_pdf = TRUE)
 ```
 
-We need to load a couple of __Python libraries__:
+We need to load a __Python library__:
 
 -   **Biopython** (`Bio`): a suite of bioinformatics focused Python tools.
     -   From this __library__ we will import the __module__ `SeqIO`
--   **`re`**: Allows us to perform searches using wildcards and special characters.
-    -   `re` stands for regular expressions.
 
-To load (**import**) these __libraries__ and **modules** add the following towards the top of your notebook.
+To load (**import**) this __library__ and **module** add the following towards the top of your notebook.
 
 ```{python, eval=FALSE}
 #Import libraries and modules
 from Bio import SeqIO
-import re
 ```
 
 It is also good to create a **variable** called "wd" that contains your working directory when working with files. Set this __variable__ to your __"Python_course_data"__ filepath by adding a version of the following:

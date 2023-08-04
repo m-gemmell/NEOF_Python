@@ -1,6 +1,6 @@
 ---
 title: "Python for Bioinformatics - Supplementary Materials"
-author: Graeme Fox
+author: Graeme Fox & Matthew R. Gemmell
 date: "`r format(Sys.time(), '%B, %Y')`"
 favicon: images/NEOF_favicon.png
 description: NEOF book for the Python for Bioinformatics workshop - Supplementary materials
@@ -8,6 +8,14 @@ cover-image: "images/NEOF.png"
 ---
 
 # Introduction
+
+```{r, echo=FALSE}
+#Change colour, border, and text of code chunks
+#Check style.css for .Rchunk
+#https://stackoverflow.com/questions/65627531/change-r-chunk-background-color-in-bookdown-gitbook
+#https://bookdown.org/yihui/rmarkdown-cookbook/chunk-styling.html
+knitr::opts_chunk$set(class.source="Rchunk") 
+```
 
 <center>![](images/NEOF_logo.png){height="100px"}</center>
 
