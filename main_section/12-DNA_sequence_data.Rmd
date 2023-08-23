@@ -126,7 +126,7 @@ When looping through the data the different record elements are called by using 
 
 -   **`.id`**: The sequence identifier.
 -   **`.seq`**: The sequence.
-- __`.letter_annotations["phred_quality"]__: A list of the phred quality scores (numbers).
+- __`.letter_annotations["phred_quality"]`__: A list of the phred quality scores (numbers).
 
 We can print this information for each record with the following **for loop**.
 
