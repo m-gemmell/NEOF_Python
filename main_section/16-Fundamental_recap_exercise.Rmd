@@ -1,6 +1,6 @@
 # (PART\*) Exercises {-}
 
-# Fundamental recap exercise
+# Fundamental recap exercise {#fundrecapexercise}
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 ```

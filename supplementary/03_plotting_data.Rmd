@@ -1,4 +1,4 @@
-# Plotting using Python and Matplotlib
+# Plotting using Python and Matplotlib {#matplotlib}
 <center>![](images/matplotlib.webp){width=40%}</center>
 
 We can also use Python to produce plots of our data.

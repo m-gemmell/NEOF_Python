@@ -1,4 +1,4 @@
-# Other types of data
+# Other types of data {#pandas}
 
 <center>![](./images/pandas_icon.jpg){width="40%"}</center>
 

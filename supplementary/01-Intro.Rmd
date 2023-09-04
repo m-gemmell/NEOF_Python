@@ -23,8 +23,26 @@ knitr::opts_chunk$set(class.source="Rchunk")
 
 These material serves as an introduction to two very powerful Python libraries:
 
-1. [`Pandas`](https://pandas.pydata.org/), a data analysis and manipulation tool.
-2. [`Matplotlib`](https://matplotlib.org/), a comprehensive library for creating static, animated, and interactive visualizations in Python.
+```{r, echo=FALSE, align="centre"}
+#Create 2 coilumn dataframe
+column_1 <- c(
+ '[__`Pandas`__](#pandas)',
+ '[![](images/pandas_icon.jpg){height="150"}](#pandas)'
+)
+column_2 <- c(
+  '[__`Matplotlib`__](#matplotlib)',
+ '[![](images/matplotlib.webp){height="100"}](#cluster)'
+)
+table_df <- data.frame(column_1, column_2)
+#Kable and kableextra libraries
+library(knitr)
+library(kableExtra)
+#Create table
+#ALign both column in centre (align = "cc")
+table_df %>%
+  kbl(align= "cc", col.names = NULL) %>%
+  kable_styling(position = "center")
+```
 
 This bookdown will also expand on the use of loops, reading and writing files, subsetting data, and applying functions that you have already practiced.
 
