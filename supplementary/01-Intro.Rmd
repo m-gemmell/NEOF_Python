@@ -31,7 +31,7 @@ column_1 <- c(
 )
 column_2 <- c(
   '[__`Matplotlib`__](#matplotlib)',
- '[![](images/matplotlib.webp){height="100"}](#cluster)'
+ '[![](images/matplotlib.webp){height="100"}](#matplotlib)'
 )
 table_df <- data.frame(column_1, column_2)
 #Kable and kableextra libraries
