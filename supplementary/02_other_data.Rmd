@@ -168,7 +168,7 @@ linked together by the __AND__ operator (`&`).
 
 ```{python, eval=FALSE}
 #Select 25 or older and overweight
-overweight_over24 = patients[(patients["age"] >= 25) & (patients["bmi_group"] == "overweight")]
+overweight_over25 = patients[(patients["age"] >= 25) & (patients["bmi_group"] == "overweight")]
 #print
 print(overweight_over25)
 ```
