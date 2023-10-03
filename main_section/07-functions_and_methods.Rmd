@@ -187,5 +187,5 @@ opts_p <- c(answer="__`.count()`__", "__`len()`__", "__`.upper()`__")
 ```{r, echo = FALSE}
 opts_p <- c("__`.count()`__", "__`len()`__", answer="__`.upper()`__")
 ```
-6. The __method__ ________ can convert a string __variable__ to lower-case. `r longmcq(opts_p)`
+6. The __method__ ________ can convert a string __variable__ to upper-case. `r longmcq(opts_p)`
 

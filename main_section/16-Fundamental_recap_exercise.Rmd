@@ -190,7 +190,7 @@ minutes = []
 seconds = []
 for hour in hours:
   minutes.append(hour * 60)
-  seconds.append{hour * 60 * 60}
+  seconds.append(hour * 60 * 60)
 print(hours)
 print(minutes)
 print(seconds)

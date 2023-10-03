@@ -22,7 +22,7 @@ Write, run, and try to understand the below code.
 
 ```{python, eval=FALSE}
 #Read in the fastq data
-R_undulata_data = SeqIO.parse(wd + "/Python_course_data/R_undulata_WGS.fastq", "fastq")
+R_undulata_data = SeqIO.parse(wd + "/R_undulata_WGS.fastq", "fastq")
 
 #Initialise an empty list to hold the records that we want to keep
 wanted_sequences = []
@@ -39,7 +39,7 @@ for record in R_undulata_data:
     wanted_sequences.append(record)
 
 #Print statement to show number of reads retained after length filtering
-print("Found " + str(len(wanted_sequences)) + " reads >= " + str(min_len) "bp in length.")
+print("Found " + str(len(wanted_sequences)) + " reads >= " + str(min_len) + "bp in length.")
 ```
 
 ## Remove PCR primers

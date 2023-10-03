@@ -187,7 +187,7 @@ To close the notebook:
 -   Click on **"File"**.
 -   From the dropdown options click **"Close and Halt"**.
 
-When you are back in the file explorer page you may not yet set the new file you saved. If so, you will need to refresh the page with the Refresh button `r icons::ionicons("refresh")` towards the top right.
+When you are back in the file explorer page you may not yet see the new file you saved. If so, you will need to refresh the page with the Refresh button `r icons::ionicons("refresh")` towards the top right.
 
 ```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
 knitr::include_graphics(path = "figures/jupyter_notebook_refresh.png", auto_pdf = TRUE)

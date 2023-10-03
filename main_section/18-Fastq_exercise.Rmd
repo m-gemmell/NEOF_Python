@@ -170,7 +170,7 @@ q10_length_filtered_records = []
 #Loop through records
 for record in q10_filtered_records:
   #If condition for length thresholds
-  if len(record.seq) >= min_length and len(records.seq) <= max_length:
+  if len(record.seq) >= min_length and len(record.seq) <= max_length:
     #Add record to retained records
     q10_length_filtered_records.append(record)
 #Print
@@ -191,7 +191,7 @@ For the last challenge, write the data in __"q10_length_filtered_records"__ to a
 ```{python, eval=FALSE}
 #F5
 #Open file
-with open("SRR11554953.10k.filtered", 'w') as outptu_file:
+with open("SRR11554953.10k.filtered", 'w') as output_file:
   #Write fastq file
   SeqIO.write(q10_length_filtered_records, output_file, "fastq")
 ```

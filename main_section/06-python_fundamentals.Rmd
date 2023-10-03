@@ -168,7 +168,7 @@ amino_acids = "ARG VAL TRP"
 DNA_string
 ```
 ```{python, eval=FALSE}
-#Call the amino_acid string variable
+#Call the amino_acids string variable
 amino_acids
 ```
 
@@ -311,7 +311,7 @@ a_bool
 ```{python, eval=FALSE}
 #Check if 2 string variables are identical
 #Cannot use > or < with strings
-another_bool = DNA_string == amino_acid
+another_bool = DNA_string == amino_acids
 another_bool
 ```
 ```{python, eval=FALSE}

@@ -99,7 +99,7 @@ The next bit of coding will retain reads with a GC% between 40% and 60%. This is
 
 ```{python, eval=FALSE}
 #Read in the fastq data
-R_undulata_data = SeqIO.parse(wd + "/Python_course_data/R_undulata_WGS.fastq", "fastq")
+R_undulata_data = SeqIO.parse(wd + "/R_undulata_WGS.fastq", "fastq")
 
 #Initialise an empty list to hold the records that we want to keep
 gc_sequences = []
