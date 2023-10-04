@@ -209,17 +209,19 @@ aa_2 = "Q"
 
 #Loop through the fastq records
 for record in R_undulata_data:
-  #Extract the first 30 bases
-  subset_seq = record.seq[:30]
-  #Translate sequence
-  aa_seq = subset_seq.translate()
-  #Amino acid counts
-  aa_1_count = aa_seq.upper().count(aa_1)
-  aa_2_count = aa_seq.upper().count(aa_2)
-  #If aa_1 is present or aa_2 is present
-  if aa_1_count > 0 or aa_2_count > 0:
-    #Add 1 to counter
-    counter = counter + 1
+  #If condition so we only analyse reads that are 30bps or longer
+  if len(record.seq) >= 30:
+    #Extract the first 30 bases
+    subset_seq = record.seq[:30]
+    #Translate sequence
+    aa_seq = subset_seq.translate()
+    #Amino acid counts
+    aa_1_count = aa_seq.upper().count(aa_1)
+    aa_2_count = aa_seq.upper().count(aa_2)
+    #If aa_1 is present or aa_2 is present
+    if aa_1_count > 0 or aa_2_count > 0:
+      #Add 1 to counter
+      counter = counter + 1
 
 #Print statement to show number translated sequences with either of the amino acids
 print("Found " + str(counter) + " reads with a translated " + 

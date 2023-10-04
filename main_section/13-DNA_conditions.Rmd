@@ -110,7 +110,7 @@ for record in wanted_sequences:
     #this is because there is no PCR sequence present to trim off
     trimmed_sequences.append(record)
 
-print("Number of sequences with the PCR sequence present: " + str(pcr_records))
+print("Number of sequences with the PCR sequence removed: " + str(pcr_records))
 ```
 
 ## Modifying DNA reflection

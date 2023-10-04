@@ -84,7 +84,7 @@ for record in seq_data:
     q10_filtered_records.append(record)
 #Print
 print("The number of retained sequences after filtering reads with a mean quality less than " +
-      str(min_qual) + " is: " + str(len(q10_filtered_records.append)))
+      str(min_qual) + " is: " + str(len(q10_filtered_records)))
 ```
 `r unhide()`
 

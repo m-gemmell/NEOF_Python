@@ -160,8 +160,8 @@ We will be using multiple notebooks in this workshop. We will also have multiple
 To add a header __cell__ to the top of our notebook:
 
 -   Create a new __cell__ at the top of the notebook.
--   Click on the **"Code"** drop down and select **"Markdown"**.
-    -   The **"Heading"** option no longer works.
+-   Click on the **"Code"** drop down and select the **"Markdown"** option.
+    -   Do not choose the **"Heading"** option as it no longer works.
 
 ```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
 knitr::include_graphics(path = "figures/jupyter_notebook_example_5.png", auto_pdf = TRUE)
