@@ -43,7 +43,7 @@ gene_fold_change
 
 To add an additional value to the **end** of the __list__, we can use the `.append()` __method__:
 
-__Reminder__: Each unique __method__ can only be used on one type of data. The `append()` method can only be used with __lists__.
+__Reminder__: Each unique __method__ can only be used on one type of data. The `.append()` method can only be used with __lists__.
 
 ```{python, eval=FALSE}
 gene_fold_change.append(0.33)
@@ -107,7 +107,9 @@ gene_fold_change[-1]
 knitr::include_graphics(path = "figures/four_hand.png", auto_pdf = TRUE)
 ```
 
-The same technique also works to select a range of values from the __list__. The upper and lower position of the range to be selected given in square brackets, separated by a colon (`X:Y`). 
+The same technique also works to select a range of values from the __list__. 
+The upper and lower positions of the range to be selected. 
+These are given in square brackets, separated by a colon (`X:Y`). 
 
 When using a range in this manner:
 

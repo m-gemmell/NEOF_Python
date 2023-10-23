@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap');
 p.caption {
   color: #777;
   margin-top: 10px;
 }
 p code {
   white-space: inherit;
+}
+code {
+  white-space: inherit;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 pre {
   word-break: normal;

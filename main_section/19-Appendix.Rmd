@@ -24,7 +24,9 @@ Mamba is a reimplementation of conda. It is a great tool for installing bioinfor
 
 Mamba github: <https://github.com/mamba-org/mamba>
 
-Mamba installation: <https://github.com/conda-forge/miniforge#mambaforge>
+The best way to use Mamba is to install Miniforge. It has both Conda and Mamba commands.
+
+Miniforge installation: <https://github.com/conda-forge/miniforge>
 
 Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
 

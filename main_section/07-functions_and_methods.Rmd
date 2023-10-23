@@ -151,7 +151,7 @@ C_total = DNA1.count("C")
 knitr::include_graphics(path = "figures/question_bubble_green.png", auto_pdf = TRUE)
 ```
 
-We have explored __functions__ (`function_name(variable)`) and __methods__ (`variable_name.method_name()`), and can now apply them to __variables__.
+We have explored __functions__ (`function_name(variable)`) and __methods__ (`variable.method_name()`), and can now apply them to __variables__.
 You'll learn more __functions__ and __methods__ throughout this course.
 
 It is nigh impossible to learn all the __function__ and __methods__.
@@ -177,7 +177,7 @@ opts_p <- c("__Functions__", answer="__Methods__", "__Operators__")
 ```{r, echo = FALSE}
 opts_p <- c("__`.count()`__", answer="__`len()`__", "__`.upper()`__")
 ```
-4. The __function__ ________ can count the number of characters in a string. `r longmcq(opts_p)`
+4. The __function__ ________ can count the total number of characters in a string. `r longmcq(opts_p)`
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__`.count()`__", "__`len()`__", "__`.upper()`__")

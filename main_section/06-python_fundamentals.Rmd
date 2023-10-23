@@ -144,8 +144,8 @@ Python supports several classes (or types) of __variables__ including __strings_
 In a new __Markdown cell__ add the following:
 
 ```{python, eval=FALSE}
-## Variables
-### Strings
+### Variables
+#### Strings
 ```
 
 ### Strings
@@ -186,7 +186,7 @@ These should not be declared with quote marks otherwise they will be stored as a
 Create the following __markdown cell__:
 
 ```{python, eval=FALSE}
-### Integers
+#### Integers
 ```
  
 Create and run the following __code cells__:
@@ -244,7 +244,7 @@ knitr::include_graphics(path = "figures/float.png", auto_pdf = TRUE)
 Create a new __markdown cell__ with the following:
 
 ```{python, eval=FALSE}
-### Floats
+#### Floats
 ```
 
 Run the following code:
@@ -280,7 +280,7 @@ You can compare any two values in Python and get a result of either __True__ or 
 Create a new __markdown cell__ with the following:
 
 ```{python, eval=FALSE}
-### Booleans
+#### Booleans
 ```
 
 Run the following code:
@@ -315,6 +315,7 @@ another_bool = DNA_string == amino_acids
 another_bool
 ```
 ```{python, eval=FALSE}
+#Can compare if boolean variables are identical
 yet_another_bool = a_bool == another_bool
 yet_another_bool
 ```
@@ -337,7 +338,7 @@ Python will try to figure it out based on the value assigned.
 Create a new __markdown cell__ with the following:
 
 ```{python, eval=FALSE}
-## Classes
+### Classes
 ```
 
 You can check the __class__ of a __variable__ by passing it to the `type()` __function__:
@@ -369,7 +370,7 @@ __Variables__ can be transformed from one __class/type__ to another provided the
 Create a new __markdown cell__ with the following:
 
 ```{python, eval=FALSE}
-## Transforming variables
+### Transforming variables
 ```
 
 To transform a __float__ to an __integer__ use the `int()` __function__ (note the loss of precision):
