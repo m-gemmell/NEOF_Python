@@ -102,7 +102,7 @@ knitr::include_graphics(path = "figures/mobile_read.png", auto_pdf = TRUE)
 
 We are going to use `SeqIO`'s (which stands for sequence in/out) `parse()` **function** which splits the FASTQ file into its separate components.
 
-We'll store the information in the variable called `R_undulata_R1_data`.
+We'll store the information in the variable called `R_undulata_data`.
 
 `SeqIO.parse` requires two arguments:
 
@@ -153,13 +153,13 @@ R_undulata_data = SeqIO.parse(wd + "/R_undulata_WGS.fastq", "fastq")
 ```
 
 ```{python, eval=FALSE}
-#Print IDs and sequences
+#Print IDs
 for record in R_undulata_data:
   print(record.id)
 ```
 
 ```{python, eval=FALSE}
-#Print IDs and sequences
+#Print sequences
 for record in R_undulata_data:
   print(record.seq)
 ```
@@ -171,10 +171,10 @@ Try running the code from the 3 **code cells** in 1 **code cell**.
 ```{python, eval=FALSE}
 #Parse file
 R_undulata_data = SeqIO.parse(wd + "/R_undulata_WGS.fastq", "fastq")
-#Print IDs and sequences
+#Print IDs
 for record in R_undulata_data:
   print(record.id)
-#Print IDs and sequences
+#Print sequences
 for record in R_undulata_data:
   print(record.seq)
 ```
@@ -188,12 +188,12 @@ __Note__: After running the below you will need to scroll through a lot of **IDs
 ```{python, eval=FALSE}
 #Parse file
 R_undulata_data = SeqIO.parse(wd + "/R_undulata_WGS.fastq", "fastq")
-#Print IDs and sequences
+#Print IDs
 for record in R_undulata_data:
   print(record.id)
 #Parse file
 R_undulata_data = SeqIO.parse(wd + "/R_undulata_WGS.fastq", "fastq")
-#Print IDs and sequences
+#Print sequences
 for record in R_undulata_data:
   print(record.seq)
 ```

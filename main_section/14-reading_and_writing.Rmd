@@ -59,7 +59,7 @@ We have 2 new python words in the code:
   - This is known as a __data stream__.
 - __`as`__: This python __keyword__ creates an alias for our `with` __statement__.
   - In the below code we __open__ a file and store the read information as a __variable__ called `input_file`.
-  - The variable name is arbitrary and chosen by the user.
+  - This variable name is arbitrary and chosen by the user.
 
 ```{python, eval=FALSE}
 #Open input file for reading and add to a data stream
@@ -69,7 +69,7 @@ with open(wd + "/patients_gut_data.csv", 'r') as input_file:
     print(row)
 ```
 
-When you run the code the file contents will be printed. We will learn to organise this output in a more usable way in the supplementary material).
+When you run the code the file contents will be printed. We will learn to organise this output in a more usable way in the supplementary material.
 
 ## Write data to a file
 ```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
@@ -128,7 +128,7 @@ Use your `jupyter-notebook` file navigator to check that the file exists and tha
 knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
 ```
 
-Grand! You've successfully finished this chapter.
+Sublime! You've successfully finished this chapter.
 
 For a quick recap, choose the correct option to complete the below sentences:
 

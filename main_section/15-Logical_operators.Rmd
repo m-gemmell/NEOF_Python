@@ -15,7 +15,7 @@ With these statements you will:
 
 This will further solidify your use of __loops__ and __conditions__. 
 
-Use a new notebook called __"06-Logical_statements"__. Add the top to this notebook to loadd the required __library__.
+Use a new notebook called __"06-Logical_statements"__. Add the following code to the top of this notebook to load the required __library__.
 
 __Note__: Ensure `wd =` is set to __your__ working directory (not `nsc201`).
 
@@ -95,7 +95,7 @@ knitr::include_graphics(path = "figures/40_60_range.png", auto_pdf = TRUE)
 
 With the `and` __logical operator__ we can filter by a GC% range.
 
-The next bit of coding will retain reads with a GC% between 40% and 60%. This is not normally something you would do but instead we've included it for demonstration purposes.
+The next bit of coding will retain reads with a GC% between 40% and 60%. This is not normally something you would do but instead we've included it for demonstrative purposes.
 
 ```{python, eval=FALSE}
 #Read in the fastq data
@@ -191,14 +191,14 @@ knitr::include_graphics(path = "figures/amino_acid.png", auto_pdf = TRUE)
 ```
 
 In this part you will translate part of each sequence with `.translate()`.
-Then you will count the number of sequences that have at least one translated __Glutamine (Q)__ or _Serine (S)_.
+Then you will count the number of sequences that have at least one translated __Glutamine (Q)__ or __Serine (S)__.
 This will be carried out with the  `or` __logical operator__.
 
 When translating the sequence length needs to be divisible by three to match codon lengths. We will only translate the first 10 codons (30 bases) to check.
 
 ```{python, eval=FALSE}
 #Read in the fastq data
-R_undulata_data = SeqIO.parse(wd + "/Python_course_data/R_undulata_WGS.fastq", "fastq")
+R_undulata_data = SeqIO.parse(wd + "/R_undulata_WGS.fastq", "fastq")
 
 #Initialise a variable for the counter
 counter = 0
@@ -236,5 +236,5 @@ knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
 Excellent! You have learnt how to use the `and` and `or` __logical operators__.
 You now have a good tool kit to carry out a lot of different python coding and be able to learn more yourself.
 
-We'll finish this book with some challenges to give you practice with all you have learnt followed by an overall recap.
+We'll finish this book with some challenges to give you practice with all you have learnt.
 

@@ -72,7 +72,7 @@ pcr_records = 0
 #Loop through the sequence records
 for record in wanted_sequences:
   #Check whether the sequence starts with the primer sequence
-  if record.seq.startswith("ACACTGCTGATCG"):
+  if record.seq.startswith(pcr_seq):
     pcr_records = pcr_records + 1
 
 print("Number of sequences with the PCR sequence present: " + str(pcr_records))
@@ -87,7 +87,7 @@ This will contain records that have been:
 
 - Filtered to remove sequences shorter than 100bp.
 - Trimmed to remove the PCR sequence ("ACACTGCTGATCG"). 
-  - However, we also want to keep untrimmed sequences that did not contain the PCR sequence.
+  - Note, we are also keeping the untrimmed sequences that did not contain the PCR sequence.
 
 ```{python, eval=FALSE}
 #Define a list to hold the trimmed sequences
@@ -100,7 +100,7 @@ pcr_records = 0
 #Loop through the sequence records
 for record in wanted_sequences:
   #Check whether the sequence starts with the primer sequence
-  if record.seq.startswith("ACACTGCTGATCG"):
+  if record.seq.startswith(pcr_seq):
     #Subset read from position 14 onwards and add to trimmed_sequences
     #This will remove the first 13 bases, the PCR sequence
     trimmed_sequences.append(record[13:])
@@ -111,6 +111,7 @@ for record in wanted_sequences:
     trimmed_sequences.append(record)
 
 print("Number of sequences with the PCR sequence removed: " + str(pcr_records))
+print("Total number of filtered and trimmed reads: " + str(len(trimmed_sequences)))
 ```
 
 ## Modifying DNA reflection
@@ -118,7 +119,7 @@ print("Number of sequences with the PCR sequence removed: " + str(pcr_records))
 knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
 ``` 
 
-In this chapter we used your knowledge of reading FASTQ files, to:
+Outstanding! In this chapter we used your knowledge of reading FASTQ files, to:
 
 - Loop through the data.
 - Use conditions to check certain characteristics of the data.

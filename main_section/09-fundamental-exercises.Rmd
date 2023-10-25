@@ -176,7 +176,6 @@ Create a __dictionary__ called __"moth_visits_sep"__ containing the following __
 3. "Cinnabar" : 23
 4. "Scarlet Tiger" : 32
 5. "Scalloped Oak" : 10
-6. "Feathered Thorn" : 13
 
 `r hide("Moth 7 solution")`
 ```{python, eval=FALSE}
@@ -212,6 +211,6 @@ moth_visits_sep
 knitr::include_graphics(path = "figures/finish.png", auto_pdf = TRUE)
 ```
 
-Hopefully you found those challenges helpful in practising and solidifying your python skills and knowledge.
+Fantastic! Hopefully you found those challenges helpful in practising and solidifying your python skills and knowledge.
 
 You can now save and __close and halt__ your __notebooks__.

@@ -122,7 +122,7 @@ c = "GGTCATtat"
 knitr::include_graphics(path = "figures/measuring_tape.png", auto_pdf = TRUE)
 ```
 
-In the below code we create new variables for the __statement__.
+In the below code we create new variables for the __statement__ (`dna1` & `dna2`).
 This is so we only have to change the one set of __variables__ if we change the input data.
 This is a common technique with __conditions__ and __loops__.
 It is cumbersome and error prone to change all the __variables__ within the __statement__.
@@ -216,8 +216,8 @@ When you run the above code, they will now be correct for our purposes.
 knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
 ```
 
-**If** and **else statements** can be used to make decisions in our programs by comparing values.
+Marvelous! **If** and **else statements** can be used to make decisions in our programs by comparing values.
 This might be to check if two __strings__ are the same, two __lists__ contain the same number of items, or a __string__ of nucleotide data has 100 or more bases.
 We can think of them as switches.
 
-Often we need to make these **if**/**else** comparisons for every item in a data structure and to do this we can use loops.
+Often we need to make these **if**/**else** comparisons for every item in a data structure and to do this we can use __loops__.

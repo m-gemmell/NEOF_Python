@@ -104,6 +104,8 @@ Do not enter the below, this is just an illustration of how three levels of tab 
 knitr::include_graphics(path = "figures/question_bubble_black.png", auto_pdf = TRUE)
 ``` 
 
+Wonderful! That is the end of the scripting chapter. Now time for some reinforcement.
+
 Choose the correct option to complete the below sentences:
 
 ```{r, echo = FALSE}

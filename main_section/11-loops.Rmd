@@ -61,10 +61,9 @@ knitr::include_graphics(path = "figures/loop_thru_dna.png", auto_pdf = TRUE)
 
 **For loops** are extremely useful when we have a lot of values (for example, in a **list**) and we need to apply some commands to all of them.
 
-As an example, we will take a __string__ of DNA nucleotides and use a couple **loops** to generate the complement and reverse complement sequences.
+For demonstrative purposes the first code we will use will move through the DNA string, printing each base to the screen.
 
 Run the below code. 
-The __for loop__ will move through the DNA string, printing each base to the screen.
 
 __Note__: Ensure lines inside a __for loop__ are indented. 
 Thankfully `jupyter-notebook` will automate a lot of this for you.
@@ -299,6 +298,6 @@ You can find good resources covering __Python control statements__ [online](http
 knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
 ```
 
-**Loops** are really useful when we need to perform the same task, or commands, over-and-over again. 
+Perfect! **Loops** are really useful when we need to perform the same task, or commands, over-and-over again. 
 Where we have data stored in a data structure such as a **list**, we can apply something to everything in the **list** using a **for** **loop**. 
 This is an efficient way to code as it means we do not need to duplicate the instructions.

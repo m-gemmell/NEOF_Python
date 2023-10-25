@@ -42,12 +42,11 @@ __Note:__ The `.strip()`__method__ works on __strings__, not data from files. Se
 
 `r hide("National animals 1 solution with .strip()")`
 ```{python, eval=FALSE}
-#NAC1
+#NAC1 fixed
 #Read in the file using with statement
-#If your jupyter notebook is in the same directory as the file you only need to provide the file name
 with open("national-animals.csv", 'r') as input_file:
   #Loop through the lines of input_file
-  #Can't strip input_file as it's aa file object
+  #Can't strip input_file as it's a file object
   for row in input_file:
     #Set country and animal to variables using .split() method
     country = row.split(",")[0]
@@ -103,7 +102,7 @@ Try this yourself or see the edited solution below.
 
 `r hide("National animals 2 solution with del")`
 ```{python, eval=FALSE}
-#NAC2
+#NAC2 with del
 #Create empty dictionary
 national_animals = {}
 #Read in the file using with statement
@@ -134,7 +133,7 @@ This can then be used with `del`. I encourage you to attempt this before looking
 
 `r hide("National animals 2 solution with del automated")`
 ```{python, eval=FALSE}
-#NAC2
+#NAC2 with automated del
 #Create empty dictionary
 national_animals = {}
 #Read in the file using with statement
@@ -188,7 +187,7 @@ print(national_animals["Niger"])
 knitr::include_graphics(path = "figures/Iguana_iguana.png", auto_pdf = TRUE)
 ```
 
-Create a __list__ of the animals using the __values__ from the __dictionary__ __"animals_list"__. Then __print__ the __list__.
+Create a __list__ of the animals using the __values__ from the __dictionary__ __"national_animals"__. Call the __list "animals_list"__. Then __print__ the __list__.
 
 Additionally, create and print a __set__ of the animals called __"animals_set"__. 
 
@@ -214,7 +213,7 @@ print(animals_list)
 ```
 ```{python, eval=FALSE}
 #NAC4.2
-#Create set form list
+#Create set from list
 animals_set = set(animals_list)
 #Print
 print(animals_set)
@@ -267,7 +266,7 @@ You can count the number of times a __string__ appears as __value__ in a __list_
 ```{python, eval=FALSE}
 #Will give zero as there is no value that is just an "a"
 print(animals_list.count("a"))
-#Will give 19 as there are 19 countries with the Eagle as there national animal
+#Will give 19 as there are 19 countries with the Eagle is the national animal
 print(animals_list.count("Eagle"))
 ```
 `r unhide()`
@@ -293,16 +292,16 @@ print(animal_popularity)
 knitr::include_graphics(path = "figures/Panthera_leo.png", auto_pdf = TRUE)
 ```
 
-This challenge is difficult. Please, try your best to make a solution before looking at my solution. You can solve this with what you the __fuctions, methods__, etcs that you learn tin this course. Optionally, I encourage you to search online for help, this is what normal day to day bioinformatics involves.
+This challenge is difficult. Please, try your best to make a solution before looking at my solution. You can solve this with the __fuctions, methods__, etcs that you have learnt in this course. Optionally, I encourage you to search online for help, this is what normal day to day bioinformatics involves.
 
-Using __"animal_popularity"__ answer the question "What animal represents the most countries as their national animal?"
+Using the __"animal_popularity" dictionary__ answer the question "What animal represents the most countries as their national animal?"
 
 With this information print the statement "The most popular animal is the \<animal\> which represents \<country count\> countries as their national animal."
 
 Do not simply look through the __dictionary__ __"animal_popularity"__. Create code that could be reused for any __dictionary__ containing __integer__ __values__.
 
-`r hide("National animals 6 tip")`
-First create 2 __variables__ to then be used in a __fo rloop__. Use an __if__ statement in your __for loop__.
+`r hide("National animals 7 tip")`
+First create 2 __variables__ to then be used in a __for loop__. Use an __if__ statement in your __for loop__.
 ```{python, eval=FALSE}
 highest_count = 0
 most_popular_animal = ""
@@ -357,17 +356,17 @@ Make sure this file has the following features:
 3. There is a line for each animal with a count of 2 or more.
   - An example line would be: "Pelican,2"
 
-`r hide("National animals 8 tip 1")`
+`r hide("National animals 8 tip")`
 Add `\n` to the end of your file lines so each entry is on a new line.
 `r unhide()`
 
-`r hide("National animals 7 solution with online help")`
+`r hide("National animals 8 solution")`
 ```{python, eval=FALSE}
 #NAC8
 #Create file, open for writing, and put into data stream
 with open("popular_national_animals.csv", 'w') as output_file:
   #Write header
-  output_file.write("Animal,popularitycount\n")
+  output_file.write("Animal,popularity_count\n")
   #Loop through animal set made in NAC4
   for animal in animals_set:
     #Determine if animal count is greater than 1

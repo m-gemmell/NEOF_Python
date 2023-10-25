@@ -14,18 +14,18 @@ This exercise will primarily focus on the fundamentals you learnt in chapters 5 
 
 Create a new notebook called __"07-Fundamental_recap_exercise"__ to carry out the below challenges.
 
-__Tip__ The Appendix will be useful for quick lookup of various python __functions__, __methods__, etc..
+__Tip:__ The Appendix will be useful for quick lookup of various python __functions__, __methods__, etc..
 
 ## FRE challenge 1
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/header_footbal.png", auto_pdf = TRUE)
 ```
 
-Create a __markdown__ cell with the 1st level header "Exercise 1".
+Create a __markdown__ cell with the 1st level header "Fundamental recap exercise".
 
 `r hide("FREC1 solution")`
 ```{python, eval=FALSE}
-# Fundamental recap exercise 1
+# Fundamental recap exercise
 ```
 `r unhide()`
 
@@ -125,8 +125,7 @@ length_dict = {
   "foot" : 0.3048,
   "league" : 4800,
   "nautical mile" : 1852,
-  "fathom" : 1.8288,
-  "furlong" : 201.168
+  "fathom" : 1.8288
 }
 #Print the dictionary to check it
 print(length_dict)
@@ -189,8 +188,9 @@ hours = [1,2,3,4,5,6,7,8,9]
 minutes = []
 seconds = []
 for hour in hours:
-  minutes.append(hour * 60)
-  seconds.append(hour * 60 * 60)
+  minute = hour * 60
+  minutes.append(minute)
+  seconds.append(minute * 60)
 print(hours)
 print(minutes)
 print(seconds)
@@ -202,7 +202,7 @@ print(seconds)
 knitr::include_graphics(path = "figures/finish.png", auto_pdf = TRUE)
 ```
 
-Great going. You can save, and close and halt your notebook. 
+Great going! You can save, and close and halt your notebook. 
 
 Through the challenges you got more practice of:
 

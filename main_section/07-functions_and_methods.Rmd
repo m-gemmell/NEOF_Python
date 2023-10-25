@@ -151,7 +151,7 @@ C_total = DNA1.count("C")
 knitr::include_graphics(path = "figures/question_bubble_green.png", auto_pdf = TRUE)
 ```
 
-We have explored __functions__ (`function_name(variable)`) and __methods__ (`variable.method_name()`), and can now apply them to __variables__.
+Fabulous! We have explored __functions__ (`function_name(variable)`) and __methods__ (`variable.method_name()`), and can now apply them to __variables__.
 You'll learn more __functions__ and __methods__ throughout this course.
 
 It is nigh impossible to learn all the __function__ and __methods__.
