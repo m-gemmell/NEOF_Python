@@ -61,9 +61,9 @@ plt.savefig('age_diversity_plot.png')
 plt.close()
 ```
 
-View the plot and you should see the below.
+View the plot file and you should see the below.
 
 <center>![](images/scatter.png){width=80%}</center>
 
 ## Recap
-__Madplotlib__ is a __library__ of very powerful tools to produce plots directly from Python. We have barely scratched the surface of what __Matplotlib__ can do but have seen a couple of examples of how we can produce plots to explore our data.
+__Madplotlib__ is a __library__ of very powerful tools to produce plots directly from Python. We have barely scratched the surface of what __Matplotlib__ can do but you have seen a couple of examples of how we can produce plots to explore our data.

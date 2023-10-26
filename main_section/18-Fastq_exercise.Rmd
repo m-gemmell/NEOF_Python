@@ -3,11 +3,11 @@
 knitr::include_graphics(path = "figures/Coriobacteriia.png", auto_pdf = TRUE)
 ```
 
-In this exercise you will read in a fastq file, carry out some filtering, and then writing the filtered data to a new fastq file.
+In this exercise you will read in a fastq file, carry out some filtering, and then write the filtered data to a new fastq file.
 
 The data comes from the paper: ["Identification of plastic-associated species in the Mediterranean Sea using DNA metabarcoding with Nanopore MinION"](https://www.nature.com/articles/s41598-020-74180-z).
 
-They had a lot of different samples but our sample ([SRR11554953](https://www.ncbi.nlm.nih.gov/sra/SRX8124700[accn])) contains 16S sequences from a polyethylene food bag that has been in the Mediterranean sea for a month. The researchers carried this out as they were interested in the organisms present in the "plastisphere bioata".
+They had a lot of different samples but our sample ([SRR11554953](https://www.ncbi.nlm.nih.gov/sra/SRX8124700[accn])) contains 16S sequences from a polyethylene food bag that has been in the Mediterranean sea for a month. The researchers carried this out as they were interested in the organisms present in the "plastisphere biota".
 
 The researchers used MinION sequencing to target the full 1.5 kb-long 16S rRNA gene for bacterial profiling.
 
@@ -20,13 +20,13 @@ For this exercise create and use a new __notebook__ called __"09-Fastq_exercise"
 knitr::include_graphics(path = "figures/bacillus_subtilis.png", auto_pdf = TRUE)
 ```
 
-For you first challenge, __read__ in the fastq file (__"SRR11554953.10k.fastq"__) and count the number of sequences there are. __Print__ this number.
+For your first challenge, __read__ in the fastq file (__"SRR11554953.10k.fastq"__) and count the number of sequences there are. __Print__ this number.
 
-__Tip:__ Remember to load the __module__ and __library__ for _loading__reading/parsing__ fastq files into python.
+__Tip:__ Remember to load the __module__ and __library__ for __reading/parsing__ the fastq file into python.
 
 `r hide("Fastq 1 solution")`
 ```{python, eval=FALSE}
-#F1
+#FC1
 #Read in data
 seq_data = SeqIO.parse("SRR11554953.10k.fastq", "fastq")
 #Set count to zero
@@ -63,7 +63,7 @@ for record in seq_data:
 
 `r hide("Fastq 2 solution")`
 ```{python, eval=FALSE}
-#F2
+#FC2
 #Read in data
 seq_data = SeqIO.parse("SRR11554953.10k.fastq", "fastq")
 
@@ -95,7 +95,7 @@ In this case none of the reads were removed as they were all high quality.
 knitr::include_graphics(path = "figures/Verrucomicrobiae.png", auto_pdf = TRUE)
 ```
 
-Are last filtering didn't remove any reads so prior to length filtering we will check the lengths of the reads.
+Our previous filtering step didn't remove any reads so prior to length filtering we will check the lengths of the reads.
 
 Carry out the following tasks:
 
@@ -109,7 +109,7 @@ Carry out the following tasks:
 
 `r hide("Fastq 3 solution")`
 ```{python, eval=FALSE}
-#F3.1
+#FC3.1
 #Create empty list of seq lengths
 seq_lengths = []
 #Loop through records
@@ -121,12 +121,13 @@ for record in q10_filtered_records:
 print(seq_lengths)
 ```
 ```{python, eval=FALSE}
-#F3.2
+#FC3.2
+#Discover min and max lengths
 print(min(seq_lengths))
 print(max(seq_lengths))
 ```
 ```{python, eval=FALSE}
-#F3.3
+#FC3.3
 #Create list of range starts
 range_starts = [1150,1200,1250,1300,1350,1400,1450,1500]
 #Create empty list for counts
@@ -143,6 +144,7 @@ for start in range_starts:
     #Add count to count list
     range_counts.append(count)
 #Print
+print(range_starts)
 print(range_counts)
 ```
 `r unhide()`
@@ -156,11 +158,11 @@ knitr::include_graphics(path = "figures/Vicinamibacteria.png", auto_pdf = TRUE)
 
 Its time to filter the sequences (__"q10_filtered_records"__) by lengths. Use a minimum length of 1250 and a maximum length of 1450 (these lengths are chosen arbitrarily for this example). Create a __variable__ called __"q10_length_filtered_records"__ to contain the length filtered reads.
 
-The __print__ the statement: "The number of reatined sequences after filtering reads shorter than 1250bps and longer than 1450bps is: \<number\>"
+Then __print__ the statement: "The number of retained sequences after filtering reads shorter than 1250bps and longer than 1450bps is: \<number\>"
 
 `r hide("Fastq 4 solution")`
 ```{python, eval=FALSE}
-#F4
+#FC4
 #Set min and max length thresholds
 min_length = 1250
 max_length = 1450
@@ -174,7 +176,7 @@ for record in q10_filtered_records:
     #Add record to retained records
     q10_length_filtered_records.append(record)
 #Print
-print("The number of reatined sequences after filtering reads shorter than " +
+print("The number of retained sequences after filtering reads shorter than " +
       str(min_length) + "bps and longer than " + str(max_length) +
       "bps is: " + str(len(q10_length_filtered_records)))
 ```
@@ -189,7 +191,7 @@ For the last challenge, write the data in __"q10_length_filtered_records"__ to a
 
 `r hide("Fastq 5 solution")`
 ```{python, eval=FALSE}
-#F5
+#FC5
 #Open file
 with open("SRR11554953.10k.filtered", 'w') as output_file:
   #Write fastq file

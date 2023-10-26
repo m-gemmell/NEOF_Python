@@ -7,6 +7,8 @@ description: NEOF book for the Python for Bioinformatics workshop - Supplementar
 cover-image: "images/NEOF.png"
 ---
 
+<center>![](images/NEOF_logo.png){height="100px"}</center>
+
 # Introduction
 
 ```{r, echo=FALSE}
@@ -17,7 +19,7 @@ cover-image: "images/NEOF.png"
 knitr::opts_chunk$set(class.source="Rchunk") 
 ```
 
-<center>![](images/NEOF_logo.png){height="100px"}</center>
+<center>![](images/python_supplement.png){height="200px"}</center>
 
 <br><br> These supplementary materials are focused on working with other types of data and generating plots with Python. We will work with comma delimited data tables and create a bar chart and scatter plot.
 

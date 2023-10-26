@@ -25,7 +25,7 @@ dataset, which itself is example data provided with the R package
 
 It contains information on 1006 western women with no reported health
 complications. The women had their gut microbiome profiled and several
-other characteristics records.
+other characteristics recorded.
 
 The data we will be looking at contains the following variables:
 
@@ -61,11 +61,16 @@ import pandas
 Next we will **read** in the data with the
 [pandas](https://pandas.pydata.org/) **function** `read_csv()`.
 
-Contents of "Script04.py":
-
 ```{python, eval=FALSE}
 #Read in csv file
 patients = pandas.read_csv("patients_gut_data.csv")
+```
+
+We have read in a __[DataFrame]__(https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html).
+Look at the top of this __DataFrame__ with the `.head()` __method__.
+
+```{python, eval=FALSE}
+patients.head()
 ```
 
 One very useful feature of [pandas](https://pandas.pydata.org/) is that
@@ -73,9 +78,7 @@ the **object** created when **reading** in the file will not dissappear
 when it is used. This means you can **read** in the file once and do
 many tasks with the resulting **object**.
 
-Now that we have read our data into the object **'patients'**, we can
-take a look at how [pandas](https://pandas.pydata.org/) has stored the
-data by looking at the **".dtypes"** (data types).
+Next, we can take a look at how [pandas](https://pandas.pydata.org/) has stored the data by looking at the **".dtypes"** (data types).
 
 ```{python, eval=FALSE}
 print(patients.dtypes)
@@ -125,12 +128,12 @@ Let's select the data relating to the age, gut microbiome diversity, and
 bmi_group and save it as a separate variable.
 
 <b>*NOTE* the double square brackets containing the variable names: [[
-]]</b>. This is because:
+]]</b>. This is used because:
 
--   We are choosing columns from **patients** by indexing, carried out
-    by the outer square brackets (**[**[]**]).**
+-   We are choosing columns from the **patients data frame** by indexing, carried out
+    by the outer square brackets (<b>[</b>[]<b>]</b>).
 -    We're using a **list** of the column names to select columns to
-    index. This is carried out by the inner square brackets ([**[]**]).
+    index. This is carried out by the inner square brackets ([<b>[]</b>]).
 
 ```{python, eval=FALSE}
 #Subset patients info
@@ -140,7 +143,7 @@ print(age_div_bmi)
 print(type(age_div_bmi))
 ```
 
-The below code carries out the same task but demonstrates the usage of square brackets.
+The below code carries out the same task but demonstrates the usage of the inner square brackets.
 
 ```{python, eval=FALSE}
 #List of column names to extract
@@ -152,9 +155,8 @@ print(age_div_bmi)
 print(type(age_div_bmi))
 ```
 
-We can see our new dataframe contains just the columns we selected, and
-also by checking it with the `type()` function, this new dataframe is also
-in the [pandas](https://pandas.pydata.org/) format.
+We can see our new dataframe contains just the columns we selected.
+By checking it with the `type()` function, we know this new dataframe is in the [pandas](https://pandas.pydata.org/) format.
 
 ### Select records by their properties
 
@@ -190,7 +192,7 @@ print(obese_or_severeobese)
 
 [Pandas](https://pandas.pydata.org/) provides useful methods for working
 with data tables, as we have seen. All of the previous approaches that
-we used in previous chapters still apply to data which has been
+we used in the main book still apply to data which has been
 processed using [pandas](https://pandas.pydata.org/).
 
 For example, we can use pandas to select the age column, and convert the
