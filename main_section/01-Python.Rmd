@@ -34,9 +34,25 @@ knitr::opts_chunk$set(class.source="Rchunk")
 
 <center>![](figures/python.png){width=30%}</center>
 
-In this practical session we are going to learn Python programming skills. This will cover the fundamentals of Python coding and several Python tools focused on data manipulation. Whilst we will be working mostly with DNA sequence data, the methods and approaches can be modified to work with most types of data.
+Python is one of the most popular programming languages for bioinformatics and data analysis in general. It is a very flexible language with countless applications in the manipulation and processing of data files. This course is aimed at Python beginners and will give you transferable skills to manipulate your own data. The course will also provide you experience in Python modules tailored specifically for bioinformatics and genomics analyses.
 
-During this session we will work through the following sections:
+Sessions will start with a brief presentation followed by self-paced computer practicals guided by an online interactive book. The book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.
+
+At the end of the course learners will be able to:
+
+- Create, edit, run, and save python scripts with Jupyter-notebook.
+- Understand and use fundamental python concepts including operators, annotations, variables, and variable classes.
+- Utilise a variety of python functions and methods.
+- Store and manipulate data within lists, sets, and dictionaries.
+- Produce If and else statements to print out different results based on logical conditions (True or False).
+- Carry out the same task on multiple items with loops.
+- Read in and write out fastq files with the biopython library.
+- Filter sequences from fastq data.
+- Use logical operators to test multiple conditions at once.
+
+There are [supplementary materials](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/) including the use of the Pandas for table based data and Matplotlib for plot production. These can be run through after the course by the learner.
+
+## Table of contents {-}
 
 ```{r, echo=FALSE, align="centre"}
 #Create 2 coilumn dataframe
