@@ -1,6 +1,6 @@
 --- 
 title: "Python for bioinformatics resources"
-author: "Graeme Fox"
+author: "Graeme Fox & Matthew R. Gemmell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -73,15 +73,18 @@ Note:
 
 Links to the online versions of the Bookdowns.
 
-[__Main section__](https://neof-workshops.github.io/Python_m4zqwb/Course/)
-
-[__Supplementary__](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/)
+- [__Course__](https://neof-workshops.github.io/Python_m4zqwb/Course/)
+- [__Supplemental__](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/)
 
 You can download the html files of the bookdown below. Ensure you unzip the directory before use.
 
 [__Download zipped bookdown__](https://neof-workshops.github.io/Python_m4zqwb/resources/Bookdown/Python_for_bioinformatics_bookdowns.zip)
 
+## Jupyter notebooks
 
+Pre-made Jupyter notebooks containing the course code with annotations.
+
+[__Download zipped directory__](https://neof-workshops.github.io/Python_m4zqwb/resources/Files/Python_course_data_with_jupyter_notebooks.zip)
 
 <!--chapter:end:01-Python_for_bioinformatics.Rmd-->
 
