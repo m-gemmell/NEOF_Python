@@ -66,7 +66,7 @@ The next step is to create a python notebook.
 1.  Click on the **"New"** button towards the top right, right of the "Upload" button.
 2.  From the dropdown click __Python 3 (ipykernel)__.
 
-This will open up a new R notebook like below.
+This will open up a new Python notebook like below.
 
 ```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
 knitr::include_graphics(path = "figures/jupyter_notebook_example_2.png", auto_pdf = TRUE)

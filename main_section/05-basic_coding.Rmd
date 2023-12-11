@@ -62,7 +62,7 @@ import os
 os.getcwd()
 ```
 
-This will return something like: '/pub39/tea/nsc206/Python_course_data' (your nsc number will be different though).
+This will return something like: '/pub14/tea/nsc206/Python_course_data' (your nsc number will be different though).
 
 `print()` and `os.getcwd()` are nice commands to start with but don't appear very useful, yet. We will see later how they can be used effectively.
 

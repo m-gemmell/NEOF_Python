@@ -266,7 +266,7 @@ knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = 
 
 Grand! You have learnt about different data structures in __Python__.
 
-Try choosing the correct option in the below senteces to recap what you have learnt.
+Try choosing the correct option in the below sentences to recap what you have learnt.
 
 ```{r, echo = FALSE}
 opts_p <- c("__Dictionaries__", answer="__Lists__", "__Sets__")
