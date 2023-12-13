@@ -26,22 +26,22 @@ knitr::include_graphics(path = "figures/python.png", auto_pdf = TRUE)
 ## Intro & Foundations
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/EzpFa8w7_k8" 
+<iframe src="https://www.youtube.com/embed/rjmIdziZ2EM" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 [__Slides__](https://neof-workshops.github.io/Python_m4zqwb/resources/Slides/01_NEOF_Python_for_bioinformatics.pdf)
 
-## Structure & concepts
+## Programmatic coding
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/9KlnFBczkbY" 
+<iframe src="https://www.youtube.com/embed/1v305NFCVYs" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
 [__Slides__](https://neof-workshops.github.io/Python_m4zqwb/resources/Slides/02_NEOF_Python_for_bioinformatics.pdf)
 
-## Working with DNA data
+## Practical python
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/FxT_XE5OneY" 
@@ -50,7 +50,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 [__Slides__](https://neof-workshops.github.io/Python_m4zqwb/resources/Slides/03_NEOF_Python_for_bioinformatics.pdf)
 
-## Reading & writing files
+## Exercises
 
 <div class="container">
 <iframe src="https://www.youtube.com/embed/ItKfAqtzJzw" 
