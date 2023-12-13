@@ -19,7 +19,7 @@ There are two parts to consider:
   
   - with(...`<input-file>`...) as input_file:
   
-Create a new notebook with the name  __"05-Reading_and_writing"__ we'll learn to __open__, __read__, and __write__ files with it.
+Create a new notebook with the name  __"05-Reading_and_writing"__. We'll learn to __open__, __read__, and __write__ files with it.
   
 ## 'open'
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }

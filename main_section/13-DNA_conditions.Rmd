@@ -35,7 +35,7 @@ min_len = 100
 for record in R_undulata_data:
   #If condition to determine if sequence length is greater or equal to minimum length
   if len(record.seq) >= min_len:
-    #Add the record to the list of records meets minimum length threshold
+    #Add the record to the list of records that meet the minimum length threshold
     wanted_sequences.append(record)
 
 #Print statement to show number of reads retained after length filtering
@@ -51,7 +51,7 @@ Often you may want to check your sequence file for PCR primers, and remove them 
 Using a __for__ __loop__ to move through the sequence file, we can check each DNA sequence read for the presence of a pre-defined primer sequence.
 If it is present, we'll remove it.
 
-We are going to check for the presence of the 13 nucleotide PCR primer "ACACTGCTGATCG" at the start of the reads using the `startswith()` __method__.
+We are going to check for the presence of the 13 nucleotide PCR primer "ACACTGCTGATCG" at the start of the reads using the `.startswith()` __method__.
 This __method__ checks whether a __string__ starts with a particular sub-string and returns __True__ or __False__. 
 It is very useful for checking for primer sequences in our data.
 

@@ -8,14 +8,14 @@ In this chapter you will learn how to use 2 different __logical operators__:
 - `and`
 - `or`
 
-With these statements you will:
+With these __operators__ you will:
 
 - Filter reads by GC% ranges.
 - Detect the presence of 1 or more amino acids.
 
 This will further solidify your use of __loops__ and __conditions__. 
 
-Use a new notebook called __"06-Logical_statements"__. Add the following code to the top of this notebook to load the required __library__.
+Use a new notebook called __"06-Logical_operators"__. Add the following code to the top of this notebook to load the required __library__.
 
 __Note__: Ensure `wd =` is set to __your__ working directory (not `nsc201`).
 
@@ -64,7 +64,7 @@ for num in num_list:
     print(num)
 ```
 
-Print strings longer than three characters __and__ has at least on letter __e__.
+Print strings longer than three characters __and__ has at least one letter __e__.
 
 ```{python, eval = FALSE}
 #Loop through strings
@@ -156,7 +156,7 @@ Print numbers less than or equal to 2 __or__ greater than or equal to 8.
 ```{python, eval = FALSE}
 #Loop through numbers
 for num in num_list:
-  #If number is less than or equal to 2 or greater than or qual to 8
+  #If number is less than or equal to 2 or greater than or equal to 8
   if num <= 2 or num >= 8:
     #Print number
     print(num)
@@ -179,7 +179,7 @@ Print strings with an __n__ count of more than 1 __or__ an __e__ count of 0.
 #Loop through strings
 for string in string_list:
   #If n count is greater than 0 or e count is 0
-  if len(string) <= 3 and string.count("e") == 0:
+  if string.count("n") > 0 and string.count("e") == 0:
     #Print the string
     print(string)
 ```

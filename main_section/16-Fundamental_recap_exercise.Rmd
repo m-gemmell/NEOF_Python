@@ -39,7 +39,7 @@ Ensure each answer is displayed on your notebook.
 
 1. Add 1 and 17.
 2. Divide 17 by 6.
-3. Subtract 9 from 5.
+3. Subtract 5 from 9.
 4. Multiply 0.1 by 60.
 5. Find the remainder when dividing 7 by 0.6.
 
@@ -84,7 +84,7 @@ eight_string = "8"
 
 Using these __variables__ __print__ out the below sentences. Ensure the __bold words__ are made with one or more of the above __variables__.
 
-__Note__: Ensure you matching the case (upper/lower) of the sentences.
+__Note__: Ensure you are matching the case (upper/lower) of the sentences.
 
 1. "I have __7__ __apples__ in a bushel".
 2. "You have __8__ __POTATOES__ in a sack".

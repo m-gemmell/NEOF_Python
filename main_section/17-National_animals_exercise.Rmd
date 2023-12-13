@@ -266,7 +266,7 @@ You can count the number of times a __string__ appears as __value__ in a __list_
 ```{python, eval=FALSE}
 #Will give zero as there is no value that is just an "a"
 print(animals_list.count("a"))
-#Will give 19 as there are 19 countries with the Eagle is the national animal
+#Will give 19 as there are 19 countries with the Eagle as the national animal
 print(animals_list.count("Eagle"))
 ```
 `r unhide()`

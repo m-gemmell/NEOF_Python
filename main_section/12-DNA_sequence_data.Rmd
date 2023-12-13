@@ -258,7 +258,7 @@ print("Raw sequence file has " + str(num_raw_reads) + " sequence records.")
 knitr::include_graphics(path = "figures/question_bubble_orange.png", auto_pdf = TRUE)
 ```
 
-Superb! That is the end of this chapter. Ensure to save your **notebook** regularly.
+Superb! That is the end of this chapter. Ensure you are saving your **notebook** regularly.
 
 For a quick recap, choose the correct option to complete the below sentences:
 
