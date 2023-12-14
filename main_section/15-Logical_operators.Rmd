@@ -179,7 +179,7 @@ Print strings with an __n__ count of more than 1 __or__ an __e__ count of 0.
 #Loop through strings
 for string in string_list:
   #If n count is greater than 0 or e count is 0
-  if string.count("n") > 0 and string.count("e") == 0:
+  if string.count("n") > 0 or string.count("e") == 0:
     #Print the string
     print(string)
 ```
