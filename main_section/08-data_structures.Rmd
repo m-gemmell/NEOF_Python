@@ -1,7 +1,7 @@
 # Data Structures {#data_structures}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/python_data_structure.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/python_data_structure.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 We now know the different types of data points that Python can hold, whether
 they are __integers__, __floats__, __strings__ of text, or __boolean__ values.
@@ -21,9 +21,9 @@ Use the same notebook (__"01-Fundamentals"__) and add the following __markdown c
 From now on you won't be instructed to make __markdown cells__, instead use your judgement and make your own.
 
 ## Lists
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/shopping_list.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/shopping_list.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 __Lists__ are used to store multiple items within a single __variable__. 
 __Lists__ allow duplicate values and once defined are always in the same order (__ordered__).
@@ -65,9 +65,9 @@ numerals
 ```
 
 ## Subsetting data
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/noun-list-5537185.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/noun-list-5537185.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 A value from a __list__ can be retrieved by the **position** it occupies in the list.
 This selection can be carried out using square braces (`[]`).
@@ -78,11 +78,11 @@ One of the most vital aspects to grasp for Python is that data structures start 
 This can be confusing but is a common feature of many programming languages.
 
 ### Single values
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/one_hand.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/one_hand.png){style="width:200px; background:white; border-radius:5px; border:white solid 5px"}
+</center>
 
-To select the first entry in a __list__, we therefore pass position "0" in the square braces:
+To select the first entry in a __list__ we pass position "0" in the square braces:
 
 __Reminder__: Create your own informative __markdown cells__.
 
@@ -103,12 +103,12 @@ gene_fold_change[-1]
 ```
 
 ### Multiple values
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/four_hand.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/four_hand.png){style="width:200px; background:white; border-radius:5px; border:white 5px solid"}
+</center>
 
 The same technique also works to select a range of values from the __list__. 
-The upper and lower positions of the range to be selected. 
+The upper and lower positions of the range are selected. 
 These are given in square brackets, separated by a colon (`X:Y`). 
 
 When using a range in this manner:
@@ -155,9 +155,9 @@ one_to_seven[:2]
 __Lists__ are incredibly useful but have their limitations so it is good to learn other data structures.
 
 ## Set
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/uk_plants.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/uk_plants.png){style="width:200px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
 
 A __set__ is similar to a __list__ except that it can only hold __unique__ values.
 A __set__ also differs from a __list__ in that they do not retain the order of the elements (unordered).
@@ -186,9 +186,9 @@ plants_set
 ```
 
 ## Convert a list to a set
-```{r, fig.align = 'center',out.width= '65%', echo=FALSE }
-knitr::include_graphics(path = "figures/list_to_set.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/list_to_set.png){style="width:700px; background:white; border-radius:5px"}
+</center>
 
 Sometimes we have a __list__ of non-unique values and it is useful to extract the unique values. We can do this by transforming a __list__ into a __set__.
 
@@ -207,9 +207,9 @@ gene_set
 ```
 
 ## Dictionary
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/dictionary.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/dictionary.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 The third data structure we will learn is the **dictionary**. A __dictionary__ is an
 ordered data structure which holds **pairs** of values; a **key** and a **value**.
@@ -260,9 +260,9 @@ It offers an easy way of matching up the read identifier with the DNA nucleotide
 Once indexed, the individual records can then be accessed extremely quickly.
 
 ## Data structures MCQ recap
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_purple.png){style="width:200px"}
+</center>
 
 Grand! You have learnt about different data structures in __Python__.
 

@@ -2,7 +2,10 @@
 
 # Scripting in Python {#scripting}
 
-<center>![](./figures/python_logo.png){height=150px}![](./figures/scripting_icon.png){height=150px}</center>
+<center>
+![](./figures/python_logo.png){style="height:150px; border-radius:15px; border:5px solid white; background:white"}
+![](./figures/scripting_icon.png){style="height:150px; border-radius:15px; border:5px solid white; background:white"}
+</center>
 
 ## Introduction to commands and scripts
 There are two important components to programming in __Python__; the commands that are committed by the user, and the interpreter which receives and implements the commands.
@@ -16,7 +19,9 @@ Think about how a cooking recipe is often presented:
 These are two distinct *commands*, but together they form a *script* for how to transform raw eggs into an omelette.
 
 ## Issuing commands
-<center>![](./figures/translator.png){width=15%}</center>
+<center>
+![](./figures/translator.png){style="width:150px; border-radius:15px; border:5px solid white; background:white"}
+</center>
 
 In this section we will learn and use some __Python__ commands.
 
@@ -30,9 +35,9 @@ Convert the first __cell__ to a __Markdown cell__. Add the following to the cell
 ```
 
 ### Print
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/printer.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/printer.png){style="width:100px"}
+</center>
 
 The first command we will use is `print()`. This will print the desired text. Type and run the below commands in 2 new __Code cells__.
 
@@ -49,9 +54,9 @@ print("I'm excited to be learning some Python!")
 Below each cell you will see the specified text.
 
 ### Working directory
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/directory.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/directory.png){style="width:100px"}
+</center>
 
 The command `getcwd()` stands for "get the *current working directory*". This command comes from the __Python module__ `os`. We therefore need to `import` the module and specify it when running the command (`os.getcwd()`). 
 
@@ -67,9 +72,9 @@ This will return something like: '/pub14/tea/nsc206/Python_course_data' (your ns
 `print()` and `os.getcwd()` are nice commands to start with but don't appear very useful, yet. We will see later how they can be used effectively.
 
 ## A note on indentation
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/tab.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/tab.png){style="width:100px; background:white; border-radius:5px; border: white solid 5px"}
+</center>
 
 __Indentation__ refers to any __spaces__ or __tab__ characters at the beginning of a line of code. 
 __Indentation__ helps readability of code.
@@ -80,9 +85,9 @@ However, __indentation__ in __Python__ is __mandatory__ and the interpreter will
 However, you still need to take care that the level of indentation in the script matches that in the workbook __exactly__.
   
 ### Tabs vs spaces
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/indent_python_debate.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/indent_python_debate.png){style="width:150px; border-radius:5px; background:white"}
+</center>
 
 There is an active debate about whether tabs or spaces are more appropriate for __indentation__. 
 
@@ -93,16 +98,16 @@ You can use either tabs or spaces, but you cannot use them interchangeably! Use 
 Do not enter the below, this is just an illustration of how three levels of tab __indentation__ looks in a script.
 
 ```{python, eval=FALSE}
-# Zero level of indentation
+# Zero levels of indentation
   # One level of indentation
-    # Two levels of identation
-# Zero level of indentation
+    # Two levels of indentation
+# Zero levels of indentation
 ```
 
 ## Scripting recap MCQs
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_black.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/question_bubble_black.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 Wonderful! That is the end of the scripting chapter. Now time for some reinforcement.
 

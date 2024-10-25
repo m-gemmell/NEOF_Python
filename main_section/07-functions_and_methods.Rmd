@@ -1,7 +1,7 @@
 # Functions and methods {#functions_methods}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/function.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/function.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 __Functions__ and __methods__ are groups of instructions that together perform a specific task. 
 This may be a task that you need to run repeatedly on your data.
@@ -16,9 +16,9 @@ Use the same notebook (__"01-Fundamentals"__) and add the following __markdown c
 ```
 
 ## Functions
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/dna.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/dna.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 A __function__ is a distinct piece of code which requires data for it to run.
 To run a __function__ you need the name of the __function__ followed by a pair of braces (`()`) with the desired input within the braces. 
@@ -79,9 +79,9 @@ len(maths_sentence)
 You'll notice that each character (including spaces ` `) adds to the length.
 
 ## Methods
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/percent.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/percent.png){style="width:200px"}
+</center>
 
 __Methods__ are very similar to __functions__ in that they process an input in some manner.
 They differ in that __methods__ are associated with a particular data __class__ (__string__, for example) and are called via the data itself. 
@@ -147,14 +147,14 @@ C_total = DNA1.count("C")
 ```
 
 ## Functions and methods MCQ recap
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_green.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_green.png){style="width:200px"}
+</center>
 
 Fabulous! We have explored __functions__ (`function_name(variable)`) and __methods__ (`variable.method_name()`), and can now apply them to __variables__.
 You'll learn more __functions__ and __methods__ throughout this course.
 
-It is nigh impossible to learn all the __function__ and __methods__.
+It is nigh impossible to learn all the __functions__ and __methods__.
 During this course and afterwards you can refer to the [cheatsheet in the appendix](#cheatsheet) to get a quick summary of all the __functions__ and __methods__ used in this book.
 
 Choose the correct option to complete the below sentences:

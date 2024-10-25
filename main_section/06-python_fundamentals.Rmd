@@ -1,7 +1,7 @@
 # Python Fundamentals {#python_fundamentals}
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/python_fundamentals.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/python_fundamentals.png){style="width:150px"}
+</center>
 
 This chapter covers some of the fundamental concepts of scripting in Python.
 An understanding of how to use __operators__, __variables__, and __functions__ will
@@ -26,9 +26,9 @@ Within it create a new __Markdown__ cell with the following headers:
 ```
 
 ## Operators
-```{r, fig.align = 'center',out.width= '65%', echo=FALSE }
-knitr::include_graphics(path = "figures/bodmas_ribbon.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/bodmas_ribbon.png){style="width:650px; background:white; border-radius:5px"}
+</center>
 
 Python allows the use of the usual arithmetic __operators__ and follows the traditional rules of mathematical precedence (BODMAS). 
 
@@ -50,13 +50,13 @@ For convenience you can can create a bunch of empty cells and then use the up an
 This requires knowing the two different interaction modes.
 
 - __esc mode__: This mode allows you to move up and down between cells. You are in __esc mode__ if the highlighted border of your current cell is blue (leftside) and grey.
-```{r, fig.align = 'center',out.width= '95%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_esc_mode_cell.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_esc_mode_cell.png){style="width:950px"}
+</center>
 - __command mode__: This mode allows you to type in the cell. You are in __command mode__ if the highlighted border of your current cell is green.
-```{r, fig.align = 'center',out.width= '95%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_command_mode_cell.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_command_mode_cell.png){style="width:950px"}
+</center>
 
 Press __enter__ when on a cell in __esc mode__ to enter __command mode__. This allows you to start typing in the selected cell.
 
@@ -94,9 +94,9 @@ Be careful! If you press a number key whilst in __esc mode__ you will change the
 ```
 
 ## Comments/Annotations
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/hashtag2.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/hashtag2.png){style="width:200px"}
+</center>
 
 It is often useful to include human-readable __comments__ in your scripts and code.
 __Comments/Annotations__ in Python are indicated by the hash symbol (`#`). 
@@ -118,12 +118,12 @@ print("This section will print") # This section is ignored
 Only the `print()` command is used by the python interpreter. 
 The other text is ignored due to the hashtags.
 You will also notice that the text of __comments/annotations__ are uniquely coloured in `jupyter-notebook`.
-This is useful to quickly see what are parts of __comments__ and not.
+This is useful to quickly see what parts are __comments__ and what parts are not.
 
 ## Variables
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/cargo_container.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/cargo_container.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 __Variables__ are used to store information which can then be referenced or manipulated later. 
 It is useful to label data with descriptive names which are easily read by humans. 
@@ -149,9 +149,9 @@ In a new __Markdown cell__ add the following:
 ```
 
 ### Strings
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/string_bubble.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/string_bubble.png){style="width:200px"}
+</center>
 
 __Strings__ are used to store alphanumeric text. A __string__ is defined by enclosing the text with either single (`'text'`) or double quotes (`"text"`).
     
@@ -176,9 +176,9 @@ You will notice that you can use your __variables__ in the same __cell__ you cre
 As long as you have run the code that creates/assigns the __variable__ you can use it elsewhere in the same notebook.
 
 ### Integers
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/noun-seven-3801475.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/noun-seven-3801475.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 __Integers__ are used to store whole numbers.
 These should not be declared with quote marks otherwise they will be stored as a string.
@@ -235,9 +235,9 @@ MMXXIII
 ```
 
 ### Floats (floating point numbers)
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/float.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/float.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 **Floating point numbers** are used to store real numbers (I.e. a number written with a decimal point dividing the integer and the fractional parts).
 
@@ -265,9 +265,9 @@ yet_another_float
 ```
   
 ### Booleans
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/true_or_false.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/true_or_false.png){style="width:200px"}
+</center>
 
 **Booleans** are a special type of variable that can represent one of
 two values: __True__ or __False__. 
@@ -321,9 +321,9 @@ yet_another_bool
 ```
   
 ## Classes of variable
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/class.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/class.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 Every __variable__ in Python has a __class__. These are the characteristics we described above:
 
@@ -361,9 +361,9 @@ type(variable4)
 ```
   
 ## Transforming variables
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/transform.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 __Variables__ can be transformed from one __class/type__ to another provided the value can be coerced into the new data type (I.e. you could not transform a  __string__ of text to a __floating point number__). 
 
@@ -398,11 +398,11 @@ float(a_float_string)
 ```
 
 ## Why so many code cells?
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/cells.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/cells.png){style="width:200px"}
+</center>
 
-We are using a __code cell__ per piece of code that gives an output. We do this as `jupyter-notebook` will normally only show the last output from a __code cell__.
+We are using a __code cell__ per piece of code that gives an output. We do this as `jupyter-notebook` with `python` will normally only show the last output from a __code cell__.
 
 Create and run the below __code cells__ to see this in action.
 
@@ -433,9 +433,9 @@ In this book we will stick with the multiple __code cells__ approach as we find 
 However, if you prefer using fewer __code cells__ and more `print()` __functions__ please feel free to do so.
 
 ## Fundamentals MCQ recap
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/question_bubble_red.png){style="width:200px"}
+</center>
 
 Brilliant! That is the end of this chapter. 
 Have you saved your notebook?
@@ -472,4 +472,3 @@ opts_p <- c("__Boolean__", answer="__Float__", "__Integer__")
 opts_p <- c(answer="__Boolean__", "__Float__", "__Integer__")
 ```
 6. ________ is a __class__ that stores `True` or `False`. `r longmcq(opts_p)`
-
