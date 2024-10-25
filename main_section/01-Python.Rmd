@@ -26,17 +26,21 @@ knitr::write_bib(c(
 knitr::opts_chunk$set(class.source="Rchunk") 
 ```
 
-<center>![](figures/NEOF_logo.png){width=30%}</center>
+<center>
+![](figures/NEOF_rounded_corners.png){width=300px}
+</center>
 
 # (PART\*) Intro {-}
 
 # Introduction
 
-<center>![](figures/python.png){width=30%}</center>
+<center>
+![](figures/python.png){width=300px}
+</center>
 
 Python is one of the most popular programming languages for bioinformatics and data analysis in general. It is a very flexible language with countless applications in the manipulation and processing of data files. This course is aimed at Python beginners and will give you transferable skills to manipulate your own data. The course will also provide you experience in Python modules tailored specifically for bioinformatics and genomics analyses.
 
-Sessions will start with a brief presentation followed by self-paced computer practicals guided by an online interactive book. The book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.
+Sessions will start with a brief presentation followed by self-paced computer practicals guided by this online interactive book. This book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.
 
 At the end of the course learners will be able to:
 
@@ -50,7 +54,7 @@ At the end of the course learners will be able to:
 - Filter sequences from fastq data.
 - Use logical operators to test multiple conditions at once.
 
-There are [supplementary materials](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/) including the use of the Pandas for table based data and Matplotlib for plot production. These can be run through after the course by the learner.
+There are [supplementary materials](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/) including the use of the Pandas library for table based data and Matplotlib for plot production. These can be run through after the course by the learner.
 
 ## Table of contents {-}
 
@@ -60,7 +64,7 @@ column_1 <- c(
  '[Course Introduction](#intro)', 
  '[![](figures/python.png){height="150"}](#intro)',
  '[Jupyer-notebook](#jupyter)',
- '[![](figures/jupyter_logo.png){height="150"}](#jupyter)',
+ '[![](figures/jupyter_logo.png){style="height:150px; border-radius:15px; background:white"}](#jupyter)',
  '[Python Fundamentals](#python_fundamentals)',
  '[![](figures/python_fundamentals.png){height="150"}](#python_fundamentals)',
  '[Data Structures](#data_structures)',
@@ -68,7 +72,7 @@ column_1 <- c(
  '[Conditions (if and else statements)](#python_conditions)',
  '[![](figures/python_condition.png){height="150"}](#python_conditions)',
  '[Working with DNA Sequence Data](#reading_seq_data)',
- '[![](figures/biopython_logo.png){height="150"}](#reading_seq_data)',
+ '[![](figures/biopython_logo.png){style="height:150px; border-radius:15px; background:white"}](#reading_seq_data)',
  '[Reading and Writing Files](#reading_writing)',
  '[![](figures/contract.png){height="150"}](#reading_writing)',
   '[Final exercises](#fundrecapexercise)',

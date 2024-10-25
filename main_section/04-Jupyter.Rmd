@@ -1,7 +1,7 @@
 # Jupyter {#jupyter}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_logo.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_logo.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 [`Jupyter-notebook`](https://jupyter.org/) is a nice browser based method to write, edit, and run code. It was initially created for Python coding, but has since branched out to many other languages, such as `R`.
 
@@ -10,7 +10,7 @@ We are using it in this workshop for a variety of its properties:
 -   It is popular and well maintained.
 -   It is lightweight. Other heavier weight programs would struggle in our HPC due to the graphical and CPU load.
 -   It is interactive and displays code output.
--   It allows for easier annotation, editing, and debugging than the command line.
+-   It allows for easier annotation, editing, and debugging compared to the command line.
 -   It provides a graphical interface for changing directories and choosing files.
 
 Before carrying out any analysis we will go through a quick tutorial of `jupyter-notebook`.
@@ -30,24 +30,24 @@ You may need to zoom out with your browser so you can see the full webVNC window
 
 - __Chrome__: Click on the __three dots in vertical line__ (
 ```{r, echo=FALSE}
-icons::ionicons("ellipsis-vertical")
+icons::icon_style(icons::ionicons("ellipsis-vertical"), background = "white")
 ``` 
-) on the top left for a dropdown menu which includes zoom options.
-- __Edge__: Click on the __three horizontal lines__ (
+) on the top right for a dropdown menu which includes zoom options.
+- __Edge__: Click on the __three dots in horizontal line__ (
 ```{r, echo=FALSE}
-icons::ionicons("ellipsis-horizontal")
+icons::icon_style(icons::ionicons("ellipsis-horizontal"), background = "white")
 ``` 
-) on the top left for a dropdown menu which includes zoom options.
-- __Firefox__: Click on the __three dots in horizontal line__ (
+) on the top right for a dropdown menu which includes zoom options.
+- __Firefox__: Click on the __three horizontal lines__ (
 ```{r, echo=FALSE}
-icons::fontawesome("bars")
+icons::icon_style(icons::fontawesome("bars", style="solid"), background = "white")
 ```
-) on the top left for a dropdown menu which includes zoom options.
+) on the top right for a dropdown menu which includes zoom options.
 `r unhide()`
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_notebook_example_1.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_notebook_example_1.png){style="width:1000px"}
+</center>
 
 ## Changing directories
 
@@ -55,9 +55,9 @@ To move around the directories you can click on directory names.
 
 Click on __"Python_course_data"__ to move into that directory. You will then see the below showing the files in the directory.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_notebook_example_files.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_notebook_example_files.png){style="width:1000px"}
+</center>
 
 ## Create notebook
 
@@ -68,15 +68,15 @@ The next step is to create a python notebook.
 
 This will open up a new Python notebook like below.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_notebook_example_2.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_notebook_example_2.png){style="width:1000px"}
+</center>
 
 ## Cells and code
 
 `Jupyter-notebook` uses **cells** (the gray boxes) to separate code. This is very useful to compartmentalise our code.
 
-There will already be one **cell**. Within the **cell**, type in the below commands.
+There will already be one **cell**. Within the **cell**, type in the below command.
 
 ```{python, eval=FALSE}
 1+1
@@ -86,16 +86,25 @@ When pressing enter in **cells** it will create a new line. To run all commands 
 
 Run your current **cell** and you should see something like below.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_notebook_example_3.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_notebook_example_3.png){style="width:1000px"}
+</center>
 
 ## Create new cells
 
 You can create new **cells** by 2 different means.
 
--   Press the `+` button on the tool bar (between the floppy disk `r icons::ionicons("save-outline")` and scissors `r icons::ionicons("cut")`). This will add a **cell** below your currently selected **cell**.
--   Click on the **`Insert`** button and use the dropdown to add a cell above or below your currently selected cell.
+1.   Press the `+` button on the tool bar, between the floppy disk (
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("save-outline"), background = "white")
+``` 
+) and scissors(
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("cut"), background = "white")
+``` 
+). 
+This will add a **cell** below your currently selected **cell**.
+2.   Click on the **`Insert`** button and use the dropdown to add a cell above or below your currently selected cell.
 
 **Tip:** Hover over the toolbar icons to display a text based description of its function.
 
@@ -127,17 +136,17 @@ To run all **cells** from the start:
 
 You should then see something like the below in your notebook.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_notebook_example_4.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_notebook_example_4.png){style="width:1000px"}
+</center>
 
 There is no output printed for __cell__ 2 because we are assigning variables. However, the correct output for Cell 3 is below it. This is because the variables were assigned in **cell** 2 before **cell** 3 was run.
 
 ## Saving the file
 
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/r_save.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/r_save.png){style="width:100px"}
+</center>
 
 As with many good coding interfaces we can save our notebook.
 
@@ -150,8 +159,12 @@ First we should rename the file. Rename the notebook to **"jupyter_tut"**:
 
 Now we can save the file. Two methods to save are:
 
--   Click the floppy disk `r icons::ionicons("save-outline")` on the toolbar.
--   Click on the **"File"** button. Click **"Save and Checkpoint"** from the dropdown options.
+1.   Click the floppy disk (
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("save-outline"), background = "white")
+```
+) on the toolbar.
+2.   Click on the **"File"** button. Click **"Save and Checkpoint"** from the dropdown options.
 
 ## Title cells with markdown
 
@@ -163,9 +176,9 @@ To add a header __cell__ to the top of our notebook:
 -   Click on the **"Code"** drop down and select the **"Markdown"** option.
     -   Do not choose the **"Heading"** option as it no longer works.
 
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_notebook_example_5.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/jupyter_notebook_example_5.png){style="width:1000px"}
+</center>
 
 -   Add the following to the **"Markdown"** cell to create a first level header.
     -   Ensure you have a space between the `#` and header text ("Tutorial").
@@ -187,11 +200,15 @@ To close the notebook:
 -   Click on **"File"**.
 -   From the dropdown options click **"Close and Halt"**.
 
-When you are back in the file explorer page you may not yet see the new file you saved. If so, you will need to refresh the page with the Refresh button `r icons::ionicons("refresh")` towards the top right.
-
-```{r, fig.align = 'center',out.width= '100%', echo=FALSE }
-knitr::include_graphics(path = "figures/jupyter_notebook_refresh.png", auto_pdf = TRUE)
+When you are back in the file explorer page you may not yet see the new file you saved. If so, you will need to refresh the page with the Refresh button (
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("refresh"), background = "white")
 ```
+) towards the top right.
+
+<center>
+![](figures/jupyter_notebook_refresh.png){style="width:1000px"}
+</center>
 
 With that quick tutorial of `jupyter-notebook` we can start our community analysis in the next chapter.
 
@@ -199,8 +216,7 @@ For more info on `jupter-notebook` please see the [appendix](#jupyter_appendix).
 
 ## Video tutorial
 
-::: container
-<iframe src="https://www.youtube.com/embed/2jqOdreD1c4" frameborder="0" allowfullscreen class="video">
-
-</iframe>
-:::
+<div class="container">
+<iframe src="https://www.youtube.com/embed/2jqOdreD1c4" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
