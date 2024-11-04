@@ -1,31 +1,31 @@
 # Fundamental exercise {#fundamental_exercise}
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Mimas tiliae.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Mimas tiliae.png){style="width:200px"}
+</center>
 
 To reinforce what you have learnt please try the challenges in this chapter.
 
 Solutions are in the expandable boxes.
 Try your best to solve the challenge but use the solutions for help if you would like.
-Even if your solution works it can be good to check the solution as there are many ways to do the same thing in python.
+Even if your method works it can be good to check the book solution as there are many ways to do the same thing in python.
 
 In this exercise you are going to create, investigate, and manipulate data of UK moths found in light traps.
 
 ## Fundamental exercise notebook
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/notebook.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/notebook.png){style="width:100px"}
+</center>
 
 Create a new notebook called "02-Fundamental_exercises". Use this notebook to carry out the challenges.
 
-Remember to use __markdown cells__ to make headers.
+Remember to use __markdown cells__ to make headers and to save often.
 
 ## Moth light trap challenges
 
 ### Moth challenge 1 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_1.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_1.png){style="width:100px"}
+</center>
 
 Create a __list variable__ called __"moth_sightings_21sep"__ with the ordered __string__ values:
 
@@ -51,9 +51,9 @@ moth_sightings_21sep
 `r unhide()`
 
 ### Moth challenge 2 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_2.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_2.png){style="width:100px"}
+</center>
 
 Using python code calculate the percentage of individuals that were __Elephant Hawk-moths__ in __"moth_sightings_21sep"__.
 
@@ -67,9 +67,9 @@ __Tip:__ Operators, the __function__ `len()` and the __method__ `.count()` (it c
 `r unhide()`
 
 ### Moth challenge 3 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_3.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_3.png){style="width:100px"}
+</center>
 
 Create a __set__ called __unique_moths__ from the __"moth_sightings_21sep"__ list.
 
@@ -82,9 +82,9 @@ unique_moths
 `r unhide()`
 
 ### Moth challenge 4 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_4.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_4.png){style="width:100px"}
+</center>
 
 Create a new __list variable__ called __"moth_sightings_22sep"__ with the ordered __string__ values:
 
@@ -108,9 +108,9 @@ moth_sightings_22sep
 `r unhide()`
 
 ### Moth challenge 5 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_5.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_5.png){style="width:100px"}
+</center>
 
 Add the string __variable__ __"Feathered Thorn"__ to the __set__  __"unique_moths"__.
 
@@ -123,9 +123,9 @@ unique_moths
 `r unhide()`
 
 ### Moth challenge 6 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_6.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_6.png){style="width:100px"}
+</center>
 
 This is a multi stage challenge.
 Subset the __lists__ in the following ways:
@@ -165,9 +165,9 @@ moth_sightings_22sep[-3:]
 `r unhide()`
 
 ### Moth challenge 7 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_7.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_7.png){style="width:100px"}
+</center>
 
 Create a __dictionary__ called __"moth_visits_sep"__ containing the following __key__ & __value__ pairs:
 
@@ -192,9 +192,9 @@ moth_visits_sep
 `r unhide()`
 
 ### Moth challenge 8 {-}
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/moth_8.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/moth_8.png){style="width:100px"}
+</center>
 
 Add the __key/value__ pair __"Feathered Thorn" : 13__ to the __dictionary__ __"moth_visits_sep"__.
 
@@ -207,9 +207,9 @@ moth_visits_sep
 `r unhide()`
 
 ## Moth exercise conclusion
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/finish.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 Fantastic! Hopefully you found those challenges helpful in practising and solidifying your python skills and knowledge.
 

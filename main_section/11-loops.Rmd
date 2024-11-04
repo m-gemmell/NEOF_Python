@@ -1,7 +1,7 @@
 # Loops {#loops}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/loopdeloo.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/loopdeloo.png){style="width:200px"}
+</center>
 
 We now have some knowledge of Python data structures (**lists**, **sets**, and **dictionaries**), what type of data they hold, and how we can access the elements within them.
 
@@ -14,9 +14,9 @@ There are several types of **loop**; we will cover some of the most important in
 __Note__: Continue using the notebook __"03-Programmatic_coding"__ for this chapter.
 
 ## For Loops
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/assembly_line_robot.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/assembly_line_robot.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
 
 One of the most important and most common type of **loops** is the **for** **loop**.
 
@@ -24,7 +24,10 @@ The **for** **loop** runs through a set of **variables** (such as those in our l
 
 Imagine you have a bag of 10 potatoes that you need to peel and put into a pot.
 
-<center>![](./figures/potatoes.jpg){width="20%"}![](./figures/boiling_pot.webp){width="20%"}</center>
+<center>
+![](./figures/potatoes.jpg){style="width:200px; background: white; border-radius:5px"}
+![](./figures/boiling_pot.webp){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 Using some pseudocode we can imagine how this script might look:
 
@@ -55,9 +58,9 @@ for <value> in <data_structure>:
 Note the colon (`:`) starting the loop and the tab indent of any commands inside the loop.
 
 ### Loop through DNA nucleotides
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/loop_thru_dna.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/loop_thru_dna.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 **For loops** are extremely useful when we have a lot of values (for example, in a **list**) and we need to apply some commands to all of them.
 
@@ -83,9 +86,9 @@ We can see from the output that the **loop** allows us to process each base in t
 __Note__: The __loop variable name__ `base` is arbitrary and chosen by us.
 
 ### Complement a DNA sequence
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/complement.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/complement.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 Next, let's use this **loop** functionality to do something useful to each base such as converting each nucleotide to the appropriate complement base.
 
@@ -156,9 +159,9 @@ print(complement_DNA)
 Now you have a __variable__ containing the complemented sequences.
 
 ### Reverse-complement a DNA sequence
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/reverse_complement.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/reverse_complement.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 To generate the reverse complement we can use Python's built in `reversed()` **function** to reverse the __string__.
 This reversed __string__ can then be used in the complementation. 
@@ -193,9 +196,9 @@ print(rc_DNA)
 Running this new code will produce the reverse complement of our original DNA sequence.
 
 ### Transcription challenge
-```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
-knitr::include_graphics(path = "figures/transcription.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/transcription.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 In a new __code cell__ create and run code to transcribe the DNA (__"DNA_string"__) to a RNA sequence.
 When a single strand of DNA is transcribed the resulting RNA strand is complemented with the relevant RNA bases.
@@ -233,9 +236,9 @@ print(RNA)
 `r unhide()`
 
 ## While loops
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/while_loop.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/while_loop.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 The other type of **loop** you might encounter is the **while** **loop**. A **while** **loop** continues to run **while** a statement remains **True**. For example, returning to our bag of potatoes, a **while** **loop** for the same job might look like this:
 
@@ -285,18 +288,18 @@ x
 **While** **loops** are much less commonly used and we will not spend any more time on them in this book. Hopefully you can see the difference between a **for** **loop** and a **while** **loop** and have an idea of how they run.
 
 ## Further control statements
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/controller.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/controller.png){style="width:200px"}
+</center>
 
 You can control **loops** further using __break__, __continue__ and __pass__ __statements__.
 We won't cover these in this tutorial as they are much less common. 
 You can find good resources covering __Python control statements__ [online](https://www.tutorialspoint.com/python/python_loop_control.htm).
 
 ## Loop reflection
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/reflection.png){style="width:200px"}
+</center>
 
 Perfect! **Loops** are really useful when we need to perform the same task, or commands, over-and-over again. 
 Where we have data stored in a data structure such as a **list**, we can apply something to everything in the **list** using a **for** **loop**. 

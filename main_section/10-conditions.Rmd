@@ -1,18 +1,18 @@
 # (PART\*) Programmatic coding {-}
 
 # Python Conditions {#python_conditions}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/python_condition.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/python_condition.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 In this section we are going to learn some programmatic __Python__ coding including __conditions__ and __loops__.
 
 Create a new notebook called __"03-Programmatic_coding"__. Use this notebook in this chapter.
 
 ## Logical conditions
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/logical.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/logical.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 A powerful feature of most programming languages is the ability to compare values/**variables** and to make decisions based upon the outcome.
 This type of behaviour is achieved using __logical conditions__.
@@ -43,9 +43,9 @@ len(a) == len(b)
 These logical conditions are most typically used in **if** statements.
 
 ## If statements
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/switch.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/switch.png){style="width:200px"}
+</center>
 
 By testing whether certain comparisons evaluate as either **True** or **False**, we can change the flow of our programs.
 
@@ -86,9 +86,9 @@ if x >= y:
 ```
 
 ## If else statements
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/wrong.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/wrong.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 We can also include an action for when the condition has not been met using **else**.
 The **else statement** works in conjunction with the **if** and offers a different action if the condition evaluated to **False**.
@@ -118,9 +118,9 @@ c = "GGTCATtat"
 ```
 
 ### DNA length comparison
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/measuring_tape.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/measuring_tape.png){style="width:200px"}
+</center>
 
 In the below code we create new variables for the __statement__ (`dna1` & `dna2`).
 This is so we only have to change the one set of __variables__ if we change the input data.
@@ -149,11 +149,11 @@ else:
 ```
 
 ### Nucleotide count comparison
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/abacus.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/abacus.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
-In the below examples we'll compare the number of specific nucleotides.
+In the below examples we'll compare numbers of specific nucleotides between sequences.
 We'll use the __method__ `.count()`.
 In this case we'll calculate the nucleotide content outside of the __condition__.
 
@@ -212,9 +212,9 @@ else:
 When you run the above code, they will now be correct for our purposes.
 
 ## Conditions reflection
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/reflection.png){style="width:200px"}
+</center>
 
 Marvelous! **If** and **else statements** can be used to make decisions in our programs by comparing values.
 This might be to check if two __strings__ are the same, two __lists__ contain the same number of items, or a __string__ of nucleotide data has 100 or more bases.
