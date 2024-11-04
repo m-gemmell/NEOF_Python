@@ -1,7 +1,7 @@
 # National animals exercise
-```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
-knitr::include_graphics(path = "figures/tiger.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/tiger.png){style="width:250px; border-radius:5px; background:white"}
+</center>
 
 In this chapter you'll be going through a set of challenges which will involves a file containing information on the national animals of different countries. It contains two columns; __Country__ and __National Animal__. This dataset was found in [kaggle](https://www.kaggle.com/datasets/rambomind/countries-and-their-national-animals).
 
@@ -14,9 +14,9 @@ Please check the solution in the box even if your solution works. There are many
 Create a new `jupyter-notebook` called __"08-National_animals_challenges"__ to attempt the challenges.
 
 ## NA challenge 1
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Momotus_aequatorialis.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Momotus_aequatorialis.png){style="width:150px; border-radius:5px; background:white"}
+</center>
 
 Read in the file __"national-animals.csv"__ in your __"Python_course_data"__ directory. Then __print__ the line "The national animal of \<country\> is the \<animal\>" for each line in the file.
 
@@ -38,7 +38,7 @@ with open("national-animals.csv", 'r') as input_file:
 
 You will notice that there are spaces between the lines. This is because there is a newline character (`\n`) at the end of each line in the file. You can remove these with the __method__ `.strip()`. It removes any leading (start of sentence) and trailing (end of sentence) white spaces (including `\n`). It's very useful to quickly clean the input from files.
 
-__Note:__ The `.strip()`__method__ works on __strings__, not data from files. See the below solution for an example on how to use it.
+__Note:__ The `.strip()` __method__ works on __strings__, not data from files. See the below solution for an example on how to use it.
 
 `r hide("National animals 1 solution with .strip()")`
 ```{python, eval=FALSE}
@@ -60,9 +60,9 @@ with open("national-animals.csv", 'r') as input_file:
 __Ensure__ you use `.strip()` in this challenge and the next to remove the `\n` characters.
 
 ## NA challenge 2
-```{r, fig.align = 'center',out.width= '25%', echo=FALSE }
-knitr::include_graphics(path = "figures/Rhizoprionodon_terraenovae.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Rhizoprionodon_terraenovae.png){style="width:250px; border-radius:5px; background:white"}
+</center>
 
 Read in the file __"national-animals.csv"__. Then convert the data into a dictionary called __"national_animals"__. Ensure the __key__ is the __country__ and the __value__ is the __animal__.
 
@@ -159,9 +159,9 @@ There are many other ways to do this, but I will let you discover these yourself
 __Ensure__ your __dictionary__ __"national_animals"__ does not have the header information before continuing.
 
 ## NA challenge 3
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Giraffa_camelopardalis.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Giraffa_camelopardalis.png){style="width:150px; border-radius:5px; background:white; border: white solid 5px"}
+</center>
 
 __Print__ out the national animals of the following countries:
 
@@ -183,9 +183,9 @@ print(national_animals["Niger"])
 `r unhide()`
 
 ## NA challenge 4
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Iguana_iguana.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Iguana_iguana.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 Create a __list__ of the animals using the __values__ from the __dictionary__ __"national_animals"__. Call the __list "animals_list"__. Then __print__ the __list__.
 
@@ -221,9 +221,9 @@ print(animals_set)
 `r unhide()`
 
 ## NA challenge 5
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Aquila nipalensis.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Aquila nipalensis.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 Carry out the below tasks with python coding.
 
@@ -253,9 +253,9 @@ print(len(national_animals) - len(animals_set))
 `r unhide()`
 
 ## NA challenge 6
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Crocodylus_porosus.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Crocodylus_porosus.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 Create a __dictionary__ where the __key__ is the animal and the __value__ is the number of countries it is a national animal for. Call it __"animal_popularity"__.
 
@@ -288,11 +288,11 @@ print(animal_popularity)
 `r unhide()`
 
 ## NA challenge 7
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Panthera_leo.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Panthera_leo.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
-This challenge is difficult. Please, try your best to make a solution before looking at my solution. You can solve this with the __fuctions, methods__, etcs that you have learnt in this course. Optionally, I encourage you to search online for help, this is what normal day to day bioinformatics involves.
+This challenge is difficult. Please, try your best to make a solution before looking at my solution. You can solve this with the __fuctions, methods__, etc. that you have learnt in this course. Optionally, I encourage you to search online for help, this is what normal day to day bioinformatics involves.
 
 Using the __"animal_popularity" dictionary__ answer the question "What animal represents the most countries as their national animal?"
 
@@ -343,18 +343,18 @@ print("The most popular animal is the " + max_key + " which represents " +
 `r unhide()`
 
 ## NA challenge 8
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Pteropus_medius.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Pteropus_medius.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 For the last challenge use the __dictionary__ __"animal_popularity"__ to __write__ to a new file called __"popular_national_animals.csv"__. 
 
 Make sure this file has the following features:
 
-1. The fields/columns are comma separated (`,`).
-2. The first line is the header with the following text: "Animal,popularity_count"
-3. There is a line for each animal with a count of 2 or more.
-  - An example line would be: "Pelican,2"
+1.  The fields/columns are comma separated (`,`).
+2.  The first line is the header with the following text: "Animal,popularity_count"
+3.  There is a line for each animal with a count of 2 or more.
+    -   An example line would be: "Pelican,2"
 
 `r hide("National animals 8 tip")`
 Add `\n` to the end of your file lines so each entry is on a new line.
@@ -377,9 +377,9 @@ with open("popular_national_animals.csv", 'w') as output_file:
 `r unhide()`
 
 ## National animals conclusion
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Gallus_gallus_domesticus.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Gallus_gallus_domesticus.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 Superlative! That is the end of the national animals exercise. Throughout it you have:
 

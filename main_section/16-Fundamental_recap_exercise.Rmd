@@ -1,14 +1,14 @@
 # (PART\*) Exercises {-}
 
 # Fundamental recap exercise {#fundrecapexercise}
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/exercise_2.png){style="width:200px"}
+</center>
 
 In this section you'll be going through multiple exercises.
 These will try to bring in everything you have learnt throughout the course.
 
-Solutions are in the expandable boxes. Try your best to solve the challenge but use the solutions for help if you would like. Even if your solution works it can be good to check the solution as there are many ways to do the same thing in python.
+Solutions are in the expandable boxes. Try your best to solve the challenge but use the solutions for help if you would like. Even if your method works it can be good to check the book solution as there are many ways to do the same thing in python.
 
 This exercise will primarily focus on the fundamentals you learnt in chapters 5 to 9.
 
@@ -17,9 +17,9 @@ Create a new notebook called __"07-Fundamental_recap_exercise"__ to carry out th
 __Tip:__ The Appendix will be useful for quick lookup of various python __functions__, __methods__, etc..
 
 ## FRE challenge 1
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/header_footbal.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/header_footbal.png){style="width:150px"}
+</center>
 
 Create a __markdown__ cell with the 1st level header "Fundamental recap exercise".
 
@@ -30,9 +30,9 @@ Create a __markdown__ cell with the 1st level header "Fundamental recap exercise
 `r unhide()`
 
 ## FRE challenge 2
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/calculator_2.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/calculator_2.png){style="width:100px"}
+</center>
 
 Carry out the following calculations with python.
 Ensure each answer is displayed on your notebook.
@@ -67,9 +67,9 @@ Ensure each answer is displayed on your notebook.
 `r unhide()`
 
 ## FRE challenge 3
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/apple.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/apple.png){style="width:100px"}
+</center>
 
 Write and run the below code to create some __variables__
 
@@ -108,9 +108,9 @@ print("We have " + str(seven_int * int(eight_string)) + " " + money.lower() + " 
 `r unhide()`
 
 ## FRE challenge 4
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/distance.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/distance.png){style="width:150px; background: white; border-radius: 5px"}
+</center>
 
 Write and run the below code to create a __dictionary variable__.
 
@@ -136,7 +136,7 @@ Using python coding carry out the following tasks:
 1. Add a new entry to the __dictionary__ with the __key__ of __"furlong"__ and the __value__ of __201.168__. Then __print__ the dictionary to check it.
 2. Check if a __mile__ is __equal__ to a __nautical mile__.
 3. Check if a __furlong__ is __less__ than a __league__.
-4. Check if an __inch__ is __greater than or equal__ to a __yard divided by 36__ (yard/36).
+4. Check if an __inch__ is __greater than or equal__ to a __36th of a yard__ (yard/36).
 5. Check if a __foot__ is not equal to a __fathom__.
 
 __Tip__: This will require the retrieval of values from the __dictionary__ (dict["key"]) and the use of __logical operators__ (`>`, `<`, etc.)
@@ -166,9 +166,9 @@ length_dict["foot"] != length_dict["fathom"]
 `r unhide()`
 
 ## FRE challenge 5
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/clock.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/clock.png){style="width:150px"}
+</center>
 
 In this challenge you will create 3 __lists__ related to time.
 The __variable names__ and contents of these __lists__ are:
@@ -179,7 +179,7 @@ The __variable names__ and contents of these __lists__ are:
 
 Once created __print__ all these __lists__.
 
-__Note__: A __for loop__ will be useful to create `minutes` and `seconds` using the `hours` __list__.
+__Note__: Utilise a __for loop__ to create `minutes` and `seconds` using the `hours` __list__.
 
 `r hide("FREC5 solution")`
 ```{python, eval=FALSE}
@@ -197,10 +197,10 @@ print(seconds)
 ```
 `r unhide()`
 
-## Exercise 1 conclusion
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/finish.png", auto_pdf = TRUE)
-```
+## FRE Exercise conclusion
+<center>
+![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 Great going! You can save, and close and halt your notebook. 
 

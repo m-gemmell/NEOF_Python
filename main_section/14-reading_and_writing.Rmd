@@ -1,7 +1,7 @@
 # Reading and writing files {#reading_writing}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/contract.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/contract.png){style="width:200px"}
+</center>
 
 Often we want to __read__ from a data file, perform some task with the data, and __write__ out
 another file.
@@ -22,9 +22,9 @@ There are two parts to consider:
 Create a new notebook with the name  __"05-Reading_and_writing"__. We'll learn to __open__, __read__, and __write__ files with it.
   
 ## 'open'
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/open_file.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/open_file.png){style="width:200px"}
+</center>
 
 The `open` __function__ asks the Python interpreter to make a link to the specified file and __open__ a data stream.
 We need to specify the __mode__ by which the file is __opened__.
@@ -37,9 +37,9 @@ The most common __modes__ are:
 There are other modes but these three cover the majority of file tasks.
 
 ## Read a data file
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/reading_glasses.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/reading_glasses.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 Create your first coding __cell__ in your __"05-Reading_and_writing"__ notebook. Add the location of your working directory and load the __SeqIO library__.
 
@@ -72,9 +72,9 @@ with open(wd + "/patients_gut_data.csv", 'r') as input_file:
 When you run the code the file contents will be printed. We will learn to organise this output in a more usable way in the supplementary material.
 
 ## Write data to a file
-```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
-knitr::include_graphics(path = "figures/write_feather.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/write_feather.png){style="width:100px; background: white; border-radius:5px"}
+</center>
 
 Copy, paste, and edit your code to add a second __data stream__.
 This is done by first opening a new file for __write__ access.
@@ -97,9 +97,9 @@ Open your new file (__"patients_modified.csv"__) in the `jupyter-notebook` file 
 You will see that each row in the data now starts with the "Study_2022" __string__.
 
 ## Write out the filtered Undulate ray sequence data
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Leucoraja erinacea.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Leucoraja erinacea.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 Returning to our example data relating to the undulate ray, we have a list of sequence records (trimmed_sequences).
 These have passed our filters and we now want to write out the FASTQ file so that it might be further analysed using another piece of software.
@@ -123,10 +123,9 @@ This trimmed, filtered file would now be ready to go into whichever subsequent a
 Use your `jupyter-notebook` file navigator to check that the file exists and that it is approximately 3MBs in size.
 
 ## Reading and writing MCQ recap
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_red.png){style="width:200px"}
+</center>
 
 Sublime! You've successfully finished this chapter.
 

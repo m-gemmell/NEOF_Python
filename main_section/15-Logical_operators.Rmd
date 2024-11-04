@@ -1,7 +1,7 @@
 # Logical operators {#logical_operators}
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/logic.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/logic.png){style="width:150px"}
+</center>
 
 In this chapter you will learn how to use 2 different __logical operators__:
 
@@ -25,9 +25,9 @@ from Bio import SeqIO
 ```
 
 ## and logical operator
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/and.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/and.png){style="width:150px"}
+</center>
 
 We will first look at the `and` __logical operator__. 
 This allows us to compare two comparisons. 
@@ -89,9 +89,9 @@ for string in string_list:
 In the above examples we have only used one `and` __operator__. You can use multiple but of course the more you use the more complex your __statement__ becomes.
 
 ## Filter by GC% range
-```{r, fig.align = 'center',out.width= '40%', echo=FALSE }
-knitr::include_graphics(path = "figures/40_60_range.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/40_60_range.png){style="width:400px; background: white; border-radius:5px"}
+</center>
 
 With the `and` __logical operator__ we can filter by a GC% range.
 
@@ -127,9 +127,9 @@ Ensure you understand the above code before continuing.
 Please ask a demonstrator if you are unsure.
 
 ## or logical operator
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/oar.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/oar.png){style="width:150px; background: white; border-radius:5px"}
+</center>
 
 For this we will use the `or` __logical operator__. This allows us to test two comparisons and __if__ the first __or__ second is `True` the __condition__ will return the output. Lets go through a few examples.
 
@@ -186,9 +186,9 @@ for string in string_list:
 
 
 ## Amino acid detection
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/amino_acid.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/amino_acid.png){style="width:200px; background: white; border-radius:5px"}
+</center>
 
 In this part you will translate part of each sequence with `.translate()`.
 Then you will count the number of sequences that have at least one translated __Glutamine (Q)__ or __Serine (S)__.
@@ -229,9 +229,9 @@ print("Found " + str(counter) + " reads with a translated " +
 ```
 
 ## Logical operators reflection
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/reflection.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/reflection.png){style="width:200px"}
+</center>
 
 Excellent! You have learnt how to use the `and` and `or` __logical operators__.
 You now have a good tool kit to carry out a lot of different python coding and be able to learn more yourself.

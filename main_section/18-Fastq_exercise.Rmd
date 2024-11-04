@@ -1,8 +1,7 @@
 # Fastq exercise
-
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Coriobacteriia.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Coriobacteriia.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 In this exercise you will read in a fastq file, carry out some filtering, and then write the filtered data to a new fastq file.
 
@@ -17,10 +16,9 @@ To have a smaller dataset the fastq file you will be using only contains the fir
 For this exercise create and use a new **notebook** called **"09-Fastq_exercise"**.
 
 ## Fastq challenge 1
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/bacillus_subtilis.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/bacillus_subtilis.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 For your first challenge, **read** in the fastq file (**"SRR11554953.10k.fastq"**) and count the number of sequences there are. **Print** this number.
 
@@ -44,12 +42,11 @@ print(count)
 `r unhide()`
 
 ## Fastq challenge 2
+<center>
+![](figures/Nitriliruptoria.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Nitriliruptoria.png", auto_pdf = TRUE)
-```
-
-In the paper they remove reads with an average/mean quality that is less than 10. Therefore you will do the same thing.
+In the paper they remove reads with an average/mean quality that is less than 10. Therefore you will do the same.
 
 Carry out the following steps:
 
@@ -99,16 +96,15 @@ print("The number of retained sequences after filtering reads with a mean qualit
 In this case none of the reads were removed as they were all high quality.
 
 ## Fastq challenge 3
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Verrucomicrobiae.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Verrucomicrobiae.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 Our previous filtering step didn't remove any reads so prior to length filtering we will check the lengths of the reads.
 
 Carry out the following tasks:
 
-1.  With your **variable "q10_filtered_records"** create a **list** called **"seq_lengths"** which contains all the lengths of all the sequences.
+1.  With your **variable "q10_filtered_records"** create a **list** called **"seq_lengths"** which contains the lengths of all the sequences.
 2.  **Print** the length of the shortest read and longest read.
     -   **Tip**: The **functions** `min()` and `max()` can be used on an **intger list**.
 3.  Calculate the number of sequences with length ranges of: 1150-1199, 1200-1249, 1250-1299, 1300-1349, 1350-1399, 1400-1449, & 1500-1549.
@@ -165,10 +161,9 @@ print(range_counts)
 You'll notice that the majority of reads are in the length range of 1350-1449. However, there is a range of lengths.
 
 ## Fastq challenge 4
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Vicinamibacteria.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Vicinamibacteria.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 Its time to filter the sequences (**"q10_filtered_records"**) by lengths. Use a minimum length of 1250 and a maximum length of 1450 (these lengths are chosen arbitrarily for this example). Create a **variable** called **"q10_length_filtered_records"** to contain the length filtered reads.
 
@@ -199,10 +194,9 @@ print("The number of retained sequences after filtering reads shorter than " +
 `r unhide()`
 
 ## Fastq challenge 5
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Chlorobium_clathratiforme.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Chlorobium_clathratiforme.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 For the last challenge, write the data in **"q10_length_filtered_records"** to a fastq file called **"SRR11554953.10k.filtered.fastq"**.
 
@@ -219,10 +213,9 @@ with open("SRR11554953.10k.filtered", 'w') as output_file:
 `r unhide()`
 
 ## Fastq exercise conclusion
-
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/Flexibacter_flexilis.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/Flexibacter_flexilis.png){style="width:200px; background:white; border-radius:5px"}
+</center>
 
 Stupendous! You have finished the last exercise of this workshop.
 
