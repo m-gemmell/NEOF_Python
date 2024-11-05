@@ -1,5 +1,7 @@
 # Plotting using Python and Matplotlib {#matplotlib}
-<center>![](images/matplotlib.webp){width=40%}</center>
+<center>
+![](figures/matplotlib.webp){style="width:400px; background:white; border-radius:5px"}
+</center>
 
 We can also use Python to produce plots of our data.
 [Matplotlib](https://matplotlib.org/) is a library of powerful
@@ -47,7 +49,9 @@ plt.close()
 
 You can then open the file in your `jupyter-notebook` explorer tab.
 
-<center>![](images/bar_chart.png){width=80%}</center>
+<center>
+![](figures/bar_chart.png){style="width:800px; border-radius:5px"}
+</center>
 
 ## Scatter plot
 We can also look for relationships between a pair of variables. Consider the age and diversity of gut microbiome of the first 100 patients (for clarity).
@@ -63,7 +67,9 @@ plt.close()
 
 View the plot file and you should see the below.
 
-<center>![](images/scatter.png){width=80%}</center>
+<center>
+![](figures/scatter.png){style="width:800px; border-radius:5px"}
+</center>
 
 ## Recap
 __Madplotlib__ is a __library__ of very powerful tools to produce plots directly from Python. We have barely scratched the surface of what __Matplotlib__ can do but you have seen a couple of examples of how we can produce plots to explore our data.

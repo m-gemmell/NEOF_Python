@@ -1,6 +1,7 @@
 # Other types of data {#pandas}
-
-<center>![](./images/pandas_icon.jpg){width="40%"}</center>
+<center>
+![](figures/pandas_icon.jpg){style="width:200px; border-radius:5px"}
+</center>
 
 Often scientists store data in delimited text files. These are typically
 separated by commas or tabs. We can **read** these into Python, **loop**
@@ -15,8 +16,9 @@ data. We will then use the Python module
 Create a new notebook called **"10-Pandas"** for this chapter.
 
 ## Background info on the example data
-
-<center>![](./images/microbiome_icon.webp){width="15%"}</center>
+<center>
+![](figures/microbiome_icon.webp){style="width:200px; border-radius:5px"}
+</center>
 
 The example data we are working with is a subset of the
 [Atlas1006](https://rdrr.io/github/microbiome/microbiome/man/atlas1006.html)
@@ -37,8 +39,9 @@ The data we will be looking at contains the following variables:
 -   A BMI category
 
 ## Read a .csv file with pandas
-
-<center>![](./images/pandas_icon.jpg){width="25%"}</center>
+<center>
+![](figures/pandas_icon.jpg){style="width:200px"}
+</center>
 
 The Python **library** [pandas](https://pandas.pydata.org/) is
 specifically designed for reading delimited text files. It pre-processes
@@ -66,7 +69,7 @@ Next we will **read** in the data with the
 patients = pandas.read_csv("patients_gut_data.csv")
 ```
 
-We have read in a __[DataFrame]__(https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html).
+We have read in a __[DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)__.
 Look at the top of this __DataFrame__ with the `.head()` __method__.
 
 ```{python, eval=FALSE}
@@ -116,8 +119,9 @@ print(patients.nationality["Sample-21"])
 ```
 
 ## Make more complex selections
-
-<center>![](./images/filter_icon.png){width="15%"}</center>
+<center>
+![](figures/filter_icon.png){style="width:200px; border-radius:5px"}
+</center>
 
 Pandas is very powerful for selecting columns and records from the data
 by any conditions we want.
@@ -159,8 +163,9 @@ We can see our new dataframe contains just the columns we selected.
 By checking it with the `type()` function, we know this new dataframe is in the [pandas](https://pandas.pydata.org/) format.
 
 ### Select records by their properties
-
-<center>![](./images/venn_icon.jpg){width="15%"}</center>
+<center>
+![](figures/venn_icon.jpg){style="width:200px; border-radius:5px"}
+</center>
 
 Let's choose records which fit certain criteria.
 
@@ -185,9 +190,8 @@ print(obese_or_severeobese)
 ```
 
 ## Applying functions and methods to pandas objects
-
-<center>![](./images/function.jpg){width="10%"}![](./images/pandas_logo2.svg.png){width="25%"}</center>
-
+<center>
+![](figures/function.jpg){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 [Pandas](https://pandas.pydata.org/) provides useful methods for working

@@ -7,7 +7,9 @@ description: NEOF book for the Python for Bioinformatics workshop - Supplementar
 cover-image: "images/NEOF.png"
 ---
 
-<center>![](images/NEOF_logo.png){height="100px"}</center>
+<center>
+![](figures/NEOF_rounded_corners.png){width=300px}
+</center>
 
 # Introduction
 
@@ -29,11 +31,11 @@ These material serves as an introduction to two very powerful Python libraries:
 #Create 2 coilumn dataframe
 column_1 <- c(
  '[__`Pandas`__](#pandas)',
- '[![](images/pandas_icon.jpg){height="150"}](#pandas)'
+ '[![](figures/pandas_icon.jpg){style="height:150px; border-radius:15px; background:white"}](#pandas)'
 )
 column_2 <- c(
   '[__`Matplotlib`__](#matplotlib)',
- '[![](images/matplotlib.webp){height="100"}](#matplotlib)'
+ '[![](figures/matplotlib.webp){style="height:150px; border-radius:15px; background:white"}](#matplotlib)'
 )
 table_df <- data.frame(column_1, column_2)
 #Kable and kableextra libraries
