@@ -210,7 +210,7 @@ icons::icon_style(icons::ionicons("refresh"), background = "white")
 ![](figures/jupyter_notebook_refresh.png){style="width:1000px"}
 </center>
 
-With that quick tutorial of `jupyter-notebook` we can start our community analysis in the next chapter.
+With that quick tutorial of `jupyter-notebook` we can start python scripting in the next chapter.
 
 For more info on `jupter-notebook` please see the [appendix](#jupyter_appendix).
 
