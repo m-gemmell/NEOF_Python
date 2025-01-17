@@ -39,7 +39,7 @@ Ensure each answer is displayed on your notebook.
 
 1. Add 1 and 17.
 2. Divide 17 by 6.
-3. Subtract 5 from 9.
+3. Subtract 9 from 5.
 4. Multiply 0.1 by 60.
 5. Find the remainder when dividing 7 by 0.6.
 

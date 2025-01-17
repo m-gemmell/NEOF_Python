@@ -173,7 +173,7 @@ for string in string_list:
     print(string)
 ```
 
-Print strings with an __n__ count of more than 1 __or__ an __e__ count of 0.
+Print strings with an __n__ count of more than 0 __or__ an __e__ count of 0.
 
 ```{python, eval = FALSE}
 #Loop through strings

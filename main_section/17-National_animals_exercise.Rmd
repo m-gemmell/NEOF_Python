@@ -146,7 +146,7 @@ with open("national-animals.csv", 'r') as input_file:
     #Set key and value
     national_animals[country] = animal
 #Get key from first line
-fstring = open("national-animals.csv", 'r').readline().strip().split()[0]
+fstring = open("national-animals.csv", 'r').readline().strip().split(",")[0]
 #Remove the pair from the header
 del national_animals[fstring]
 #Print dictionary

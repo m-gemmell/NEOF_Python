@@ -44,7 +44,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Practical python
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/8o3bixCj4VI" 
+<iframe src="https://www.youtube.com/embed/4kf9cEM-snw" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
@@ -53,7 +53,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Exercises
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/HKrPtJOySZ4" 
+<iframe src="https://www.youtube.com/embed/3tpJkavGCvI" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 

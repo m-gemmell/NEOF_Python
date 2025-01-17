@@ -25,8 +25,8 @@ The example data we are working with is a subset of the
 dataset, which itself is example data provided with the R package
 [microbiome](https://microbiome.github.io/tutorials/).
 
-It contains information on 1006 western women with no reported health
-complications. The women had their gut microbiome profiled and several
+It contains information on 1006 westerners with no reported health
+complications. The westerners had their gut microbiome profiled and several
 other characteristics recorded.
 
 The data we will be looking at contains the following variables:

@@ -149,8 +149,8 @@ for start in range_starts:
     #If length in range add to current count
     if length >=start and length < (start + 50):
       count = count + 1
-    #Add count to count list
-    range_counts.append(count)
+  #Add count to count list
+  range_counts.append(count)
 #Print
 print(range_starts)
 print(range_counts)
