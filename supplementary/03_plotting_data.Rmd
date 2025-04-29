@@ -72,4 +72,4 @@ View the plot file and you should see the below.
 </center>
 
 ## Recap
-__Madplotlib__ is a __library__ of very powerful tools to produce plots directly from Python. We have barely scratched the surface of what __Matplotlib__ can do but you have seen a couple of examples of how we can produce plots to explore our data.
+__Matplotlib__ is a __library__ of very powerful tools to produce plots directly from Python. We have barely scratched the surface of what __Matplotlib__ can do but you have seen a couple of examples of how we can produce plots to explore our data.

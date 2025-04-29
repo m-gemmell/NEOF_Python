@@ -1,6 +1,6 @@
 # Further Reading and Resources
 
-## Websites of the verious packages used in the workshop
+## Websites of the various packages used in the workshop
 There are plenty of online resources to help you with your analyses and programming.
 
 The [Biopython website](http://biopython.org/DIST/docs/tutorial/Tutorial.html)

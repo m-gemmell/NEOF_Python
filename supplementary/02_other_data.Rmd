@@ -35,7 +35,7 @@ The data we will be looking at contains the following variables:
 -   Age
 -   Gender
 -   Nationality
--   Diverity of gut microbiome
+-   Diversity of gut microbiome
 -   A BMI category
 
 ## Read a .csv file with pandas
