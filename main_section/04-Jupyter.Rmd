@@ -1,6 +1,6 @@
 # Jupyter {#jupyter}
 <center>
-![](figures/jupyter_logo.png){style="width:200px; background:white; border-radius:5px"}
+![](figures/jupyter_logo.png){style="width:200px; background:white; border-radius:5px; border: white 5px solid"}
 </center>
 
 [`Jupyter-notebook`](https://jupyter.org/) is a nice browser based method to write, edit, and run code. It was initially created for Python coding, but has since branched out to many other languages, such as `R`.
@@ -8,7 +8,7 @@
 We are using it in this workshop for a variety of its properties:
 
 -   It is popular and well maintained.
--   It is lightweight. Other heavier weight programs would struggle in our HPC due to the graphical and CPU load.
+-   It is lightweight. Other heavier weight programs would struggle in our <u id='hpc'>HPC</u>  due to the graphical and <u id='cpu'>CPU</u> load.
 -   It is interactive and displays code output.
 -   It allows for easier annotation, editing, and debugging compared to the command line.
 -   It provides a graphical interface for changing directories and choosing files.
@@ -142,6 +142,25 @@ You should then see something like the below in your notebook.
 
 There is no output printed for __cell__ 2 because we are assigning variables. However, the correct output for Cell 3 is below it. This is because the variables were assigned in **cell** 2 before **cell** 3 was run.
 
+`r hide("Moving across cells in jupyter-notebook with the keyboard")`
+To use the keyboard to move around and create new cells you will need to know the two different interaction modes.
+
+- __esc mode__: This mode allows you to move up and down between cells. You are in __esc mode__ if the highlighted border of your current cell is blue (leftside) and grey.
+<center>
+![](figures/jupyter_esc_mode_cell.png){style="width:950px"}
+</center>
+- __command mode__: This mode allows you to type in the cell. You are in __command mode__ if the highlighted border of your current cell is green.
+<center>
+![](figures/jupyter_command_mode_cell.png){style="width:950px"}
+</center>
+
+Press __enter__ when on a cell in __esc mode__ to enter __command mode__. This allows you to start typing in the selected cell.
+
+When you run code (ctrl + enter) in __command mode__ you will then enter __esc mode__.
+
+Be careful! If you press a number key whilst in __esc mode__ you will change the cell to a __markdown cell__. Additionally, you will change the first line to a header line equal to the number you pressed. I.e. if you pressed 2, the following would be added to the start of the first line of the cell: `## `.
+`r unhide()`
+
 ## Saving the file
 
 <center>
@@ -220,3 +239,13 @@ For more info on `jupter-notebook` please see the [appendix](#jupyter_appendix).
 <iframe src="https://www.youtube.com/embed/2jqOdreD1c4" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "hpc", 
+                  tooltip = "High Performance Computing",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "cpu", 
+                  tooltip = "Central Processing Unit",
+                  arrow = TRUE, placement = "bottom")
+```

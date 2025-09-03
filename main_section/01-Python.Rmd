@@ -35,7 +35,7 @@ knitr::opts_chunk$set(class.source="Rchunk")
 # Introduction
 
 <center>
-![](figures/python.png){width=300px}
+![](figures/python.png){style="width:300px; border-radius:5px; background:white"}
 </center>
 
 Python is one of the most popular programming languages for bioinformatics and data analysis in general. It is a very flexible language with countless applications in the manipulation and processing of data files. This course is aimed at Python beginners and will give you transferable skills to manipulate your own data. The course will also provide you experience in Python modules tailored specifically for bioinformatics and genomics analyses.

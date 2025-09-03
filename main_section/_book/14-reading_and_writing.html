@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>14 Reading and writing files | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="14 Reading and writing files | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -53,6 +53,14 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
 
 
 <style type="text/css">
@@ -492,28 +500,28 @@ We can carry this out with <code>SeqIO's</code> built in <code>write()</code> <s
 <p>For a quick recap, choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>The ________ <strong>function</strong> is used to <strong>read</strong>, <strong>write</strong>, or <strong>append</strong> data from/to files.
-<div id="radio_PBALUJGWOF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PBALUJGWOF" value="answer"></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PBALUJGWOF" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PBALUJGWOF" value=""></input> <span><strong><code>.write()</code></strong></span></label>
+<div id="radio_OGHUFKIDFV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OGHUFKIDFV" value="answer"></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OGHUFKIDFV" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OGHUFKIDFV" value=""></input> <span><strong><code>.write()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>method</strong> is used to <strong>write</strong> data to a file.
-<div id="radio_UJRJXWQMRV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UJRJXWQMRV" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UJRJXWQMRV" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UJRJXWQMRV" value="answer"></input> <span><strong><code>.write()</code></strong></span></label>
+<div id="radio_UETJRJMOJC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UETJRJMOJC" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UETJRJMOJC" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UETJRJMOJC" value="answer"></input> <span><strong><code>.write()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>function</strong> is used to write biological data (such as fastq) to files.
-<div id="radio_WEFIYGJJZP" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WEFIYGJJZP" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WEFIYGJJZP" value="answer"></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WEFIYGJJZP" value=""></input> <span><strong><code>.write()</code></strong></span></label>
+<div id="radio_WJNARKHWOI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WJNARKHWOI" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WJNARKHWOI" value="answer"></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WJNARKHWOI" value=""></input> <span><strong><code>.write()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>statement</strong> opens a data stream allowing you to carry out more tasks with opened data.
-<div id="radio_OIVQQWZNMH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OIVQQWZNMH" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OIVQQWZNMH" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_OIVQQWZNMH" value="answer"></input> <span><strong><code>with</code></strong></span></label>
+<div id="radio_GXCJSMYNKT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GXCJSMYNKT" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GXCJSMYNKT" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GXCJSMYNKT" value="answer"></input> <span><strong><code>with</code></strong></span></label>
 </div></li>
 <li>In chapter 13 we checked the lengths of reads with the logical comparison ________.
-<div id="radio_KAWVJRSLKS" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KAWVJRSLKS" value="answer"></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KAWVJRSLKS" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KAWVJRSLKS" value=""></input> <span><strong><code>with</code></strong></span></label>
+<div id="radio_LNIQPNITTQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LNIQPNITTQ" value="answer"></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LNIQPNITTQ" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LNIQPNITTQ" value=""></input> <span><strong><code>with</code></strong></span></label>
 </div></li>
 <li>In chapter 13 we checked for the presence of a PCR sequence at the start of each sequence with the <strong>method</strong> ________.
-<div id="radio_LMUDCWLLFH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LMUDCWLLFH" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LMUDCWLLFH" value="answer"></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LMUDCWLLFH" value=""></input> <span><strong><code>with</code></strong></span></label>
+<div id="radio_PWRKNWNVSQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PWRKNWNVSQ" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PWRKNWNVSQ" value="answer"></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_PWRKNWNVSQ" value=""></input> <span><strong><code>with</code></strong></span></label>
 </div></li>
 </ol>
 
@@ -745,29 +753,29 @@ window.onload = function() {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

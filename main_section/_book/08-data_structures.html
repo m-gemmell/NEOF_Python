@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Data Structures | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Data Structures | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -53,6 +53,14 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
 
 
 <style type="text/css">
@@ -560,44 +568,44 @@ Once indexed, the individual records can then be accessed extremely quickly.</p>
 <p>Try choosing the correct option in the below sentences to recap what you have learnt.</p>
 <ol style="list-style-type: decimal">
 <li>________ hold an ordered catalogue of values.
-<div id="radio_XIBECCCZGI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XIBECCCZGI" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XIBECCCZGI" value="answer"></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XIBECCCZGI" value=""></input> <span><strong>Sets</strong></span></label>
+<div id="radio_YOXLNCQQSO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YOXLNCQQSO" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YOXLNCQQSO" value="answer"></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YOXLNCQQSO" value=""></input> <span><strong>Sets</strong></span></label>
 </div></li>
 <li>________ can only hold unique values.
-<div id="radio_XGYGMMLLXM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XGYGMMLLXM" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XGYGMMLLXM" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XGYGMMLLXM" value="answer"></input> <span><strong>Sets</strong></span></label>
+<div id="radio_ZGYWVHDINU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZGYWVHDINU" value=""></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZGYWVHDINU" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZGYWVHDINU" value="answer"></input> <span><strong>Sets</strong></span></label>
 </div></li>
 <li>________ hold pairs of values (key and value). They can be used to quickly access individual records, even when they are extremely large.
-<div id="radio_OACLBNOFDM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OACLBNOFDM" value="answer"></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OACLBNOFDM" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OACLBNOFDM" value=""></input> <span><strong>Sets</strong></span></label>
+<div id="radio_IXXKUDBZPG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_IXXKUDBZPG" value="answer"></input> <span><strong>Dictionaries</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IXXKUDBZPG" value=""></input> <span><strong>Lists</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IXXKUDBZPG" value=""></input> <span><strong>Sets</strong></span></label>
 </div></li>
 <li>Data structures in Python start at position ________.
-<div id="radio_OLMFTMKXMH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OLMFTMKXMH" value=""></input> <span><strong>-1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OLMFTMKXMH" value="answer"></input> <span><strong>0</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OLMFTMKXMH" value=""></input> <span><strong>1</strong></span></label>
+<div id="radio_BSSILQNLLH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BSSILQNLLH" value=""></input> <span><strong>-1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BSSILQNLLH" value="answer"></input> <span><strong>0</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BSSILQNLLH" value=""></input> <span><strong>1</strong></span></label>
 </div></li>
 <li>When subsetting values in a <strong>list</strong> the first number (<code>[X:]</code>) is ________.
-<div id="radio_RYBFJURLCL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RYBFJURLCL" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RYBFJURLCL" value="answer"></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RYBFJURLCL" value=""></input> <span><strong>Key</strong></span></label>
+<div id="radio_DPDXXMSXEK" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DPDXXMSXEK" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DPDXXMSXEK" value="answer"></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DPDXXMSXEK" value=""></input> <span><strong>Key</strong></span></label>
 </div></li>
 <li>When subsetting values in a <strong>list</strong> the last number (<code>[:Y]</code>) is ________.
-<div id="radio_MIQMEKPNGF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MIQMEKPNGF" value="answer"></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MIQMEKPNGF" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MIQMEKPNGF" value=""></input> <span><strong>Key</strong></span></label>
+<div id="radio_TQONOUJYWX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TQONOUJYWX" value="answer"></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TQONOUJYWX" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TQONOUJYWX" value=""></input> <span><strong>Key</strong></span></label>
 </div></li>
 <li>You can access the <strong>value</strong> of a <strong>dictionary</strong> with its matching ________.
-<div id="radio_PFXCSFNERA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PFXCSFNERA" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PFXCSFNERA" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PFXCSFNERA" value="answer"></input> <span><strong>Key</strong></span></label>
+<div id="radio_DUOOOXCZWU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DUOOOXCZWU" value=""></input> <span><strong>Exclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DUOOOXCZWU" value=""></input> <span><strong>Inclusive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DUOOOXCZWU" value="answer"></input> <span><strong>Key</strong></span></label>
 </div></li>
 <li>The ________ <strong>method</strong> can add a value to a <strong>list</strong>.
-<div id="radio_KHUPQBTMOW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KHUPQBTMOW" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KHUPQBTMOW" value="answer"></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KHUPQBTMOW" value=""></input> <span><strong><code>set()</code></strong></span></label>
+<div id="radio_SPKESIUXUV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SPKESIUXUV" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SPKESIUXUV" value="answer"></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SPKESIUXUV" value=""></input> <span><strong><code>set()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>method</strong> can add a value to a <strong>set</strong>.
-<div id="radio_KNGQZAOABT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KNGQZAOABT" value="answer"></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KNGQZAOABT" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KNGQZAOABT" value=""></input> <span><strong><code>set()</code></strong></span></label>
+<div id="radio_SMGJYPTUDI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SMGJYPTUDI" value="answer"></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SMGJYPTUDI" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SMGJYPTUDI" value=""></input> <span><strong><code>set()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>function</strong> can create a <strong>set</strong> from a <strong>list</strong>.
-<div id="radio_KSJRQBGIZB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KSJRQBGIZB" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KSJRQBGIZB" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KSJRQBGIZB" value="answer"></input> <span><strong><code>set()</code></strong></span></label>
+<div id="radio_KWJTZHTBDQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KWJTZHTBDQ" value=""></input> <span><strong><code>.add()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KWJTZHTBDQ" value=""></input> <span><strong><code>.append()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KWJTZHTBDQ" value="answer"></input> <span><strong><code>set()</code></strong></span></label>
 </div></li>
 </ol>
 <p>We are going to be using these data structures to look at and manipulate DNA sequence data specifically, but the principles apply to any datasets stored in these structures.</p>
@@ -831,29 +839,29 @@ window.onload = function() {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

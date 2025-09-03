@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Functions and methods | Python for Bioinformatics</title>
   <meta name="description" content="NEOF book for the Python for Bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Functions and methods | Python for Bioinformatics" />
   <meta property="og:type" content="book" />
@@ -53,6 +53,14 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
 
 
 <style type="text/css">
@@ -479,28 +487,28 @@ During this course and afterwards you can refer to the <a href="19-Appendix.html
 <p>Choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>________ are associated with a specific <strong>class</strong>.
-<div id="radio_CNCJZHMDNC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CNCJZHMDNC" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CNCJZHMDNC" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CNCJZHMDNC" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_WYPUVMYWUE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WYPUVMYWUE" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WYPUVMYWUE" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WYPUVMYWUE" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The syntax of ________ are <code>command_name(data)</code>.
-<div id="radio_HXWAKXLOFH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HXWAKXLOFH" value="answer"></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HXWAKXLOFH" value=""></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HXWAKXLOFH" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_ILHKOTXMLH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ILHKOTXMLH" value="answer"></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ILHKOTXMLH" value=""></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ILHKOTXMLH" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The syntax of ________ are <code>data.command_name()</code>.
-<div id="radio_CSGMZGJHTI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CSGMZGJHTI" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CSGMZGJHTI" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CSGMZGJHTI" value=""></input> <span><strong>Operators</strong></span></label>
+<div id="radio_OCIVBKRQLQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OCIVBKRQLQ" value=""></input> <span><strong>Functions</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OCIVBKRQLQ" value="answer"></input> <span><strong>Methods</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OCIVBKRQLQ" value=""></input> <span><strong>Operators</strong></span></label>
 </div></li>
 <li>The <strong>function</strong> ________ can count the total number of characters in a string.
-<div id="radio_GQABLIVHKB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GQABLIVHKB" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GQABLIVHKB" value="answer"></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_GQABLIVHKB" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_ZUPBBHEQXG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZUPBBHEQXG" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZUPBBHEQXG" value="answer"></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZUPBBHEQXG" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 <li>The <strong>method</strong> ________ can count the number of instances of a pattern in a string <strong>variable</strong>.
-<div id="radio_WVWIQMBGSJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WVWIQMBGSJ" value="answer"></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WVWIQMBGSJ" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WVWIQMBGSJ" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_YJNTTFTCYR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YJNTTFTCYR" value="answer"></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJNTTFTCYR" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJNTTFTCYR" value=""></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 <li>The <strong>method</strong> ________ can convert a string <strong>variable</strong> to upper-case.
-<div id="radio_XOMYBCSYOQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XOMYBCSYOQ" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_XOMYBCSYOQ" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_XOMYBCSYOQ" value="answer"></input> <span><strong><code>.upper()</code></strong></span></label>
+<div id="radio_FOBTEJUEBJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FOBTEJUEBJ" value=""></input> <span><strong><code>.count()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FOBTEJUEBJ" value=""></input> <span><strong><code>len()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FOBTEJUEBJ" value="answer"></input> <span><strong><code>.upper()</code></strong></span></label>
 </div></li>
 </ol>
 
@@ -732,29 +740,29 @@ window.onload = function() {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

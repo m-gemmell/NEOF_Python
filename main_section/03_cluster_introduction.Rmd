@@ -5,11 +5,10 @@
 </center>
 
 ## Logon Instructions
-For this workshop we will be using Virtual Network Computing (VNC). 
-Connect to the VNC with a browser by using the webVNC link you were sent.
 
-You will now be in a logged-in Linux VNC desktop with a terminal window visible. 
-You will see something as below.
+For this workshop we will be using Virtual Network Computing (<u id='vnc'>VNC</u>). Connect to the <u id='vnc'>VNC</u> with a browser by using the webVNC link you were sent.
+
+You will now be in a logged-in Linux <u id='vnc'>VNC</u> desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.
 
 <center>
 ![](./figures/logon_pic.png){width=750px}
@@ -17,7 +16,27 @@ You will see something as below.
 
 If you do not see something similar please ask for assistance.
 
-If the VNC is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
+If the <u id='vnc'>VNC</u> is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
+
+`r hide("How to zoom with your browser")`
+You may need to zoom out with your browser so you can see the full webVNC window.
+
+- __Chrome__: Click on the __three dots in vertical line__ (
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("ellipsis-vertical"), background="white", border="solid white")
+``` 
+) on the top left for a dropdown menu which includes zoom options.
+- __Edge__: Click on the __three horizontal lines__ (
+```{r, echo=FALSE}
+icons::icon_style(icons::ionicons("ellipsis-horizontal"), background="white", border="solid white")
+``` 
+) on the top left for a dropdown menu which includes zoom options.
+- __Firefox__: Click on the __three dots in horizontal line__ (
+```{r, echo=FALSE}
+icons::icon_style(icons::fontawesome("bars", style="solid"), background="white", border="solid white")
+```
+) on the top left for a dropdown menu which includes zoom options.
+`r unhide()`
 
 ## The Terminal Window
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
@@ -66,3 +85,10 @@ less /usr/local/bin/usepython
 __Tip:__ press `q` to quit `less`.
 
 For more about mamba and how to create your own `python` environment please see the [appendix](#mamba_install)
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "vnc", 
+                  tooltip = "Virtual Network Computing",
+                  arrow = TRUE, placement = "bottom")
+```
