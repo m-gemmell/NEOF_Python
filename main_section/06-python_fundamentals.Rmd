@@ -1,10 +1,10 @@
 # Python Fundamentals {#python_fundamentals}
 <center>
-![](figures/python_fundamentals.png){style="width:150px"}
+![](figures/python_fundamentals.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 This chapter covers some of the fundamental concepts of scripting in Python.
-An understanding of how to use __operators__, __variables__, and __functions__ will
+An understanding of how to use __<u id='operator'>operators</u>__, __<u id='variable'>variables</u>__, and __<u id='function'>functions</u>__ will
 give a good grounding in how the language works and allow you to develop
 your own methods and code.
 
@@ -13,9 +13,7 @@ concepts will be explored more in the rest of the tutorial. The best way to
 learn how various aspects of the Python language works is by *doing* rather
 than by *reading*. 
 
-Consider
-coming back to this page later if you want to remind yourself of how a
-particular operator works or how to define a __function__.
+Consider coming back to this page later if you want to remind yourself of how a particular <u id='operator'>operator</u>  works or how to define a __<u id='function'>function</u>__.
 
 We'll continue to use our __"01-Fundamentals"__ notebook. 
 Within it create a new __Markdown__ cell with the following headers:
@@ -30,9 +28,9 @@ Within it create a new __Markdown__ cell with the following headers:
 ![](figures/bodmas_ribbon.png){style="width:650px; background:white; border-radius:5px"}
 </center>
 
-Python allows the use of the usual arithmetic __operators__ and follows the traditional rules of mathematical precedence (BODMAS). 
+Python allows the use of the usual arithmetic __<u id='operator'>operators</u>__ and follows the traditional rules of mathematical precedence (BODMAS). 
 
-The main mathematical operators are:
+The main mathematical <u id='operator'>operators</u>  are:
 
 - __`+`__ (addition)
 - __`-`__ (subtraction)
@@ -95,7 +93,7 @@ Be careful! If you press a number key whilst in __esc mode__ you will change the
 
 ## Comments/Annotations
 <center>
-![](figures/hashtag2.png){style="width:200px"}
+![](figures/hashtag2.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
 It is often useful to include human-readable __comments__ in your scripts and code.
@@ -122,16 +120,16 @@ This is useful to quickly see what parts are __comments__ and what parts are not
 
 ## Variables
 <center>
-![](figures/cargo_container.png){style="width:200px; background:white; border-radius:5px"}
+![](figures/cargo_container.png){style="width:200px; background:white; border-radius:5px; border: white 5px solid"}
 </center>
 
-__Variables__ are used to store information which can then be referenced or manipulated later. 
+__<u id='variable'>Variables</u>__ are used to store information which can then be referenced or manipulated later. 
 It is useful to label data with descriptive names which are easily read by humans. 
-You can think of a __variable__ as a 'container' to hold a piece of information. 
+You can think of a __<u id='variable'>variable</u>__ as a 'container' to hold a piece of information. 
   
-__Variables__ are assigned a value using the equals (`=`) character.
+__<u id='variable'>Variables</u>__ are assigned a value using the equals (`=`) character.
 
-__Variable name rules__:
+__<u id='variable'>Variable</u> name rules__:
 
 - Must start with either a letter or an underscore
   - Cannot start with a number.
@@ -139,7 +137,7 @@ __Variable name rules__:
   - No punctuation such as full stops, quotes, commas, colons, etc are allowed.
 - They are case sensitive.
 
-Python supports several classes (or types) of __variables__ including __strings__, __integers__, __floats__, and __booleans__.
+Python supports several <u id='class'>classes</u> (or types) of __<u id='variable'>variables</u>__ including __<u id='string'>strings</u>__, __<u id='integer'>integers</u>__, __<u id='float'>floats</u>__, and __<u id='boolean'>booleans</u>__.
 
 In a new __Markdown cell__ add the following:
 
@@ -150,12 +148,12 @@ In a new __Markdown cell__ add the following:
 
 ### Strings
 <center>
-![](figures/string_bubble.png){style="width:200px"}
+![](figures/string_bubble.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
-__Strings__ are used to store alphanumeric text. A __string__ is defined by enclosing the text with either single (`'text'`) or double quotes (`"text"`).
+__<u id='string'>Strings</u>__ are used to store alphanumeric text. A __<u id='string'>string</u>__ is defined by enclosing the text with either single (`'text'`) or double quotes (`"text"`).
     
-In the below code we define two __string variables__, and then retrieve them again by using their name, or identifier.
+In the below code we define two __<u id='string'>string</u> <u id='variable'>variables</u>__, and then retrieve them again by using their name, or identifier.
 
 As before, for each code block below create a __code cell__, enter the code, and run it.
 Do this for all future code examples.
@@ -172,16 +170,16 @@ DNA_string
 amino_acids
 ```
 
-You will notice that you can use your __variables__ in the same __cell__ you created it in, or in a different __cell__. 
-As long as you have run the code that creates/assigns the __variable__ you can use it elsewhere in the same notebook.
+You will notice that you can use your __<u id='variable'>variables</u>__ in the same __cell__ you created it in, or in a different __cell__. 
+As long as you have run the code that creates/assigns the __<u id='variable'>variable</u>__ you can use it elsewhere in the same notebook.
 
 ### Integers
 <center>
 ![](figures/noun-seven-3801475.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
-__Integers__ are used to store whole numbers.
-These should not be declared with quote marks otherwise they will be stored as a string.
+__<u id='integer'>integers</u>__ are used to store whole numbers.
+These should not be declared with quote marks otherwise they will be stored as a <u id='string'>string</u>.
 
 Create the following __markdown cell__:
 
@@ -236,10 +234,10 @@ MMXXIII
 
 ### Floats (floating point numbers)
 <center>
-![](figures/float.png){style="width:200px; background:white; border-radius:5px"}
+![](figures/float.png){style="width:200px; background:white; border-radius:5px; border: white solid 5px"}
 </center>
 
-**Floating point numbers** are used to store real numbers (I.e. a number written with a decimal point dividing the integer and the fractional parts).
+**<u id='float'>Floating point numbers</u>** are used to store real numbers (I.e. a number written with a decimal point dividing the <u id='integer'>integer</u> and the fractional parts).
 
 Create a new __markdown cell__ with the following:
 
@@ -266,10 +264,10 @@ yet_another_float
   
 ### Booleans
 <center>
-![](figures/true_or_false.png){style="width:200px"}
+![](figures/true_or_false.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
-**Booleans** are a special type of variable that can represent one of
+**<u id='boolean'>Booleans</u>** are a special type of <u id='variable'>variable</u> that can represent one of
 two values: __True__ or __False__. 
 You can compare any two values in Python and get a result of either __True__ or __False__.
 
@@ -322,17 +320,17 @@ yet_another_bool
   
 ## Classes of variable
 <center>
-![](figures/class.png){style="width:200px; background:white; border-radius:5px"}
+![](figures/class.png){style="width:200px; background:white; border-radius:5px; border: 5px white solid"}
 </center>
 
-Every __variable__ in Python has a __class__. These are the characteristics we described above:
+Every __<u id='variable'>variable</u>__ in Python has a __<u id='class'>class</u>__. These are the characteristics we described above:
 
-- __String__ (`<class 'str'>`)
-- __Integer__ (`<class 'int'>`)
-- __Float__ (`<class 'float'>`)
-- __Boolean__ (`<class 'bool'>`)
+- __<u id='string'>String</u>__ (`<class 'str'>`)
+- __<u id='integer'>Integer</u>__ (`<class 'int'>`)
+- __<u id='float'>Float</u>__ (`<class 'float'>`)
+- __<u id='boolean'>Boolean</u>__ (`<class 'bool'>`)
 
-Unlike some other languages, you do not need to tell Python which __class__ a __variable__ should have. 
+Unlike some other languages, you do not need to tell Python which __<u id='class'>class</u>__ a __<u id='variable'>variable</u>__ should have. 
 Python will try to figure it out based on the value assigned.
 
 Create a new __markdown cell__ with the following:
@@ -341,7 +339,7 @@ Create a new __markdown cell__ with the following:
 ### Classes
 ```
 
-You can check the __class__ of a __variable__ by passing it to the `type()` __function__:
+You can check the __<u id='class'>class</u>__ of a __<u id='variable'>variable</u>__ by passing it to the `type()` __<u id='function'>function</u>__:
 
 ```{python, eval=FALSE}
 variable1 = "a piece of text"
@@ -365,7 +363,7 @@ type(variable4)
 ![](figures/transform.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
-__Variables__ can be transformed from one __class/type__ to another provided the value can be coerced into the new data type (I.e. you could not transform a  __string__ of text to a __floating point number__). 
+__<u id='variable'>Variables</u>__ can be transformed from one __<u id='class'>class</u>__ to another provided the value can be coerced into the new data type (I.e. you could not transform a  __<u id='string'>string</u>__ of text to a __<u id='float'>floating point numbers</u>__). 
 
 Create a new __markdown cell__ with the following:
 
@@ -373,25 +371,25 @@ Create a new __markdown cell__ with the following:
 ### Transforming variables
 ```
 
-To transform a __float__ to an __integer__ use the `int()` __function__ (note the loss of precision):
+To transform a __<u id='float'>float</u>__ to an __<u id='integer'>integer</u>__ use the `int()` __<u id='function'>function</u>__ (note the loss of precision):
 ```{python, eval=FALSE}
 a_float = 17.45
 int(a_float)
 ```
     
-To transform an __integer__ to a __string__ use the `str()` __function__:
+To transform an __<u id='integer'>integer</u>__ to a __<u id='string'>string</u>__ use the `str()` __<u id='function'>function</u>__:
 ```{python, eval=FALSE}
 an_integer = 783473
 str(an_integer)
 ```
 
-You can transform a numeric __string__ to an __integer__:
+You can transform a numeric __<u id='string'>string</u>__ to an __<u id='integer'>integer</u>__:
 ```{python, eval=FALSE}
 a_numeric_string = "256"
 int(a_numeric_string)
 ```
 
-You can also transform to a __floating point__ using `float()`:
+You can also transform to a __<u id='float'>floating point</u>__ using `float()`:
 ```{python, eval=FALSE}
 a_float_string = "3.14"
 float(a_float_string)
@@ -399,7 +397,7 @@ float(a_float_string)
 
 ## Why so many code cells?
 <center>
-![](figures/cells.png){style="width:200px"}
+![](figures/cells.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
 We are using a __code cell__ per piece of code that gives an output. We do this as `jupyter-notebook` with `python` will normally only show the last output from a __code cell__.
@@ -416,8 +414,8 @@ Create and run the below __code cells__ to see this in action.
 2 > 4
 ```
 
-However, you can use the `print()` function to bypass this. 
-The output from every single `print()` function will be printed in `jupyter-notebook`.
+However, you can use the `print()` <u id='function'>function</u> to bypass this. 
+The output from every single `print()` <u id='function'>function</u> will be printed in `jupyter-notebook`.
 
 Try it out with the below single __code cell__:
 
@@ -430,11 +428,11 @@ print(2 > 4)
 
 This is essential when writing longer pieces of code that need multiple outputs.
 In this book we will stick with the multiple __code cells__ approach as we find it easier than having to use `print()` constantly.
-However, if you prefer using fewer __code cells__ and more `print()` __functions__ please feel free to do so.
+However, if you prefer using fewer __code cells__ and more `print()` __<u id='function'>functions</u>__ please feel free to do so.
 
 ## Fundamentals MCQ recap
 <center>
-![](figures/question_bubble_red.png){style="width:200px"}
+![](figures/question_bubble_red.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
 Brilliant! That is the end of this chapter. 
@@ -472,3 +470,31 @@ opts_p <- c("__Boolean__", answer="__Float__", "__Integer__")
 opts_p <- c(answer="__Boolean__", "__Float__", "__Integer__")
 ```
 6. ________ is a __class__ that stores `True` or `False`. `r longmcq(opts_p)`
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

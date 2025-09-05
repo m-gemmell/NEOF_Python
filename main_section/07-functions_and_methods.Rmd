@@ -3,10 +3,10 @@
 ![](figures/function.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
-__Functions__ and __methods__ are groups of instructions that together perform a specific task. 
+__<u id='function'>Functions</u> __ and __<u id='method'>methods</u>__ are groups of instructions that together perform a specific task. 
 This may be a task that you need to run repeatedly on your data.
-By storing these instructions in a single __function/method__, you only need to enter the code once and simply re-use it each time. 
-A __function/method__ returns a value after it has performed the specific task.
+By storing these instructions in a single __<u id='function'>function</u>/<u id='method'>method</u>__, you only need to enter the code once and simply re-use it each time. 
+A __<u id='function'>function</u>/<u id='method'>method</u>__ returns a value after it has performed the specific task.
 
 Use the same notebook (__"01-Fundamentals"__) and add the following __markdown cell__:
 
@@ -20,20 +20,20 @@ Use the same notebook (__"01-Fundamentals"__) and add the following __markdown c
 ![](figures/dna.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
-A __function__ is a distinct piece of code which requires data for it to run.
-To run a __function__ you need the name of the __function__ followed by a pair of braces (`()`) with the desired input within the braces. 
+A __<u id='function'>function</u>__ is a distinct piece of code which requires data for it to run.
+To run a __<u id='function'>function</u>__ you need the name of the __<u id='function'>function</u>__ followed by a pair of braces (`()`) with the desired input within the braces. 
 
-We have already used some __functions__: 
+We have already used some __<u id='function'>functions</u>__: 
  
  - __`int()`__
  - __`str()`__
  - __`float()`__
  - __`type()`__
  
-Imagine that we need to find the length of a __string__ of nucleotides (i.e. how many bases are in a piece of DNA).
-In this instance, we can use the built-in `len()` __function__ on the __string__:
+Imagine that we need to find the length of a __<u id='string'>string</u>__ of nucleotides (i.e. how many bases are in a piece of DNA).
+In this instance, we can use the built-in `len()` __<u id='function'>function</u>__ on the __<u id='string'>string</u>__:
 
-__Note__: Use any __string__ of 'ACGT' you like, no need to copy this one exactly.
+__Note__: Use any __<u id='string'>string</u>__ of 'ACGT' you like, no need to copy this one exactly.
 
 ```{python, eval=FALSE}
 #Random DNA sequence
@@ -51,7 +51,7 @@ DNA2 = "AGCTGACTGCATGATTGCTGATCAACAGT"
 len(DNA2)
 ```
 
-You can use the `+` __operator__ to paste 2 or more __strings__ together which is useful.
+You can use the `+` __<u id='operator'>operator</u>__ to paste 2 or more __<u id='string'>strings</u>__ together which is useful.
 
 ```{python, eval=FALSE}
 DNA3 = DNA1 + DNA2
@@ -62,7 +62,7 @@ DNA3
 len(DNA3)
 ```
 
-The below code incorporates previously made __variables__ and used __functions__.
+The below code incorporates previously made __<u id='variable'>variables</u>__ and used __<u id='function'>functions</u>__.
 Make a good attempt to understand it.
 You can try running smaller parts of the code to more easily see what each part is doing (e.g. only run `str(X)`).
 If you are unsure please ask a demonstrator, they are more than happy to help.
@@ -83,10 +83,10 @@ You'll notice that each character (including spaces ` `) adds to the length.
 ![](figures/percent.png){style="width:200px"}
 </center>
 
-__Methods__ are very similar to __functions__ in that they process an input in some manner.
-They differ in that __methods__ are associated with a particular data __class__ (__string__, for example) and are called via the data itself. 
+__<u id='method'>Methods</u>__ are very similar to __<u id='function'>functions</u>__ in that they process an input in some manner.
+They differ in that __<u id='method'>methods</u>__ are associated with a particular data __<u id='class'>class</u>__ (__<u id='string'>string</u>__, for example) and are called via the data itself. 
 
-__Methods__ are called using a different syntax; the __variable__ is followed by __`.`__ and the name of the __method__ with a pair of braces.
+__<u id='method'>Methods</u>__ are called using a different syntax; the __<u id='variable'>variable</u>__ is followed by __`.`__ and the name of the __<u id='method'>method</u>__ with a pair of braces.
 
 Create a new __markdown cell__ with the following:
 
@@ -94,34 +94,34 @@ Create a new __markdown cell__ with the following:
 ### Methods
 ```
 
-Let's try a couple of __methods__ associated with manipulation of __string__ data:
+Let's try a couple of __<u id='method'>methods</u>__ associated with manipulation of __<u id='string'>string</u>__ data:
 
 ```{python, eval=FALSE}
 #Define a string called sequencers
 sequencers = "illumina,oxford_nanopore,pac-bio"
 ```
 
-The `upper()` __method__ converts string variables to upper-case.
+The `upper()` __<u id='method'>method</u>__ converts __<u id='string'>string</u> <u id='variable'>variables</u>__ to upper-case.
 
 ```{python, eval=FALSE}
 sequencers.upper()
 ```
 
-The `split()` __method__ chops a string up wherever the specified sub-string occurs (comma in this case).
+The `split()` __<u id='method'>method</u>__ chops a <u id='string'>string</u> up wherever the specified sub-string occurs (comma in this case).
 
 ```{python, eval=FALSE}
 sequencers.split(",")
 ```
 
-Multiple __methods__ can be used in one line. 
-This is the main advantage of the __method__ syntax.
+Multiple __<u id='method'>methods</u>__ can be used in one line. 
+This is the main advantage of the __<u id='method'>method</u>__ syntax.
 
 ```{python, eval=FALSE}
 sequencers.upper().split(",")
 ```
 
-We can also use built-in __methods__ for some simple analysis using the "DNA1" __string__ generated earlier.
-Use the `count()` __method__ to count the number of each nucleotide in the string.
+We can also use built-in __<u id='method'>methods</u>__ for some simple analysis using the "DNA1" __<u id='string'>string</u>__ generated earlier.
+Use the `count()` __<u id='method'>method</u>__ to count the number of each nucleotide in the string.
 
 ```{python, eval=FALSE}
 DNA1.count("A")
@@ -136,7 +136,7 @@ DNA1.count("G")
 DNA1.count("T")
 ```
 
-By using the `len()` __function__ and the `count()` __method__, we can calculate the GC content of the DNA1 sequence:
+By using the `len()` __<u id='function'>function</u>__ and the `count()` __<u id='method'>method</u>__, we can calculate the GC content of the DNA1 sequence:
 
 ```{python, eval=FALSE}
 #Count the number of Gs and Cs in the sequence
@@ -151,11 +151,11 @@ C_total = DNA1.count("C")
 ![](figures/question_bubble_green.png){style="width:200px"}
 </center>
 
-Fabulous! We have explored __functions__ (`function_name(variable)`) and __methods__ (`variable.method_name()`), and can now apply them to __variables__.
-You'll learn more __functions__ and __methods__ throughout this course.
+Fabulous! We have explored __<u id='function'>functions</u>__ and __<u id='method'>methods</u>__, and can now apply them to __<u id='variable'>variables</u>__.
+You'll learn more __<u id='function'>functions</u>__ and __<u id='method'>methods</u>__ throughout this course.
 
-It is nigh impossible to learn all the __functions__ and __methods__.
-During this course and afterwards you can refer to the [cheatsheet in the appendix](#cheatsheet) to get a quick summary of all the __functions__ and __methods__ used in this book.
+It is nigh impossible to learn all the __<u id='function'>functions</u>__ and __<u id='method'>methods</u>__.
+During this course and afterwards you can refer to the [cheatsheet in the appendix](#cheatsheet) to get a quick summary of all the __<u id='function'>functions</u>__ and __<u id='method'>methods</u>__ used in this book.
 
 Choose the correct option to complete the below sentences:
 
@@ -189,3 +189,33 @@ opts_p <- c("__`.count()`__", "__`len()`__", answer="__`.upper()`__")
 ```
 6. The __method__ ________ can convert a string __variable__ to upper-case. `r longmcq(opts_p)`
 
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "function_name(variable)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```
