@@ -1,6 +1,6 @@
 # Reading and writing files {#reading_writing}
 <center>
-![](figures/contract.png){style="width:200px"}
+![](figures/contract.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Often we want to __read__ from a data file, perform some task with the data, and __write__ out
@@ -23,7 +23,7 @@ Create a new notebook with the name  __"05-Reading_and_writing"__. We'll learn t
   
 ## 'open'
 <center>
-![](figures/open_file.png){style="width:200px"}
+![](figures/open_file.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 The `open` __function__ asks the Python interpreter to make a link to the specified file and __open__ a data stream.
@@ -124,7 +124,7 @@ Use your `jupyter-notebook` file navigator to check that the file exists and tha
 
 ## Reading and writing MCQ recap
 <center>
-![](figures/question_bubble_red.png){style="width:200px"}
+![](figures/question_bubble_red.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Sublime! You've successfully finished this chapter.

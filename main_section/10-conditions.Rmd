@@ -44,7 +44,7 @@ These logical conditions are most typically used in **if** statements.
 
 ## If statements
 <center>
-![](figures/switch.png){style="width:200px"}
+![](figures/switch.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 By testing whether certain comparisons evaluate as either **True** or **False**, we can change the flow of our programs.

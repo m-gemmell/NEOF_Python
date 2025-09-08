@@ -1,6 +1,6 @@
 # Modifying DNA Data {#modify_dna_data}
 <center>
-![](figures/modify_dna.png){style="width:200px"}
+![](figures/modify_dna.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Suppose we want to filter raw sequence reads by some parameter.
@@ -13,7 +13,7 @@ In this chapter we will use our knowledge of __loops__ and __conditions__ to per
 
 ## Length filtering
 <center>
-![](figures/filter_2.png){style="width:200px"}
+![](figures/filter_2.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Using what we know, we will create code to remove/filter reads shorter than a specified read-length threshold from a FastQ file.
@@ -44,7 +44,7 @@ print("Found " + str(len(wanted_sequences)) + " reads >= " + str(min_len) + "bp 
 
 ## Remove PCR primers
 <center>
-![](figures/scissors_2.png){style="width:200px"}
+![](figures/scissors_2.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Often you may want to check your sequence file for PCR primers, and remove them when they are found.

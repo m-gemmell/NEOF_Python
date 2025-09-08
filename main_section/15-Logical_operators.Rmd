@@ -1,6 +1,6 @@
 # Logical operators {#logical_operators}
 <center>
-![](figures/logic.png){style="width:150px"}
+![](figures/logic.png){style="width:150px; background: white; border: white 5px solid; border-radius:5px"}
 </center>
 
 In this chapter you will learn how to use 2 different __logical operators__:
@@ -26,7 +26,7 @@ from Bio import SeqIO
 
 ## and logical operator
 <center>
-![](figures/and.png){style="width:150px"}
+![](figures/and.png){style="width:150px; background: white; border: white 5px solid; border-radius:5px"}
 </center>
 
 We will first look at the `and` __logical operator__. 
@@ -64,7 +64,7 @@ for num in num_list:
     print(num)
 ```
 
-Print strings longer than three characters __and__ has at least one letter __e__.
+Print strings that are longer than three characters __and__ have at least one letter __e__.
 
 ```{python, eval = FALSE}
 #Loop through strings

@@ -2,7 +2,7 @@
 
 # Fundamental recap exercise {#fundrecapexercise}
 <center>
-![](figures/exercise_2.png){style="width:200px"}
+![](figures/exercise_2.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid"}
 </center>
 
 In this section you'll be going through multiple exercises.
@@ -14,11 +14,11 @@ This exercise will primarily focus on the fundamentals you learnt in chapters 5 
 
 Create a new notebook called __"07-Fundamental_recap_exercise"__ to carry out the below challenges.
 
-__Tip:__ The Appendix will be useful for quick lookup of various python __functions__, __methods__, etc..
+__Tip:__ [The Appendix](#cheatsheet) will be useful for quick lookup of various python __functions__, __methods__, etc..
 
 ## FRE challenge 1
 <center>
-![](figures/header_footbal.png){style="width:150px"}
+![](figures/header_footbal.png){style="width:150px; background: white; border-radius:5px; border: white 5px solid"}
 </center>
 
 Create a __markdown__ cell with the 1st level header "Fundamental recap exercise".
@@ -31,7 +31,7 @@ Create a __markdown__ cell with the 1st level header "Fundamental recap exercise
 
 ## FRE challenge 2
 <center>
-![](figures/calculator_2.png){style="width:100px"}
+![](figures/calculator_2.png){style="width:100px; background: white; border-radius:5px; border: white 5px solid"}
 </center>
 
 Carry out the following calculations with python.
@@ -68,7 +68,7 @@ Ensure each answer is displayed on your notebook.
 
 ## FRE challenge 3
 <center>
-![](figures/apple.png){style="width:100px"}
+![](figures/apple.png){style="width:100px; background: white; border-radius:5px; border: white 5px solid"}
 </center>
 
 Write and run the below code to create some __variables__
@@ -167,7 +167,7 @@ length_dict["foot"] != length_dict["fathom"]
 
 ## FRE challenge 5
 <center>
-![](figures/clock.png){style="width:150px"}
+![](figures/clock.png){style="width:150px; background: white; border-radius:5px; border: white 5px solid"}
 </center>
 
 In this challenge you will create 3 __lists__ related to time.
