@@ -202,7 +202,7 @@ print(seconds)
 ![](figures/finish.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
-Great going! You can save, and close and halt your notebook. 
+Great going! You can save, then close and halt your notebook. 
 
 Through the challenges you got more practice of:
 

@@ -64,8 +64,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -75,7 +76,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -500,28 +501,28 @@ We can carry this out with <code>SeqIO's</code> built in <code>write()</code> <s
 <p>For a quick recap, choose the correct option to complete the below sentences:</p>
 <ol style="list-style-type: decimal">
 <li>The ________ <strong>function</strong> is used to <strong>read</strong>, <strong>write</strong>, or <strong>append</strong> data from/to files.
-<div id="radio_SOBHHMWSCV" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SOBHHMWSCV" value="answer"></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SOBHHMWSCV" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SOBHHMWSCV" value=""></input> <span><strong><code>.write()</code></strong></span></label>
+<div id="radio_ROKFKMMKYI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ROKFKMMKYI" value="answer"></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ROKFKMMKYI" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ROKFKMMKYI" value=""></input> <span><strong><code>.write()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>method</strong> is used to <strong>write</strong> data to a file.
-<div id="radio_FNEPHZJOUM" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FNEPHZJOUM" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FNEPHZJOUM" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FNEPHZJOUM" value="answer"></input> <span><strong><code>.write()</code></strong></span></label>
+<div id="radio_WNOOENYNAH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WNOOENYNAH" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WNOOENYNAH" value=""></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WNOOENYNAH" value="answer"></input> <span><strong><code>.write()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>function</strong> is used to write biological data (such as fastq) to files.
-<div id="radio_FQFZMLWNOW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FQFZMLWNOW" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FQFZMLWNOW" value="answer"></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_FQFZMLWNOW" value=""></input> <span><strong><code>.write()</code></strong></span></label>
+<div id="radio_MQCDWXMOOI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MQCDWXMOOI" value=""></input> <span><strong><code>open()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQCDWXMOOI" value="answer"></input> <span><strong><code>SeqIO.write()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_MQCDWXMOOI" value=""></input> <span><strong><code>.write()</code></strong></span></label>
 </div></li>
 <li>The ________ <strong>statement</strong> opens a data stream allowing you to carry out more tasks with opened data.
-<div id="radio_CQPDWYUPKL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CQPDWYUPKL" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CQPDWYUPKL" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_CQPDWYUPKL" value="answer"></input> <span><strong><code>with</code></strong></span></label>
+<div id="radio_ESNVAXMVCI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ESNVAXMVCI" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ESNVAXMVCI" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ESNVAXMVCI" value="answer"></input> <span><strong><code>with</code></strong></span></label>
 </div></li>
 <li>In chapter 13 we checked the lengths of reads with the logical comparison ________.
-<div id="radio_ZMQXUCWZGB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZMQXUCWZGB" value="answer"></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZMQXUCWZGB" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZMQXUCWZGB" value=""></input> <span><strong><code>with</code></strong></span></label>
+<div id="radio_NBDCTNKYUX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NBDCTNKYUX" value="answer"></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NBDCTNKYUX" value=""></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_NBDCTNKYUX" value=""></input> <span><strong><code>with</code></strong></span></label>
 </div></li>
 <li>In chapter 13 we checked for the presence of a PCR sequence at the start of each sequence with the <strong>method</strong> ________.
-<div id="radio_SFWIURQMTQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SFWIURQMTQ" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SFWIURQMTQ" value="answer"></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_SFWIURQMTQ" value=""></input> <span><strong><code>with</code></strong></span></label>
+<div id="radio_UCWPUETKIY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UCWPUETKIY" value=""></input> <span><strong><code>&gt;=</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UCWPUETKIY" value="answer"></input> <span><strong><code>.startswith()</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_UCWPUETKIY" value=""></input> <span><strong><code>with</code></strong></span></label>
 </div></li>
 </ol>
 

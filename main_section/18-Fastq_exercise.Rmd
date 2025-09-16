@@ -106,7 +106,7 @@ Carry out the following tasks:
 
 1.  With your **variable "q10_filtered_records"** create a **list** called **"seq_lengths"** which contains the lengths of all the sequences.
 2.  **Print** the length of the shortest read and longest read.
-    -   **Tip**: The **functions** `min()` and `max()` can be used on an **intger list**.
+    -   **Tip**: The **functions** `min()` and `max()` can be used on an **integer list**.
 3.  Calculate the number of sequences with length ranges of: 1150-1199, 1200-1249, 1250-1299, 1300-1349, 1350-1399, 1400-1449, & 1500-1549.
     -   Save these values in a **list** called **"range_counts"**.
     -   Creating the following list may prove useful: `range_starts = [1150,1200,1250,1300,1350,1400,1450,1500]`
