@@ -21,7 +21,7 @@ Create a new notebook called **"10-Pandas"** for this chapter.
 </center>
 
 The example data we are working with is a subset of the
-[Atlas1006](https://rdrr.io/github/microbiome/microbiome/man/atlas1006.html)
+[Atlas1006](https://microbiome.github.io/tutorials/Atlas.html)
 dataset, which itself is example data provided with the R package
 [microbiome](https://microbiome.github.io/tutorials/).
 
@@ -40,7 +40,7 @@ The data we will be looking at contains the following variables:
 
 ## Read a .csv file with pandas
 <center>
-![](figures/pandas_icon.jpg){style="width:200px"}
+![](figures/pandas_icon.jpg){style="width:200px; border-radius: 5px"}
 </center>
 
 The Python **library** [pandas](https://pandas.pydata.org/) is
@@ -53,6 +53,8 @@ elements within each row. For example, the gender of each patient.
 With [pandas](https://pandas.pydata.org/) let us **read** in the file
 **"patients_gut_data.csv"**.
 
+### Import module {-}
+
 First we need to load the [pandas](https://pandas.pydata.org/)
 **module**.
 
@@ -60,6 +62,8 @@ First we need to load the [pandas](https://pandas.pydata.org/)
 #load pandas
 import pandas
 ```
+
+### Read data {-}
 
 Next we will **read** in the data with the
 [pandas](https://pandas.pydata.org/) **function** `read_csv()`.
@@ -81,6 +85,8 @@ the **object** created when **reading** in the file will not dissappear
 when it is used. This means you can **read** in the file once and do
 many tasks with the resulting **object**.
 
+### Data types {-}
+
 Next, we can take a look at how [pandas](https://pandas.pydata.org/) has stored the data by looking at the **".dtypes"** (data types).
 
 ```{python, eval=FALSE}
@@ -93,6 +99,8 @@ and assigned each variable a type based on the data:
 -   **int64**: An integer.
 -   **float64**: A floating point number.
 -   **object**: A catch all term for string types
+
+### Columns and index {-}
 
 We can access a single column of data by it's variable name assigned by
 [pandas](https://pandas.pydata.org/). For example, to access the
