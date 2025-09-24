@@ -11,7 +11,7 @@ For this workshop we will be using Virtual Network Computing (<u id='vnc'>VNC</u
 You will now be in a logged-in Linux <u id='vnc'>VNC</u> desktop with two terminals. You will see something as below (there may be only one terminal which is fine). If you do not see something similar please ask for assistance.
 
 <center>
-![](./figures/logon_pic.png){width=750px}
+![](figures/nsc200_logon.png){style="width:800px; border-radius:5px; border: #282828 solid 5px"}
 </center>
 
 If you do not see something similar please ask for assistance.
@@ -42,7 +42,7 @@ icons::icon_style(icons::fontawesome("bars", style="solid"), background="white",
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
 
 <center>
-![](./figures/terminal_window.png){width=750px}
+![](figures/terminal_window.png){style="width:700px; border-radius:5px"}
 </center>
 
 You're now ready to start the workshop!
