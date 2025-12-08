@@ -62,39 +62,39 @@ There are [supplementary materials](https://neof-workshops.github.io/Python_m4zq
 #Create 2 coilumn dataframe
 column_1 <- c(
  '[Course Introduction](#intro)', 
- '[![](figures/python.png){height="150"}](#intro)',
+ '[![](figures/python.png){style="height:150px; border-radius:15px; background:white"}](#intro)',
  '[Jupyer-notebook](#jupyter)',
  '[![](figures/jupyter_logo.png){style="height:150px; border-radius:15px; background:white"}](#jupyter)',
  '[Python Fundamentals](#python_fundamentals)',
- '[![](figures/python_fundamentals.png){height="150"}](#python_fundamentals)',
+ '[![](figures/python_fundamentals.png){style="height:150px; border-radius:15px; background:white; border: 5px solid white"}](#python_fundamentals)',
  '[Data Structures](#data_structures)',
- '[![](figures/python_data_structure.png){height="150"}](#data_structures)',
+ '[![](figures/python_data_structure.png){style="height:150px; border-radius:15px; background:white"}](#data_structures)',
  '[Conditions (if and else statements)](#python_conditions)',
- '[![](figures/python_condition.png){height="150"}](#python_conditions)',
+ '[![](figures/python_condition.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#python_conditions)',
  '[Working with DNA Sequence Data](#reading_seq_data)',
  '[![](figures/biopython_logo.png){style="height:150px; border-radius:15px; background:white"}](#reading_seq_data)',
  '[Reading and Writing Files](#reading_writing)',
- '[![](figures/contract.png){height="150"}](#reading_writing)',
+ '[![](figures/contract.png){style="height:150px; border-radius:15px; background:white"}](#reading_writing)',
   '[Final exercises](#fundrecapexercise)',
- '[![](figures/exercise_2.png){height="150"}](#fundrecapexercise)'
+ '[![](figures/exercise_2.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#fundrecapexercise)'
 )
 column_2 <- c(
   '[Working in the VNC](#cluster)',
- '[![](figures/cluster.png){height="150"}](#cluster)',
+ '[![](figures/cluster.png){style="height:150px; border-radius:15px; background:white"}](#cluster)',
  '[Scripting in Python](#scripting)',
- '[![](figures/scripting_icon.png){height="150"}](#scripting)',
+ '[![](figures/scripting_icon.png){style="height:150px; border-radius:15px; background:white; border: whiet solid 5px"}](#scripting)',
  '[Functions and methods](#functions_methods)',
- '[![](figures/function.png){height="150"}](#functions_methods)',
+ '[![](figures/function.png){style="height:150px; border-radius:15px; background:white"}](#functions_methods)',
  '[Fundamental exercise](#fundamental_exercise)',
- '[![](figures/Mimas tiliae.png){height="150"}](#fundamental_exercise)',
+ '[![](figures/Mimas tiliae.png){style="height:150px; border-radius:15px; background:white"}](#fundamental_exercise)',
  '[Loops](#loops)',
- '[![](figures/loopdeloo.png){height="150"}](#loops)',
+ '[![](figures/loopdeloo.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#loops)',
  '[Manipulating Sequence Data](#modify_dna_data)',
- '[![](figures/modify_dna.png){height="150"}](#modify_dna_data)',
+ '[![](figures/modify_dna.png){style="height:150px; border-radius:15px; background:white; border: white 5px solid"}](#modify_dna_data)',
  '[Logical operators](#logical_operators)',
- '[![](figures/logic.png){height="150"}](#logical_operators)',
+ '[![](figures/logic.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#logical_operators)',
    '[Appendix](#further_resources)',
- '[![](figures/further_resources.png){height="150"}](#further_resources)'
+ '[![](figures/further_resources.png){style="height:150px; border-radius:15px; background:white"}](#further_resources)'
 )
 table_df <- data.frame(column_1, column_2)
 #Kable and kableextra libraries

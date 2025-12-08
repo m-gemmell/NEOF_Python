@@ -231,8 +231,6 @@ icons::icon_style(icons::ionicons("refresh"), background = "white")
 
 With that quick tutorial of `jupyter-notebook` we can start python scripting in the next chapter.
 
-For more info on `jupter-notebook` please see the [appendix](#jupyter_appendix).
-
 ## Video tutorial
 
 <div class="container">

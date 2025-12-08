@@ -80,7 +80,7 @@ You'll notice that each character (including spaces ` `) adds to the length.
 
 ## Methods
 <center>
-![](figures/percent.png){style="width:200px"}
+![](figures/percent.png){style="width:200px; background: white; border-radius: 5px; border: white solid 5px"}
 </center>
 
 __<u id='method'>Methods</u>__ are very similar to __<u id='function'>functions</u>__ in that they process an input in some manner.
@@ -148,7 +148,7 @@ C_total = DNA1.count("C")
 
 ## Functions and methods MCQ recap
 <center>
-![](figures/question_bubble_green.png){style="width:200px"}
+![](figures/question_bubble_green.png){style="width:200px; background: white; border-radius: 5px; border: white solid 5px"}
 </center>
 
 Fabulous! We have explored __<u id='function'>functions</u>__ and __<u id='method'>methods</u>__, and can now apply them to __<u id='variable'>variables</u>__.

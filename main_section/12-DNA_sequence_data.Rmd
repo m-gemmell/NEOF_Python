@@ -17,7 +17,7 @@ Create a new notebook called **"04-Practical_python"**. Use this notebook in thi
 
 ## SeqIO
 <center>
-![](figures/seqio.png){style="width:200px; background: white; border-radius:5px"}
+![](figures/seqio.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 The **SeqIO** tools are the main Sequence Input/Output interface for **Biopython**. It provides a relatively simple, uniform interface for working with various types of DNA sequence files. The **module** reads raw sequence files (such as .FASTQ files you will likely receive from your sequencing facility) and converts them to a Python readable format; a [SeqRecord](https://biopython.org/wiki/SeqRecord) **class**.
@@ -62,7 +62,7 @@ We are going to read the data into Python, ready to do some data processing and 
 
 ### Loading the python library
 <center>
-![](figures/library_1.png){style="width:200px"}
+![](figures/library_1.png){style="width:200px; background: white; border-radius:5px; border: 5px solid white"}
 </center>
 
 We need to load a __Python library__:
@@ -88,7 +88,7 @@ wd = "/pub14/tea/nsc201/Python_course_data"
 
 ### Read a file of sequence data
 <center>
-![](figures/mobile_read.png){style="width:100px"}
+![](figures/mobile_read.png){style="width:100px; background: white; border-radius:5px; border: 5px solid white"}
 </center>
 
 We are going to use `SeqIO`'s (which stands for sequence in/out) `parse()` **function** which splits the FASTQ file into its separate components.
@@ -241,7 +241,7 @@ print("Raw sequence file has " + str(num_raw_reads) + " sequence records.")
 
 ## Reading sequence data MCQ recap
 <center>
-![](figures/question_bubble_orange.png){style="width:200px"}
+![](figures/question_bubble_orange.png){style="width:200px; background: white; border-radius:5px; border: 5px solid white"}
 </center>
 
 Superb! That is the end of this chapter. Ensure you are saving your **notebook** regularly.

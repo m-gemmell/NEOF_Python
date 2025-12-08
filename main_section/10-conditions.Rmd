@@ -119,7 +119,7 @@ c = "GGTCATtat"
 
 ### DNA length comparison
 <center>
-![](figures/measuring_tape.png){style="width:200px"}
+![](figures/measuring_tape.png){style="width:200px; background: white; border-radius: 5px"}
 </center>
 
 In the below code we create new variables for the __statement__ (`dna1` & `dna2`).
@@ -213,7 +213,7 @@ When you run the above code, they will now be correct for our purposes.
 
 ## Conditions reflection
 <center>
-![](figures/reflection.png){style="width:200px"}
+![](figures/reflection.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Marvelous! **If** and **else statements** can be used to make decisions in our programs by comparing values.
