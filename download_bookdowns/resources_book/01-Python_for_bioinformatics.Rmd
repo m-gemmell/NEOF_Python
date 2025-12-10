@@ -1,0 +1,94 @@
+--- 
+title: "Python for bioinformatics resources"
+author: "Graeme Fox & Matthew R. Gemmell"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+favicon: figures/NEOF_favicon.png
+description: NEOF book for the Python for bioinformatics workshop resources
+cover-image: "figures/NEOF.png"
+---
+```{r cite-packages, include = FALSE}
+# automatically create a bib database for R packages
+# add any packages you want to cite here
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'webexercises'
+), 'packages.bib')
+```
+<center>
+![](figures/NEOF_rounded_corners.png){style="width:300px"}
+</center> 
+
+# Videos, slides, & files
+
+<center>
+![](figures/python.png){style="width:300px; background: white; border-radius:5px"}
+</center> 
+
+
+## Intro & Foundations
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/lbAa4tTkdaM" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1PG3lOB1dVOERibdAOz5Gtmb_jHFeSfgajr_2eJWwCP0/edit?usp=sharing)
+
+## Programmatic coding
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/jV8febHhZNM" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1iVnPRW1wkQvKLM78_AejAPDt9D_8wB_DzvOKiXwr9ro/edit?usp=sharing)
+
+## Practical python
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/4kf9cEM-snw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1xmg8_cpTmGGR1mlbOwF4GplfeRfo5UKXgX-BOpxLMoI/edit?usp=sharing)
+
+## Exercises
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/3tpJkavGCvI" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1IdWdkFv_k8zct2_C5bXmhq7XACitrTP8SSDADWEkGKQ/edit?usp=sharing)
+
+## Workshop files
+
+The below compressed directory is provided so you may attempt the workshop materials on a computer/cluster available to you.
+
+Note:
+
+- The file locations will not match
+
+[__Download files__](https://neof-workshops.github.io/Python_m4zqwb/resources/Files/Python_course_data.zip)
+
+## Bookdown html
+
+Links to the online versions of the Bookdowns.
+
+- [__Course__](https://neof-workshops.github.io/Python_m4zqwb/Course/)
+- [__Supplemental__](https://neof-workshops.github.io/Python_m4zqwb/Supplemental/)
+
+You can download the html files of the bookdown below. Ensure you unzip the directory before use.
+
+[__Download zipped bookdown__](https://neof-workshops.github.io/Python_m4zqwb/resources/Bookdown/Python_for_bioinformatics_bookdowns.zip)
+
+## Jupyter notebooks
+
+Pre-made Jupyter notebooks containing the course code with annotations.
+
+[__Download zipped directory__](https://neof-workshops.github.io/Python_m4zqwb/resources/Files/Python_course_data_with_jupyter_notebooks.zip)
