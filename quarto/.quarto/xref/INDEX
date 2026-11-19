@@ -1,0 +1,482 @@
+{
+  "index.qmd": {
+    "index.html": "bd801b31"
+  },
+  "webexercises.qmd": {
+    "webexercises.html": "cef80dae"
+  },
+  "overview.qmd": {
+    "overview.html": "73db1972"
+  },
+  "foundations/02-Foundations.Rmd": {
+    "02-Foundations.html": "7bc16b38"
+  },
+  "foundations/03-Foundations_exercises.Rmd": {
+    "03-Foundations_exercises.html": "82c34ad7"
+  },
+  "foundations/intro.qmd": {
+    "intro.html": "63bb6a6c"
+  },
+  "foundations/operators.qmd": {
+    "operators.html": "09740e63"
+  },
+  "foundations/variables.qmd": {
+    "variables.html": "9df1c7ce"
+  },
+  "foundations/functions.qmd": {
+    "functions.html": "32942d34"
+  },
+  "foundations/directories.qmd": {
+    "directories.html": "44b921c7"
+  },
+  "foundations/rstudio_interface.qmd": {
+    "rstudio_interface.html": "e87c8a67"
+  },
+  "foundations/script_editor.qmd": {
+    "script_editor.html": "45668756"
+  },
+  "foundations/recap.qmd": {
+    "recap.html": "f62eb4a2"
+  },
+  "foundations/exercise.qmd": {
+    "exercise.html": "786bc1ab"
+  },
+  "objects/05-R_objects_exercises.Rmd": {
+    "05-R_objects_exercises.html": "6b51583d"
+  },
+  "objects/04-R_objects.Rmd": {
+    "04-R_objects.html": "7b84edd2"
+  },
+  "objects/intro.qmd": {
+    "intro.html": "14b61935"
+  },
+  "objects/basic_classes.qmd": {
+    "basic_classes.html": "89510465"
+  },
+  "objects/numeric.qmd": {
+    "numeric.html": "ceec24c8"
+  },
+  "objects/logical.qmd": {
+    "logical.html": "84c6d159"
+  },
+  "objects/string.qmd": {
+    "string.html": "bfa5cf34"
+  },
+  "objects/code_sections.qmd": {
+    "code_sections.html": "886dcf59"
+  },
+  "objects/data_structure.qmd": {
+    "data_structure.html": "5d0dbf7d"
+  },
+  "objects/scalar.qmd": {
+    "scalar.html": "13997eb1"
+  },
+  "objects/vectors_lists.qmd": {
+    "vectors_lists.html": "f7895996"
+  },
+  "objects/data_frames_matrices.qmd": {
+    "data_frames_matrices.html": "ffebd10c"
+  },
+  "objects/recap.qmd": {
+    "recap.html": "daeb7668"
+  },
+  "objects/exercise.qmd": {
+    "exercise.html": "a4eda101"
+  },
+  "files_subsetting/intro.qmd": {
+    "intro.html": "62643779"
+  },
+  "files_subsetting/06-Files_and_subsetting_data.Rmd": {
+    "06-Files_and_subsetting_data.html": "98cfb973"
+  },
+  "files_subsetting/09-Honey_bee_colonies_exercise.Rmd": {
+    "09-Honey_bee_colonies_exercise.html": "bf37cfa0"
+  },
+  "files_subsetting/08-Bats_roosts_exercise.Rmd": {
+    "08-Bats_roosts_exercise.html": "543559fc"
+  },
+  "files_subsetting/07-Files_exercises.Rmd": {
+    "07-Files_exercises.html": "e2dc9387"
+  },
+  "files_subsetting/reading.qmd": {
+    "reading.html": "0642af09"
+  },
+  "files_subsetting/subsetting.qmd": {
+    "subsetting.html": "672b3caa"
+  },
+  "files_subsetting/vector_subsetting.qmd": {
+    "vector_subsetting.html": "f656efbd"
+  },
+  "files_subsetting/data_frame_subsetting.qmd": {
+    "data_frame_subsetting.html": "df299063"
+  },
+  "files_subsetting/writing.qmd": {
+    "writing.html": "ab20558e"
+  },
+  "files_subsetting/recap.qmd": {
+    "recap.html": "ba2423b1"
+  },
+  "files_subsetting/exercises.qmd": {
+    "exercises.html": "dafbaf51"
+  },
+  "files_subsetting/bat_roosts.qmd": {
+    "bat_roosts.html": "09f574a8"
+  },
+  "files_subsetting/honey_bee.qmd": {
+    "honey_bee.html": "d3e96309"
+  },
+  "tips_tricks/10-Handy_tips_and_tricks.qmd": {
+    "10-Handy_tips_and_tricks.html": "403ca8fb"
+  },
+  "tips_tricks/intro.qmd": {
+    "intro.html": "862a2915"
+  },
+  "tips_tricks/11-Tips_exercises.qmd": {
+    "11-Tips_exercises.html": "e8ac26c7"
+  },
+  "tips_tricks/conventions.qmd": {
+    "conventions.html": "5ec22db2"
+  },
+  "tips_tricks/rstudio.qmd": {
+    "rstudio.html": "d0c68ce4"
+  },
+  "tips_tricks/multiplication_table.qmd": {
+    "multiplication_table.html": "11316ddc"
+  },
+  "tips_tricks/tab_complete.qmd": {
+    "tab_complete.html": "554d49aa"
+  },
+  "tips_tricks/tea.qmd": {
+    "tea.html": "f3a4f50c"
+  },
+  "tips_tricks/english_speakers.qmd": {
+    "english_speakers.html": "abd7321c"
+  },
+  "tips_tricks/identical.qmd": {
+    "identical.html": "df52a38a"
+  },
+  "tips_tricks/shortcuts.qmd": {
+    "shortcuts.html": "ff3efc1a"
+  },
+  "tips_tricks/mcqs.qmd": {
+    "mcqs.html": "8f0b1e40"
+  },
+  "tips_tricks/english_exercise.qmd": {
+    "english_exercise.html": "327a945c"
+  },
+  "tips_tricks/handy_exercises.qmd": {
+    "handy_exercises.html": "49922496"
+  },
+  "tips_tricks/tea_exerciseq.qmd": {
+    "tea_exerciseq.html": "9f2a4400"
+  },
+  "tips_tricks/extra_exercise.qmd": {
+    "extra_exercise.html": "0b02ca4e"
+  },
+  "plots/12-Plots_line_graphs_and_histograms.qmd": {
+    "12-Plots_line_graphs_and_histograms.html": "5ccb1582"
+  },
+  "plots/13-Plots_scatterplot_and_box_plots.qmd": {
+    "13-Plots_scatterplot_and_box_plots.html": "4ba6160e"
+  },
+  "plots/14-Plots_exercises.qmd": {
+    "14-Plots_exercises.html": "6dfe18a3"
+  },
+  "plots/plots_intro.qmd": {
+    "plots_intro.html": "808918b3"
+  },
+  "plots/histogram.qmd": {
+    "histogram.html": "eb309e8a"
+  },
+  "plots/histogram copy.qmd": {
+    "histogram copy.html": "9a25b1d8"
+  },
+  "plots/eu_cities.qmd": {
+    "eu_cities.html": "b8bc4216"
+  },
+  "plots/histogram copy 2.qmd": {
+    "histogram copy 2.html": "82776ff3"
+  },
+  "plots/histogram copy 3.qmd": {
+    "histogram copy 3.html": "9ee5dacd"
+  },
+  "plots/eu_populations.qmd": {
+    "eu_populations.html": "679b1bb2"
+  },
+  "plots/eu_ratio.qmd": {
+    "eu_ratio.html": "48bcafef"
+  },
+  "plots/prev_plot.qmd": {
+    "prev_plot.html": "f7f745e7"
+  },
+  "plots/line.qmd": {
+    "line.html": "a0bb775f"
+  },
+  "plots/add_lines.qmd": {
+    "add_lines.html": "c5d9c7e4"
+  },
+  "plots/axis_limits.qmd": {
+    "axis_limits.html": "32c39c53"
+  },
+  "plots/axis_labels.qmd": {
+    "axis_labels.html": "873a3884"
+  },
+  "plots/plot_titles.qmd": {
+    "plot_titles.html": "2cd8e274"
+  },
+  "plots/axes.qmd": {
+    "axes.html": "76626b66"
+  },
+  "plots/plot_features.qmd": {
+    "plot_features.html": "a0f8621a"
+  },
+  "plots/scatter.qmd": {
+    "scatter.html": "88fee10d"
+  },
+  "plots/animal_sizes.qmd": {
+    "animal_sizes.html": "dd6d1787"
+  },
+  "plots/animal_mass_length.qmd": {
+    "animal_mass_length.html": "1f94494a"
+  },
+  "plots/factors.qmd": {
+    "factors.html": "c138424f"
+  },
+  "plots/map_key_analogy.qmd": {
+    "map_key_analogy.html": "5824f822"
+  },
+  "plots/factor_code_example.qmd": {
+    "factor_code_example.html": "b0383328"
+  },
+  "plots/level_orders.qmd": {
+    "level_orders.html": "f2294834"
+  },
+  "plots/scatter_shapes.qmd": {
+    "scatter_shapes.html": "4157201f"
+  },
+  "plots/boxplot.qmd": {
+    "boxplot.html": "3156eaf0"
+  },
+  "plots/example_boxplots.qmd": {
+    "example_boxplots.html": "567e87ee"
+  },
+  "plots/final_boxplot.qmd": {
+    "final_boxplot.html": "fc1a0124"
+  },
+  "plots/png.qmd": {
+    "png.html": "bac1dd9d"
+  },
+  "plots/exercises.qmd": {
+    "exercises.html": "bae1af1a"
+  },
+  "plots/line_exercise.qmd": {
+    "line_exercise.html": "59f49ddb"
+  },
+  "plots/histogram_exercise.qmd": {
+    "histogram_exercise.html": "49b95270"
+  },
+  "plots/boxplot_exercise.qmd": {
+    "boxplot_exercise.html": "445927a0"
+  },
+  "plots/scatter_exercise.qmd": {
+    "scatter_exercise.html": "e5072712"
+  },
+  "tips_tricks/tea_exercise.qmd": {
+    "tea_exercise.html": "5d4571bb"
+  },
+  "stats_programming/15-Basic_stats.Rmd": {
+    "15-Basic_stats.html": "cb65a57c"
+  },
+  "stats_programming/16-Stats_exercises.Rmd": {
+    "16-Stats_exercises.html": "6d094036"
+  },
+  "stats_programming/17-Basic_programming.Rmd": {
+    "17-Basic_programming.html": "2bfdad2d"
+  },
+  "stats_programming/18-Student_grades_example.Rmd": {
+    "18-Student_grades_example.html": "2553cbcf"
+  },
+  "stats_programming/stats_and_programming.qmd": {
+    "stats_and_programming.html": "5a920fda"
+  },
+  "stats_programming/stats_overview.qmd": {
+    "stats_overview.html": "5ac5e7d7"
+  },
+  "stats_programming/linear_regression.qmd": {
+    "linear_regression.html": "1af4c6ef"
+  },
+  "programming/17-Basic_programming.Rmd": {
+    "17-Basic_programming.html": "a287c2b5"
+  },
+  "programming/18-Student_grades_example.Rmd": {
+    "18-Student_grades_example.html": "06b49cfc"
+  },
+  "stats/15-Basic_stats.Rmd": {
+    "15-Basic_stats.html": "64c5e513"
+  },
+  "stats/16-Stats_exercises.Rmd": {
+    "16-Stats_exercises.html": "a67c0d4c"
+  },
+  "stats/linear_regression.qmd": {
+    "linear_regression.html": "b4bcad30"
+  },
+  "stats/stats_overview.qmd": {
+    "stats_overview.html": "6baf1ef7"
+  },
+  "stats/fish_dataset.qmd": {
+    "fish_dataset.html": "ca45b9ca"
+  },
+  "stats/scatterplot.qmd": {
+    "scatterplot.html": "e8d076f0"
+  },
+  "stats/linear_model.qmd": {
+    "linear_model.html": "39c1889b"
+  },
+  "stats/boxplot.qmd": {
+    "boxplot.html": "766cefa8"
+  },
+  "stats/t_test.qmd": {
+    "t_test.html": "d479a1a1"
+  },
+  "stats/t_test_comparison.qmd": {
+    "t_test_comparison.html": "786bc54e"
+  },
+  "stats/useful_functions.qmd": {
+    "useful_functions.html": "d8cc993f"
+  },
+  "stats/exercises.qmd": {
+    "exercises.html": "398e35f5"
+  },
+  "programming/overview.qmd": {
+    "overview.html": "26e4a776"
+  },
+  "programming/recycle.qmd": {
+    "recycle.html": "8c3ae103"
+  },
+  "programming/loop_types.qmd": {
+    "loop_types.html": "bf9b5367"
+  },
+  "programming/for_loops.qmd": {
+    "for_loops.html": "80a9af19"
+  },
+  "programming/while_loops.qmd": {
+    "while_loops.html": "cb41efbf"
+  },
+  "programming/if.qmd": {
+    "if.html": "2efd1b2c"
+  },
+  "programming/functions.qmd": {
+    "functions.html": "cb2825c4"
+  },
+  "programming/student_grades.qmd": {
+    "student_grades.html": "dd16503a"
+  },
+  "appendix/course_materials.qmd": {
+    "course_materials.html": "8a50eefa"
+  },
+  "appendix/faq.qmd": {
+    "faq.html": "28fe3559"
+  },
+  "appendix/files.qmd": {
+    "files.html": "065b7d6d"
+  },
+  "appendix/further_resources.qmd": {
+    "further_resources.html": "ebb83af2"
+  },
+  "appendix/neof.qmd": {
+    "neof.html": "d9d247c2"
+  },
+  "objects/numeric.knit.md": {
+    "numeric.knit.html": "6bba729e"
+  },
+  "objects/string.knit.md": {
+    "string.knit.html": "a742f80c"
+  },
+  "files_subsetting/read_csv.qmd": {
+    "read_csv.html": "eb18abc3"
+  },
+  "files_subsetting/read_tsv.qmd": {
+    "read_tsv.html": "c9f30962"
+  },
+  "files_subsetting/read_xl.qmd": {
+    "read_xl.html": "ea993f8b"
+  },
+  "files_subsetting/viewing.qmd": {
+    "viewing.html": "d54754c4"
+  },
+  "files_subsetting/fondation_vector_subsetting.qmd": {
+    "fondation_vector_subsetting.html": "2d26214b"
+  },
+  "files_subsetting/foundation_vector_subsetting.qmd": {
+    "foundation_vector_subsetting.html": "4b36a89e"
+  },
+  "files_subsetting/complex_vector_subsetting.qmd": {
+    "complex_vector_subsetting.html": "d6267447"
+  },
+  "files_subsetting/logical_vector_subsetting.qmd": {
+    "logical_vector_subsetting.html": "0dfa85ae"
+  },
+  "files_subsetting/foundation_data_frame_subsetting.qmd": {
+    "foundation_data_frame_subsetting.html": "5038cf5f"
+  },
+  "files_subsetting/complex_data_frame_subsetting.qmd": {
+    "complex_data_frame_subsetting.html": "207c2fd5"
+  },
+  "objects/data_frames_matrices.knit.md": {
+    "data_frames_matrices.knit.html": "c30e283f"
+  },
+  "objects/exercise.knit.md": {
+    "exercise.knit.html": "e1627767"
+  },
+  "tips_tricks/variable_names.qmd": {
+    "variable_names.html": "8dfe58c9"
+  },
+  "tips_tricks/wide_long.qmd": {
+    "wide_long.html": "cac08206"
+  },
+  "tips_tricks/global_options.qmd": {
+    "global_options.html": "79ac101e"
+  },
+  "tips_tricks/sweep.qmd": {
+    "sweep.html": "28d728ee"
+  },
+  "plots/intro.qmd": {
+    "intro.html": "325b4428"
+  },
+  "stats/intro.qmd": {
+    "intro.html": "4bb3ce57"
+  },
+  "programming/intro.qmd": {
+    "intro.html": "b94bb2e3"
+  },
+  "overview/overview.qmd": {
+    "overview.html": "fc31ee6e"
+  },
+  "overview/course_contents.qmd": {
+    "course_contents.html": "bf955d81"
+  },
+  "setup/cluster_intro.qmd": {
+    "cluster_intro.html": "4c61ff9e"
+  },
+  "setup/jupyter.qmd": {
+    "jupyter.html": "65ec0348"
+  },
+  "fundamentals/intro.qmd": {
+    "intro.html": "310bbafa"
+  },
+  "programmatic/intro.qmd": {
+    "intro.html": "ba75d782"
+  },
+  "genomic/intro.qmd": {
+    "intro.html": "d9046d7a"
+  },
+  "exercises/intro.qmd": {
+    "intro.html": "c03c6ff1"
+  },
+  "supp/intro.qmd": {
+    "intro.html": "d18a0f16"
+  },
+  "genomics/intro.qmd": {
+    "intro.html": "53ffd6ad"
+  }
+}

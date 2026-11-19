@@ -1,0 +1,29 @@
+---
+title: "Intro"
+---
+
+![](/images/python.png){style="width:200px; border-radius:5px; background:white" fig-align="center"}
+
+Python is one of the most popular programming languages for bioinformatics and data analysis in general. It is a very flexible language with countless applications in the manipulation and processing of data files. This course is aimed at Python beginners and will give you transferable skills to manipulate your own data. The course will also provide you experience in Python modules tailored specifically for bioinformatics and genomics analyses.
+
+## Learning outcomes
+
+At the end of the course learners will be able to:
+
+- Create, edit, run, and save python scripts with Jupyter-notebook
+- Understand and use fundamental python concepts including operators, annotations, variables, and variable classes
+- Utilise a variety of python functions and methods
+- Store and manipulate data within lists, sets, and dictionaries
+- Produce If and else statements to print out different results based on logical conditions (True or False)
+- Carry out the same task on multiple items with loops
+- Read in and write out fastq files with the biopython library
+- Filter sequences from fastq data
+- Use logical operators to test multiple conditions at once
+
+## Material contents
+
+Sessions will start with a brief presentation followed by self-paced computer practicals guided by this online interactive book. This book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

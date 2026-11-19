@@ -1,0 +1,17 @@
+{
+  "hash": "ab63a854ecbf291ea6b57accd3e1b948",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Line graph exercise\nFirst we will ignore \"penguin_df\".\n\nCreate the below plot. You will need to create the __vectors__ yourself.\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](line_exercise_files/figure-html/unnamed-chunk-1-1.png){fig-align='center' width=672}\n:::\n:::\n\n\n::: {.callout-tip}\nThe x and y labels may help you figure out the commands to create the __vectors__.\n:::\n\n::: {.callout-note collapse=\"true\"}\n## Line graph solution\n\n::: {.cell}\n\n```{.r .cell-code}\n#Produce the plot with vectors created inside the function\nplot(x = rep(1:10, 2), \n     y = seq(from = 0.5, to = 10, by = 0.5),\n     col = \"red\",\n     main = 'A line graph with \"red\" as the colour',\n     type = \"l\")\n```\n:::\n\n:::",
+    "supporting": [
+      "line_exercise_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,89 @@
+project:
+  type: website
+editor:
+  render-on-save: true
+website:
+  bread-crumbs: false
+  favicon: /images//NEOF_favicon.png
+  page-navigation: true
+  title: NEOF Python for bioinformatics
+  description: NEOF Python for bioinformatics course by NEOF
+  navbar:
+    title: NEOF R primer
+    collapse-below: lg
+    left:
+    - text: Intro
+      href: index.qmd
+    - text: Setup
+      href: setup/cluster_intro.qmd
+    - text: Fundamentals
+      href: fundamentals/intro.qmd
+    - text: Programmatic
+      href: programmatic/intro.qmd
+    - text: Genomic
+      href: genomic/intro.qmd
+    - text: Exercises
+      href: exercises/intro.qmd
+    - text: Supp
+      href: supp/intro.qmd
+    - text: Appendix
+      href: appendix/neof.qmd
+    right:
+    - icon: house-fill
+      href: https://neof.org.uk/training/
+      aria-label: Neof website
+    - icon: bluesky
+      href: https://bsky.app/profile/nerc-eof.bsky.social
+      aria-label: bluesky
+  page-footer:
+    left: |
+      [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png){fig-alt="CC BY-SA 4.0" height=30px}](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+    center: |
+      [![](/images//NEOF_rounded_corners.png){fig-alt="NEOF" height=60px}](https://neof.org.uk/)
+  sidebar:
+  - id: Intro
+    title: Intro
+    style: floating
+    align: left
+    contents:
+    - href: index.qmd
+    - href: overview.qmd
+  - id: Setup
+    title: setup
+    style: floating
+    align: left
+    contents:
+    - href: setup/cluster_intro.qmd
+    - href: setup/jupyter.qmd
+  - id: Fundamentals
+    title: fundamentals
+    style: floating
+    align: left
+    contents:
+    - href: fundamentals/intro.qmd
+  - id: Appendix
+    title: appendix
+    style: floating
+    align: left
+    contents:
+    - href: appendix\neof.qmd
+    - href: appendix\faq.qmd
+format:
+  html:
+    toc: true
+    grid:
+      sidebar-width: 200px
+      body-width: 1200px
+      margin-width: 150px
+      gutter-width: 10px
+    highlight-style: a11y
+    code-overflow: scroll
+    theme:
+      dark:
+      - darkly
+      - styles_dark.scss
+      light: styles_light.scss
+    mainfont: Lexend
+    monofont: Fira Mono
+    css: include/webex.css
+    include-after-body: include/webex.js
