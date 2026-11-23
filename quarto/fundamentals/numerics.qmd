@@ -1,0 +1,121 @@
+---
+engine: knitr
+---
+
+# Numerics
+
+In python there are two main types of numerics: __<u id='integer'>integers</u>__ and **<u id='float'>Floating point numbers</u>**
+
+## Integers
+
+![](/images/noun-seven-3801475.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+__<u id='integer'>integers</u>__ are used to store whole numbers.
+These should not be declared with quote marks otherwise they will be stored as a <u id='string'>string</u>.
+
+Create the following __markdown cell__:
+
+```{python, eval=FALSE}
+#### Integers
+```
+ 
+Create and run the following __code cells__:
+    
+```{python, eval=FALSE}
+#Roman numeral letters
+I = 1
+V = 5
+X = 10
+L = 50
+C = 100
+D = 500
+M = 1000
+```
+
+```{python, eval=FALSE}
+I
+```
+
+```{python, eval=FALSE}
+X
+```
+
+```{python, eval=FALSE}
+#7
+VII = V + (I * 2)
+VII
+```
+
+```{python, eval=FALSE}
+#67
+LXVII = L + X + VII
+LXVII
+```
+
+```{python, eval=FALSE}
+#44
+XLIV = (L - X) + (V - I)
+XLIV
+```
+
+```{python, eval=FALSE}
+#2023
+MMXXIII = (M * 2) + (X * 2) + (I * 3)
+MMXXIII
+```
+
+## Floats
+![](/images/float.png){style="width:200px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+**<u id='float'>Floating point numbers</u>** are used to store real numbers (I.e. a number written with a decimal point dividing the <u id='integer'>integer</u> and the fractional parts).
+
+Create a new __markdown cell__ with the following:
+
+```{python, eval=FALSE}
+#### Floats
+```
+
+Run the following code:
+
+```{python, eval=FALSE}
+my_float = 7.0001
+another_float = 345.765
+yet_another_float = -5.423e+19
+```
+```{python, eval=FALSE}
+my_float
+```
+```{python, eval=FALSE}
+another_float
+```
+```{python, eval=FALSE}
+yet_another_float
+``` 
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

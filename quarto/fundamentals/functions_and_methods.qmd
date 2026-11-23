@@ -1,0 +1,49 @@
+---
+engine: knitr
+---
+
+# Python instructions
+![](/images/function.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+__<u id='function'>Functions</u> __ and __<u id='method'>methods</u>__ are groups of instructions that together perform a specific task. 
+This may be a task that you need to run repeatedly on your data.
+By storing these instructions in a single __<u id='function'>function</u>/<u id='method'>method</u>__, you only need to enter the code once and simply re-use it each time. 
+A __<u id='function'>function</u>/<u id='method'>method</u>__ returns a value after it has performed the specific task.
+
+Use the same notebook (__"01-Fundamentals"__) and add the following __markdown cell__:
+
+```{python, eval=FALSE}
+## Functions & methods
+### Functions
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "function_name(variable)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

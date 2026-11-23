@@ -1,0 +1,57 @@
+---
+engine: knitr
+---
+
+# Strings
+![](/images/string_bubble.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+__<u id='string'>Strings</u>__ are used to store alphanumeric text. A __<u id='string'>string</u>__ is defined by enclosing the text with either single (`'text'`) or double quotes (`"text"`).
+    
+In the below code we define two __<u id='string'>string</u> <u id='variable'>variables</u>__, and then retrieve them again by using their name, or identifier.
+
+As before, for each code block below create a __code cell__, enter the code, and run it.
+Do this for all future code examples.
+    
+```{python, eval=FALSE}
+#Assign string variables
+DNA_string = "GCACAAACC"
+amino_acids = "ARG VAL TRP"
+#Call the DNA_string variable
+DNA_string
+```
+```{python, eval=FALSE}
+#Call the amino_acids string variable
+amino_acids
+```
+
+You will notice that you can use your __<u id='variable'>variables</u>__ in the same __cell__ you created it in, or in a different __cell__. 
+As long as you have run the code that creates/assigns the __<u id='variable'>variable</u>__ you can use it elsewhere in the same notebook.
+
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

@@ -1,0 +1,69 @@
+---
+engine: knitr
+---
+# Classes
+![](/images/class.png){style="width:200px; background:white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+Every __<u id='variable'>variable</u>__ in Python has a __<u id='class'>class</u>__. These are the characteristics we described above:
+
+- __<u id='string'>String</u>__ (`<class 'str'>`)
+- __<u id='integer'>Integer</u>__ (`<class 'int'>`)
+- __<u id='float'>Float</u>__ (`<class 'float'>`)
+- __<u id='boolean'>Boolean</u>__ (`<class 'bool'>`)
+
+Unlike some other languages, you do not need to tell Python which __<u id='class'>class</u>__ a __<u id='variable'>variable</u>__ should have. 
+Python will try to figure it out based on the value assigned.
+
+Create a new __markdown cell__ with the following:
+
+```{python, eval=FALSE}
+### Classes
+```
+
+You can check the __<u id='class'>class</u>__ of a __<u id='variable'>variable</u>__ by passing it to the `type()` __<u id='function'>function</u>__:
+
+```{python, eval=FALSE}
+variable1 = "a piece of text"
+type(variable1)
+```
+```{python, eval=FALSE}
+variable2 = 5
+type(variable2)
+```
+```{python, eval=FALSE}
+variable3 = 7.0001
+type(variable3)
+```
+```{python, eval=FALSE}
+variable4 = True
+type(variable4)
+```
+  
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

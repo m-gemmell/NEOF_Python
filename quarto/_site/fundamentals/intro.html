@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -36,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../fundamentals/scripting.html" rel="next">
 <link href="..//images//NEOF_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -43,12 +41,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ff0949255a74e185e93ecc00344e77ee.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b69ea6703ff244394f33951a6daa101f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-eb64a3f073326e2a307b85c007fc47ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a1f90d0197aaca3227d444526a2ed6b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3dbc30dbc48f6f58dbcf08637aa38e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-78af124ace17c31d74afd4dd2c6d8795.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -332,6 +330,118 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Python fundamentals</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/scripting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scripting in Python</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Operators</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/annotations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comments/Annotations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Variables</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/strings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Strings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/numerics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/class.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/booleans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Booleans</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/transform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transforming variables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/code_cells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why so many code cells?</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/fundamental_mcqs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1st MCQ recap</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Functions &amp; methods</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/functions_and_methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Methods</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../fundamentals/function_method_mcq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MCQ recap</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -342,7 +452,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#python-fundamentals" id="toc-python-fundamentals" class="nav-link active" data-scroll-target="#python-fundamentals">Python fundamentals</a></li>
+  <li><a href="#python-fundamentals" id="toc-python-fundamentals" class="nav-link active" data-scroll-target="#python-fundamentals">Python fundamentals</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -355,217 +468,436 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="python-fundamentals" class="level1">
 <h1>Python fundamentals</h1>
+<p>Below is info to incoportate</p>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/python_fundamentals.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
+<p>[Stuff from operaters, comments, and variables]</p>
+<p>This section covers some of the fundamental concepts of scripting in Python. An understanding of how to use <strong><u id="operator">operators</u></strong>, <strong><u id="variable">variables</u></strong>, and <strong><u id="function">functions</u></strong> will give a good grounding in how the language works and allow you to develop your own methods and code.</p>
+<p>You definitely do not need to memorise all the information here as all of these concepts will be explored more in the rest of the tutorial. The best way to learn how various aspects of the Python language works is by <em>doing</em> rather than by <em>reading</em>.</p>
+<p>Consider coming back to this page later if you want to remind yourself of how a particular <u id="operator">operator</u> works or how to define a <strong><u id="function">function</u></strong>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
 <script>
 
+
+
 /* update total correct if #webex-total_correct exists */
+
 update_total_correct = function() {
+
   console.log("webex: update total_correct");
 
+
+
   var t = document.getElementsByClassName("webex-total_correct");
+
   for (var i = 0; i < t.length; i++) {
+
     p = t[i].parentElement;
+
     var correct = p.getElementsByClassName("webex-correct").length;
+
     var solvemes = p.getElementsByClassName("webex-solveme").length;
+
     var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+
     var selects = p.getElementsByClassName("webex-select").length;
 
+
+
     t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+
   }
+
 }
+
+
 
 /* webex-solution button toggling function */
+
 b_func = function() {
+
   console.log("webex: toggle hide");
 
+
+
   var cl = this.parentElement.classList;
+
   if (cl.contains('open')) {
+
     cl.remove("open");
+
   } else {
+
     cl.add("open");
+
   }
+
 }
+
+
 
 /* check answers */
+
 check_func = function() {
+
   console.log("webex: check answers");
 
+
+
   var cl = this.parentElement.classList;
+
   if (cl.contains('unchecked')) {
+
     cl.remove("unchecked");
+
     this.innerHTML = "Hide Answers";
+
   } else {
+
     cl.add("unchecked");
+
     this.innerHTML = "Show Answers";
+
   }
+
 }
+
+
 
 /* function for checking solveme answers */
+
 solveme_func = function(e) {
+
   console.log("webex: check solveme");
 
+
+
   var real_answers = JSON.parse(this.dataset.answer);
+
   var my_answer = this.value;
+
   var cl = this.classList;
+
   if (cl.contains("ignorecase")) {
+
     my_answer = my_answer.toLowerCase();
+
   }
+
   if (cl.contains("nospaces")) {
+
     my_answer = my_answer.replace(/ /g, "")
+
   }
+
+
 
   if (my_answer == "") {
+
     cl.remove("webex-correct");
+
     cl.remove("webex-incorrect");
+
   } else if (real_answers.includes(my_answer)) {
+
     cl.add("webex-correct");
+
     cl.remove("webex-incorrect");
+
   } else {
+
     cl.add("webex-incorrect");
+
     cl.remove("webex-correct");
+
   }
+
+
 
   // match numeric answers within a specified tolerance
+
   if(this.dataset.tol > 0){
+
     var tol = JSON.parse(this.dataset.tol);
+
     var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+
     if (matches.reduce((a, b) => a + b, 0) > 0) {
+
       cl.add("webex-correct");
+
     } else {
+
       cl.remove("webex-correct");
+
     }
+
   }
+
+
 
   // added regex bit
+
   if (cl.contains("regex")){
+
     answer_regex = RegExp(real_answers.join("|"))
+
     if (answer_regex.test(my_answer)) {
+
       cl.add("webex-correct");
+
     }
+
   }
 
+
+
   update_total_correct();
+
 }
 
+
+
 /* function for checking select answers */
+
 select_func = function(e) {
+
   console.log("webex: check select");
+
+
 
   var cl = this.classList
 
+
+
   /* add style */
+
   cl.remove("webex-incorrect");
+
   cl.remove("webex-correct");
+
   if (this.value == "answer") {
+
     cl.add("webex-correct");
+
   } else if (this.value != "blank") {
+
     cl.add("webex-incorrect");
+
   }
 
+
+
   update_total_correct();
+
 }
+
+
 
 /* function for checking radiogroups answers */
+
 radiogroups_func = function(e) {
+
   console.log("webex: check radiogroups");
 
+
+
   var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+
   var cl = checked_button.parentElement.classList;
+
   var labels = checked_button.parentElement.parentElement.children;
 
+
+
   /* get rid of styles */
+
   for (i = 0; i < labels.length; i++) {
+
     labels[i].classList.remove("webex-incorrect");
+
     labels[i].classList.remove("webex-correct");
+
   }
+
+
 
   /* add style */
+
   if (checked_button.value == "answer") {
+
     cl.add("webex-correct");
+
   } else {
+
     cl.add("webex-incorrect");
+
   }
 
+
+
   update_total_correct();
+
 }
+
+
 
 window.onload = function() {
+
   console.log("webex onload");
+
   /* set up solution buttons */
+
   var buttons = document.getElementsByTagName("button");
 
+
+
   for (var i = 0; i < buttons.length; i++) {
+
     if (buttons[i].parentElement.classList.contains('webex-solution')) {
+
       buttons[i].onclick = b_func;
+
     }
+
   }
+
+
 
   var check_sections = document.getElementsByClassName("webex-check");
+
   console.log("check:", check_sections.length);
+
   for (var i = 0; i < check_sections.length; i++) {
+
     check_sections[i].classList.add("unchecked");
 
+
+
     let btn = document.createElement("button");
+
     btn.innerHTML = "Show Answers";
+
     btn.classList.add("webex-check-button");
+
     btn.onclick = check_func;
+
     check_sections[i].appendChild(btn);
 
+
+
     let spn = document.createElement("span");
+
     spn.classList.add("webex-total_correct");
+
     check_sections[i].appendChild(spn);
+
   }
+
+
 
   /* set up webex-solveme inputs */
+
   var solveme = document.getElementsByClassName("webex-solveme");
 
+
+
   for (var i = 0; i < solveme.length; i++) {
+
     /* make sure input boxes don't auto-anything */
+
     solveme[i].setAttribute("autocomplete","off");
+
     solveme[i].setAttribute("autocorrect", "off");
+
     solveme[i].setAttribute("autocapitalize", "off");
+
     solveme[i].setAttribute("spellcheck", "false");
+
     solveme[i].value = "";
 
+
+
     /* adjust answer for ignorecase or nospaces */
+
     var cl = solveme[i].classList;
+
     var real_answer = solveme[i].dataset.answer;
+
     if (cl.contains("ignorecase")) {
+
       real_answer = real_answer.toLowerCase();
+
     }
+
     if (cl.contains("nospaces")) {
+
       real_answer = real_answer.replace(/ /g, "");
+
     }
+
     solveme[i].dataset.answer = real_answer;
 
+
+
     /* attach checking function */
+
     solveme[i].onkeyup = solveme_func;
+
     solveme[i].onchange = solveme_func;
 
+
+
     solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+
   }
+
+
 
   /* set up radiogroups */
+
   var radiogroups = document.getElementsByClassName("webex-radiogroup");
+
   for (var i = 0; i < radiogroups.length; i++) {
+
     radiogroups[i].onchange = radiogroups_func;
+
   }
+
+
 
   /* set up selects */
+
   var selects = document.getElementsByClassName("webex-select");
+
   for (var i = 0; i < selects.length; i++) {
+
     selects[i].onchange = select_func;
+
     selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+
   }
 
+
+
   update_total_correct();
+
 }
 
+
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -979,6 +1311,15 @@ window.onload = function() {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../fundamentals/scripting.html" class="pagination-link" aria-label="Scripting in Python">
+        <span class="nav-page-text">Scripting in Python</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -986,7 +1327,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

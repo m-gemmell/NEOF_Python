@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -79,12 +76,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ff0949255a74e185e93ecc00344e77ee.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b69ea6703ff244394f33951a6daa101f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-eb64a3f073326e2a307b85c007fc47ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a1f90d0197aaca3227d444526a2ed6b2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3dbc30dbc48f6f58dbcf08637aa38e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-78af124ace17c31d74afd4dd2c6d8795.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,13 +110,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
 <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
 <link href="../site_libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet">
+
 <link href="../site_libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet">
+
 <link href="../site_libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet">
+
 <link href="../site_libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet">
+
 <script src="../site_libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+
 <script src="../site_libs/tippy-binding-0.1.0/tippy.js"></script>
+
 
 
 <link rel="stylesheet" href="../include/webex.css">
@@ -307,16 +312,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Intro</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../overview/overview.html"> 
-<span class="menu-text">Overview</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="../setup/cluster_intro.html" aria-current="page"> 
 <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../fundamentals/intro.html"> 
 <span class="menu-text">Fundamentals</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../programmatic/intro.html"> 
+<span class="menu-text">Programmatic</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../genomic/intro.html"> 
+<span class="menu-text">Genomic</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../exercises/intro.html"> 
+<span class="menu-text">Exercises</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../supp/intro.html"> 
+<span class="menu-text">Supp</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../appendix/neof.html"> 
@@ -391,6 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#saving-the-file" id="toc-saving-the-file" class="nav-link" data-scroll-target="#saving-the-file">Saving the file</a></li>
   <li><a href="#title-cells-with-markdown" id="toc-title-cells-with-markdown" class="nav-link" data-scroll-target="#title-cells-with-markdown">Title cells with markdown</a></li>
   <li><a href="#close-the-notebook" id="toc-close-the-notebook" class="nav-link" data-scroll-target="#close-the-notebook">Close the notebook</a></li>
+  <li><a href="#next-step" id="toc-next-step" class="nav-link" data-scroll-target="#next-step">Next step</a></li>
   <li><a href="#video-tutorial" id="toc-video-tutorial" class="nav-link" data-scroll-target="#video-tutorial">Video tutorial</a></li>
   </ul></li>
   </ul>
@@ -407,7 +425,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Jupyter</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: white 5px solid"></p>
+<p><img src="..\images/jupyter_logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: white 5px solid"></p>
 </figure>
 </div>
 <p><a href="https://jupyter.org/"><code>Jupyter-notebook</code></a> is a nice browser based method to write, edit, and run code. It was initially created for Python coding, but has since branched out to many other languages, such as <code>R</code>.</p>
@@ -427,37 +445,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter-notebook</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This will open <code>jupyter-notebook</code> in firefox. We won’t need to access the linux terminal in this book anymore. Leave the terminal running <code>jupyter-notebook</code> and full screen your <code>firefox</code> so you should see something like below.</p>
-<div class="webex-solution">
-<button>
-Can’t see the whole webVNC window?
-</button>
-<p>You may need to zoom out with your browser so you can see the full webVNC window.</p>
-<ul>
-<li><strong>Chrome</strong>: Click on the <strong>three dots in vertical line</strong> (</li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;background:white;" xmlns="http://www.w3.org/2000/svg">  <circle cx="256" cy="256" r="48"></circle>  <circle cx="256" cy="416" r="48"></circle>  <circle cx="256" cy="96" r="48"></circle></svg>
-</div>
-</div>
-<p>) on the top right for a dropdown menu which includes zoom options. - <strong>Edge</strong>: Click on the <strong>three dots in horizontal line</strong> (</p>
-<div class="cell">
-<div class="cell-output-display">
-<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;background:white;" xmlns="http://www.w3.org/2000/svg">  <circle cx="256" cy="256" r="48"></circle>  <circle cx="416" cy="256" r="48"></circle>  <circle cx="96" cy="256" r="48"></circle></svg>
-</div>
-</div>
-<p>) on the top right for a dropdown menu which includes zoom options. - <strong>Firefox</strong>: Click on the <strong>three horizontal lines</strong> (</p>
-<div class="cell">
-<div class="cell-output-display">
-<svg viewbox="0 0 448 512" style="height:1em;display:inline-block;vertical-align:-.1em;background:white;" xmlns="http://www.w3.org/2000/svg">  <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
-</div>
-</div>
-<p>) on the top right for a dropdown menu which includes zoom options.</p>
-</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_notebook_example_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
+<p><img src="..\images/jupyter_notebook_example_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
 </figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the <u id="vnc">VNC</u> is taking up too much/little space of your browser you can press the button “Fit Desktop to Browser”. This will automatically adjust the size of the webVNC desktop to your browser window.</p>
+</div>
 </div>
 </section>
 <section id="changing-directories" class="level2">
@@ -466,7 +470,7 @@ Can’t see the whole webVNC window?
 <p>Click on <strong>“Python_course_data”</strong> to move into that directory. You will then see the below showing the files in the directory.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_notebook_example_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
+<p><img src="..\images/jupyter_notebook_example_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
 </figure>
 </div>
 </section>
@@ -474,13 +478,13 @@ Can’t see the whole webVNC window?
 <h2 class="anchored" data-anchor-id="create-notebook">Create notebook</h2>
 <p>The next step is to create a python notebook.</p>
 <ol type="1">
-<li>Click on the <strong>“New”</strong> button towards the top right, right of the “Upload” button.</li>
-<li>From the dropdown click <strong>Python 3 (ipykernel)</strong>.</li>
+<li>Click on the <strong>“New”</strong> button towards the top right, right of the “Upload” button</li>
+<li>From the dropdown click <strong>Python 3 (ipykernel)</strong></li>
 </ol>
 <p>This will open up a new Python notebook like below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_notebook_example_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
+<p><img src="..\images/jupyter_notebook_example_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
 </figure>
 </div>
 </section>
@@ -495,7 +499,7 @@ Can’t see the whole webVNC window?
 <p>Run your current <strong>cell</strong> and you should see something like below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_notebook_example_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
+<p><img src="..\images/jupyter_notebook_example_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
 </figure>
 </div>
 </section>
@@ -503,27 +507,40 @@ Can’t see the whole webVNC window?
 <h2 class="anchored" data-anchor-id="create-new-cells">Create new cells</h2>
 <p>You can create new <strong>cells</strong> by 2 different means.</p>
 <ol type="1">
-<li>Press the <code>+</code> button on the tool bar, between the floppy disk (</li>
+<li>Press the <code>+</code> button on the tool bar, between the floppy disk (<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;fill:#648fff;" xmlns="http://www.w3.org/2000/svg"> <path d="M465.94,119.76l-73.7-73.7h0A47.68,47.68,0,0,0,358.3,32H96A64,64,0,0,0,32,96V416a64,64,0,0,0,64,64H416a64,64,0,0,0,64-64V153.7A47.68,47.68,0,0,0,465.94,119.76ZM120,112H296a8,8,0,0,1,8,8v48a8,8,0,0,1-8,8H120a8,8,0,0,1-8-8V120A8,8,0,0,1,120,112ZM259.75,431.91a80,80,0,1,1,76.16-76.16A80.06,80.06,0,0,1,259.75,431.91Z"></path> <circle cx="256" cy="352" r="48"></circle></svg>) and scissors (<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;fill:#648fff;" xmlns="http://www.w3.org/2000/svg"> <path d="M103.48,224a71.64,71.64,0,0,0,44.76-15.66l41.5,16.89,6.82-12.63a39.15,39.15,0,0,1,4.32-6.37l14.22-14.42-41.17-24.94A72,72,0,1,0,103.48,224Zm0-112a40,40,0,1,1-40,40A40,40,0,0,1,103.48,112Z"></path> <path d="M480,169l-5.52-12.58c-4.48-10.42-14.74-16-32.78-17.85-10.12-1-26.95-1.24-49.69,3.81-20,4.45-122.14,28.2-164.95,58.62C206.81,215.39,203,234.67,200,250.16c-2.78,14.14-5,25.31-18,35-15,11.14-27.27,16.38-33.58,18.6a71.74,71.74,0,1,0,24.79,38ZM255.48,256a16,16,0,1,1,16-16A16,16,0,0,1,255.48,256Zm-152,144a40,40,0,1,1,40-40A40,40,0,0,1,103.48,400Z"></path> <path d="M343.79,259.87l-83.74,48.18,27.63,13.08,3.62,1.74C310,331.92,359.74,356,410.53,359c3.89.23,7.47.34,10.78.34C442,359.31,453,354,459.75,350L480,336Z"></path></svg>) , this will add a <strong>cell</strong> below your currently selected <strong>cell</strong></li>
+<li>Click on the <strong><code>Insert</code></strong> button and use the dropdown to add a cell above or below your currently selected cell</li>
 </ol>
-<div class="cell">
-<div class="cell-output-display">
-<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;background:white;" xmlns="http://www.w3.org/2000/svg">  <path d="M380.93,57.37A32,32,0,0,0,358.3,48H94.22A46.21,46.21,0,0,0,48,94.22V417.78A46.21,46.21,0,0,0,94.22,464H417.78A46.36,46.36,0,0,0,464,417.78V153.7a32,32,0,0,0-9.37-22.63ZM256,416a64,64,0,1,1,64-64A63.92,63.92,0,0,1,256,416Zm48-224H112a16,16,0,0,1-16-16V112a16,16,0,0,1,16-16H304a16,16,0,0,1,16,16v64A16,16,0,0,1,304,192Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
 </div>
 </div>
-<p>) and scissors(</p>
-<div class="cell">
-<div class="cell-output-display">
-<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;background:white;" xmlns="http://www.w3.org/2000/svg">  <path d="M103.48,224a71.64,71.64,0,0,0,44.76-15.66l41.5,16.89,6.82-12.63a39.15,39.15,0,0,1,4.32-6.37l14.22-14.42-41.17-24.94A72,72,0,1,0,103.48,224Zm0-112a40,40,0,1,1-40,40A40,40,0,0,1,103.48,112Z"></path>  <path d="M480,169l-5.52-12.58c-4.48-10.42-14.74-16-32.78-17.85-10.12-1-26.95-1.24-49.69,3.81-20,4.45-122.14,28.2-164.95,58.62C206.81,215.39,203,234.67,200,250.16c-2.78,14.14-5,25.31-18,35-15,11.14-27.27,16.38-33.58,18.6a71.74,71.74,0,1,0,24.79,38ZM255.48,256a16,16,0,1,1,16-16A16,16,0,0,1,255.48,256Zm-152,144a40,40,0,1,1,40-40A40,40,0,0,1,103.48,400Z"></path>  <path d="M343.79,259.87l-83.74,48.18,27.63,13.08,3.62,1.74C310,331.92,359.74,356,410.53,359c3.89.23,7.47.34,10.78.34C442,359.31,453,354,459.75,350L480,336Z"></path></svg>
+<div class="callout-body-container callout-body">
+<p>Hover over the toolbar icons to display a text based description of its function.</p>
 </div>
 </div>
-<p>). This will add a <strong>cell</strong> below your currently selected <strong>cell</strong>. 2. Click on the <strong><code>Insert</code></strong> button and use the dropdown to add a cell above or below your currently selected cell.</p>
-<p><strong>Tip:</strong> Hover over the toolbar icons to display a text based description of its function.</p>
 <p>With that knowledge add a second <strong>cell</strong> below the first <strong>cell</strong>. Add the following code to your second <strong>cell</strong> but do not run it.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>num_1 <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>num_2 <span class="op">=</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>Tip:</strong> Notice there are green lines around your selected cell.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice there are green lines around your selected cell.</p>
+</div>
+</div>
 <p>Insert a third <strong>cell</strong> and add the following code to it. Do not run the code.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>num_1 <span class="op">*</span> num_2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -541,29 +558,39 @@ Can’t see the whole webVNC window?
 <p>You should then see something like the below in your notebook.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_notebook_example_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
+<p><img src="..\images/jupyter_notebook_example_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
 </figure>
 </div>
 <p>There is no output printed for <strong>cell</strong> 2 because we are assigning variables. However, the correct output for Cell 3 is below it. This is because the variables were assigned in <strong>cell</strong> 2 before <strong>cell</strong> 3 was run.</p>
-<div class="webex-solution">
-<button>
-Moving across cells in jupyter-notebook with the keyboard
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Moving across cells in jupyter-notebook with the keyboard
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>To use the keyboard to move around and create new cells you will need to know the two different interaction modes.</p>
 <ul>
-<li><strong>esc mode</strong>: This mode allows you to move up and down between cells. You are in <strong>esc mode</strong> if the highlighted border of your current cell is blue (leftside) and grey. <img src="../images/jupyter_esc_mode_cell.png" class="img-fluid quarto-figure quarto-figure-center" style="width:950px"></li>
-<li><strong>command mode</strong>: This mode allows you to type in the cell. You are in <strong>command mode</strong> if the highlighted border of your current cell is green. <img src="../images/jupyter_command_mode_cell.png" class="img-fluid quarto-figure quarto-figure-center" style="width:950px"></li>
+<li><strong>esc mode</strong>: This mode allows you to move up and down between cells. You are in <strong>esc mode</strong> if the highlighted border of your current cell is blue (leftside) and grey. <img src="..\images/jupyter_esc_mode_cell.png" class="img-fluid quarto-figure quarto-figure-center" style="width:950px"></li>
+<li><strong>command mode</strong>: This mode allows you to type in the cell. You are in <strong>command mode</strong> if the highlighted border of your current cell is green. <img src="..\images/jupyter_command_mode_cell.png" class="img-fluid quarto-figure quarto-figure-center" style="width:950px"></li>
 </ul>
 <p>Press <strong>enter</strong> when on a cell in <strong>esc mode</strong> to enter <strong>command mode</strong>. This allows you to start typing in the selected cell.</p>
 <p>When you run code (ctrl + enter) in <strong>command mode</strong> you will then enter <strong>esc mode</strong>.</p>
 <p>Be careful! If you press a number key whilst in <strong>esc mode</strong> you will change the cell to a <strong>markdown cell</strong>. Additionally, you will change the first line to a header line equal to the number you pressed. I.e. if you pressed 2, the following would be added to the start of the first line of the cell: <code>##</code>.</p>
+</div>
+</div>
 </div>
 </section>
 <section id="saving-the-file" class="level2">
 <h2 class="anchored" data-anchor-id="saving-the-file">Saving the file</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/r_save.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px; background: white; border-radius:5px"></p>
+<p><img src="..\images/r_save.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px; background: white; border-radius:5px"></p>
 </figure>
 </div>
 <p>As with many good coding interfaces we can save our notebook.</p>
@@ -578,14 +605,9 @@ Moving across cells in jupyter-notebook with the keyboard
 </ol>
 <p>Now we can save the file. Two methods to save are:</p>
 <ol type="1">
-<li>Click the floppy disk (</li>
+<li>Click the floppy disk (<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;fill:#648fff;" xmlns="http://www.w3.org/2000/svg"> <path d="M465.94,119.76l-73.7-73.7h0A47.68,47.68,0,0,0,358.3,32H96A64,64,0,0,0,32,96V416a64,64,0,0,0,64,64H416a64,64,0,0,0,64-64V153.7A47.68,47.68,0,0,0,465.94,119.76ZM120,112H296a8,8,0,0,1,8,8v48a8,8,0,0,1-8,8H120a8,8,0,0,1-8-8V120A8,8,0,0,1,120,112ZM259.75,431.91a80,80,0,1,1,76.16-76.16A80.06,80.06,0,0,1,259.75,431.91Z"></path> <circle cx="256" cy="352" r="48"></circle></svg>) on the toolbar</li>
+<li>Click on the <strong>“File”</strong> button and then click <strong>“Save and Checkpoint”</strong> from the dropdown options</li>
 </ol>
-<div class="cell">
-<div class="cell-output-display">
-<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;background:white;" xmlns="http://www.w3.org/2000/svg">  <path d="M380.93,57.37A32,32,0,0,0,358.3,48H94.22A46.21,46.21,0,0,0,48,94.22V417.78A46.21,46.21,0,0,0,94.22,464H417.78A46.36,46.36,0,0,0,464,417.78V153.7a32,32,0,0,0-9.37-22.63ZM256,416a64,64,0,1,1,64-64A63.92,63.92,0,0,1,256,416Zm48-224H112a16,16,0,0,1-16-16V112a16,16,0,0,1,16-16H304a16,16,0,0,1,16,16v64A16,16,0,0,1,304,192Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
-</div>
-</div>
-<p>) on the toolbar. 2. Click on the <strong>“File”</strong> button. Click <strong>“Save and Checkpoint”</strong> from the dropdown options.</p>
 </section>
 <section id="title-cells-with-markdown" class="level2">
 <h2 class="anchored" data-anchor-id="title-cells-with-markdown">Title cells with markdown</h2>
@@ -600,7 +622,7 @@ Moving across cells in jupyter-notebook with the keyboard
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_notebook_example_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
+<p><img src="..\images/jupyter_notebook_example_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
 </figure>
 </div>
 <ul>
@@ -613,11 +635,21 @@ Moving across cells in jupyter-notebook with the keyboard
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tutorial</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Great, we can now add nice headers in our notebooks. <strong>Save</strong> the notebook once more before carrying on to the next section.</p>
-<div class="webex-solution">
-<button>
-Markdown
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Markdown
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>You won’t need to know more about <code>Markdown</code> but if you are interested please see the <a href="https://www.markdownguide.org/basic-syntax/"><code>Markdown</code> guide</a>.</p>
+</div>
+</div>
 </div>
 </section>
 <section id="close-the-notebook" class="level2">
@@ -627,19 +659,16 @@ Markdown
 <li>Click on <strong>“File”</strong>.</li>
 <li>From the dropdown options click <strong>“Close and Halt”</strong>.</li>
 </ul>
-<p>When you are back in the file explorer page you may not yet see the new file you saved. If so, you will need to refresh the page with the Refresh button (</p>
-<div class="cell">
-<div class="cell-output-display">
-<svg viewbox="0 0 512 512" style="height:1em;display:inline-block;vertical-align:-.1em;background:white;" xmlns="http://www.w3.org/2000/svg">  <path d="M320,146s24.36-12-64-12A160,160,0,1,0,416,294" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></path>  <polyline points="256 58 336 138 256 218" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></polyline></svg>
-</div>
-</div>
-<p>) towards the top right.</p>
+<p>When you are back in the file explorer page you may not yet see the new file you saved. If so, you will need to refresh the page with the Refresh button (<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:1em;display:inline-block;vertical-align:-.1em;" xmlns="http://www.w3.org/2000/svg"> <polyline points="23 4 23 10 17 10"></polyline> <polyline points="1 20 1 14 7 14"></polyline> <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>) towards the top right.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/jupyter_notebook_refresh.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
+<p><img src="..\images/jupyter_notebook_refresh.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1000px"></p>
 </figure>
 </div>
-<p>With that quick tutorial of <code>jupyter-notebook</code> we can start python scripting in the next chapter.</p>
+</section>
+<section id="next-step" class="level2">
+<h2 class="anchored" data-anchor-id="next-step">Next step</h2>
+<p>With that quick tutorial of <code>jupyter-notebook</code> we can start python scripting in the next part: <a href="../fundamentals/intro.html">Python fundamentals</a>.</p>
 </section>
 <section id="video-tutorial" class="level2">
 <h2 class="anchored" data-anchor-id="video-tutorial">Video tutorial</h2>
@@ -649,12 +678,12 @@ Markdown
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-131bd64affff7ca63b8e" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-131bd64affff7ca63b8e">{"x":{"element":"hpc","opts":{"content":"High Performance Computing","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fc304bd4ddad9b52d32a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-fc304bd4ddad9b52d32a">{"x":{"element":"hpc","opts":{"content":"High Performance Computing","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a3b1b57bf4ca77019cdf" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-a3b1b57bf4ca77019cdf">{"x":{"element":"cpu","opts":{"content":"Central Processing Unit","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ab3d8cad1834312f02fe" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-ab3d8cad1834312f02fe">{"x":{"element":"cpu","opts":{"content":"Central Processing Unit","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -665,210 +694,416 @@ Markdown
 </main> <!-- /main -->
 <script>
 
+
+
 /* update total correct if #webex-total_correct exists */
+
 update_total_correct = function() {
+
   console.log("webex: update total_correct");
 
+
+
   var t = document.getElementsByClassName("webex-total_correct");
+
   for (var i = 0; i < t.length; i++) {
+
     p = t[i].parentElement;
+
     var correct = p.getElementsByClassName("webex-correct").length;
+
     var solvemes = p.getElementsByClassName("webex-solveme").length;
+
     var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+
     var selects = p.getElementsByClassName("webex-select").length;
 
+
+
     t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+
   }
+
 }
+
+
 
 /* webex-solution button toggling function */
+
 b_func = function() {
+
   console.log("webex: toggle hide");
 
+
+
   var cl = this.parentElement.classList;
+
   if (cl.contains('open')) {
+
     cl.remove("open");
+
   } else {
+
     cl.add("open");
+
   }
+
 }
+
+
 
 /* check answers */
+
 check_func = function() {
+
   console.log("webex: check answers");
 
+
+
   var cl = this.parentElement.classList;
+
   if (cl.contains('unchecked')) {
+
     cl.remove("unchecked");
+
     this.innerHTML = "Hide Answers";
+
   } else {
+
     cl.add("unchecked");
+
     this.innerHTML = "Show Answers";
+
   }
+
 }
+
+
 
 /* function for checking solveme answers */
+
 solveme_func = function(e) {
+
   console.log("webex: check solveme");
 
+
+
   var real_answers = JSON.parse(this.dataset.answer);
+
   var my_answer = this.value;
+
   var cl = this.classList;
+
   if (cl.contains("ignorecase")) {
+
     my_answer = my_answer.toLowerCase();
+
   }
+
   if (cl.contains("nospaces")) {
+
     my_answer = my_answer.replace(/ /g, "")
+
   }
+
+
 
   if (my_answer == "") {
+
     cl.remove("webex-correct");
+
     cl.remove("webex-incorrect");
+
   } else if (real_answers.includes(my_answer)) {
+
     cl.add("webex-correct");
+
     cl.remove("webex-incorrect");
+
   } else {
+
     cl.add("webex-incorrect");
+
     cl.remove("webex-correct");
+
   }
+
+
 
   // match numeric answers within a specified tolerance
+
   if(this.dataset.tol > 0){
+
     var tol = JSON.parse(this.dataset.tol);
+
     var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+
     if (matches.reduce((a, b) => a + b, 0) > 0) {
+
       cl.add("webex-correct");
+
     } else {
+
       cl.remove("webex-correct");
+
     }
+
   }
+
+
 
   // added regex bit
+
   if (cl.contains("regex")){
+
     answer_regex = RegExp(real_answers.join("|"))
+
     if (answer_regex.test(my_answer)) {
+
       cl.add("webex-correct");
+
     }
+
   }
 
+
+
   update_total_correct();
+
 }
 
+
+
 /* function for checking select answers */
+
 select_func = function(e) {
+
   console.log("webex: check select");
+
+
 
   var cl = this.classList
 
+
+
   /* add style */
+
   cl.remove("webex-incorrect");
+
   cl.remove("webex-correct");
+
   if (this.value == "answer") {
+
     cl.add("webex-correct");
+
   } else if (this.value != "blank") {
+
     cl.add("webex-incorrect");
+
   }
 
+
+
   update_total_correct();
+
 }
+
+
 
 /* function for checking radiogroups answers */
+
 radiogroups_func = function(e) {
+
   console.log("webex: check radiogroups");
 
+
+
   var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+
   var cl = checked_button.parentElement.classList;
+
   var labels = checked_button.parentElement.parentElement.children;
 
+
+
   /* get rid of styles */
+
   for (i = 0; i < labels.length; i++) {
+
     labels[i].classList.remove("webex-incorrect");
+
     labels[i].classList.remove("webex-correct");
+
   }
+
+
 
   /* add style */
+
   if (checked_button.value == "answer") {
+
     cl.add("webex-correct");
+
   } else {
+
     cl.add("webex-incorrect");
+
   }
 
+
+
   update_total_correct();
+
 }
+
+
 
 window.onload = function() {
+
   console.log("webex onload");
+
   /* set up solution buttons */
+
   var buttons = document.getElementsByTagName("button");
 
+
+
   for (var i = 0; i < buttons.length; i++) {
+
     if (buttons[i].parentElement.classList.contains('webex-solution')) {
+
       buttons[i].onclick = b_func;
+
     }
+
   }
+
+
 
   var check_sections = document.getElementsByClassName("webex-check");
+
   console.log("check:", check_sections.length);
+
   for (var i = 0; i < check_sections.length; i++) {
+
     check_sections[i].classList.add("unchecked");
 
+
+
     let btn = document.createElement("button");
+
     btn.innerHTML = "Show Answers";
+
     btn.classList.add("webex-check-button");
+
     btn.onclick = check_func;
+
     check_sections[i].appendChild(btn);
 
+
+
     let spn = document.createElement("span");
+
     spn.classList.add("webex-total_correct");
+
     check_sections[i].appendChild(spn);
+
   }
+
+
 
   /* set up webex-solveme inputs */
+
   var solveme = document.getElementsByClassName("webex-solveme");
 
+
+
   for (var i = 0; i < solveme.length; i++) {
+
     /* make sure input boxes don't auto-anything */
+
     solveme[i].setAttribute("autocomplete","off");
+
     solveme[i].setAttribute("autocorrect", "off");
+
     solveme[i].setAttribute("autocapitalize", "off");
+
     solveme[i].setAttribute("spellcheck", "false");
+
     solveme[i].value = "";
 
+
+
     /* adjust answer for ignorecase or nospaces */
+
     var cl = solveme[i].classList;
+
     var real_answer = solveme[i].dataset.answer;
+
     if (cl.contains("ignorecase")) {
+
       real_answer = real_answer.toLowerCase();
+
     }
+
     if (cl.contains("nospaces")) {
+
       real_answer = real_answer.replace(/ /g, "");
+
     }
+
     solveme[i].dataset.answer = real_answer;
 
+
+
     /* attach checking function */
+
     solveme[i].onkeyup = solveme_func;
+
     solveme[i].onchange = solveme_func;
 
+
+
     solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+
   }
+
+
 
   /* set up radiogroups */
+
   var radiogroups = document.getElementsByClassName("webex-radiogroup");
+
   for (var i = 0; i < radiogroups.length; i++) {
+
     radiogroups[i].onchange = radiogroups_func;
+
   }
+
+
 
   /* set up selects */
+
   var selects = document.getElementsByClassName("webex-select");
+
   for (var i = 0; i < selects.length; i++) {
+
     selects[i].onchange = select_func;
+
     selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+
   }
 
+
+
   update_total_correct();
+
 }
 
+
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1298,7 +1533,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

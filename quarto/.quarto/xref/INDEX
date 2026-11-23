@@ -478,5 +478,89 @@
   },
   "genomics/intro.qmd": {
     "intro.html": "53ffd6ad"
+  },
+  "appendix/mamaba.qmd": {
+    "mamaba.html": "aa0c2942"
+  },
+  "appendix/mamba.qmd": {
+    "mamba.html": "7051b937"
+  },
+  "appendix/resources.qmd": {
+    "resources.html": "c67b0ce9"
+  },
+  "appendix/cheatsheet.qmd": {
+    "cheatsheet.html": "0fc3716d"
+  },
+  "fundamentals/scripting.qmd": {
+    "scripting.html": "8cf24af2"
+  },
+  "fundamentals/fundamentals.qmd": {
+    "fundamentals.html": "b58f37e5"
+  },
+  "fundamentals/operators.qmd": {
+    "operators.html": "a4e61234"
+  },
+  "fundamentals/annotations.qmd": {
+    "annotations.html": "db5e2a0c"
+  },
+  "fundamentals/variables.qmd": {
+    "variables.html": "e125ccbf"
+  },
+  "fundamentals/class.qmd": {
+    "class.html": "673d38a8"
+  },
+  "fundamentals/transform.qmd": {
+    "transform.html": "19f212ad"
+  },
+  "fundamentals/code_cells.qmd": {
+    "code_cells.html": "8dea0127"
+  },
+  "fundamentals/fundamental_mcqs.qmd": {
+    "fundamental_mcqs.html": "5685c384"
+  },
+  "fundamentals/functions_and_methods.qmd": {
+    "functions_and_methods.html": "06a4d962"
+  },
+  "fundamentals/functions.qmd": {
+    "functions.html": "3986738c"
+  },
+  "fundamentals/methods.qmd": {
+    "methods.html": "c0cbdcd6"
+  },
+  "fundamentals/function_method_mcq.qmd": {
+    "function_method_mcq.html": "bfe1adf1"
+  },
+  "fundamentals/strings.qmd": {
+    "strings.html": "d84f6d8f"
+  },
+  "fundamentals/integers.qmd": {
+    "integers.html": "ad2c0129"
+  },
+  "fundamentals/floats.qmd": {
+    "floats.html": "12e576e4"
+  },
+  "fundamentals/booleans.qmd": {
+    "booleans.html": "4fcce00e"
+  },
+  "fundamentals/numerics.qmd": {
+    "numerics.html": "6f5a0bfe"
+  },
+  "fundamentals/data_structures.qmd": {
+    "data_structures.html": "61b9ea1a"
+  },
+  "fundamentals/lists.qmd": {
+    "lists.html": "0be6dc52"
+  },
+  "fundamentals/sets.qmd": {
+    "sets.html": "cb2f6990"
+  },
+  "fundamentals/dictionary.qmd": {
+    "dictionary.html": "64816c78"
+  },
+  "fundamentals/data_structure_mcq.qmd": {
+    "data_structure_mcq.html": "24b3f663"
+  },
+  "fundamentals/exercise.qmd": {
+    "exercise.html": "74d88135"
   }
 }

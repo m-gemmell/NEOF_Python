@@ -1,0 +1,85 @@
+# Cheatsheet
+
+## Operators
+
+### Arithmetic operators
+
+-   **`+`** (addition)
+-   **`-`** (subtraction)
+-   **`*`** (multiplication)
+-   **`/`** (division)
+-   **`**`** (power/exponent)
+-   **`//`** (Floor division)
+-   **`%`** (modulo operator. Find the remainder after dividing 2 numbers)
+
+### Comparison operators
+
+-   **`==`**: Equals logical operator.
+-   **`!=`**: Does not equal logical operator.
+-   **`<`**: Less than logical operator.
+-   **`<=`**: Less than or equal to logical operator.
+-   **`>`**: Greater than logical operator.
+-   **`>=`**: Greater than or equal to logical operator.
+
+### Logical operators
+
+-   **`and`** logical operator.
+    -   If both comparisons are `True` return `True`.
+    -   If either or both comparisons are `False` return `False`.
+-   **`or`** logical operator.
+    -   If either or both comparisons are `True` return `True`.
+    -   If both comparisons are `False` return `False`.
+
+## Functions
+
+-   **`print()`**: Print specified text.
+-   **`type()`**: Check **class/type** of a **variable**.
+-   **`str()`** : Transform **variable** to string **class**.
+-   **`int()`** : Transform **variable** to integer **class**.
+-   **`float()`** : Transform **variable** to float **class**.
+-   **`len()`**: Calculate number of characters in a string **variable**.
+-   **`set()`**: Transform a **list** to a **set**.
+-   **`reversed()`**: Reverse a **string**.
+-   **`open()`**: Open a file for reading (`r`), writing (`w`), or appending (`a`).
+
+### Biopython functions
+
+For a full list of `Bio.SeqIO` methods please see the [wiki](https://biopython.org/wiki/SeqIO)
+
+-   **`SeqIO.parse()`**: Takes a filename and format name to return a `SeqRecord` **list**.
+    -   e.g. `fastq_list = SeqIO.parse("example_input.fastq", "fastq")`
+-   **`SeqIO.write()`**: Writes a `SeqRecord` list as a file with a specified format.
+    -   e.g. `seqIO.write(fastq_list, "example_output.fastq", "fastq")`
+
+## Methods
+
+### String methods
+
+-   **`.upper()`**: Convert string to upper case.
+-   **`.lower()`**: Convert string to lower case.
+-   **`.count()`**: Count number of specified string pattern in **string variable** or .
+-   **`.split()`**: Split string by specified delimiter.
+-   **`.startswith()`**: Check if a string starts with a particular sub-string. Returns `True` or `False`.
+-   **`.strip()`**: Remove leading or trailing white spaces.
+
+### List methods
+
+-   **`.append()`**: Append a value to the end of a **list**.
+
+### Set methods
+
+-   **`.add()`**: Add a value to a **set**.
+
+### File methods
+
+-   **`.write()`**: **Write** data to a file **opened** for **writing**.
+-   **`.readline()`**: Extract the first line from a file **opened** for **reading**.
+
+### Biopython methods
+
+-   **`.translate()`**: Translate a DNA sequence record element to a protein sequence.
+
+## Statements
+
+-   **`for <loop_variable> in <variable>:`** : Loop through each **value** in a **variable**.
+-   **`with <data> as <variable_name>:`** : Start a data stream.

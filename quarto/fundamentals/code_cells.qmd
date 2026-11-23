@@ -1,0 +1,65 @@
+---
+engine: knitr
+---
+
+# Why so many code cells?
+![](/images/cells.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+We are using a __code cell__ per piece of code that gives an output. 
+We do this as when using `jupyter-notebook` with `python` it will normally only show the last output from a __code cell__.
+
+Create and run the below __code cells__ to see this in action.
+
+```{python, eval=FALSE}
+1+1
+2+2
+```
+
+```{python, eval=FALSE}
+1 == 1
+2 > 4
+```
+
+However, you can use the `print()` <u id='function'>function</u> to bypass this. 
+The output from every single `print()` <u id='function'>function</u> will be printed in `jupyter-notebook`.
+
+Try it out with the below single __code cell__:
+
+```{python, eval=FALSE}
+print(1+1)
+print(2+2)
+print(1 == 1)
+print(2 > 4)
+```
+
+This is essential when writing longer pieces of code that need multiple outputs.
+In this book we will stick with the multiple __code cells__ approach as we find it easier than having to use `print()` constantly.
+However, if you prefer using fewer __code cells__ and more `print()` __<u id='function'>functions</u>__ please feel free to do so.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

@@ -1,0 +1,361 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Fundamental exercise {#fundamental_exercise}\n",
+        "![](/images/Mimas tiliae.png){style=\"width:200px\" fig-align=\"center\"}\n",
+        "\n",
+        "To reinforce what you have learnt please try the challenges in this chapter.\n",
+        "\n",
+        "Solutions are in the expandable boxes.\n",
+        "Try your best to solve each challenge but use the solutions for help if you would like.\n",
+        "Even if your method works it can be good to check the solution as there are many ways to do the same thing in python.\n",
+        "\n",
+        "In this exercise you are going to create, investigate, and manipulate data of UK moths found in light traps.\n",
+        "\n",
+        "## Fundamental exercise notebook\n",
+        "![](/images/notebook.png){style=\"width:100px\" fig-align=\"center\"}\n",
+        "\n",
+        "Create a new notebook called \"02-Fundamental_exercises\". Use this notebook to carry out the challenges.\n",
+        "\n",
+        "Remember to use __markdown cells__ to make headers and to save often.\n",
+        "\n",
+        "## Moth light trap challenges\n",
+        "\n",
+        "### Moth challenge 1 {-}\n",
+        "![](/images/moth_1.png){style=\"width:100px\" fig-align=\"center\"}\n",
+        "\n",
+        "Create a __list variable__ called __\"moth_sightings_21sep\"__ with the ordered __string__ values:\n",
+        "\n",
+        "1. \"Poplar Hawk-moth\"\n",
+        "2. \"Elephant Hawk-moth\"\n",
+        "3. \"Elephant Hawk-moth\"\n",
+        "4. \"Cinnabar\"\n",
+        "5. \"Poplar Hawk-moth\"\n",
+        "6. \"Scarlet Tiger\"\n",
+        "7. \"Scalloped Oak\"\n",
+        "\n",
+        "This is the species of the individual moths that visited the light trap on the 21st night of September. \n",
+        "\n",
+        "Then view the __list__.\n",
+        "\n",
+        "`r hide(\"Moth 1 solution\")`"
+      ],
+      "id": "3a47febd"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#1\n",
+        "moth_sightings_21sep = [\"Poplar Hawk-moth\", \"Elephant Hawk-moth\", \"Elephant Hawk-moth\",\n",
+        "                        \"Cinnabar\", \"Poplar Hawk-moth\", \"Scarlet Tiger\", \"Scalloped Oak\"]\n",
+        "moth_sightings_21sep"
+      ],
+      "id": "7e528c8b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "### Moth challenge 2 {-}\n",
+        "![](/images/moth_2.png){style=\"width:150px\" fig-align=\"center\"}\n",
+        "\n",
+        "Using python code, calculate the percentage of individuals that were __Elephant Hawk-moths__ in __\"moth_sightings_21sep\"__.\n",
+        "\n",
+        "__Tip:__ Operators, the __function__ `len()` and the __method__ `.count()` (it can be used on string __lists__) will be useful.\n",
+        "\n",
+        "`r hide(\"Moth 2 solution\")`"
+      ],
+      "id": "dcd667b9"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#2\n",
+        "(moth_sightings_21sep.count(\"Elephant Hawk-moth\") / len(moth_sightings_21sep)) * 100"
+      ],
+      "id": "b5b97de6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "### Moth challenge 3 {-}\n",
+        "![](/images/moth_3.png){style=\"width:150px\" fig-align=\"center\"}\n",
+        "\n",
+        "Create a __set__ called __unique_moths__ from the __\"moth_sightings_21sep\"__ list.\n",
+        "\n",
+        "`r hide(\"Moth 3 solution\")`"
+      ],
+      "id": "2da66ee9"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#3\n",
+        "unique_moths = set(moth_sightings_21sep)\n",
+        "unique_moths"
+      ],
+      "id": "6086877c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "### Moth challenge 4 {-}\n",
+        "![](/images/moth_4.png){style=\"width:150px\" fig-align=\"center\"}\n",
+        "\n",
+        "Create a new __list variable__ called __\"moth_sightings_22sep\"__ with the ordered __string__ values:\n",
+        "\n",
+        "1. \"Poplar Hawk-moth\"\n",
+        "2. \"Elephant Hawk-moth\"\n",
+        "3. \"Elephant Hawk-moth\"\n",
+        "4. \"Cinnabar\"\n",
+        "5. \"Feathered Thorn\"\n",
+        "6. \"Scarlet Tiger\"\n",
+        "7. \"Elephant Hawk-moth\"\n",
+        "\n",
+        "__Tip__: It can be useful to copy, paste, and edit previous code.\n",
+        "\n",
+        "`r hide(\"Moth 4 solution\")`"
+      ],
+      "id": "d03a155c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#4\n",
+        "moth_sightings_22sep = [\"Poplar Hawk-moth\", \"Elephant Hawk-moth\", \"Elephant Hawk-moth\",\n",
+        "                        \"Cinnabar\", \"Feathered Thorn\", \"Scarlet Tiger\", \"Elephant Hawk-moth\"]\n",
+        "moth_sightings_22sep"
+      ],
+      "id": "23d8f933",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "### Moth challenge 5 {-}\n",
+        "![](/images/moth_5.png){style=\"width:150px\" fig-align=\"center\"}\n",
+        "\n",
+        "Add the string __variable__ __\"Feathered Thorn\"__ to the __set__  __\"unique_moths\"__.\n",
+        "\n",
+        "`r hide(\"Moth 5 solution\")`"
+      ],
+      "id": "05f439f6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#5\n",
+        "unique_moths.add(\"Feathered Thorn\")\n",
+        "unique_moths"
+      ],
+      "id": "67f17d18",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "### Moth challenge 6 {-}\n",
+        "![](/images/moth_6.png){style=\"width:150px\" fig-align=\"center\"}\n",
+        "\n",
+        "This is a multi stage challenge.\n",
+        "Subset the __lists__ in the following ways:\n",
+        "\n",
+        "1. Subset the 1st value of __\"moth_sightings_21sep\"__.\n",
+        "2. Subset the 3rd to 5th values of __\"moth_sightings_22sep\"__.\n",
+        "3. Subset the second last value of __\"moth_sightings_21sep\"__.\n",
+        "4. Subset the first 4 values of __\"moth_sightings_22sep\"__.\n",
+        "5. Subset the values from the 5th to the end of __\"moth_sightings_21sep\"__.\n",
+        "6. Subset the three last values of __\"moth_sightings_22sep\"__.\n",
+        "\n",
+        "`r hide(\"Moth 6 solution\")`"
+      ],
+      "id": "93572c74"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#6.1\n",
+        "moth_sightings_21sep[0]"
+      ],
+      "id": "68c472d4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#6.2\n",
+        "moth_sightings_22sep[2:5]"
+      ],
+      "id": "22719a1f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#6.3\n",
+        "moth_sightings_21sep[-2]"
+      ],
+      "id": "a11e997a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#6.4\n",
+        "moth_sightings_22sep[:4]"
+      ],
+      "id": "b7206e45",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#6.5\n",
+        "moth_sightings_21sep[4:]"
+      ],
+      "id": "1f9a859d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#6.6\n",
+        "moth_sightings_22sep[-3:]"
+      ],
+      "id": "d0445033",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "### Moth challenge 7 {-}\n",
+        "![](/images/moth_7.png){style=\"width:150px\" fig-align=\"center\"}\n",
+        "\n",
+        "Create a __dictionary__ called __\"moth_visits_sep\"__ containing the following __key__ & __value__ pairs:\n",
+        "\n",
+        "1. \"Poplar Hawk-moth\" : 45\n",
+        "2. \"Elephant Hawk-moth\" : 72\n",
+        "3. \"Cinnabar\" : 23\n",
+        "4. \"Scarlet Tiger\" : 32\n",
+        "5. \"Scalloped Oak\" : 10\n",
+        "\n",
+        "`r hide(\"Moth 7 solution\")`"
+      ],
+      "id": "2d04e0ca"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#7\n",
+        "moth_visits_sep = {\n",
+        "  \"Poplar Hawk-moth\" :  45, \n",
+        "  \"Elephant Hawk-moth\" : 72,\n",
+        "  \"Cinnabar\" : 23,\n",
+        "  \"Scarlet Tiger\" : 32,\n",
+        "  \"Scalloped Oak\" : 10\n",
+        "}\n",
+        "moth_visits_sep"
+      ],
+      "id": "925b40f4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "### Moth challenge 8 {-}\n",
+        "![](/images/moth_8.png){style=\"width:150px\" fig-align=\"center\"}\n",
+        "\n",
+        "Add the __key/value__ pair __\"Feathered Thorn\" : 13__ to the __dictionary__ __\"moth_visits_sep\"__.\n",
+        "\n",
+        "`r hide(\"Moth 8 solution\")`"
+      ],
+      "id": "fd12c09a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#8\n",
+        "moth_visits_sep[\"Feathered Thorn\"] = 13\n",
+        "moth_visits_sep"
+      ],
+      "id": "341cfc3a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`r unhide()`\n",
+        "\n",
+        "## Moth exercise conclusion\n",
+        "![](/images/finish.png){style=\"width:200px; background: white; border-radius:5px\" fig-align=\"center\"}\n",
+        "\n",
+        "Fantastic! Hopefully you found those challenges helpful in practising and solidifying your python skills and knowledge.\n",
+        "\n",
+        "You can now save and __close and halt__ your __notebooks__."
+      ],
+      "id": "abe53a44"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

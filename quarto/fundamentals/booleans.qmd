@@ -1,0 +1,87 @@
+---
+engine: knitr
+---
+
+# Booleans
+![](/images/true_or_false.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+**<u id='boolean'>Booleans</u>** are a special type of <u id='variable'>variable</u> that can represent one of
+two values: __True__ or __False__. 
+You can compare any two values in Python and get a result of either __True__ or __False__.
+
+- To check if two values are equal we use double equals: `==`
+- To check if two values are not equal we use: `!=`
+- Greater than (`>`) or less than (`<`) also work.
+
+Create a new __markdown cell__ with the following:
+
+```{python, eval=FALSE}
+#### Booleans
+```
+
+Run the following code:
+
+```{python, eval=FALSE}
+1 == 1
+```
+```{python, eval=FALSE}
+1 == 2
+```
+```{python, eval=FALSE}
+2 == 17
+```
+```{python, eval=FALSE}
+2 != 17
+```
+```{python, eval=FALSE}
+(10 * 2) < 30
+```
+```{python, eval=FALSE}
+(10 * 30) > 20
+```
+```{python, eval=FALSE}
+#Use one of our previously created integer variables
+a_bool = X > 4
+a_bool
+```
+```{python, eval=FALSE}
+#Check if 2 string variables are identical
+#Cannot use > or < with strings
+another_bool = DNA_string == amino_acids
+another_bool
+```
+```{python, eval=FALSE}
+#Can compare if boolean variables are identical
+yet_another_bool = a_bool == another_bool
+yet_another_bool
+```
+  
+
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

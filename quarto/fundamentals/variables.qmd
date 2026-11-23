@@ -1,0 +1,57 @@
+---
+engine: knitr
+---
+
+# Rules
+![](/images/cargo_container.png){style="width:200px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
+
+__<u id='variable'>Variables</u>__ are used to store information which can then be referenced or manipulated later. 
+It is useful to label data with descriptive names which are easily read by humans. 
+You can think of a __<u id='variable'>variable</u>__ as a 'container' to hold a piece of information. 
+  
+__<u id='variable'>Variables</u>__ are assigned a value using the equals (`=`) character.
+
+__<u id='variable'>Variable</u> name rules__:
+
+- Must start with either a letter or an underscore
+  - Cannot start with a number.
+- Must only contain alphanumeric characters (and underscores)
+  - No punctuation such as full stops, quotes, commas, colons, etc are allowed.
+- They are case sensitive.
+
+Python supports several <u id='class'>classes</u> (or types) of __<u id='variable'>variables</u>__ including __<u id='string'>strings</u>__, __<u id='integer'>integers</u>__, __<u id='float'>floats</u>__, and __<u id='boolean'>booleans</u>__.
+
+In a new __Markdown cell__ add the following:
+
+```{python, eval=FALSE}
+### Variables
+#### Strings
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

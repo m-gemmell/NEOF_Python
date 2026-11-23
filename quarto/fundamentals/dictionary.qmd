@@ -1,0 +1,92 @@
+---
+engine: knitr
+---
+# Dictionary
+![](/images/dictionary.png){style="width:200px; background:white; border-radius:5px; border: 5px solid white" fig-align="center"}
+
+The third data structure we will learn is the **<u id='dictionary_tooltip'>dictionary</u>**. 
+A __<u id='dictionary_tooltip'>dictionary</u>__ is an ordered data structure which holds **pairs** of values; a **key** and a **value**.
+
+For example, say we want to store the gene identifiers alongside our fold-change data that we recorded earlier in a __<u id='list'>list</u>__. 
+Each gene identifier/fold-change pair is the __key__/__value__ of the __<u id='dictionary_tooltip'>dictionary</u>__.
+
+__<u id='dictionary_tooltip'>Dictionaries</u>__ are also defined using the curly braces but a pair of values are given each time, separated by a colon (`{key:value}`).
+
+Enter the following. 
+
+__Note__: You need to press enter after each line.
+
+```{python, eval=FALSE}
+gene_fold_change = {
+  "Agl" : 0.25,
+  "Pygm" : -0.42,
+  "Pgm2" : 0.62,
+  "Ugp2" : 1.27,
+  "Gys1" : -0.5,
+  "Phka1" : 0,
+  "Phkg1" : 0.33
+}
+gene_fold_change
+```
+
+__<u id='dictionary_tooltip'>Dictionaries</u>__ are **indexed** meaning that individual records can be retrieved 
+very quickly (important if you are working with very large dictionaries).
+
+We can retrieve the information for "Gys1" by using the identifier as the **key** 
+and the __<u id='dictionary_tooltip'>dictionary</u>__ will then return the **value**.
+
+```{python, eval=FALSE}
+gene_fold_change["Gys1"]
+```
+
+New values can be added to the __<u id='dictionary_tooltip'>dictionary</u>__ in a similar way to how they are retrieved:
+```{python, eval=FALSE}
+gene_fold_change["ZT1"] = 3.2
+gene_fold_change["ZT1"]
+```
+
+You __cannot__ subset __<u id='dictionary_tooltip'>dictionaries</u>__ with numbers like a __<u id='list'>list</u>__.
+
+The pairing up of values in __<u id='dictionary_tooltip'>dictionaries</u>__ is extremely useful if you are working with DNA sequence files (Fasta or FastQ).
+It offers an easy way of matching up the read identifier with the DNA nucleotide data, for example. 
+Once indexed, the individual records can then be accessed extremely quickly.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "list", 
+                  tooltip = "list = [value1,value2]",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "set_tooltip", 
+                  tooltip = "set{unique_value1,unique_value2}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "dictionary_tooltip", 
+                  tooltip = "dictionary = {key:value}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "function_name(variable)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

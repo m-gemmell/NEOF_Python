@@ -1,0 +1,56 @@
+---
+engine: knitr
+---
+
+# Annotations
+![](/images/hashtag2.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+It is often useful to include human-readable __comments__ in your scripts and code.
+__Comments/Annotations__ in Python are indicated by the hash symbol (`#`). 
+Anything to the right of the hash is considered a __comment__ and is ignored by the interpreter.
+
+Create a new __Markdown cell__ with the following.
+
+```{python, eval=FALSE}
+### Annotation
+```
+
+In a new __cell__, enter and run the below.
+
+```{python, eval=FALSE}
+# This line is a comment
+print("This section will print") # This section is ignored
+```
+
+Only the `print()` command is used by the python interpreter. 
+The other text is ignored due to the hashtags.
+You will also notice that the text of __comments/annotations__ are uniquely coloured in `jupyter-notebook`.
+This is useful to quickly see what parts are __comments__ and what parts are not.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

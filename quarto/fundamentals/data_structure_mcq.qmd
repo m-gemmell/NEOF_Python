@@ -1,0 +1,105 @@
+---
+engine: knitr
+---
+
+# Structures recap
+![](/images/question_bubble_purple.png){style="width:200px" fig-align="center"}
+
+Grand! You have learnt about different data structures in __Python__.
+
+Try choosing the correct option in the below sentences to recap what you have learnt.
+
+```{r, echo = FALSE}
+opts_p <- c("__Dictionaries__", answer="__Lists__", "__Sets__")
+```
+1. ________ hold an ordered catalogue of values. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Dictionaries__", "__Lists__", answer="__Sets__")
+```
+2. ________ can only hold unique values. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Dictionaries__", "__Lists__", "__Sets__")
+```
+3. ________ hold pairs of values (key and value). They can be used to quickly access individual records, even when they are extremely large. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__-1__", answer="__0__", "__1__")
+```
+4. Data structures in Python start at position ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Exclusive__", answer="__Inclusive__", "__Key__")
+```
+5. When subsetting values in a __list__ the first number (`[X:]`) is ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Exclusive__", "__Inclusive__", "__Key__")
+```
+6. When subsetting values in a __list__ the last number (`[:Y]`) is ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Exclusive__", "__Inclusive__", answer="__Key__")
+```
+7. You can access the __value__ of a __dictionary__ with its matching ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.add()`__", answer="__`.append()`__", "__`set()`__")
+```
+8. The ________ __method__ can add a value to a __list__. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`.add()`__", "__`.append()`__", "__`set()`__")
+```
+9. The ________ __method__ can add a value to a __set__. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.add()`__", "__`.append()`__", answer="__`set()`__")
+```
+10. The ________ __function__ can create a __set__ from a __list__. `r longmcq(opts_p)`
+
+
+We are going to be using these data structures to look at and manipulate DNA sequence data specifically, but the principles apply to any datasets stored in these structures.
+
+Ensure you save your notebook. However, don't close it as you may find its contents useful for the next chapter of exercises.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "list", 
+                  tooltip = "list = [value1,value2]",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "set_tooltip", 
+                  tooltip = "set{unique_value1,unique_value2}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "dictionary_tooltip", 
+                  tooltip = "dictionary = {key:value}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "function_name(variable)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

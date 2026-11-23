@@ -1,0 +1,69 @@
+---
+engine: knitr
+---
+# 1st MCQ recap
+![](/images/question_bubble_red.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+Brilliant! That is the end of this chapter. 
+Have you saved your notebook?
+It is good practice to save it regularly.
+
+Choose the correct option to complete each sentence below:
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Class__", "__Comments__", "__String__")
+```
+1. All __variables__ have a ________. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Class__", answer="__Comments__", "__String__")
+```
+2. The hashtag (`#`) can be used to add ________ to code. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Class__", "__Comments__", answer="__String__")
+```
+3. Quotes ('single' or "double") are used to create ________ __variables__. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Boolean__", "__Float__", answer="__Integer__")
+```
+4. ________ is a numeric __class__ which __does not__ contain decimal points (whole numbers). `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Boolean__", answer="__Float__", "__Integer__")
+```
+5. ________ is a numeric __class__ which __does__ contain decimal points (real numbers). `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Boolean__", "__Float__", "__Integer__")
+```
+6. ________ is a __class__ that stores `True` or `False`. `r longmcq(opts_p)`
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

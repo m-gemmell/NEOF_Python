@@ -1,0 +1,63 @@
+---
+engine: knitr
+---
+
+# Structuring data
+![](/images/python_data_structure.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+We now know the different types of data points that Python can hold, whether
+they are __<u id='integer'>integers</u>__, __<u id='float'>floats</u>__, __<u id='string'>strings</u>__ of text, or __<u id='boolean'>boolean</u>__ values.
+
+Typically, data points do not exist in isolation but instead are in a group. 
+For example, consider a set of measurements of the peak day temperature over
+a period of a week. 
+A group of data points such as these can be stored in a __<u id='list'>list</u>__.
+
+Use the same notebook (__"01-Fundamentals"__) and add the following __markdown cell__:
+
+```{python, eval=FALSE}
+## Data structures
+### Lists
+```
+
+From now on you won't be instructed to make __markdown cells__, instead use your judgement and make your own.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "list", 
+                  tooltip = "list = [value1,value2]",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "set_tooltip", 
+                  tooltip = "set{unique_value1,unique_value2}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "dictionary_tooltip", 
+                  tooltip = "dictionary = {key:value}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "function_name(variable)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

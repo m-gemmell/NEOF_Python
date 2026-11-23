@@ -1,0 +1,26 @@
+# Mamba
+![](/images/mamba_logo.png){style="width:200px; border-radius:5px" fig-align="center"}
+
+## Mamba installation and environment {#mamba_install}
+
+Mamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.
+
+Mamba github: <https://github.com/mamba-org/mamba>
+
+The best way to use Mamba is to install Miniforge. It has both Conda and Mamba commands.
+
+Miniforge installation: <https://github.com/conda-forge/miniforge>
+
+Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
+
+To create the mamba environment `python` run the below commands in your bash. You will need to have installed `mamba` first.
+
+```{bash, eval=FALSE}
+#Python
+mamba create -n python
+mamba activate python
+mamba install -c anaconda jupyter
+mamba install -c conda-forge biopython
+mamba install -c anaconda pandas
+mamba install -c conda-forge matplotlib
+```

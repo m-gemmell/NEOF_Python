@@ -1,0 +1,91 @@
+---
+engine: knitr
+---
+
+# Sets
+![](/images/uk_plants.png){style="width:200px; background:white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+A __<u id='set_tooltip'>set</u>__ is similar to a __<u id='list'>list</u>__ except that it can only hold __unique__ values.
+A __<u id='set_tooltip'>set</u>__ also differs from a __<u id='list'>list</u>__ in that they do not retain the order of the elements (unordered).
+
+__<u id='set_tooltip'>Sets</u>__ are defined using the curly braces (`{}`). Define a __<u id='set_tooltip'>set</u>__ containing the plants found on the one pound coin. 
+
+```{python, eval=FALSE}
+plants_set = {"Leek", "Rose", "Shamrock"}
+plants_set
+```
+
+We forgot the Scottish thistle! 
+We can add a new element to our __<u id='set_tooltip'>set</u>__ using the `.add()` __<u id='method'>method</u>__.
+
+```{python, eval=FALSE}
+plants_set.add("Thistle")
+plants_set
+```
+
+In real world analysis combining data from more samples might mean that duplicate plants were detected in the data. 
+Adding values that are already in the __<u id='set_tooltip'>set</u>__ has no effect as it cannot hold duplicate values.
+
+```{python, eval=FALSE}
+plants_set.add("Shamrock")
+plants_set
+```
+
+## Convert a list to a set
+![](/images/list_to_set.png){style="width:700px; background:white; border-radius:5px" fig-align="center"}
+
+Sometimes we have a __<u id='list'>list</u>__ of non-unique values and it is useful to extract the unique values. This can be carried out by transforming a __<u id='list'>list</u>__ into a __<u id='set_tooltip'>set</u>__.
+
+Add some gene IDs to a __<u id='list'>list</u>__.
+
+```{python, eval=FALSE}
+gene_IDs = ["Agl", "Pygm", "Pgm2", "Ugp2", "Pygm", "Pgm2"]
+gene_IDs
+```
+
+We can transform the __<u id='list'>list</u>__ into a __<u id='set_tooltip'>set</u>__ using the __<u id='function'>function</u>__ `set()`.
+
+```{python, eval=FALSE}
+gene_set = set(gene_IDs)
+gene_set
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "list", 
+                  tooltip = "list = [value1,value2]",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "set_tooltip", 
+                  tooltip = "set{unique_value1,unique_value2}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "dictionary_tooltip", 
+                  tooltip = "dictionary = {key:value}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "function_name(variable)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

@@ -1,0 +1,73 @@
+---
+engine: knitr
+---
+# Transforming variables
+![](/images/transform.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+__<u id='variable'>Variables</u>__ can be transformed from one __<u id='class'>class</u>__ to another provided the value can be coerced into the new data type (I.e. you could not transform a  __<u id='string'>string</u>__ of text to a __<u id='float'>floating point numbers</u>__). 
+
+Create a new __markdown cell__ with the following:
+
+```{python, eval=FALSE}
+### Transforming variables
+```
+
+## Float to integer
+
+To transform a __<u id='float'>float</u>__ to an __<u id='integer'>integer</u>__ use the `int()` __<u id='function'>function</u>__ (note the loss of precision):
+```{python, eval=FALSE}
+a_float = 17.45
+int(a_float)
+```
+
+## Integer to string
+
+To transform an __<u id='integer'>integer</u>__ to a __<u id='string'>string</u>__ use the `str()` __<u id='function'>function</u>__:
+```{python, eval=FALSE}
+an_integer = 783473
+str(an_integer)
+```
+
+## Numeric to integer
+
+You can transform a numeric __<u id='string'>string</u>__ to an __<u id='integer'>integer</u>__:
+```{python, eval=FALSE}
+a_numeric_string = "256"
+int(a_numeric_string)
+```
+
+## To float
+
+You can also transform to a __<u id='float'>floating point</u>__ using `float()`:
+```{python, eval=FALSE}
+a_float_string = "3.14"
+float(a_float_string)
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

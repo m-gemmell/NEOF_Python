@@ -61,13 +61,43 @@ website:
     align: left
     contents:
     - href: fundamentals/intro.qmd
+    - href: fundamentals\scripting.qmd
+    - href: fundamentals\operators.qmd
+    - href: fundamentals\annotations.qmd
+    - section: "Variables"
+      contents:
+      - href: fundamentals\variables.qmd
+      - href: fundamentals\strings.qmd
+      - href: fundamentals\numerics.qmd
+      - href: fundamentals\booleans.qmd
+      - href: fundamentals\class.qmd
+      - href: fundamentals\transform.qmd
+    - href: fundamentals\code_cells.qmd
+    - href: fundamentals\fundamental_mcqs.qmd
+    - section: "Functions & methods"
+      contents:
+      - href: fundamentals\functions_and_methods.qmd
+      - href: fundamentals\functions.qmd
+      - href: fundamentals\methods.qmd
+      - href: fundamentals\function_method_mcq.qmd
+    - section: "Data structures"
+      contents:
+      - href: fundamentals\data_structures.qmd
+      - href: fundamentals\lists.qmd
+      - href: fundamentals\sets.qmd
+      - href: fundamentals\dictionary.qmd
+      - href: fundamentals\data_structure_mcq.qmd
+    - href: fundamentals\exercise.qmd
   - id: Appendix
     title: appendix
     style: floating
     align: left
     contents:
-    - href: appendix\neof.qmd
-    - href: appendix\faq.qmd
+    - href: appendix/neof.qmd
+    - href: appendix/resources.qmd
+    - href: appendix/mamba.qmd
+    - href: appendix/cheatsheet.qmd
+    - href: appendix/faq.qmd
 format:
   html:
     toc: true

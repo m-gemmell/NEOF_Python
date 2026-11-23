@@ -15,27 +15,9 @@ You will now be in a logged-in Linux <u id='vnc'>VNC</u> desktop with two termin
 
 If you do not see something similar please ask for assistance.
 
-If the <u id='vnc'>VNC</u> is taking up too much/little space of your browser you can use the zoom of your browser to adjust the size. Ensure you can see one whole terminal.
-
-`r hide("How to zoom with your browser")`
-You may need to zoom out with your browser so you can see the full webVNC window.
-
-- __Chrome__: Click on the __three dots in vertical line__ (
-```{r, echo=FALSE}
-icons::icon_style(icons::ionicons("ellipsis-vertical"), background="white", border="solid white")
-``` 
-) on the top left for a dropdown menu which includes zoom options.
-- __Edge__: Click on the __three horizontal lines__ (
-```{r, echo=FALSE}
-icons::icon_style(icons::ionicons("ellipsis-horizontal"), background="white", border="solid white")
-``` 
-) on the top left for a dropdown menu which includes zoom options.
-- __Firefox__: Click on the __three dots in horizontal line__ (
-```{r, echo=FALSE}
-icons::icon_style(icons::fontawesome("bars", style="solid"), background="white", border="solid white")
-```
-) on the top left for a dropdown menu which includes zoom options.
-`r unhide()`
+::: {.callout-important}
+If the <u id='vnc'>VNC</u> is taking up too much/little space of your browser you can press the button “Fit Desktop to Browser”. This will automatically adjust the size of the webVNC desktop to your browser window.
+:::
 
 ## The Terminal Window
 In our case the terminal window looks like the picture below. We are using the terminal window as our shell to interpret our commands to the kernel. Depending on your system and preferences it may look different.
@@ -60,7 +42,7 @@ cp -r /pub14/tea/nsc206/NEOF/Python_course_data .
 This workshop requires some programs. 
 These can be difficult to install. 
 Instead we have used Miniforge to install the programs including Jupyter-notebook. 
-To learn more about Miniforge and how to create your own environment please see the [appendix](#mamba_install).
+To learn more about Miniforge and how to create your own environment please see the [appendix](/appendix/mamba.qmd).
 
 To set-up your environment for this workshop please run the following code (you must include the full stop and space at the front of the command).
 
@@ -77,9 +59,11 @@ If you are interested in the use script you can look at its contents.
 less /usr/local/bin/usepython
 ```
 
-__Tip:__ press `q` to quit `less`.
+::: {.callout-tip}
+Press `q` to quit `less`.
+:::
 
-For more about mamba and how to create your own `python` environment please see the [appendix](#mamba_install)
+For more about mamba and how to create your own `python` environment please see the [appendix](/appendix/mamba.qmd).
 
 ```{r, echo=FALSE}
 #Tippy tooltips

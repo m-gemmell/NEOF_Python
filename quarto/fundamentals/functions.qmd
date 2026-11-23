@@ -1,0 +1,95 @@
+---
+engine: knitr
+---
+
+# Functions
+![](/images/dna.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+A __<u id='function'>function</u>__ is a distinct piece of code which requires data for it to run.
+To run a __<u id='function'>function</u>__ you need the name of the __<u id='function'>function</u>__ followed by a pair of braces (`()`) with the desired input within the braces. 
+
+We have already used some __<u id='function'>functions</u>__: 
+ 
+ - __`int()`__
+ - __`str()`__
+ - __`float()`__
+ - __`type()`__
+ 
+Imagine that we need to find the length of a __<u id='string'>string</u>__ of nucleotides (i.e. how many bases are in a piece of DNA).
+In this instance, we can use the built-in `len()` __<u id='function'>function</u>__ on the __<u id='string'>string</u>__:
+
+__Note__: Use any __<u id='string'>string</u>__ of 'ACGT' you like, no need to copy this one exactly.
+
+```{python, eval=FALSE}
+#Random DNA sequence
+DNA1 = "ACGTGTTATATGCGCGTTAGTGTAGTCGATC"
+#print the length of the DNA
+len(DNA1)
+```
+
+Make another random length of DNA and check its length:
+
+```{python, eval=FALSE}
+#Random DNA sequence
+DNA2 = "AGCTGACTGCATGATTGCTGATCAACAGT"
+#print the length of the DNA
+len(DNA2)
+```
+
+You can use the `+` __<u id='operator'>operator</u>__ to paste 2 or more __<u id='string'>strings</u>__ together which is useful.
+
+```{python, eval=FALSE}
+DNA3 = DNA1 + DNA2
+DNA3
+```
+
+```{python, eval=FALSE}
+len(DNA3)
+```
+
+The below code incorporates previously made __<u id='variable'>variables</u>__ and used __<u id='function'>functions</u>__.
+Make a good attempt to understand it.
+You can try running smaller parts of the code to more easily see what each part is doing (e.g. only run `str(X)`).
+If you are unsure please ask a demonstrator, they are more than happy to help.
+
+```{python, eval=FALSE}
+maths_sentence = str(X) + " + " + str(V) + " = " + str(X + V)
+maths_sentence
+```
+
+```{python, eval=FALSE}
+len(maths_sentence)
+```
+
+You'll notice that each character (including spaces ` `) adds to the length.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "function_name(variable)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

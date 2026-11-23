@@ -1,0 +1,104 @@
+---
+engine: knitr
+---
+
+# Operators
+![](/images/bodmas_ribbon.png){style="width:650px; background:white; border-radius:5px" fig-align="center"}
+
+Python allows the use of the usual arithmetic __<u id='operator'>operators</u>__ and follows the traditional rules of mathematical precedence (BODMAS). 
+
+The main mathematical <u id='operator'>operators</u>  are:
+
+- __`+`__ (addition)
+- __`-`__ (subtraction)
+- __`*`__ (multiplication)
+- __`/`__ (division)
+- __`**`__ (power/exponent)
+- __`//`__ (Floor division)
+- __`%`__ (modulo operator. Find the remainder after dividing 2 numbers)
+
+## Setup
+
+We'll continue to use our __"01-Fundamentals"__ notebook. 
+Within it create a new __Markdown__ cell with the following headers:
+
+```{python, eval=FALSE}
+## Fundamentals
+### Operators
+```
+
+
+## Using operators
+
+For each code block below create a __code cell__, enter the code, and run it.
+This will demonstrate the code output and give you some practice.
+
+::: {.callout-note collapse="true"}
+## Moving across cells in jupyter-notebook with the keyboard
+To use the keyboard to move around and create new cells you will need to know the two different interaction modes.
+
+- **esc mode**: This mode allows you to move up and down between cells. You are in **esc mode** if the highlighted border of your current cell is blue (leftside) and grey. ![](/images/jupyter_esc_mode_cell.png){style="width:950px" fig-align="center"}
+- **command mode**: This mode allows you to type in the cell. You are in **command mode** if the highlighted border of your current cell is green. ![](/images/jupyter_command_mode_cell.png){style="width:950px" fig-align="center"}
+
+Press **enter** when on a cell in **esc mode** to enter **command mode**. This allows you to start typing in the selected cell.
+
+When you run code (ctrl + enter) in **command mode** you will then enter **esc mode**.
+
+Be careful! If you press a number key whilst in **esc mode** you will change the cell to a **markdown cell**. Additionally, you will change the first line to a header line equal to the number you pressed. I.e. if you pressed 2, the following would be added to the start of the first line of the cell: `##`.
+:::
+
+```{r, eval=FALSE}
+1+1
+```
+```{python, eval=FALSE}
+9-6
+```
+```{python, eval=FALSE}
+3*4
+```
+```{python, eval=FALSE}
+42/7
+```
+```{python, eval=FALSE}
+45/7
+```
+```{python, eval=FALSE}
+3**3
+```
+```{python, eval=FALSE}
+42//7
+```
+```{python, eval=FALSE}
+45//7
+```
+```{python, eval=FALSE}
+45%7
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```

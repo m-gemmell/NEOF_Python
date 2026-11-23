@@ -5,7 +5,14 @@ It will be updated with the answers to questions asked during these courses.
 
 ## General
 
+### Copy and paste from computer to webVNC?
+
+You cannot copy and paste from your computer to the webVNC and vice versa. This is because the webVNC and your computer have two different clipboards (used for copy and pasting) which are not able to interact with each other as they are 2 different computers.
+
 ### Where can I get the presentation recordings and the dataset?
 
-These can be found on the [course materials page](/appendix/course_materials.qmd).
+These are included in the resources webpage that is accessed after filling in the feedback form.
 
+### How can I quit/exit less
+
+You can quite less by press the `q` key.
