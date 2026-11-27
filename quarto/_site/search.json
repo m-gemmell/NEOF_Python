@@ -157,7 +157,7 @@
     "href": "fundamentals/intro.html",
     "title": "Python fundamentals",
     "section": "",
-    "text": "This part covers a plethora of topics encompassing the fundamentals of Python. An understanding of how to use operators, variables, functions/methods, and data structures will give a good grounding in how the language works and allow you to develop your own code.\nWe do not expect you to memorise all the information here as all of these concepts will be explored further in the rest of the tutorial. The best way to learn how various aspects of the Python language works is by doing rather than by reading.\nConsider coming back to this part later if you want to remind yourself of how a particular operator works or how to define a function.\n\n\nWithin jupyter-notebook create a new notebook in your “Python_course_data” directory. Rename it to “01-Fundamentals” and save it. Open and use this notebook for this part.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn overview of the sections in this part are below.\n\n\n\n\n\n\n\n\nScripting\nOperators\nAnnotations\n\n\n\n\n\n\n\n\n\nVariables\n\nStrings\nNumerics\nBoolean\nClass\nTransformations\n\n\n\n\n\n\n\n\n\nFunctions & methods\n\nFunctions\nMethods\n\n\n\n\n\n\n\n\n\nData structures\n\nLists\nSets\nDictionary\n\n\n\n\n\n\n\n\n\nExercise",
+    "text": "This part covers a plethora of topics encompassing the fundamentals of Python. An understanding of how to use operators, variables, functions/methods, and data structures will give a good grounding in how the language works and allow you to develop your own code.\nWe do not expect you to memorise all the information here as all of these concepts will be explored further in the rest of the tutorial. The best way to learn how various aspects of the Python language works is by doing rather than by reading.\nConsider coming back to this part later if you want to remind yourself of how a particular operator works or how to define a function.\n\n\n\n\n\n\nTip\n\n\n\nThere is also a cheatsheet in the appendix\n\n\n\n\nWithin jupyter-notebook create a new notebook in your “Python_course_data” directory. Rename it to “01-Fundamentals” and save it. Open and use this notebook for this part.\n\n\n\nAn overview of the sections in this part are below.\n\n\n\n\n\n\n\nThe first section is a quick introduction to scripting, operators, and annotations.\n\nScripting: Writing and running commands (scripting) in Python\nOperators: Using Python like a calculator with operators (+, -, *, /, etc.)\nAnnotations: Adding comments/annotations with # in scripts\n\n\n\n\n\n\n\n\n\nInformation can be stored into variables in Python. A variable consists of a name and the information/value within it.\nValues can be of different classes including:\n\nStrings: Alphanumeric text, e.g. \"text1\"\nNumerics: Numbers which can be stored as integers (e.g. 3) or floats (e.g. 3.14)\nBooleans: True or False\n\nAdditionally the following topics are covered:\n\nClass: The auto assignment of classes by python and how to check the class of a variable\nTransformation: How to transform a variable from one class to another\n\n\n\n\n\n\n\n\n\nFunctions & methods are instructions/commands which carry out specific tasks.\n\nFunctions: A distinct piece of code that can be used for any class of data\n\nfunction(variable)\n\nMethods: Similar to functions but they can only be used for one class\n\nvariable.method()\n\n\n\n\n\n\n\n\n\n\nData structures are used to group multiple values together. We will look at the 3 structures:\n\nLists: An ordered list of values that can contain duplicates\n\nlist = [value1,value2]\n\nSets: An unordered set of values that cannot contain duplicates\n\nset = (unique_value1,unique_value2)\n\nDictionary: An ordered data structure that holds pairs of values; a key and a value\n\ndictionary = {key:value}\n\n\n\n\n\n\n\n\n\n\nAs the final part you will complete tasks of the fundamental exercise. This involves creating and editing various variables of moths.",
     "crumbs": [
       "Fundamentals",
       "Python fundamentals"
@@ -438,7 +438,7 @@
     "href": "fundamentals/scripting.html",
     "title": "Scripting in Python",
     "section": "",
-    "text": "There are two important components to programming in Python; the commands that are committed by the user, and the interpreter which receives and implements the commands.\nEach command can be thought of as a single instruction and these can be added together into a series of steps, called a script. Think about how a cooking recipe is often presented:\n\nBreak a few eggs\nMake an omelette\n\nThese are two distinct commands, but together they form a script for how to transform raw eggs into an omelette.\n\n\n\n\n\n\n\n\nIn this section we will learn and use some Python commands.\nConvert the first cell to a Markdown cell in your “01-Fundamentals” notebook. Add the following to the cell to create a 1st and 2nd level header.\n\n# 1-Fundamentals\n## Scripting\n\n\n\n\n\n\n\n\nThe first command we will use is print(). This will print the desired text. Type and run the below commands in 2 new Code cells.\n\n\n\n\n\n\nNote\n\n\n\nPython is very particular about braces/brackets and quote marks.\n\n\n\nprint(\"Hello, world!\")\n\n\nprint(\"I'm excited to be learning some Python!\")\n\nBelow each cell you will see the specified text.\n\n\n\n\n\n\nThe command getcwd() stands for “get the current working directory”. This command comes from the Python module os. We therefore need to import the module and specify it when running the command (os.getcwd()).\nRun the below in a new cell.\n\nimport os\nos.getcwd()\n\nThis will return something like: ‘/pub14/tea/nsc206/Python_course_data’ (your nsc number will be different though).\nprint() and os.getcwd() are nice commands to start with but don’t appear very useful, yet. We will see later how they can be used effectively.\n\n\n\n\n\n\n\nIndentation refers to any spaces or tab characters at the beginning of a line of code. Indentation helps readability of code. It defines code blocks dedicated to a single purpose. However, indentation in Python is mandatory and the interpreter will give an error if the indentation is wrong.\nJupyter-notebook attempts to auto indent code. However, you still need to take care that the level of indentation in the script matches that in the workbook exactly.\n\n\n\n\n\nThere is an active debate about whether tabs or spaces are more appropriate for indentation.\nFor reference, one tab = 4 spaces.\nYou can use either tabs or spaces, but you cannot use them interchangeably! Use one and keep consistent with your use.\nDo not enter the below, this is just an illustration of how three levels of tab indentation looks in a script.\n\n# Zero levels of indentation\n  # One level of indentation\n    # Two levels of indentation\n# Zero levels of indentation\n\n\n\n\n\n\n\n\nWonderful! That is the end of the scripting chapter. Now time for some reinforcement.\nChoose the correct option to complete the below sentences:\n\nThe command ________ gets your current working directory.\n\n getcwd() os print()\n\n\n\nThe command ________ prints text.\n\n getcwd() os print()\n\n\n\nThe module ________ is needed for the getcwd() command.\n\n getcwd() os print()\n\n\n\n________ can be used for indentation in Python.\n\n Tabs Spaces Tabs or Spaces",
+    "text": "There are two important components to programming in Python; the commands that are committed by the user, and the interpreter which receives and implements the commands.\nEach command can be thought of as a single instruction and these can be added together into a series of steps, called a script. Think about how a cooking recipe is often presented:\n\nBreak a few eggs\nMake an omelette\n\nThese are two distinct commands, but together they form a script for how to transform raw eggs into an omelette.\n\n\n\n\n\n\n\n\nIn this section we will learn and use some Python commands.\nConvert the first cell to a Markdown cell in your “01-Fundamentals” notebook. Add the following to the cell to create a 1st and 2nd level header.\n\n# 1-Fundamentals\n## Scripting\n\n\n\n\n\n\n\n\nThe first command we will use is print(). This will print the desired text. Type and run the below commands in 2 new Code cells.\n\n\n\n\n\n\nNote\n\n\n\nPython is very particular about braces/brackets and quote marks.\n\n\n\nprint(\"Hello, world!\")\n\n\nprint(\"I'm excited to be learning some Python!\")\n\nBelow each cell you will see the specified text.\n\n\n\n\n\n\n\n\nThe command getcwd() stands for “get the current working directory”. This command comes from the Python module os. We therefore need to import the module and specify it when running the command (os.getcwd()).\nRun the below in a new cell.\n\nimport os\nos.getcwd()\n\nThis will return something like: ‘/pub14/tea/nsc206/Python_course_data’ (your nsc number will be different though).\nprint() and os.getcwd() are nice commands to start with but don’t appear very useful, yet. We will see later how they can be used effectively.\n\n\n\n\n\n\n\n\n\nIndentation refers to any spaces or tab characters at the beginning of a line of code. Indentation helps readability of code. It defines code blocks dedicated to a single purpose. However, indentation in Python is mandatory and the interpreter will give an error if the indentation is wrong.\nJupyter-notebook attempts to auto indent code. However, you still need to take care that the level of indentation in the script matches that in the workbook exactly.\n\n\n\n\n\n\n\nThere is an active debate about whether tabs or spaces are more appropriate for indentation.\nFor reference, one tab = 4 spaces.\nYou can use either tabs or spaces, but you cannot use them interchangeably! Use one and keep consistent with your use.\nDo not enter the below, this is just an illustration of how three levels of tab indentation looks in a script.\n\n# Zero levels of indentation\n  # One level of indentation\n    # Two levels of indentation\n# Zero levels of indentation\n\n\n\n\n\n\n\n\n\n\nWonderful! That is the end of the scripting page. Now time for some reinforcement.\nChoose the correct option to complete the below sentences:\n\nThe command ________ gets your current working directory.\n\n getcwd() os print()\n\n\n\nThe command ________ prints text.\n\n getcwd() os print()\n\n\n\nThe module ________ is needed for the getcwd() command.\n\n getcwd() os print()\n\n\n\n________ can be used for indentation in Python.\n\n Tabs Spaces Tabs or Spaces",
     "crumbs": [
       "Fundamentals",
       "Scripts",
@@ -462,7 +462,7 @@
     "href": "fundamentals/scripting.html#issuing-commands",
     "title": "Scripting in Python",
     "section": "",
-    "text": "In this section we will learn and use some Python commands.\nConvert the first cell to a Markdown cell in your “01-Fundamentals” notebook. Add the following to the cell to create a 1st and 2nd level header.\n\n# 1-Fundamentals\n## Scripting\n\n\n\n\n\n\n\n\nThe first command we will use is print(). This will print the desired text. Type and run the below commands in 2 new Code cells.\n\n\n\n\n\n\nNote\n\n\n\nPython is very particular about braces/brackets and quote marks.\n\n\n\nprint(\"Hello, world!\")\n\n\nprint(\"I'm excited to be learning some Python!\")\n\nBelow each cell you will see the specified text.\n\n\n\n\n\n\nThe command getcwd() stands for “get the current working directory”. This command comes from the Python module os. We therefore need to import the module and specify it when running the command (os.getcwd()).\nRun the below in a new cell.\n\nimport os\nos.getcwd()\n\nThis will return something like: ‘/pub14/tea/nsc206/Python_course_data’ (your nsc number will be different though).\nprint() and os.getcwd() are nice commands to start with but don’t appear very useful, yet. We will see later how they can be used effectively.",
+    "text": "In this section we will learn and use some Python commands.\nConvert the first cell to a Markdown cell in your “01-Fundamentals” notebook. Add the following to the cell to create a 1st and 2nd level header.\n\n# 1-Fundamentals\n## Scripting\n\n\n\n\n\n\n\n\nThe first command we will use is print(). This will print the desired text. Type and run the below commands in 2 new Code cells.\n\n\n\n\n\n\nNote\n\n\n\nPython is very particular about braces/brackets and quote marks.\n\n\n\nprint(\"Hello, world!\")\n\n\nprint(\"I'm excited to be learning some Python!\")\n\nBelow each cell you will see the specified text.\n\n\n\n\n\n\n\n\nThe command getcwd() stands for “get the current working directory”. This command comes from the Python module os. We therefore need to import the module and specify it when running the command (os.getcwd()).\nRun the below in a new cell.\n\nimport os\nos.getcwd()\n\nThis will return something like: ‘/pub14/tea/nsc206/Python_course_data’ (your nsc number will be different though).\nprint() and os.getcwd() are nice commands to start with but don’t appear very useful, yet. We will see later how they can be used effectively.",
     "crumbs": [
       "Fundamentals",
       "Scripts",
@@ -474,7 +474,7 @@
     "href": "fundamentals/scripting.html#a-note-on-indentation",
     "title": "Scripting in Python",
     "section": "",
-    "text": "Indentation refers to any spaces or tab characters at the beginning of a line of code. Indentation helps readability of code. It defines code blocks dedicated to a single purpose. However, indentation in Python is mandatory and the interpreter will give an error if the indentation is wrong.\nJupyter-notebook attempts to auto indent code. However, you still need to take care that the level of indentation in the script matches that in the workbook exactly.\n\n\n\n\n\nThere is an active debate about whether tabs or spaces are more appropriate for indentation.\nFor reference, one tab = 4 spaces.\nYou can use either tabs or spaces, but you cannot use them interchangeably! Use one and keep consistent with your use.\nDo not enter the below, this is just an illustration of how three levels of tab indentation looks in a script.\n\n# Zero levels of indentation\n  # One level of indentation\n    # Two levels of indentation\n# Zero levels of indentation",
+    "text": "Indentation refers to any spaces or tab characters at the beginning of a line of code. Indentation helps readability of code. It defines code blocks dedicated to a single purpose. However, indentation in Python is mandatory and the interpreter will give an error if the indentation is wrong.\nJupyter-notebook attempts to auto indent code. However, you still need to take care that the level of indentation in the script matches that in the workbook exactly.\n\n\n\n\n\n\n\nThere is an active debate about whether tabs or spaces are more appropriate for indentation.\nFor reference, one tab = 4 spaces.\nYou can use either tabs or spaces, but you cannot use them interchangeably! Use one and keep consistent with your use.\nDo not enter the below, this is just an illustration of how three levels of tab indentation looks in a script.\n\n# Zero levels of indentation\n  # One level of indentation\n    # Two levels of indentation\n# Zero levels of indentation",
     "crumbs": [
       "Fundamentals",
       "Scripts",
@@ -486,7 +486,7 @@
     "href": "fundamentals/scripting.html#scripting-recap-mcqs",
     "title": "Scripting in Python",
     "section": "",
-    "text": "Wonderful! That is the end of the scripting chapter. Now time for some reinforcement.\nChoose the correct option to complete the below sentences:\n\nThe command ________ gets your current working directory.\n\n getcwd() os print()\n\n\n\nThe command ________ prints text.\n\n getcwd() os print()\n\n\n\nThe module ________ is needed for the getcwd() command.\n\n getcwd() os print()\n\n\n\n________ can be used for indentation in Python.\n\n Tabs Spaces Tabs or Spaces",
+    "text": "Wonderful! That is the end of the scripting page. Now time for some reinforcement.\nChoose the correct option to complete the below sentences:\n\nThe command ________ gets your current working directory.\n\n getcwd() os print()\n\n\n\nThe command ________ prints text.\n\n getcwd() os print()\n\n\n\nThe module ________ is needed for the getcwd() command.\n\n getcwd() os print()\n\n\n\n________ can be used for indentation in Python.\n\n Tabs Spaces Tabs or Spaces",
     "crumbs": [
       "Fundamentals",
       "Scripts",
@@ -586,9 +586,10 @@
     "href": "fundamentals/operators.html",
     "title": "Operators",
     "section": "",
-    "text": "Python allows the use of the usual arithmetic operators and follows the traditional rules of mathematical precedence (BODMAS).\nThe main mathematical operators are:\n\n+ (addition)\n- (subtraction)\n* (multiplication)\n/ (division)\n** (power/exponent)\n// (Floor division)\n% (modulo operator. Find the remainder after dividing 2 numbers)\n\n\n\nWe’ll continue to use our “01-Fundamentals” notebook. Within it create a new Markdown cell with the following headers:\n\n## Fundamentals\n### Operators\n\n\n\n\nFor each code block below create a code cell, enter the code, and run it. This will demonstrate the code output and give you some practice.\n\n\n\n\n\n\nNoteMoving across cells in jupyter-notebook with the keyboard\n\n\n\n\n\nTo use the keyboard to move around and create new cells you will need to know the two different interaction modes.\n\nesc mode: This mode allows you to move up and down between cells. You are in esc mode if the highlighted border of your current cell is blue (leftside) and grey. \ncommand mode: This mode allows you to type in the cell. You are in command mode if the highlighted border of your current cell is green. \n\nPress enter when on a cell in esc mode to enter command mode. This allows you to start typing in the selected cell.\nWhen you run code (ctrl + enter) in command mode you will then enter esc mode.\nBe careful! If you press a number key whilst in esc mode you will change the cell to a markdown cell. Additionally, you will change the first line to a header line equal to the number you pressed. I.e. if you pressed 2, the following would be added to the start of the first line of the cell: ##.\n\n\n\n\n1+1\n\n\n9-6\n\n\n3*4\n\n\n42/7\n\n\n45/7\n\n\n3**3\n\n\n42//7\n\n\n45//7\n\n\n45%7",
+    "text": "Python allows the use of the usual arithmetic operators and follows the traditional rules of mathematical precedence (BODMAS).\nThe main mathematical operators are:\n\n+ (addition)\n- (subtraction)\n* (multiplication)\n/ (division)\n** (power/exponent)\n// (floor division)\n% (modulo operator, find the remainder after dividing 2 numbers)\n\n\n\nWe’ll continue to use our “01-Fundamentals” notebook. Within it create a new Markdown cell with the following headers:\n\n## Fundamentals\n### Operators\n\n\n\n\nFor each code block below create a code cell, enter the code, and run it. This will demonstrate the code output and give you some practice.\n\n\n\n\n\n\nNoteMoving across cells in jupyter-notebook with the keyboard\n\n\n\n\n\nTo use the keyboard to move around and create new cells you will need to know the two different interaction modes.\n\nesc mode: This mode allows you to move up and down between cells. You are in esc mode if the highlighted border of your current cell is blue (leftside) and grey. \ncommand mode: This mode allows you to type in the cell. You are in command mode if the highlighted border of your current cell is green. \n\nPress enter when on a cell in esc mode to enter command mode. This allows you to start typing in the selected cell.\nWhen you run code (ctrl + enter) in command mode you will then enter esc mode.\nBe careful! If you press a number key whilst in esc mode you will change the cell to a markdown cell. Additionally, you will change the first line to a header line equal to the number you pressed. I.e. if you pressed 2, the following would be added to the start of the first line of the cell: ##.\n\n\n\n\n1+1\n\n\n9-6\n\n\n3*4\n\n\n42/7\n\n\n45/7\n\n\n3**3\n\n\n42//7\n\n\n45//7\n\n\n45%7",
     "crumbs": [
       "Fundamentals",
+      "Scripts",
       "Operators"
     ]
   },
@@ -600,19 +601,20 @@
     "text": "Annotations\n\n\n\n\n\nIt is often useful to include human-readable comments in your scripts and code. Comments/Annotations in Python are indicated by the hash symbol (#). Anything to the right of the hash is considered a comment and is ignored by the interpreter.\nCreate a new Markdown cell with the following.\n\n### Annotation\n\nIn a new cell, enter and run the below.\n\n# This line is a comment\nprint(\"This section will print\") # This section is ignored\n\nOnly the print() command is used by the python interpreter. The other text is ignored due to the hashtags. You will also notice that the text of comments/annotations are uniquely coloured in jupyter-notebook. This is useful to quickly see what parts are comments and what parts are not.",
     "crumbs": [
       "Fundamentals",
+      "Scripts",
       "Annotations"
     ]
   },
   {
     "objectID": "fundamentals/variables.html",
     "href": "fundamentals/variables.html",
-    "title": "Rules",
+    "title": "Variable rules",
     "section": "",
-    "text": "Rules\n\n\n\n\n\nVariables are used to store information which can then be referenced or manipulated later. It is useful to label data with descriptive names which are easily read by humans. You can think of a variable as a ‘container’ to hold a piece of information.\nVariables are assigned a value using the equals (=) character.\nVariable name rules:\n\nMust start with either a letter or an underscore\n\nCannot start with a number.\n\nMust only contain alphanumeric characters (and underscores)\n\nNo punctuation such as full stops, quotes, commas, colons, etc are allowed.\n\nThey are case sensitive.\n\nPython supports several classes (or types) of variables including strings, integers, floats, and booleans.\nIn a new Markdown cell add the following:\n\n### Variables\n#### Strings",
+    "text": "Variable rules\n\n\n\n\n\nVariables are used to store information which can then be referenced or manipulated later. It is useful to label data with descriptive names which are easily read by humans. You can think of a variable as a ‘container’ to hold a piece of information.\nVariables are assigned a value using the equals (=) character.\nVariable name rules:\n\nMust start with either a letter or an underscore\n\nCannot start with a number\n\nMust only contain alphanumeric characters (and underscores)\n\nNo punctuation such as full stops, quotes, commas, colons, etc. are allowed\n\nThey are case sensitive\n\nPython supports several classes (or types) of variables including strings, integers, floats, and booleans.\nIn a new Markdown cell add the following:\n\n### Variables\n#### Strings",
     "crumbs": [
       "Fundamentals",
       "Variables",
-      "Rules"
+      "Variable rules"
     ]
   },
   {
@@ -668,9 +670,10 @@
     "href": "fundamentals/class.html",
     "title": "Classes",
     "section": "",
-    "text": "Classes\n\n\n\n\n\nEvery variable in Python has a class. These are the characteristics we described above:\n\nString (&lt;class 'str'&gt;)\nInteger (&lt;class 'int'&gt;)\nFloat (&lt;class 'float'&gt;)\nBoolean (&lt;class 'bool'&gt;)\n\nUnlike some other languages, you do not need to tell Python which class a variable should have. Python will try to figure it out based on the value assigned.\nCreate a new markdown cell with the following:\n\n### Classes\n\nYou can check the class of a variable by passing it to the type() function:\n\nvariable1 = \"a piece of text\"\ntype(variable1)\n\n\nvariable2 = 5\ntype(variable2)\n\n\nvariable3 = 7.0001\ntype(variable3)\n\n\nvariable4 = True\ntype(variable4)",
+    "text": "Classes\n\n\n\n\n\nEvery variable in Python has a class. These are the characteristics we described in the previous pages:\n\nString (&lt;class 'str'&gt;)\nInteger (&lt;class 'int'&gt;)\nFloat (&lt;class 'float'&gt;)\nBoolean (&lt;class 'bool'&gt;)\n\nUnlike some other languages, you do not need to tell Python which class a variable should have. Python will try to figure it out based on the value assigned.\nCreate a new markdown cell with the following:\n\n### Classes\n\nYou can check the class of a variable by passing it to the type() function.\n\nvariable1 = \"a piece of text\"\ntype(variable1)\n\n\nvariable2 = 5\ntype(variable2)\n\n\nvariable3 = 7.0001\ntype(variable3)\n\n\nvariable4 = True\ntype(variable4)",
     "crumbs": [
       "Fundamentals",
+      "Variables",
       "Classes"
     ]
   },
@@ -682,6 +685,7 @@
     "text": "Variables can be transformed from one class to another provided the value can be coerced into the new data type (I.e. you could not transform a string of text to a floating point numbers).\nCreate a new markdown cell with the following:\n\n### Transforming variables\n\n\n\nTo transform a float to an integer use the int() function (note the loss of precision):\n\na_float = 17.45\nint(a_float)\n\n\n\n\nTo transform an integer to a string use the str() function:\n\nan_integer = 783473\nstr(an_integer)\n\n\n\n\nYou can transform a numeric string to an integer:\n\na_numeric_string = \"256\"\nint(a_numeric_string)\n\n\n\n\nYou can also transform to a floating point using float():\n\na_float_string = \"3.14\"\nfloat(a_float_string)",
     "crumbs": [
       "Fundamentals",
+      "Variables",
       "Transforming variables"
     ]
   },
@@ -693,6 +697,7 @@
     "text": "To transform a float to an integer use the int() function (note the loss of precision):\n\na_float = 17.45\nint(a_float)",
     "crumbs": [
       "Fundamentals",
+      "Variables",
       "Transforming variables"
     ]
   },
@@ -704,6 +709,7 @@
     "text": "To transform an integer to a string use the str() function:\n\nan_integer = 783473\nstr(an_integer)",
     "crumbs": [
       "Fundamentals",
+      "Variables",
       "Transforming variables"
     ]
   },
@@ -715,6 +721,7 @@
     "text": "You can transform a numeric string to an integer:\n\na_numeric_string = \"256\"\nint(a_numeric_string)",
     "crumbs": [
       "Fundamentals",
+      "Variables",
       "Transforming variables"
     ]
   },
@@ -726,6 +733,7 @@
     "text": "You can also transform to a floating point using float():\n\na_float_string = \"3.14\"\nfloat(a_float_string)",
     "crumbs": [
       "Fundamentals",
+      "Variables",
       "Transforming variables"
     ]
   },
@@ -840,7 +848,7 @@
     "href": "fundamentals/strings.html",
     "title": "Strings",
     "section": "",
-    "text": "Strings\n\n\n\n\n\nStrings are used to store alphanumeric text. A string is defined by enclosing the text with either single ('text') or double quotes (\"text\").\nIn the below code we define two string variables, and then retrieve them again by using their name, or identifier.\nAs before, for each code block below create a code cell, enter the code, and run it. Do this for all future code examples.\n\n#Assign string variables\nDNA_string = \"GCACAAACC\"\namino_acids = \"ARG VAL TRP\"\n#Call the DNA_string variable\nDNA_string\n\n\n#Call the amino_acids string variable\namino_acids\n\nYou will notice that you can use your variables in the same cell you created it in, or in a different cell. As long as you have run the code that creates/assigns the variable you can use it elsewhere in the same notebook.",
+    "text": "Strings\n\n\n\n\n\nStrings are used to store alphanumeric text. A string is defined by enclosing the text with either single quotes ('text') or double quotes (\"text\").\nIn the below code we define two string variables, and then retrieve them again by using their name, or identifier.\nAs before, for each code block below create a code cell, enter the code, and run it. Do this for all future code examples.\n\n#Assign string variables\nDNA_string = \"GCACAAACC\"\namino_acids = \"ARG VAL TRP\"\n#Call the DNA_string variable\nDNA_string\n\n\n#Call the amino_acids string variable\namino_acids\n\nYou will notice that you can use your variables in the same cell you created it in, or in a different cell. As long as you have run the code that creates/assigns the variable you can use it elsewhere in the same notebook.",
     "crumbs": [
       "Fundamentals",
       "Variables",
@@ -902,6 +910,7 @@
     "text": "We’ll continue to use our “01-Fundamentals” notebook. Within it create a new Markdown cell with the following headers:\n\n## Fundamentals\n### Operators",
     "crumbs": [
       "Fundamentals",
+      "Scripts",
       "Operators"
     ]
   },
@@ -924,6 +933,7 @@
     "text": "For each code block below create a code cell, enter the code, and run it. This will demonstrate the code output and give you some practice.\n\n\n\n\n\n\nNoteMoving across cells in jupyter-notebook with the keyboard\n\n\n\n\n\nTo use the keyboard to move around and create new cells you will need to know the two different interaction modes.\n\nesc mode: This mode allows you to move up and down between cells. You are in esc mode if the highlighted border of your current cell is blue (leftside) and grey. \ncommand mode: This mode allows you to type in the cell. You are in command mode if the highlighted border of your current cell is green. \n\nPress enter when on a cell in esc mode to enter command mode. This allows you to start typing in the selected cell.\nWhen you run code (ctrl + enter) in command mode you will then enter esc mode.\nBe careful! If you press a number key whilst in esc mode you will change the cell to a markdown cell. Additionally, you will change the first line to a header line equal to the number you pressed. I.e. if you pressed 2, the following would be added to the start of the first line of the cell: ##.\n\n\n\n\n1+1\n\n\n9-6\n\n\n3*4\n\n\n42/7\n\n\n45/7\n\n\n3**3\n\n\n42//7\n\n\n45//7\n\n\n45%7",
     "crumbs": [
       "Fundamentals",
+      "Scripts",
       "Operators"
     ]
   },
@@ -1192,7 +1202,7 @@
     "href": "fundamentals/intro.html#sections",
     "title": "Python fundamentals",
     "section": "",
-    "text": "An overview of the sections in this part are below.\n\n\n\n\n\n\n\n\nScripting\nOperators\nAnnotations\n\n\n\n\n\n\n\n\n\nVariables\n\nStrings\nNumerics\nBoolean\nClass\nTransformations\n\n\n\n\n\n\n\n\n\nFunctions & methods\n\nFunctions\nMethods\n\n\n\n\n\n\n\n\n\nData structures\n\nLists\nSets\nDictionary\n\n\n\n\n\n\n\n\n\nExercise",
+    "text": "An overview of the sections in this part are below.\n\n\n\n\n\n\n\nThe first section is a quick introduction to scripting, operators, and annotations.\n\nScripting: Writing and running commands (scripting) in Python\nOperators: Using Python like a calculator with operators (+, -, *, /, etc.)\nAnnotations: Adding comments/annotations with # in scripts\n\n\n\n\n\n\n\n\n\nInformation can be stored into variables in Python. A variable consists of a name and the information/value within it.\nValues can be of different classes including:\n\nStrings: Alphanumeric text, e.g. \"text1\"\nNumerics: Numbers which can be stored as integers (e.g. 3) or floats (e.g. 3.14)\nBooleans: True or False\n\nAdditionally the following topics are covered:\n\nClass: The auto assignment of classes by python and how to check the class of a variable\nTransformation: How to transform a variable from one class to another\n\n\n\n\n\n\n\n\n\nFunctions & methods are instructions/commands which carry out specific tasks.\n\nFunctions: A distinct piece of code that can be used for any class of data\n\nfunction(variable)\n\nMethods: Similar to functions but they can only be used for one class\n\nvariable.method()\n\n\n\n\n\n\n\n\n\n\nData structures are used to group multiple values together. We will look at the 3 structures:\n\nLists: An ordered list of values that can contain duplicates\n\nlist = [value1,value2]\n\nSets: An unordered set of values that cannot contain duplicates\n\nset = (unique_value1,unique_value2)\n\nDictionary: An ordered data structure that holds pairs of values; a key and a value\n\ndictionary = {key:value}\n\n\n\n\n\n\n\n\n\n\nAs the final part you will complete tasks of the fundamental exercise. This involves creating and editing various variables of moths.",
     "crumbs": [
       "Fundamentals",
       "Python fundamentals"

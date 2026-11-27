@@ -8,7 +8,7 @@ In python there are two main types of numerics: __<u id='integer'>integers</u>__
 
 ## Integers
 
-![](/images/noun-seven-3801475.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+![](/images/noun-seven-3801475.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 __<u id='integer'>integers</u>__ are used to store whole numbers.
 These should not be declared with quote marks otherwise they will be stored as a <u id='string'>string</u>.
@@ -65,7 +65,7 @@ MMXXIII
 ```
 
 ## Floats
-![](/images/float.png){style="width:200px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
+![](/images/float.png){style="width:150px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 **<u id='float'>Floating point numbers</u>** are used to store real numbers (I.e. a number written with a decimal point dividing the <u id='integer'>integer</u> and the fractional parts).
 

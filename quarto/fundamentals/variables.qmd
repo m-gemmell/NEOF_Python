@@ -2,7 +2,7 @@
 engine: knitr
 ---
 
-# Rules
+# Variable rules
 ![](/images/cargo_container.png){style="width:200px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
 
 __<u id='variable'>Variables</u>__ are used to store information which can then be referenced or manipulated later. 
@@ -14,10 +14,10 @@ __<u id='variable'>Variables</u>__ are assigned a value using the equals (`=`) c
 __<u id='variable'>Variable</u> name rules__:
 
 - Must start with either a letter or an underscore
-  - Cannot start with a number.
+  - Cannot start with a number
 - Must only contain alphanumeric characters (and underscores)
-  - No punctuation such as full stops, quotes, commas, colons, etc are allowed.
-- They are case sensitive.
+  - No punctuation such as full stops, quotes, commas, colons, etc. are allowed
+- They are case sensitive
 
 Python supports several <u id='class'>classes</u> (or types) of __<u id='variable'>variables</u>__ including __<u id='string'>strings</u>__, __<u id='integer'>integers</u>__, __<u id='float'>floats</u>__, and __<u id='boolean'>booleans</u>__.
 

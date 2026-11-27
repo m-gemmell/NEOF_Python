@@ -48,9 +48,7 @@ print("I'm excited to be learning some Python!")
 Below each cell you will see the specified text.
 
 ### Working directory
-<center>
-![](/images/directory.png){style="width:100px"}
-</center>
+![](/images/directory.png){style="width:100px; background: white; border-radius:5px" fig-align="center"}
 
 The command `getcwd()` stands for "get the *current working directory*". This command comes from the __Python module__ `os`. We therefore need to `import` the module and specify it when running the command (`os.getcwd()`). 
 
@@ -66,9 +64,7 @@ This will return something like: '/pub14/tea/nsc206/Python_course_data' (your ns
 `print()` and `os.getcwd()` are nice commands to start with but don't appear very useful, yet. We will see later how they can be used effectively.
 
 ## A note on indentation
-<center>
-![](/images/tab.png){style="width:100px; background:white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/tab.png){style="width:100px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 __Indentation__ refers to any __spaces__ or __tab__ characters at the beginning of a line of code. 
 __Indentation__ helps readability of code.
@@ -79,9 +75,7 @@ However, __indentation__ in __Python__ is __mandatory__ and the interpreter will
 However, you still need to take care that the level of indentation in the script matches that in the workbook __exactly__.
   
 ### Tabs vs spaces
-<center>
-![](/images/indent_python_debate.png){style="width:150px; border-radius:5px; background:white"}
-</center>
+![](/images/indent_python_debate.png){style="width:150px; border-radius:5px; background:white" fig-align="center"}
 
 There is an active debate about whether tabs or spaces are more appropriate for __indentation__. 
 
@@ -99,11 +93,9 @@ Do not enter the below, this is just an illustration of how three levels of tab 
 ```
 
 ## Scripting recap MCQs
-<center>
-![](/images/question_bubble_black.png){style="width:200px; background:white; border-radius:5px; border: 5px solid white"}
-</center>
+![](/images/question_bubble_black.png){style="width:200px; background:white; border-radius:5px; border: 5px solid white" fig-align="center"}
 
-Wonderful! That is the end of the scripting chapter. Now time for some reinforcement.
+Wonderful! That is the end of the scripting page. Now time for some reinforcement.
 
 Choose the correct option to complete the below sentences:
 

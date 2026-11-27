@@ -4,7 +4,7 @@ engine: knitr
 # Classes
 ![](/images/class.png){style="width:200px; background:white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
-Every __<u id='variable'>variable</u>__ in Python has a __<u id='class'>class</u>__. These are the characteristics we described above:
+Every __<u id='variable'>variable</u>__ in Python has a __<u id='class'>class</u>__. These are the characteristics we described in the previous pages:
 
 - __<u id='string'>String</u>__ (`<class 'str'>`)
 - __<u id='integer'>Integer</u>__ (`<class 'int'>`)
@@ -20,7 +20,7 @@ Create a new __markdown cell__ with the following:
 ### Classes
 ```
 
-You can check the __<u id='class'>class</u>__ of a __<u id='variable'>variable</u>__ by passing it to the `type()` __<u id='function'>function</u>__:
+You can check the __<u id='class'>class</u>__ of a __<u id='variable'>variable</u>__ by passing it to the `type()` __<u id='function'>function</u>__.
 
 ```{python, eval=FALSE}
 variable1 = "a piece of text"

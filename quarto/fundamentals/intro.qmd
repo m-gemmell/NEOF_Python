@@ -7,13 +7,76 @@ An understanding of how to use __<u id='operator'>operators</u>__, __<u id='vari
 We do not expect you to memorise all the information here as all of these concepts will be explored further in the rest of the tutorial. 
 The best way to learn how various aspects of the Python language works is by *doing* rather than by *reading*. 
 
-Consider coming back to this part later if you want to remind yourself of how a particular <u id='operator'>operator</u>  works or how to define a __<u id='function'>function</u>__.
+Consider coming back to this part later if you want to remind yourself of how a particular <u id='operator'>operator</u> works or how to define a __<u id='function'>function</u>__.
+
+::: {.callout-tip}
+There is also a [cheatsheet in the appendix](/appendix/cheatsheet.qmd)
+:::
 
 ## Setup
 
 Within `jupyter-notebook` create a new __notebook__ in your __"Python_course_data"__ directory. 
 Rename it to __"01-Fundamentals"__ and save it.
 Open and use this notebook for this part.
+
+## Sections
+
+An overview of the sections in this part are below.
+
+### Scripts
+![](/images/scripting_icon.png){style="height:150px; border-radius:5px; border:5px solid white; background:white" fig-align="center"}
+
+The first section is a quick introduction to scripting, operators, and annotations.
+
+- [Scripting](/fundamentals/scripting.qmd): Writing and running commands (scripting) in Python
+- [Operators](/fundamentals/operators.qmd): Using Python like a calculator with operators (`+`, `-`, `*`, `/`, etc.)
+- [Annotations](/fundamentals/annotations.qmd): Adding comments/annotations with `#` in scripts
+
+### Variables
+![](/images/cargo_container.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
+
+Information can be stored into [variables](/fundamentals/variables.qmd) in Python.
+A variable consists of a name and the information/value within it.
+
+Values can be of different <u id='class'>classes</u> including:
+
+- [Strings](/fundamentals/strings.qmd): Alphanumeric text, e.g. `"text1"`
+- [Numerics](/fundamentals/numerics.qmd): Numbers which can be stored as <u id='integer'>integers</u> (e.g. `3`) or <u id='float'>floats</u> (e.g. `3.14`)
+- [Booleans](/fundamentals/booleans.qmd): `True` or `False`
+
+Additionally the following topics are covered:
+
+- [Class](/fundamentals/class.qmd): The auto assignment of <u id='class'>classes</u> by python and how to check the <u id='class'>class</u> of a <u id='variable'>variable</u>
+- [Transformation](/fundamentals/transform.qmd): How to transform a <u id='variable'>variable</u> from one <u id='class'>class</u> to another
+
+### Functions & methods
+![](/images/function.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+[Functions & methods](/fundamentals/functions_and_methods.qmd) are instructions/commands which carry out specific tasks.
+
+- [Functions](/fundamentals/functions.qmd): A distinct piece of code that can be used for any <u id='class'>class</u> of data
+  - `function(variable)`
+- [Methods](/fundamentals/methods.qmd): Similar to <u id='function'>functions</u> but they can only be used for one <u id='class'>class</u>
+  - `variable.method()`
+
+### Data structures
+![](/images/python_data_structure.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+[Data structures](/fundamentals/data_structures.qmd) are used to group multiple values together.
+We will look at the 3 structures:
+
+- [Lists](/fundamentals/lists.qmd): An ordered list of values that can contain duplicates
+  - `list = [value1,value2]`
+- [Sets](/fundamentals/sets.qmd): An unordered set of values that cannot contain duplicates
+  - `set = (unique_value1,unique_value2)`
+- [Dictionary](/fundamentals/dictionary.qmd): An ordered data structure that holds pairs of values; a key and a value
+  - `dictionary = {key:value}` 
+
+### Fundamental exercise
+![](/images/Mimas tiliae.png){style="width:150px" fig-align="center"}
+
+As the final part you will complete tasks of the [fundamental exercise](/fundamentals/exercise.qmd).
+This involves creating and editing various <u id='variable'>variables</u> of moths.
 
 ```{r, echo=FALSE}
 #Tippy tooltips
@@ -44,48 +107,13 @@ tippy::tippy_this(elementId = "variable",
 tippy::tippy_this(elementId = "class", 
                   tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
                   arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "list", 
+                  tooltip = "list = [value1,value2]",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "set_tooltip", 
+                  tooltip = "set{unique_value1,unique_value2}",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "dictionary_tooltip", 
+                  tooltip = "dictionary = {key:value}",
+                  arrow = TRUE, placement = "bottom")
 ```
-
-## Sections
-
-An overview of the sections in this part are below.
-
-### Scripts
-![](/images/scripting_icon.png){style="height:150px; border-radius:5px; border:5px solid white; background:white" fig-align="center"}
-
-- [Scripting](/fundamentals/scripting.qmd)
-- [Operators](/fundamentals/operators.qmd)
-- [Annotations](/fundamentals/annotations.qmd)
-
-### Variables
-![](/images/cargo_container.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
-
-[Variables](/fundamentals/variables.qmd)
-
-- [Strings](/fundamentals/strings.qmd)
-- [Numerics](/fundamentals/numerics.qmd)
-- [Boolean](/fundamentals/booleans.qmd)
-- [Class](/fundamentals/class.qmd)
-- [Transformations](/fundamentals/transform.qmd)
-
-### Functions & methods
-![](/images/function.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
-
-[Functions & methods](/fundamentals/functions_and_methods.qmd)
-
-- [Functions](/fundamentals/functions.qmd)
-- [Methods](/fundamentals/methods.qmd)
-
-### Data structures
-![](/images/python_data_structure.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
-
-[Data structures](/fundamentals/data_structures.qmd)
-
-- [Lists](/fundamentals/lists.qmd)
-- [Sets](/fundamentals/sets.qmd)
-- [Dictionary](/fundamentals/dictionary.qmd)
-
-### Fundamental exercise
-![](/images/Mimas tiliae.png){style="width:200px" fig-align="center"}
-
-[Exercise](/fundamentals/exercise.qmd)

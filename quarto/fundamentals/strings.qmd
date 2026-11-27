@@ -5,7 +5,7 @@ engine: knitr
 # Strings
 ![](/images/string_bubble.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
-__<u id='string'>Strings</u>__ are used to store alphanumeric text. A __<u id='string'>string</u>__ is defined by enclosing the text with either single (`'text'`) or double quotes (`"text"`).
+__<u id='string'>Strings</u>__ are used to store alphanumeric text. A __<u id='string'>string</u>__ is defined by enclosing the text with either single quotes (`'text'`) or double quotes (`"text"`).
     
 In the below code we define two __<u id='string'>string</u> <u id='variable'>variables</u>__, and then retrieve them again by using their name, or identifier.
 
