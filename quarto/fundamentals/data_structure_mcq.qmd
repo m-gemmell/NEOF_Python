@@ -3,7 +3,7 @@ engine: knitr
 ---
 
 # Structures recap
-![](/images/question_bubble_purple.png){style="width:200px" fig-align="center"}
+![](/images/question_bubble_purple.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid" fig-align="center"}
 
 Grand! You have learnt about different data structures in __Python__.
 

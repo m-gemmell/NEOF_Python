@@ -1,21 +1,91 @@
 # Python fundamentals
-
-
-Below is info to incoportate
-
-## Setup
 ![](/images/python_fundamentals.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-[Stuff from operaters, comments, and variables]
+This part covers a plethora of topics encompassing the fundamentals of Python.
+An understanding of how to use __<u id='operator'>operators</u>__, __<u id='variable'>variables</u>__, __<u id='function'>functions</u>__/__<u id='method'>methods</u>__, and data structures will give a good grounding in how the language works and allow you to develop your own code.
 
-This section covers some of the fundamental concepts of scripting in Python.
-An understanding of how to use __<u id='operator'>operators</u>__, __<u id='variable'>variables</u>__, and __<u id='function'>functions</u>__ will
-give a good grounding in how the language works and allow you to develop
-your own methods and code.
+We do not expect you to memorise all the information here as all of these concepts will be explored further in the rest of the tutorial. 
+The best way to learn how various aspects of the Python language works is by *doing* rather than by *reading*. 
 
-You definitely do not need to memorise all the information here as all of these
-concepts will be explored more in the rest of the tutorial. The best way to
-learn how various aspects of the Python language works is by *doing* rather
-than by *reading*. 
+Consider coming back to this part later if you want to remind yourself of how a particular <u id='operator'>operator</u>  works or how to define a __<u id='function'>function</u>__.
 
-Consider coming back to this page later if you want to remind yourself of how a particular <u id='operator'>operator</u>  works or how to define a __<u id='function'>function</u>__.
+## Setup
+
+Within `jupyter-notebook` create a new __notebook__ in your __"Python_course_data"__ directory. 
+Rename it to __"01-Fundamentals"__ and save it.
+Open and use this notebook for this part.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "function", 
+                  tooltip = "Named block of code that performs specific tasks",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "method", 
+                  tooltip = "variable.method_name()",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "operator", 
+                  tooltip = "+, -, *, /, and more",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string", 
+                  tooltip = "Text, denoted by quotes (\"text\" or 'text')",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer", 
+                  tooltip = "Whole numbers, e.g. 1, 2, 3, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "float", 
+                  tooltip = "Real numbers (can contain decimal point), e.g. 1, 2.5, 3.14, etc",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "boolean", 
+                  tooltip = "True or False",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable", 
+                  tooltip = "Container of information with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class", 
+                  tooltip = "Type of data, e.g. string, integer, float, boolean, etc.",
+                  arrow = TRUE, placement = "bottom")
+```
+
+## Sections
+
+An overview of the sections in this part are below.
+
+### Scripts
+![](/images/scripting_icon.png){style="height:150px; border-radius:5px; border:5px solid white; background:white" fig-align="center"}
+
+- [Scripting](/fundamentals/scripting.qmd)
+- [Operators](/fundamentals/operators.qmd)
+- [Annotations](/fundamentals/annotations.qmd)
+
+### Variables
+![](/images/cargo_container.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
+
+[Variables](/fundamentals/variables.qmd)
+
+- [Strings](/fundamentals/strings.qmd)
+- [Numerics](/fundamentals/numerics.qmd)
+- [Boolean](/fundamentals/booleans.qmd)
+- [Class](/fundamentals/class.qmd)
+- [Transformations](/fundamentals/transform.qmd)
+
+### Functions & methods
+![](/images/function.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+[Functions & methods](/fundamentals/functions_and_methods.qmd)
+
+- [Functions](/fundamentals/functions.qmd)
+- [Methods](/fundamentals/methods.qmd)
+
+### Data structures
+![](/images/python_data_structure.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+[Data structures](/fundamentals/data_structures.qmd)
+
+- [Lists](/fundamentals/lists.qmd)
+- [Sets](/fundamentals/sets.qmd)
+- [Dictionary](/fundamentals/dictionary.qmd)
+
+### Fundamental exercise
+![](/images/Mimas tiliae.png){style="width:200px" fig-align="center"}
+
+[Exercise](/fundamentals/exercise.qmd)

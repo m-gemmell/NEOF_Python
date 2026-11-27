@@ -5,13 +5,13 @@ engine: knitr
 # Fundamental exercise {#fundamental_exercise}
 ![](/images/Mimas tiliae.png){style="width:200px" fig-align="center"}
 
-To reinforce what you have learnt please try the challenges in this chapter.
+To reinforce what you have learnt please attempt the challenges in this page.
+
+In this exercise you are going to create, investigate, and manipulate data of UK moths found in light traps.
 
 Solutions are in the expandable boxes.
 Try your best to solve each challenge but use the solutions for help if you would like.
 Even if your method works it can be good to check the solution as there are many ways to do the same thing in python.
-
-In this exercise you are going to create, investigate, and manipulate data of UK moths found in light traps.
 
 ## Fundamental exercise notebook
 ![](/images/notebook.png){style="width:100px" fig-align="center"}
@@ -39,41 +39,46 @@ This is the species of the individual moths that visited the light trap on the 2
 
 Then view the __list__.
 
-`r hide("Moth 1 solution")`
+::: {.callout-note collapse="true"}
+## Moth 1 solution
 ```{python, eval=FALSE}
 #1
 moth_sightings_21sep = ["Poplar Hawk-moth", "Elephant Hawk-moth", "Elephant Hawk-moth",
                         "Cinnabar", "Poplar Hawk-moth", "Scarlet Tiger", "Scalloped Oak"]
 moth_sightings_21sep
 ```
-`r unhide()`
+:::
 
 ### Moth challenge 2 {-}
 ![](/images/moth_2.png){style="width:150px" fig-align="center"}
 
 Using python code, calculate the percentage of individuals that were __Elephant Hawk-moths__ in __"moth_sightings_21sep"__.
 
-__Tip:__ Operators, the __function__ `len()` and the __method__ `.count()` (it can be used on string __lists__) will be useful.
+::: {.callout-tip}
+Operators, the __function__ `len()` and the __method__ `.count()` (it can be used on string __lists__) will be useful.
+:::
 
-`r hide("Moth 2 solution")`
+::: {.callout-note collapse="true"}
+## Moth 2 solution
 ```{python, eval=FALSE}
 #2
 (moth_sightings_21sep.count("Elephant Hawk-moth") / len(moth_sightings_21sep)) * 100
 ```
-`r unhide()`
+:::
 
 ### Moth challenge 3 {-}
 ![](/images/moth_3.png){style="width:150px" fig-align="center"}
 
 Create a __set__ called __unique_moths__ from the __"moth_sightings_21sep"__ list.
 
-`r hide("Moth 3 solution")`
+::: {.callout-note collapse="true"}
+## Moth 3 solution
 ```{python, eval=FALSE}
 #3
 unique_moths = set(moth_sightings_21sep)
 unique_moths
 ```
-`r unhide()`
+:::
 
 ### Moth challenge 4 {-}
 ![](/images/moth_4.png){style="width:150px" fig-align="center"}
@@ -88,29 +93,33 @@ Create a new __list variable__ called __"moth_sightings_22sep"__ with the ordere
 6. "Scarlet Tiger"
 7. "Elephant Hawk-moth"
 
-__Tip__: It can be useful to copy, paste, and edit previous code.
+::: {.callout-tip}
+It can be useful to copy, paste, and edit previous code.
+:::
 
-`r hide("Moth 4 solution")`
+::: {.callout-note collapse="true"}
+## Moth 4 solution
 ```{python, eval=FALSE}
 #4
 moth_sightings_22sep = ["Poplar Hawk-moth", "Elephant Hawk-moth", "Elephant Hawk-moth",
                         "Cinnabar", "Feathered Thorn", "Scarlet Tiger", "Elephant Hawk-moth"]
 moth_sightings_22sep
 ```
-`r unhide()`
+:::
 
 ### Moth challenge 5 {-}
 ![](/images/moth_5.png){style="width:150px" fig-align="center"}
 
 Add the string __variable__ __"Feathered Thorn"__ to the __set__  __"unique_moths"__.
 
-`r hide("Moth 5 solution")`
+::: {.callout-note collapse="true"}
+## Moth 5 solution
 ```{python, eval=FALSE}
 #5
 unique_moths.add("Feathered Thorn")
 unique_moths
 ```
-`r unhide()`
+:::
 
 ### Moth challenge 6 {-}
 ![](/images/moth_6.png){style="width:150px" fig-align="center"}
@@ -125,7 +134,8 @@ Subset the __lists__ in the following ways:
 5. Subset the values from the 5th to the end of __"moth_sightings_21sep"__.
 6. Subset the three last values of __"moth_sightings_22sep"__.
 
-`r hide("Moth 6 solution")`
+::: {.callout-note collapse="true"}
+## Moth 6 solution
 ```{python, eval=FALSE}
 #6.1
 moth_sightings_21sep[0]
@@ -150,7 +160,7 @@ moth_sightings_21sep[4:]
 #6.6
 moth_sightings_22sep[-3:]
 ```
-`r unhide()`
+:::
 
 ### Moth challenge 7 {-}
 ![](/images/moth_7.png){style="width:150px" fig-align="center"}
@@ -163,7 +173,8 @@ Create a __dictionary__ called __"moth_visits_sep"__ containing the following __
 4. "Scarlet Tiger" : 32
 5. "Scalloped Oak" : 10
 
-`r hide("Moth 7 solution")`
+::: {.callout-note collapse="true"}
+## Moth 7 solution
 ```{python, eval=FALSE}
 #7
 moth_visits_sep = {
@@ -175,20 +186,21 @@ moth_visits_sep = {
 }
 moth_visits_sep
 ```
-`r unhide()`
+:::
 
 ### Moth challenge 8 {-}
 ![](/images/moth_8.png){style="width:150px" fig-align="center"}
 
 Add the __key/value__ pair __"Feathered Thorn" : 13__ to the __dictionary__ __"moth_visits_sep"__.
 
-`r hide("Moth 8 solution")`
+::: {.callout-note collapse="true"}
+## Moth 8 solution
 ```{python, eval=FALSE}
 #8
 moth_visits_sep["Feathered Thorn"] = 13
 moth_visits_sep
 ```
-`r unhide()`
+:::
 
 ## Moth exercise conclusion
 ![](/images/finish.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}

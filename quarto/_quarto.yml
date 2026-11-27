@@ -61,9 +61,11 @@ website:
     align: left
     contents:
     - href: fundamentals/intro.qmd
-    - href: fundamentals\scripting.qmd
-    - href: fundamentals\operators.qmd
-    - href: fundamentals\annotations.qmd
+    - section: "Scripts"
+      contents:
+      - href: fundamentals\scripting.qmd
+      - href: fundamentals\operators.qmd
+      - href: fundamentals\annotations.qmd
     - section: "Variables"
       contents:
       - href: fundamentals\variables.qmd

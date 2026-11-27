@@ -2,11 +2,7 @@
 engine: knitr
 ---
 # Scripting in Python
-
-<center>
-![](/images/python_logo.png){style="height:150px; border-radius:5px; border:5px solid white; background:white"}
-![](/images/scripting_icon.png){style="height:150px; border-radius:5px; border:5px solid white; background:white"}
-</center>
+![](/images/scripting_icon.png){style="height:150px; border-radius:5px; border:5px solid white; background:white" fig-align="center"}
 
 ## Introduction to commands and scripts
 There are two important components to programming in __Python__; the commands that are committed by the user, and the interpreter which receives and implements the commands.
@@ -24,9 +20,8 @@ These are two distinct *commands*, but together they form a *script* for how to 
 
 In this section we will learn and use some __Python__ commands.
 
-Create a new __notebook__ in your __"Python_course_data"__ directory. Rename it to __"01-Fundamentals"__ and save it.
-
-Convert the first __cell__ to a __Markdown cell__. Add the following to the cell to create a 1st and 2nd level header.
+Convert the first __cell__ to a __Markdown cell__ in your __"01-Fundamentals"__ notebook. 
+Add the following to the cell to create a 1st and 2nd level header.
 
 ```{python, eval=FALSE}
 # 1-Fundamentals

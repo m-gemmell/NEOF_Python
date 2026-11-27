@@ -4,7 +4,7 @@ engine: knitr
 
 # Numerics
 
-In python there are two main types of numerics: __<u id='integer'>integers</u>__ and **<u id='float'>Floating point numbers</u>**
+In python there are two main types of numerics: __<u id='integer'>integers</u>__ and **<u id='float'>Floating point numbers</u>**.
 
 ## Integers
 
